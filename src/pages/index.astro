@@ -129,6 +129,7 @@ const latest = posts.filter((post) => post.id !== featured.id).slice(0, 3);
     overflow: hidden;
     color: #171714;
     background: #ddff57;
+    isolation: isolate;
   }
 
   .feature-poster::before {
@@ -140,6 +141,8 @@ const latest = posts.filter((post) => post.id !== featured.id).slice(0, 3);
     border: 88px solid #171714;
     border-radius: 50%;
     content: '';
+    z-index: 0;
+    opacity: 0.22;
   }
 
   .feature-poster::after {
@@ -150,11 +153,12 @@ const latest = posts.filter((post) => post.id !== featured.id).slice(0, 3);
     height: 1px;
     content: '';
     background: rgba(23, 23, 20, 0.35);
+    z-index: 0;
   }
 
-  .poster-label { font-size: 0.68rem; letter-spacing: 0.16em; }
-  .poster-number { position: absolute; bottom: -36px; left: 28px; font: 500 13.1rem / 1 var(--serif); letter-spacing: -0.08em; }
-  .poster-note { position: absolute; top: 150px; right: 34px; width: 135px; margin: 0; font-size: 0.68rem; line-height: 1.7; }
+  .poster-label { position: relative; z-index: 2; font-size: 0.68rem; letter-spacing: 0.16em; }
+  .poster-number { position: absolute; z-index: 2; bottom: -36px; left: 28px; font: 500 13.1rem / 1 var(--serif); letter-spacing: -0.08em; }
+  .poster-note { position: absolute; z-index: 2; top: 150px; right: 34px; width: 135px; margin: 0; font-size: 0.68rem; line-height: 1.7; }
   .feature-copy h3 { margin: 22px 0 24px; font: 500 clamp(2.5rem, 4vw, 3.1rem) / 1.17 var(--serif); letter-spacing: -0.04em; }
   .feature-copy p { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.9; }
   .feature-copy .text-link { margin-top: 24px; }
