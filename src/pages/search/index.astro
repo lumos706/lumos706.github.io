@@ -1,0 +1,215 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageIntro from '@/components/PageIntro.astro';
+import ArrowIcon from '@/components/ArrowIcon.astro';
+import { formatDate, sortPosts } from '@/lib/blog';
+
+const posts = sortPosts(await getCollection('blog', ({ data }) => !data.draft));
+const tags = [...new Set(posts.flatMap((post) => post.data.tags))].sort((a, b) => a.localeCompare(b, 'zh-CN'));
+
+function normalizeSearchText(value: string) {
+  return value.normalize('NFKC').toLocaleLowerCase('zh-CN').replace(/\s+/g, ' ').trim();
+}
+---
+
+<BaseLayout title="搜索文章 — Lumos" description="按关键词或标签搜索 Lumos 的全部文章。">
+  <PageIntro label="SEARCH / INDEX" title="搜索文章" description="输入关键词，或者选一个标签。全部筛选都在当前页面完成，不需要后端服务。" />
+
+  <section class="search-section">
+    <div class="wrap search-layout">
+      <aside class="search-controls" aria-label="文章筛选条件">
+        <label class="control-label" for="site-search-input">关键词</label>
+        <div class="search-field">
+          <input id="site-search-input" type="search" placeholder="试试 Codex、Astro 或写作" autocomplete="off" spellcheck="false" aria-describedby="search-help" data-search-input />
+          <button type="button" class="clear-search" data-search-clear hidden>清空</button>
+        </div>
+        <p id="search-help" class="search-help">搜索标题、摘要、正文、分类与标签</p>
+
+        <fieldset class="tag-fieldset">
+          <legend class="control-label">按标签筛选</legend>
+          <div class="tag-filters">
+            <button type="button" class="tag-filter" data-search-tag data-tag="" aria-pressed="true">全部</button>
+            {tags.map((tag) => <button type="button" class="tag-filter" data-search-tag data-tag={tag} aria-pressed="false">#{tag}</button>)}
+          </div>
+        </fieldset>
+      </aside>
+
+      <div class="search-results">
+        <div class="results-head" aria-live="polite" aria-atomic="true">
+          <strong data-result-count>找到 {posts.length} 篇文章</strong>
+          <span data-filter-status>全部文章</span>
+        </div>
+
+        <div data-search-results>
+          {posts.map((post, index) => {
+            const searchText = normalizeSearchText([
+              post.data.title,
+              post.data.description,
+              post.data.category,
+              post.data.tags.join(' '),
+              post.body ?? '',
+            ].join(' '));
+
+            return (
+              <article class="search-item" data-search-item data-search={searchText} data-tags={JSON.stringify(post.data.tags)}>
+                <a class="search-item-link" href={`/posts/${post.id}/`}>
+                  <span class="result-index" data-result-index>{String(index + 1).padStart(2, '0')}</span>
+                  <div class="result-content">
+                    <div class="result-meta">{post.data.category} · {formatDate(post.data.pubDate)} · {post.data.readingTime} 分钟阅读</div>
+                    <h2>{post.data.title}</h2>
+                    <p>{post.data.description}</p>
+                    <div class="result-tags" aria-label="文章标签">{post.data.tags.map((tag) => <span>#{tag}</span>)}</div>
+                  </div>
+                  <ArrowIcon />
+                </a>
+              </article>
+            );
+          })}
+        </div>
+
+        <div class="empty-state" data-search-empty hidden>
+          <span>NO RESULTS</span>
+          <h2>没有找到相关文章</h2>
+          <p>换一个关键词，或者清空当前标签后再试。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const input = document.querySelector<HTMLInputElement>('[data-search-input]');
+  const clearButton = document.querySelector<HTMLButtonElement>('[data-search-clear]');
+  const tagButtons = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-search-tag]'));
+  const items = Array.from(document.querySelectorAll<HTMLElement>('[data-search-item]'));
+  const resultCount = document.querySelector<HTMLElement>('[data-result-count]');
+  const filterStatus = document.querySelector<HTMLElement>('[data-filter-status]');
+  const emptyState = document.querySelector<HTMLElement>('[data-search-empty]');
+
+  if (input && clearButton && resultCount && filterStatus && emptyState) {
+    const params = new URLSearchParams(window.location.search);
+    const availableTags = new Set(tagButtons.map((button) => button.dataset.tag ?? ''));
+    const requestedTag = params.get('tag') ?? '';
+    let activeTag = availableTags.has(requestedTag) ? requestedTag : '';
+
+    input.value = params.get('q') ?? '';
+
+    const normalize = (value: string) => value.normalize('NFKC').toLocaleLowerCase('zh-CN').trim();
+
+    const itemTags = (item: HTMLElement) => {
+      try {
+        return JSON.parse(item.dataset.tags ?? '[]') as string[];
+      } catch {
+        return [];
+      }
+    };
+
+    const syncURL = () => {
+      const url = new URL(window.location.href);
+      const query = input.value.trim();
+      query ? url.searchParams.set('q', query) : url.searchParams.delete('q');
+      activeTag ? url.searchParams.set('tag', activeTag) : url.searchParams.delete('tag');
+      history.replaceState(null, '', `${url.pathname}${url.search}`);
+    };
+
+    const applyFilters = (updateURL = true) => {
+      const query = normalize(input.value);
+      const terms = query.split(/\s+/).filter(Boolean);
+      let visible = 0;
+
+      items.forEach((item) => {
+        const haystack = normalize(item.dataset.search ?? '');
+        const matchesText = terms.every((term) => haystack.includes(term));
+        const matchesTag = !activeTag || itemTags(item).includes(activeTag);
+        const show = matchesText && matchesTag;
+        item.hidden = !show;
+
+        if (show) {
+          visible += 1;
+          const index = item.querySelector<HTMLElement>('[data-result-index]');
+          if (index) index.textContent = String(visible).padStart(2, '0');
+        }
+      });
+
+      tagButtons.forEach((button) => button.setAttribute('aria-pressed', String((button.dataset.tag ?? '') === activeTag)));
+      clearButton.hidden = input.value.length === 0;
+      emptyState.hidden = visible !== 0;
+      resultCount.textContent = `找到 ${visible} 篇文章`;
+
+      const states = [];
+      if (input.value.trim()) states.push(`“${input.value.trim()}”`);
+      if (activeTag) states.push(`#${activeTag}`);
+      filterStatus.textContent = states.length ? states.join(' · ') : '全部文章';
+
+      if (updateURL) syncURL();
+    };
+
+    input.addEventListener('input', () => applyFilters());
+
+    clearButton.addEventListener('click', () => {
+      input.value = '';
+      input.focus();
+      applyFilters();
+    });
+
+    tagButtons.forEach((button) => button.addEventListener('click', () => {
+      activeTag = button.dataset.tag ?? '';
+      applyFilters();
+    }));
+
+    applyFilters(false);
+  }
+</script>
+
+<style>
+  .search-section { padding-block: clamp(72px, 8vw, 116px); border-top: 1px solid var(--line); }
+  .search-layout { display: grid; grid-template-columns: minmax(250px, 330px) minmax(0, 1fr); gap: clamp(58px, 8vw, 112px); align-items: start; }
+  .search-controls { position: sticky; top: 32px; }
+  .control-label { display: block; margin: 0 0 13px; color: var(--muted); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .search-field { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); }
+  .search-field input { width: 100%; min-width: 0; padding: 17px 0; border: 0; outline: 0; color: var(--ink); background: transparent; font: 500 1.25rem / 1.3 var(--serif); }
+  .search-field input::placeholder { color: var(--muted); opacity: 0.7; }
+  .search-field input::-webkit-search-cancel-button { display: none; }
+  .clear-search { padding: 8px 0 8px 14px; border: 0; color: var(--muted); background: transparent; font-size: 0.72rem; cursor: pointer; }
+  .clear-search:hover { color: var(--ink); }
+  .search-help { margin: 12px 0 0; color: var(--muted); font-size: 0.72rem; line-height: 1.6; }
+  .tag-fieldset { min-width: 0; margin: 48px 0 0; padding: 0; border: 0; }
+  .tag-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag-filter { padding: 8px 10px; border: 1px solid var(--line); color: var(--muted); background: transparent; font-size: 0.72rem; cursor: pointer; transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease; }
+  .tag-filter:hover { color: var(--ink); border-color: var(--line-strong); }
+  .tag-filter[aria-pressed='true'] { border-color: var(--ink); color: var(--paper); background: var(--ink); }
+  .results-head { display: flex; min-height: 45px; align-items: flex-start; justify-content: space-between; gap: 20px; padding-bottom: 18px; color: var(--muted); font-size: 0.72rem; letter-spacing: 0.08em; }
+  .results-head strong { color: var(--ink); font-weight: 600; }
+  .search-item { border-top: 1px solid var(--line); }
+  .search-item:last-child { border-bottom: 1px solid var(--line); }
+  .search-item-link { display: grid; grid-template-columns: 48px minmax(0, 1fr) 26px; gap: 22px; align-items: center; padding: 28px 0; transition: color 220ms ease, background-color 220ms ease, padding 280ms var(--ease); }
+  .search-item-link:hover, .search-item-link:focus-visible { padding-inline: 18px; color: #171714; background: var(--light); }
+  .search-item-link:hover :global(.arrow-icon), .search-item-link:focus-visible :global(.arrow-icon) { transform: translate(3px, -3px); }
+  .result-index { align-self: start; padding-top: 3px; color: var(--muted); font: 400 0.95rem / 1 var(--serif); }
+  .result-meta { color: var(--muted); font-size: 0.68rem; letter-spacing: 0.06em; }
+  .result-content h2 { margin: 12px 0 11px; font: 500 clamp(1.5rem, 2.4vw, 2rem) / 1.25 var(--serif); letter-spacing: -0.03em; }
+  .result-content p { max-width: 680px; margin: 0; color: var(--muted); font-size: 0.86rem; line-height: 1.75; }
+  .result-tags { display: flex; flex-wrap: wrap; gap: 5px 12px; margin-top: 15px; color: var(--muted); font-size: 0.68rem; }
+  .search-item-link:hover .result-index, .search-item-link:hover .result-meta, .search-item-link:hover .result-content p, .search-item-link:hover .result-tags,
+  .search-item-link:focus-visible .result-index, .search-item-link:focus-visible .result-meta, .search-item-link:focus-visible .result-content p, .search-item-link:focus-visible .result-tags { color: rgba(23, 23, 20, 0.66); }
+  .empty-state { padding: clamp(60px, 9vw, 110px) 0; border-top: 1px solid var(--line); text-align: center; }
+  .empty-state span { color: var(--muted); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.16em; }
+  .empty-state h2 { margin: 20px 0 12px; font: 500 clamp(2rem, 4vw, 3rem) / 1.15 var(--serif); }
+  .empty-state p { margin: 0; color: var(--muted); font-size: 0.86rem; }
+
+  @media (max-width: 820px) {
+    .search-layout { grid-template-columns: 1fr; gap: 64px; }
+    .search-controls { position: static; }
+  }
+
+  @media (max-width: 620px) {
+    .search-section { padding-block: 64px 88px; }
+    .tag-fieldset { margin-top: 38px; }
+    .results-head { min-height: 40px; }
+    .search-item-link { grid-template-columns: 34px minmax(0, 1fr) 22px; gap: 11px; padding-block: 25px; }
+    .search-item-link:hover, .search-item-link:focus-visible { padding-inline: 10px; }
+    .result-content h2 { font-size: 1.42rem; }
+    .result-content p { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+  }
+</style>

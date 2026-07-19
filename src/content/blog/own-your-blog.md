@@ -5,7 +5,7 @@ pubDate: 2026-07-19
 category: 思考
 tags: [独立博客, 写作, 开放互联网]
 readingTime: 8
-featured: true
+featured: false
 cover: light
 ---
 

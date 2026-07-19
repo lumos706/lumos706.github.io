@@ -63,7 +63,7 @@ const publishedISO = post.data.pubDate.toISOString();
         )}
         <div class="aside-block">
           <span class="aside-label">TAGS</span>
-          <div class="tags">{post.data.tags.map((tag) => <span>#{tag}</span>)}</div>
+          <div class="tags">{post.data.tags.map((tag) => <a href={`/search/?tag=${encodeURIComponent(tag)}`} aria-label={`筛选标签 ${tag}`}>#{tag}</a>)}</div>
         </div>
         {headings.length > 1 && (
           <nav class="article-toc" aria-label="文章目录">
@@ -148,6 +148,8 @@ const publishedISO = post.data.pubDate.toISOString();
   .aside-label { display: block; margin-bottom: 9px; color: var(--muted); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.14em; }
   .article-aside time, .tags { color: var(--muted); font-size: 0.76rem; line-height: 1.75; }
   .tags { display: flex; flex-wrap: wrap; gap: 4px 10px; }
+  .tags a { transition: color 180ms ease; }
+  .tags a:hover, .tags a:focus-visible { color: var(--ink); }
   .article-toc { display: grid; gap: 10px; margin: 42px 0; padding-top: 22px; border-top: 1px solid var(--line); }
   .article-toc a { color: var(--muted); font-size: 0.76rem; line-height: 1.5; transition: color 180ms ease, transform 180ms ease; }
   .article-toc a:hover { color: var(--ink); transform: translateX(3px); }
