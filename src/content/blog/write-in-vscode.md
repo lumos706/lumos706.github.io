@@ -71,7 +71,7 @@ cover: light
 npm run build
 ```
 
-它会先检查 Astro 与 TypeScript，再生成生产页面。确认没有错误后提交并推送到 `main` 分支，GitHub Actions 会自动部署。
+它会先检查 Astro 与 TypeScript，再生成生产页面。
 
 建议每次发布前至少检查：
 
@@ -82,3 +82,13 @@ npm run build
 - 草稿是否误设为可发布状态。
 
 把写作流程保持简单，更新才更容易成为一件长期做下去的事。
+
+## 提交并推送
+
+确认没有错误后提交并推送到 `main` 分支，GitHub Actions 会自动部署。运行下面的命令：
+
+```powershell
+git add .
+git commit -m "Update" # 可更换
+git push
+```
