@@ -1,0 +1,23 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ArrowIcon from '@/components/ArrowIcon.astro';
+---
+
+<BaseLayout title="页面未找到 — Lumos" description="你访问的页面不存在。">
+  <section class="wrap not-found">
+    <div class="code" aria-hidden="true">404</div>
+    <div>
+      <h1>这束光照不到这里。</h1>
+      <p>你访问的页面可能已经移动，或者从未存在。回到首页，继续阅读吧。</p>
+      <a class="button-primary" href="/">返回首页 <ArrowIcon direction="left" /></a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .not-found { display: grid; min-height: calc(100vh - 342px); grid-template-columns: 0.8fr 1fr; gap: 80px; align-items: center; padding-block: 96px; }
+  .code { color: var(--light); font: 500 clamp(8rem, 20vw, 18rem) / 0.8 var(--serif); letter-spacing: -0.1em; text-shadow: -1px -1px 0 var(--ink), 1px -1px 0 var(--ink), -1px 1px 0 var(--ink), 1px 1px 0 var(--ink); }
+  h1 { margin: 0; font: 500 clamp(3rem, 5vw, 4.6rem) / 1.05 var(--serif); letter-spacing: -0.05em; }
+  p { max-width: 560px; margin: 28px 0 38px; color: var(--muted); line-height: 1.9; }
+  @media (max-width: 760px) { .not-found { grid-template-columns: 1fr; gap: 30px; } .code { font-size: 9rem; } }
+</style>

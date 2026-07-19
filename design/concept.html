@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumos Blog — Homepage Concept</title>
+    <style>
+      :root {
+        --paper: #f5f2e9;
+        --paper-deep: #ebe5d8;
+        --ink: #171714;
+        --muted: #6d695f;
+        --line: rgba(23, 23, 20, 0.2);
+        --light: #ddff57;
+        --violet: #6657d8;
+        --serif: Georgia, "Times New Roman", "Songti SC", SimSun, serif;
+        --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+      html { background: var(--paper); color: var(--ink); }
+      body { margin: 0; font-family: var(--sans); background: var(--paper); }
+      a { color: inherit; text-decoration: none; }
+      .wrap { width: min(1240px, calc(100% - 80px)); margin: 0 auto; }
+
+      .nav {
+        height: 96px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--line);
+      }
+      .brand { display: flex; align-items: center; gap: 10px; font: 800 20px/1 var(--sans); letter-spacing: 0.12em; }
+      .brand-mark { position: relative; width: 22px; height: 22px; border: 2px solid var(--ink); border-radius: 50%; }
+      .brand-mark::before, .brand-mark::after { content: ""; position: absolute; left: 50%; top: 50%; background: var(--ink); transform: translate(-50%, -50%); }
+      .brand-mark::before { width: 30px; height: 2px; }
+      .brand-mark::after { width: 2px; height: 30px; }
+      .nav-links { display: flex; gap: 36px; align-items: center; color: var(--muted); font-size: 14px; }
+      .nav-links a:first-child { color: var(--ink); }
+      .nav-action { display: inline-flex; align-items: center; gap: 10px; padding-bottom: 6px; color: var(--ink); border-bottom: 1px solid var(--ink); }
+
+      .hero {
+        min-height: 730px;
+        display: grid;
+        grid-template-columns: 1.06fr 0.94fr;
+        gap: 84px;
+        align-items: center;
+        padding: 72px 0 88px;
+      }
+      h1 {
+        max-width: 700px;
+        margin: 0 0 32px;
+        font: 500 clamp(64px, 6vw, 92px)/1.02 var(--serif);
+        letter-spacing: -0.055em;
+      }
+      .hero-copy > p { max-width: 550px; margin: 0; color: var(--muted); font-size: 17px; line-height: 1.9; }
+      .hero-actions { display: flex; align-items: center; gap: 30px; margin-top: 44px; }
+      .primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 176px;
+        padding: 17px 19px;
+        color: var(--paper);
+        background: var(--ink);
+        font-size: 14px;
+      }
+      .primary span { font-size: 20px; line-height: 0; }
+      .secondary { color: var(--muted); font-size: 14px; border-bottom: 1px solid var(--line); padding: 8px 0; }
+      .hero-art {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 0.84;
+        overflow: hidden;
+        background: #171714;
+        color: #f5f2e9;
+      }
+      .hero-art::before {
+        content: "";
+        position: absolute;
+        width: 68%;
+        aspect-ratio: 1;
+        left: 16%;
+        top: 18%;
+        border-radius: 50%;
+        background: radial-gradient(circle at 36% 34%, #fffce3 0 5%, #efffb2 11%, #ddff57 29%, #7d8641 55%, #262720 71%);
+        box-shadow: 0 0 100px rgba(221, 255, 87, 0.23);
+      }
+      .hero-art::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0.18;
+        background-image: linear-gradient(rgba(255,255,255,.16) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.16) 1px, transparent 1px);
+        background-size: 46px 46px;
+        mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 85%, transparent);
+      }
+      .art-top, .art-bottom { position: absolute; z-index: 1; left: 28px; right: 28px; display: flex; justify-content: space-between; font-size: 10px; letter-spacing: .16em; }
+      .art-top { top: 26px; }
+      .art-bottom { bottom: 27px; color: rgba(245,242,233,.62); }
+      .art-word { position: absolute; z-index: 1; right: -22px; bottom: 150px; font: 500 96px/1 var(--serif); letter-spacing: -.06em; transform: rotate(-90deg); color: rgba(245,242,233,.12); }
+
+      .section { padding: 122px 0; border-top: 1px solid var(--line); }
+      .section-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 56px; }
+      .section-head h2 { margin: 0; font: 500 46px/1.1 var(--serif); letter-spacing: -.035em; }
+      .section-head span { color: var(--muted); font-size: 12px; letter-spacing: .14em; }
+      .featured { display: grid; grid-template-columns: 1.12fr .88fr; gap: 82px; align-items: center; }
+      .feature-poster {
+        position: relative;
+        min-height: 475px;
+        padding: 36px;
+        overflow: hidden;
+        background: var(--light);
+      }
+      .feature-poster::before { content: ""; position: absolute; width: 450px; height: 450px; right: -135px; bottom: -165px; border-radius: 50%; border: 88px solid var(--ink); }
+      .feature-poster::after { content: ""; position: absolute; top: 118px; left: 36px; width: calc(100% - 72px); height: 1px; background: rgba(23,23,20,.35); }
+      .poster-label { font-size: 11px; letter-spacing: .16em; }
+      .poster-number { position: absolute; left: 28px; bottom: -36px; font: 500 210px/1 var(--serif); letter-spacing: -.08em; }
+      .poster-note { position: absolute; top: 150px; right: 34px; width: 135px; font-size: 11px; line-height: 1.7; }
+      .feature-copy .meta { color: var(--muted); font-size: 12px; letter-spacing: .12em; }
+      .feature-copy h3 { margin: 22px 0 24px; font: 500 49px/1.17 var(--serif); letter-spacing: -.04em; }
+      .feature-copy p { color: var(--muted); font-size: 16px; line-height: 1.9; }
+      .read-link { display: inline-flex; gap: 44px; align-items: center; margin-top: 24px; padding: 12px 0; border-bottom: 1px solid var(--ink); font-size: 14px; }
+
+      .latest { padding-bottom: 136px; }
+      .post-row {
+        display: grid;
+        grid-template-columns: 74px 190px 1fr 40px;
+        gap: 24px;
+        align-items: center;
+        min-height: 138px;
+        border-top: 1px solid var(--line);
+      }
+      .post-row:last-child { border-bottom: 1px solid var(--line); }
+      .post-index { font: 400 17px/1 var(--serif); color: var(--muted); }
+      .post-meta { color: var(--muted); font-size: 12px; line-height: 1.8; }
+      .post-title { font: 500 29px/1.24 var(--serif); letter-spacing: -.025em; }
+      .post-arrow { font-size: 25px; }
+
+      .topics { background: var(--ink); color: var(--paper); padding: 105px 0 116px; }
+      .topics-title { margin: 0; font: 500 clamp(68px, 9.1vw, 132px)/.92 var(--serif); letter-spacing: -.065em; white-space: nowrap; }
+      .topics-title em { color: var(--light); font-style: normal; }
+      .topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 72px; margin-top: 88px; padding-top: 32px; border-top: 1px solid rgba(245,242,233,.2); }
+      .topic-grid strong { display: block; margin-bottom: 16px; font: 500 25px/1 var(--serif); }
+      .topic-grid p { margin: 0; color: rgba(245,242,233,.58); font-size: 14px; line-height: 1.8; }
+
+      .about-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 120px; align-items: start; padding: 132px 0; }
+      .about-strip h2 { margin: 0; font: 500 57px/1.08 var(--serif); letter-spacing: -.045em; }
+      .about-copy p { margin: 0 0 30px; color: var(--muted); font-size: 16px; line-height: 1.95; }
+      .about-copy a { display: inline-flex; gap: 34px; padding-bottom: 8px; border-bottom: 1px solid var(--ink); font-size: 14px; }
+
+      footer { color: var(--paper); background: var(--ink); }
+      .footer-inner { min-height: 246px; display: flex; flex-direction: column; justify-content: space-between; padding: 58px 0 36px; }
+      .footer-top, .footer-bottom { display: flex; align-items: flex-end; justify-content: space-between; }
+      .footer-brand { font: 500 56px/1 var(--serif); letter-spacing: -.04em; }
+      .footer-links { display: flex; gap: 30px; color: rgba(245,242,233,.6); font-size: 13px; }
+      .footer-bottom { color: rgba(245,242,233,.42); font-size: 11px; letter-spacing: .08em; }
+
+      @media (max-width: 840px) {
+        .wrap { width: min(100% - 40px, 640px); }
+        .nav { height: 76px; }
+        .nav-links a:not(.nav-action) { display: none; }
+        .hero { grid-template-columns: 1fr; gap: 54px; padding: 60px 0 72px; }
+        h1 { font-size: 54px; }
+        .hero-art { aspect-ratio: 1; }
+        .section { padding: 88px 0; }
+        .featured, .about-strip { grid-template-columns: 1fr; gap: 52px; }
+        .feature-copy h3 { font-size: 40px; }
+        .post-row { grid-template-columns: 42px 1fr 30px; padding: 28px 0; }
+        .post-meta { grid-column: 2; grid-row: 1; }
+        .post-title { grid-column: 2; font-size: 24px; }
+        .post-arrow { grid-column: 3; grid-row: 1 / 3; }
+        .topics-title { white-space: normal; font-size: 62px; }
+        .topic-grid { grid-template-columns: 1fr; gap: 38px; }
+        .footer-top { align-items: flex-start; gap: 36px; flex-direction: column; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="wrap nav">
+      <a class="brand" href="#"><span class="brand-mark"></span>LUMOS</a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="#">首页</a><a href="#">文章</a><a href="#">归档</a><a href="#">关于</a>
+        <a class="nav-action" href="#">夜间模式 <span>◐</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="wrap hero">
+        <div class="hero-copy">
+          <h1>在代码与生活之间，留下一束光。</h1>
+          <p>这里记录技术实践、设计观察，也收藏那些让日常变得清晰的微小发现。慢一点写，诚实一点想。</p>
+          <div class="hero-actions"><a class="primary" href="#featured">开始阅读 <span>↗</span></a><a class="secondary" href="#about">关于这个博客</a></div>
+        </div>
+        <div class="hero-art" aria-label="Lumos 光球视觉海报">
+          <div class="art-top"><span>FIELD NOTES</span><span>NO. 001</span></div>
+          <div class="art-word">lumos</div>
+          <div class="art-bottom"><span>MAKE THOUGHTS VISIBLE</span><span>2026</span></div>
+        </div>
+      </section>
+
+      <section id="featured" class="section">
+        <div class="wrap">
+          <div class="section-head"><h2>精选文章</h2><span>FEATURED / 01</span></div>
+          <div class="featured">
+            <div class="feature-poster"><span class="poster-label">LUMOS FIELD NOTE</span><span class="poster-number">01</span><p class="poster-note">Independent publishing, deliberate design, and a small corner of the open web.</p></div>
+            <div class="feature-copy"><div class="meta">思考 · 8 分钟阅读 · 2026.07.19</div><h3>把博客重新交还给自己</h3><p>社交平台让表达变得容易，却也让内容越来越短。重新拥有一个博客，不是怀旧，而是为长久的思考留下一块不被算法打断的地方。</p><a class="read-link" href="#">阅读全文 <span>↗</span></a></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap latest">
+        <div class="section-head"><h2>最近更新</h2><span>THE LATEST / 03</span></div>
+        <a class="post-row" href="#"><span class="post-index">01</span><span class="post-meta">技术<br />2026.07.19</span><span class="post-title">从动态 CMS 到静态站点：一次克制的技术选择</span><span class="post-arrow">↗</span></a>
+        <a class="post-row" href="#"><span class="post-index">02</span><span class="post-meta">设计<br />2026.07.18</span><span class="post-title">从 Halo 主题中学到的三件设计小事</span><span class="post-arrow">↗</span></a>
+        <a class="post-row" href="#"><span class="post-index">03</span><span class="post-meta">指南<br />2026.07.17</span><span class="post-title">如何在 VS Code 里写下一篇新文章</span><span class="post-arrow">↗</span></a>
+      </section>
+
+      <section class="topics">
+        <div class="wrap"><h2 class="topics-title">CODE <em>/</em> DESIGN <em>/</em> LIFE</h2><div class="topic-grid"><div><strong>代码</strong><p>记录开发实践、工具选择，以及那些值得被反复使用的解决方案。</p></div><div><strong>设计</strong><p>观察产品、界面和文字如何共同构成一种清晰而克制的体验。</p></div><div><strong>生活</strong><p>在效率之外，保存阅读、散步与日常里偶然亮起的时刻。</p></div></div></div>
+      </section>
+
+      <section id="about" class="wrap about-strip">
+        <h2>一间持续生长的<br />数字书房。</h2>
+        <div class="about-copy"><p>Lumos 是一个独立个人博客。这里没有信息流的催促，也不追逐转瞬即逝的热点；只有经过整理的经验、仍在发生的思考，以及对开放互联网的一点坚持。</p><a href="#">更多关于我 <span>↗</span></a></div>
+      </section>
+    </main>
+
+    <footer><div class="wrap footer-inner"><div class="footer-top"><div class="footer-brand">Lumos.</div><div class="footer-links"><a href="#">GitHub</a><a href="#">RSS</a><a href="#">文章归档</a></div></div><div class="footer-bottom"><span>© 2026 LUMOS</span><span>DESIGNED IN THE OPEN WEB</span></div></div></footer>
+  </body>
+</html>

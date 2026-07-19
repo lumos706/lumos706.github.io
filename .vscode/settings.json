@@ -1,0 +1,13 @@
+{
+  "python.defaultInterpreterPath": "D:\\miniconda3\\python.exe",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "astro-build.astro-vscode",
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "files.exclude": {
+    ".astro": true,
+    "dist": true
+  }
+}

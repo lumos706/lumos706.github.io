@@ -1,0 +1,66 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  label: string;
+}
+
+const { title, description, label } = Astro.props;
+---
+
+<header class="wrap page-intro">
+  <span class="page-label">{label}</span>
+  <h1>{title}</h1>
+  <p>{description}</p>
+</header>
+
+<style>
+  .page-intro {
+    display: grid;
+    min-height: 510px;
+    grid-template-columns: 0.72fr 1.45fr;
+    grid-template-rows: auto 1fr;
+    column-gap: clamp(42px, 7vw, 96px);
+    align-items: end;
+    padding-block: 88px 92px;
+  }
+
+  .page-label {
+    align-self: start;
+    color: var(--muted);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    grid-column: 2;
+    align-self: end;
+    margin: 0;
+    font: 500 clamp(4.2rem, 8vw, 7.25rem) / 0.98 var(--serif);
+    letter-spacing: -0.065em;
+  }
+
+  p {
+    grid-column: 2;
+    max-width: 650px;
+    margin: 30px 0 0;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  @media (max-width: 760px) {
+    .page-intro {
+      min-height: 420px;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      align-content: end;
+      padding-block: 64px 72px;
+    }
+    .page-label { margin-bottom: 56px; }
+    h1, p { grid-column: 1; }
+    h1 { font-size: clamp(3.5rem, 18vw, 5.4rem); }
+  }
+</style>

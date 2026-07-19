@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageIntro from '@/components/PageIntro.astro';
+import PostRow from '@/components/PostRow.astro';
+import { sortPosts } from '@/lib/blog';
+
+const posts = sortPosts(await getCollection('blog', ({ data }) => !data.draft));
+---
+
+<BaseLayout title="全部文章 — Lumos" description="Lumos 的全部技术、设计与生活文章。">
+  <PageIntro label={`ARTICLES / ${String(posts.length).padStart(2, '0')}`} title="全部文章" description="长文章、短笔记，以及一些仍在形成中的答案。按时间排列，也欢迎从任何一个标题开始。" />
+  <section class="section">
+    <div class="wrap post-list">
+      {posts.map((post, index) => <PostRow index={index + 1} slug={post.id} title={post.data.title} category={post.data.category} pubDate={post.data.pubDate} />)}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .post-list { padding-bottom: 24px; }
+</style>

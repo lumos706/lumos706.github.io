@@ -1,0 +1,207 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ArrowIcon from '@/components/ArrowIcon.astro';
+import { formatDate, sortPosts } from '@/lib/blog';
+
+type Post = CollectionEntry<'blog'>;
+
+export async function getStaticPaths() {
+  const posts = sortPosts(await getCollection('blog', ({ data }) => !data.draft));
+  return posts.map((post, index) => ({
+    params: { id: post.id },
+    props: {
+      post,
+      newer: index > 0 ? posts[index - 1] : undefined,
+      older: index < posts.length - 1 ? posts[index + 1] : undefined,
+    },
+  }));
+}
+
+interface Props {
+  post: Post;
+  newer?: Post;
+  older?: Post;
+}
+
+const { post, newer, older } = Astro.props;
+const { Content, headings } = await render(post);
+const publishedISO = post.data.pubDate.toISOString();
+---
+
+<BaseLayout title={`${post.data.title} — Lumos`} description={post.data.description} type="article" publishedTime={publishedISO}>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
+  <article>
+    <header class="wrap article-header">
+      <div class="article-meta">
+        <span>{post.data.category}</span>
+        <time datetime={publishedISO}>{formatDate(post.data.pubDate)}</time>
+        <span>{post.data.readingTime} 分钟阅读</span>
+      </div>
+      <h1>{post.data.title}</h1>
+      <p>{post.data.description}</p>
+    </header>
+
+    <div class:list={['wrap', 'article-cover', `cover-${post.data.cover}`]} role="img" aria-label={`${post.data.title} 文章封面`}>
+      <span class="cover-top">LUMOS FIELD NOTE</span>
+      <span class="cover-category">{post.data.category}</span>
+      <span class="cover-title">{post.data.title}</span>
+      <span class="cover-year">{post.data.pubDate.getFullYear()}</span>
+    </div>
+
+    <div class="wrap article-grid">
+      <aside class="article-aside">
+        <div class="aside-block">
+          <span class="aside-label">PUBLISHED</span>
+          <time datetime={publishedISO}>{formatDate(post.data.pubDate)}</time>
+        </div>
+        {post.data.updatedDate && (
+          <div class="aside-block">
+            <span class="aside-label">UPDATED</span>
+            <time datetime={post.data.updatedDate.toISOString()}>{formatDate(post.data.updatedDate)}</time>
+          </div>
+        )}
+        <div class="aside-block">
+          <span class="aside-label">TAGS</span>
+          <div class="tags">{post.data.tags.map((tag) => <span>#{tag}</span>)}</div>
+        </div>
+        {headings.length > 1 && (
+          <nav class="article-toc" aria-label="文章目录">
+            <span class="aside-label">CONTENTS</span>
+            {headings.filter((heading) => heading.depth === 2).map((heading) => <a href={`#${heading.slug}`}>{heading.text}</a>)}
+          </nav>
+        )}
+        <button class="copy-link" type="button" data-copy-link><span>复制文章链接</span><ArrowIcon /></button>
+      </aside>
+
+      <div class="prose"><Content /></div>
+    </div>
+
+    <nav class="wrap post-navigation" aria-label="相邻文章">
+      {older ? (
+        <a class="post-nav older" href={`/posts/${older.id}/`}><small>上一篇</small><strong>{older.data.title}</strong><ArrowIcon direction="left" /></a>
+      ) : <span></span>}
+      {newer ? (
+        <a class="post-nav newer" href={`/posts/${newer.id}/`}><small>下一篇</small><strong>{newer.data.title}</strong><ArrowIcon direction="right" /></a>
+      ) : <span></span>}
+    </nav>
+  </article>
+</BaseLayout>
+
+<script>
+  const progressBar = document.querySelector<HTMLElement>('.reading-progress span');
+  let scheduled = false;
+
+  function updateProgress() {
+    const distance = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = distance > 0 ? Math.min(window.scrollY / distance, 1) : 0;
+    progressBar?.style.setProperty('transform', `scaleX(${progress})`);
+    scheduled = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(updateProgress);
+  }, { passive: true });
+  updateProgress();
+
+  const copyButton = document.querySelector<HTMLButtonElement>('[data-copy-link]');
+  copyButton?.addEventListener('click', async () => {
+    const label = copyButton.querySelector('span');
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      if (label) label.textContent = '链接已复制';
+      setTimeout(() => { if (label) label.textContent = '复制文章链接'; }, 1800);
+    } catch {
+      if (label) label.textContent = '请复制地址栏链接';
+    }
+  });
+</script>
+
+<style>
+  .reading-progress { position: fixed; z-index: 50; top: 0; right: 0; left: 0; height: 3px; pointer-events: none; }
+  .reading-progress span { display: block; width: 100%; height: 100%; background: var(--light); transform: scaleX(0); transform-origin: left; }
+  .article-header { max-width: 1060px; padding-block: clamp(82px, 9vw, 130px) clamp(66px, 8vw, 108px); }
+  .article-meta { display: flex; flex-wrap: wrap; gap: 18px 28px; margin-bottom: 34px; color: var(--muted); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+  .article-header h1 { max-width: 980px; margin: 0; font: 500 clamp(3.5rem, 7vw, 6.8rem) / 1.03 var(--serif); letter-spacing: -0.06em; }
+  .article-header > p { max-width: 690px; margin: 36px 0 0; color: var(--muted); font-size: 1.08rem; line-height: 1.9; }
+
+  .article-cover { position: relative; min-height: clamp(360px, 48vw, 610px); overflow: hidden; isolation: isolate; }
+  .article-cover::before, .article-cover::after { position: absolute; z-index: -1; content: ''; }
+  .article-cover::before { right: -9%; bottom: -38%; width: min(56vw, 690px); aspect-ratio: 1; border: clamp(58px, 7vw, 104px) solid currentColor; border-radius: 50%; }
+  .article-cover::after { inset: 0; opacity: 0.15; background-image: linear-gradient(currentColor 1px, transparent 1px), linear-gradient(90deg, currentColor 1px, transparent 1px); background-size: 58px 58px; }
+  .cover-light { color: #171714; background: #ddff57; }
+  .cover-violet { color: #f5f2e9; background: #6657d8; }
+  .cover-ink { color: #f5f2e9; background: #171714; }
+  .cover-paper { color: #171714; background: #ebe5d8; }
+  :root[data-theme='dark'] .cover-paper { color: #f5f2e9; background: #292821; }
+  .cover-top, .cover-category, .cover-year { position: absolute; z-index: 1; font-size: 0.68rem; letter-spacing: 0.15em; }
+  .cover-top { top: 34px; left: 38px; }
+  .cover-category { top: 34px; right: 38px; }
+  .cover-year { right: 38px; bottom: 34px; }
+  .cover-title { position: absolute; z-index: 1; bottom: 30px; left: 38px; width: min(66%, 760px); font: 500 clamp(3.1rem, 6.2vw, 6.2rem) / 0.98 var(--serif); letter-spacing: -0.06em; }
+
+  .article-grid { display: grid; max-width: 1100px; grid-template-columns: 210px minmax(0, 720px); gap: clamp(58px, 8vw, 112px); padding-block: clamp(88px, 9vw, 132px); }
+  .article-aside { position: sticky; top: 32px; align-self: start; }
+  .aside-block { margin-bottom: 28px; }
+  .aside-label { display: block; margin-bottom: 9px; color: var(--muted); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.14em; }
+  .article-aside time, .tags { color: var(--muted); font-size: 0.76rem; line-height: 1.75; }
+  .tags { display: flex; flex-wrap: wrap; gap: 4px 10px; }
+  .article-toc { display: grid; gap: 10px; margin: 42px 0; padding-top: 22px; border-top: 1px solid var(--line); }
+  .article-toc a { color: var(--muted); font-size: 0.76rem; line-height: 1.5; transition: color 180ms ease, transform 180ms ease; }
+  .article-toc a:hover { color: var(--ink); transform: translateX(3px); }
+  .copy-link { display: inline-flex; width: 100%; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--muted); background: transparent; font-size: 0.76rem; cursor: pointer; }
+  .copy-link :global(.arrow-icon) { width: 16px; }
+
+  :global(.prose) { min-width: 0; color: var(--ink); font-size: 1.05rem; line-height: 2; }
+  :global(.prose > :first-child) { margin-top: 0; }
+  :global(.prose h2) { margin: 3.1em 0 1em; scroll-margin-top: 30px; font: 500 clamp(2rem, 3.7vw, 2.8rem) / 1.2 var(--serif); letter-spacing: -0.04em; }
+  :global(.prose h3) { margin: 2.5em 0 0.8em; font: 600 1.35rem / 1.4 var(--serif); }
+  :global(.prose p) { margin: 0 0 1.5em; }
+  :global(.prose a) { text-decoration: underline; text-decoration-color: var(--violet); text-decoration-thickness: 1px; text-underline-offset: 4px; }
+  :global(.prose strong) { font-weight: 700; }
+  :global(.prose blockquote) { margin: 2.4em 0; padding: 28px 32px; border-left: 4px solid var(--light); color: var(--muted); background: var(--paper-deep); font: 500 1.35rem / 1.7 var(--serif); }
+  :global(.prose blockquote p:last-child) { margin-bottom: 0; }
+  :global(.prose ul), :global(.prose ol) { margin: 0 0 1.8em; padding-left: 1.4em; }
+  :global(.prose li) { margin-bottom: 0.55em; padding-left: 0.35em; }
+  :global(.prose code) { padding: 0.15em 0.35em; border: 1px solid var(--line); background: var(--paper-deep); font: 0.88em/1.5 Consolas, "SFMono-Regular", monospace; }
+  :global(.prose pre) { margin: 2.2em 0; padding: 24px 26px; overflow-x: auto; border: 1px solid rgba(255,255,255,.08); background: #171714 !important; }
+  :global(.prose pre code) { padding: 0; border: 0; color: inherit; background: transparent; }
+  :global(.prose hr) { height: 1px; margin: 3.5em 0; border: 0; background: var(--line); }
+  :global(.prose table) { width: 100%; margin: 2em 0; border-collapse: collapse; font-size: 0.92rem; }
+  :global(.prose th), :global(.prose td) { padding: 12px 14px; border: 1px solid var(--line); text-align: left; }
+  :global(.prose th) { background: var(--paper-deep); }
+
+  .post-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-bottom: clamp(88px, 10vw, 140px); border: 1px solid var(--line); background: var(--line); }
+  .post-nav { position: relative; display: grid; min-height: 190px; align-content: center; padding: 34px 76px 34px 34px; background: var(--paper); transition: color 200ms ease, background 200ms ease; }
+  .post-nav.newer { padding: 34px 34px 34px 76px; text-align: right; }
+  .post-nav small { margin-bottom: 12px; color: var(--muted); font-size: 0.68rem; letter-spacing: 0.12em; }
+  .post-nav strong { font: 500 clamp(1.25rem, 2.4vw, 1.8rem) / 1.35 var(--serif); }
+  .post-nav :global(.arrow-icon) { position: absolute; top: calc(50% - 12px); }
+  .post-nav.older :global(.arrow-icon) { right: 30px; }
+  .post-nav.newer :global(.arrow-icon) { left: 30px; }
+  .post-nav:hover { color: #171714; background: var(--light); }
+
+  @media (max-width: 820px) {
+    .cover-title { width: 78%; }
+    .article-grid { grid-template-columns: 1fr; }
+    .article-aside { position: static; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+    .article-toc { display: none; }
+    .copy-link { align-self: start; }
+  }
+
+  @media (max-width: 620px) {
+    .article-header h1 { font-size: clamp(3.1rem, 14vw, 4.6rem); }
+    .article-cover { width: 100%; min-height: 430px; }
+    .cover-title { bottom: 28px; left: 22px; width: 82%; font-size: clamp(2.8rem, 14vw, 4.5rem); }
+    .cover-top { top: 24px; left: 22px; }
+    .cover-category { top: 24px; right: 22px; }
+    .cover-year { right: 22px; bottom: 24px; }
+    .article-grid { padding-block: 72px 90px; }
+    .article-aside { grid-template-columns: 1fr; }
+    :global(.prose) { font-size: 1rem; }
+    :global(.prose blockquote) { margin-inline: 0; padding: 22px; font-size: 1.15rem; }
+    .post-navigation { grid-template-columns: 1fr; }
+  }
+</style>

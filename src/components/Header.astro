@@ -1,0 +1,213 @@
+---
+import Brand from './Brand.astro';
+
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+const navItems = [
+  { href: '/', label: '首页' },
+  { href: '/posts/', label: '文章' },
+  { href: '/archive/', label: '归档' },
+  { href: '/about/', label: '关于' },
+];
+
+const isActive = (href: string) => href === '/' ? currentPath === '/' : currentPath.startsWith(href);
+---
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand-link" href="/" aria-label="Lumos 首页"><Brand /></a>
+
+    <button class="menu-toggle" type="button" aria-label="打开导航菜单" aria-controls="site-navigation" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+
+    <nav id="site-navigation" class="site-nav" aria-label="主导航">
+      {navItems.map((item) => (
+        <a class:list={['nav-link', { active: isActive(item.href) }]} href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>{item.label}</a>
+      ))}
+      <button class="theme-toggle" type="button" aria-label="切换至深色模式">
+        <span class="theme-label">夜间模式</span>
+        <svg viewBox="0 0 20 20" aria-hidden="true">
+          <circle cx="10" cy="10" r="7.25" fill="none" stroke="currentColor" stroke-width="1.5" />
+          <path d="M10 2.75a7.25 7.25 0 0 1 0 14.5z" fill="currentColor" />
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const root = document.documentElement;
+  const themeToggle = document.querySelector<HTMLButtonElement>('.theme-toggle');
+  const themeLabel = themeToggle?.querySelector<HTMLElement>('.theme-label');
+  const menuToggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const nav = document.querySelector<HTMLElement>('.site-nav');
+
+  function syncThemeControl() {
+    const dark = root.dataset.theme === 'dark';
+    if (themeLabel) themeLabel.textContent = dark ? '日间模式' : '夜间模式';
+    themeToggle?.setAttribute('aria-label', dark ? '切换至浅色模式' : '切换至深色模式');
+  }
+
+  themeToggle?.addEventListener('click', () => {
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    localStorage.setItem('lumos-theme', next);
+    syncThemeControl();
+  });
+
+  menuToggle?.addEventListener('click', () => {
+    const open = menuToggle.getAttribute('aria-expanded') !== 'true';
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? '关闭导航菜单' : '打开导航菜单');
+    nav?.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
+  });
+
+  nav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    menuToggle?.setAttribute('aria-label', '打开导航菜单');
+    nav.classList.remove('open');
+    document.body.classList.remove('menu-open');
+  }));
+
+  syncThemeControl();
+</script>
+
+<style>
+  .site-header {
+    position: relative;
+    z-index: 20;
+  }
+
+  .header-inner {
+    display: flex;
+    height: 96px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .brand-link {
+    position: relative;
+    z-index: 22;
+  }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(22px, 2.5vw, 36px);
+  }
+
+  .nav-link,
+  .theme-toggle {
+    position: relative;
+    color: var(--muted);
+    font-size: 0.84rem;
+  }
+
+  .nav-link::after {
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    left: 0;
+    height: 1px;
+    content: '';
+    background: var(--ink);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 260ms var(--ease);
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--ink);
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 7px 0;
+    border: 0;
+    border-bottom: 1px solid var(--line-strong);
+    color: var(--ink);
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .theme-toggle svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .menu-toggle {
+    position: relative;
+    z-index: 22;
+    display: none;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    position: absolute;
+    left: 7px;
+    width: 24px;
+    height: 1.5px;
+    background: var(--ink);
+    transition: transform 260ms var(--ease), top 260ms var(--ease);
+  }
+
+  .menu-toggle span:first-child { top: 14px; }
+  .menu-toggle span:last-child { top: 23px; }
+  .menu-toggle[aria-expanded='true'] span:first-child { top: 19px; transform: rotate(45deg); }
+  .menu-toggle[aria-expanded='true'] span:last-child { top: 19px; transform: rotate(-45deg); }
+
+  @media (max-width: 760px) {
+    .header-inner { height: 76px; }
+    .menu-toggle { display: block; }
+
+    .site-nav {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      visibility: hidden;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 24px;
+      padding-inline: var(--gutter);
+      opacity: 0;
+      background: var(--paper);
+      transform: translateY(-10px);
+      transition: opacity 220ms ease, transform 280ms var(--ease), visibility 220ms;
+    }
+
+    .site-nav.open {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .nav-link {
+      font: 500 clamp(2.6rem, 12vw, 4.5rem) / 1.05 var(--serif);
+      letter-spacing: -0.045em;
+    }
+
+    .nav-link::after { display: none; }
+    .theme-toggle { margin-top: 20px; font-size: 0.9rem; }
+  }
+</style>

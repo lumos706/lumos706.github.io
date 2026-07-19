@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageIntro from '@/components/PageIntro.astro';
+import ArrowIcon from '@/components/ArrowIcon.astro';
+import { formatDate, sortPosts } from '@/lib/blog';
+
+const posts = sortPosts(await getCollection('blog', ({ data }) => !data.draft));
+const years = posts.reduce<Record<string, typeof posts>>((groups, post) => {
+  const year = String(post.data.pubDate.getFullYear());
+  (groups[year] ??= []).push(post);
+  return groups;
+}, {});
+---
+
+<BaseLayout title="文章归档 — Lumos" description="按年份浏览 Lumos 的所有文章。">
+  <PageIntro label="ARCHIVE / INDEX" title="文章归档" description="把时间变成索引。这里保留每一次发布，也让旧文章在多年后仍然容易被找到。" />
+  <section class="section archive-section">
+    <div class="wrap archive">
+      {Object.entries(years).map(([year, yearPosts]) => (
+        <section class="year-group" data-reveal>
+          <h2>{year}</h2>
+          <div class="year-posts">
+            {yearPosts.map((post) => (
+              <a class="archive-row" href={`/posts/${post.id}/`}>
+                <time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate).slice(5)}</time>
+                <span>{post.data.title}</span>
+                <small>{post.data.category}</small>
+                <ArrowIcon />
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .archive { display: grid; gap: 96px; }
+  .year-group { display: grid; grid-template-columns: 0.32fr 1fr; gap: clamp(32px, 6vw, 92px); }
+  .year-group h2 { margin: -0.14em 0 0; color: var(--muted); font: 500 clamp(3.2rem, 5.8vw, 5.4rem) / 1 var(--serif); letter-spacing: -0.06em; }
+  .archive-row { display: grid; grid-template-columns: 90px minmax(0, 1fr) 80px 24px; gap: 20px; align-items: center; min-height: 94px; border-top: 1px solid var(--line); transition: padding 260ms var(--ease), color 200ms ease; }
+  .archive-row:last-child { border-bottom: 1px solid var(--line); }
+  .archive-row:hover, .archive-row:focus-visible { padding-inline: 16px; color: #171714; background: var(--light); }
+  .archive-row time, .archive-row small { color: var(--muted); font-size: 0.72rem; }
+  .archive-row span { font: 500 clamp(1.1rem, 1.8vw, 1.4rem) / 1.35 var(--serif); }
+  .archive-row:hover :global(.arrow-icon) { transform: translate(3px, -3px); }
+
+  @media (max-width: 760px) {
+    .year-group { grid-template-columns: 1fr; gap: 26px; }
+    .archive-row { grid-template-columns: 62px minmax(0, 1fr) 22px; padding-block: 22px; }
+    .archive-row small { display: none; }
+  }
+</style>

@@ -1,0 +1,77 @@
+<div class="hero-art" aria-label="Lumos 光球视觉海报" role="img">
+  <div class="art-top"><span>FIELD NOTES</span><span>NO. 001</span></div>
+  <span class="orb" aria-hidden="true"></span>
+  <span class="art-word" aria-hidden="true">lumos</span>
+  <div class="art-bottom"><span>MAKE THOUGHTS VISIBLE</span><span>2026</span></div>
+</div>
+
+<style>
+  .hero-art {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 0.84;
+    overflow: hidden;
+    color: #f5f2e9;
+    background: #171714;
+    isolation: isolate;
+  }
+
+  .hero-art::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: '';
+    opacity: 0.18;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+    background-size: 46px 46px;
+    mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 85%, transparent);
+  }
+
+  .orb {
+    position: absolute;
+    z-index: -1;
+    top: 18%;
+    left: 16%;
+    width: 68%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle at 36% 34%, #fffce3 0 5%, #efffb2 11%, #ddff57 29%, #7d8641 55%, #262720 71%);
+    box-shadow: 0 0 100px rgba(221, 255, 87, 0.23);
+    animation: float 7s ease-in-out infinite;
+  }
+
+  .art-top,
+  .art-bottom {
+    position: absolute;
+    right: 28px;
+    left: 28px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+  }
+
+  .art-top { top: 26px; }
+  .art-bottom { bottom: 27px; color: rgba(245, 242, 233, 0.62); }
+
+  .art-word {
+    position: absolute;
+    right: -22px;
+    bottom: 150px;
+    color: rgba(245, 242, 233, 0.12);
+    font: 500 clamp(5rem, 7vw, 6rem) / 1 var(--serif);
+    letter-spacing: -0.06em;
+    transform: rotate(-90deg);
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(0, -9px, 0) scale(1.012); }
+  }
+
+  @media (max-width: 760px) {
+    .hero-art { aspect-ratio: 1; }
+    .art-top, .art-bottom { right: 18px; left: 18px; font-size: 0.54rem; }
+    .art-word { right: -26px; bottom: 100px; font-size: 4rem; }
+  }
+</style>

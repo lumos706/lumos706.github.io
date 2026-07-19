@@ -1,0 +1,64 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PageIntro from '@/components/PageIntro.astro';
+import ArrowIcon from '@/components/ArrowIcon.astro';
+---
+
+<BaseLayout title="关于 — Lumos" description="关于 Lumos 这间数字书房，以及它如何被设计和维护。">
+  <PageIntro label="ABOUT / LUMOS" title="你好，这里是 Lumos。" description="一间由 @lumos706 持续整理的数字书房，也是一块不被算法打断的自留地。" />
+
+  <section class="about-lead">
+    <div class="wrap lead-grid">
+      <div class="lead-mark" aria-hidden="true"><span></span></div>
+      <blockquote data-reveal>“写作不是把已经想清楚的事记下来，而是在句子里慢慢看清它。”</blockquote>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap about-grid">
+      <div class="about-label">THIS PLACE</div>
+      <div class="about-body">
+        <h2 data-reveal>写技术，也写技术之外。</h2>
+        <p data-reveal>这里主要记录开发实践、产品与界面设计，以及那些值得长期保存的学习笔记。比起追逐更新速度，我更在意内容能否在半年或几年以后依然有用。</p>
+        <p data-reveal>站点采用静态生成并托管在 GitHub Pages：页面足够快，内容由 Markdown 文件长期保存，版本历史也完全属于自己。</p>
+
+        <div class="principles" data-reveal>
+          <div><span>01</span><strong>具体</strong><p>尽量提供可以复现的过程，而不只给出结论。</p></div>
+          <div><span>02</span><strong>诚实</strong><p>标记未知、取舍与局限，不把经验包装成唯一答案。</p></div>
+          <div><span>03</span><strong>长久</strong><p>为未来的自己写，也让链接在时间里保持可访问。</p></div>
+        </div>
+
+        <a class="contact-link" href="https://github.com/lumos706" target="_blank" rel="noreferrer">在 GitHub 找到我 <ArrowIcon /></a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-lead { padding-block: clamp(84px, 8vw, 116px); color: #171714; background: #ddff57; }
+  .lead-grid { display: grid; grid-template-columns: 0.38fr 1fr; gap: clamp(42px, 8vw, 110px); align-items: center; }
+  .lead-mark { position: relative; width: min(230px, 100%); aspect-ratio: 1; border: 3px solid #171714; border-radius: 50%; }
+  .lead-mark::before, .lead-mark::after { position: absolute; top: 50%; left: 50%; content: ''; background: #171714; transform: translate(-50%, -50%); }
+  .lead-mark::before { width: 132%; height: 3px; }
+  .lead-mark::after { width: 3px; height: 132%; }
+  blockquote { max-width: 850px; margin: 0; font: 500 clamp(2.6rem, 5vw, 4.65rem) / 1.24 var(--serif); letter-spacing: -0.045em; }
+  .about-grid { display: grid; grid-template-columns: 0.32fr 1fr; gap: clamp(52px, 8vw, 116px); }
+  .about-label { color: var(--muted); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; }
+  .about-body h2 { margin: 0 0 42px; font: 500 clamp(2.8rem, 5vw, 4.6rem) / 1.08 var(--serif); letter-spacing: -0.05em; }
+  .about-body > p { max-width: 760px; margin: 0 0 24px; color: var(--muted); font-size: 1.04rem; line-height: 1.95; }
+  .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; margin-block: 76px; padding-top: 28px; border-top: 1px solid var(--line); }
+  .principles span { display: block; margin-bottom: 34px; color: var(--muted); font: 500 0.8rem / 1 var(--serif); }
+  .principles strong { font: 500 1.55rem / 1 var(--serif); }
+  .principles p { margin: 14px 0 0; color: var(--muted); font-size: 0.84rem; line-height: 1.8; }
+  .contact-link { display: inline-flex; align-items: center; gap: 40px; padding: 18px 20px; border: 1px solid var(--ink); color: var(--paper); background: var(--ink); font-size: 0.88rem; }
+  .contact-link:hover { color: #171714; background: var(--light); }
+  .contact-link:hover :global(.arrow-icon) { transform: translate(3px, -3px); }
+
+  @media (max-width: 760px) {
+    .lead-grid, .about-grid { grid-template-columns: 1fr; }
+    .lead-mark { width: 128px; }
+    blockquote { font-size: clamp(2.3rem, 10vw, 3.5rem); }
+    .principles { grid-template-columns: 1fr; gap: 42px; }
+    .principles span { margin-bottom: 18px; }
+  }
+</style>
