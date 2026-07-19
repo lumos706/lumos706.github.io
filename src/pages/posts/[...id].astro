@@ -172,6 +172,17 @@ const publishedISO = post.data.pubDate.toISOString();
   :global(.prose table) { width: 100%; margin: 2em 0; border-collapse: collapse; font-size: 0.92rem; }
   :global(.prose th), :global(.prose td) { padding: 12px 14px; border: 1px solid var(--line); text-align: left; }
   :global(.prose th) { background: var(--paper-deep); }
+  :global(.prose .pet-portrait), :global(.prose .pet-contact-sheet), :global(.prose .pet-motion-grid) { margin: 2.5em 0; }
+  :global(.prose .pet-portrait), :global(.prose .pet-contact-sheet), :global(.prose .pet-motion-grid figure) { border: 1px solid var(--line); }
+  :global(.prose .pet-portrait) { display: grid; place-items: center; padding: 46px 28px 22px; color: #171714; background: #ddff57; }
+  :global(.prose .pet-portrait img) { width: 230px; max-width: 72%; height: auto; }
+  :global(.prose .pet-contact-sheet) { padding: 14px 14px 18px; background: var(--paper-deep); }
+  :global(.prose .pet-contact-sheet img) { width: 100%; height: auto; }
+  :global(.prose .pet-motion-grid) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  :global(.prose .pet-motion-grid figure) { display: grid; place-items: center; margin: 0; padding: 28px 20px 18px; background: var(--paper-deep); }
+  :global(.prose .pet-motion-grid img) { width: 220px; max-width: 100%; height: auto; }
+  :global(.prose figcaption) { margin-top: 12px; color: var(--muted); font-size: 0.75rem; line-height: 1.65; text-align: center; }
+  :global(.prose .pet-portrait figcaption) { color: rgba(23, 23, 20, 0.68); }
 
   .post-navigation { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-bottom: clamp(88px, 10vw, 140px); border: 1px solid var(--line); background: var(--line); }
   .post-nav { position: relative; display: grid; min-height: 190px; align-content: center; padding: 34px 76px 34px 34px; background: var(--paper); transition: color 200ms ease, background 200ms ease; }
@@ -194,7 +205,7 @@ const publishedISO = post.data.pubDate.toISOString();
   @media (max-width: 620px) {
     .article-header h1 { font-size: clamp(3.1rem, 14vw, 4.6rem); }
     .article-cover { width: 100%; min-height: 430px; }
-    .cover-title { bottom: 28px; left: 22px; width: 82%; font-size: clamp(2.8rem, 14vw, 4.5rem); }
+    .cover-title { bottom: 28px; left: 22px; width: 76%; font-size: clamp(2.8rem, 14vw, 4.5rem); }
     .cover-top { top: 24px; left: 22px; }
     .cover-category { top: 24px; right: 22px; }
     .cover-year { right: 22px; bottom: 24px; }
@@ -202,6 +213,8 @@ const publishedISO = post.data.pubDate.toISOString();
     .article-aside { grid-template-columns: 1fr; }
     :global(.prose) { font-size: 1rem; }
     :global(.prose blockquote) { margin-inline: 0; padding: 22px; font-size: 1.15rem; }
+    :global(.prose .pet-motion-grid) { grid-template-columns: 1fr; }
+    :global(.prose .pet-portrait) { padding-top: 36px; }
     .post-navigation { grid-template-columns: 1fr; }
   }
 </style>
