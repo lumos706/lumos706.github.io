@@ -128,19 +128,19 @@ const publishedISO = post.data.pubDate.toISOString();
   .article-header > p { max-width: 690px; margin: 36px 0 0; color: var(--muted); font-size: 1.08rem; line-height: 1.9; }
 
   .article-cover { position: relative; min-height: clamp(360px, 48vw, 610px); overflow: hidden; isolation: isolate; }
-  .article-cover::before, .article-cover::after { position: absolute; z-index: -1; content: ''; }
-  .article-cover::before { right: -9%; bottom: -38%; width: min(56vw, 690px); aspect-ratio: 1; border: clamp(58px, 7vw, 104px) solid currentColor; border-radius: 50%; }
+  .article-cover::before, .article-cover::after { position: absolute; z-index: 0; content: ''; }
+  .article-cover::before { right: -9%; bottom: -38%; width: min(56vw, 690px); aspect-ratio: 1; border: clamp(58px, 7vw, 104px) solid currentColor; border-radius: 50%; opacity: 0.22; }
   .article-cover::after { inset: 0; opacity: 0.15; background-image: linear-gradient(currentColor 1px, transparent 1px), linear-gradient(90deg, currentColor 1px, transparent 1px); background-size: 58px 58px; }
   .cover-light { color: #171714; background: #ddff57; }
   .cover-violet { color: #f5f2e9; background: #6657d8; }
   .cover-ink { color: #f5f2e9; background: #171714; }
   .cover-paper { color: #171714; background: #ebe5d8; }
   :root[data-theme='dark'] .cover-paper { color: #f5f2e9; background: #292821; }
-  .cover-top, .cover-category, .cover-year { position: absolute; z-index: 1; font-size: 0.68rem; letter-spacing: 0.15em; }
+  .cover-top, .cover-category, .cover-year { position: absolute; z-index: 2; font-size: 0.68rem; letter-spacing: 0.15em; }
   .cover-top { top: 34px; left: 38px; }
   .cover-category { top: 34px; right: 38px; }
   .cover-year { right: 38px; bottom: 34px; }
-  .cover-title { position: absolute; z-index: 1; bottom: 30px; left: 38px; width: min(66%, 760px); font: 500 clamp(3.1rem, 6.2vw, 6.2rem) / 0.98 var(--serif); letter-spacing: -0.06em; }
+  .cover-title { position: absolute; z-index: 2; bottom: 30px; left: 38px; width: min(66%, 760px); font: 500 clamp(3.1rem, 6.2vw, 6.2rem) / 0.98 var(--serif); letter-spacing: -0.06em; }
 
   .article-grid { display: grid; max-width: 1100px; grid-template-columns: 210px minmax(0, 720px); gap: clamp(58px, 8vw, 112px); padding-block: clamp(88px, 9vw, 132px); }
   .article-aside { position: sticky; top: 32px; align-self: start; }
