@@ -5,7 +5,7 @@ pubDate: 2026-07-19T20:30:00+08:00
 category: 创作
 tags: [Codex, Vibe Coding, 桌面宠物, AI 创作]
 readingTime: 8
-featured: true
+featured: false
 cover: violet
 ---
 
