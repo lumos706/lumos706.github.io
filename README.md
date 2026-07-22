@@ -61,6 +61,51 @@ src/pages/                    首页、文章、归档、关于、RSS、404
 src/styles/                   全局设计变量和基础样式
 ```
 
+## 可拆卸的旅游攻略系统
+
+旅游模块位于 `/travel/`，面向 4 位成人、2 间双床房的青海甘肃行程。它提供 3 / 4 / 7 日路线、¥2,500 / ¥3,000 / ¥3,500 三档落地预算、具体景点避坑、沿途店家证据和每日公开价格快照。
+
+所有公开网页数据都由官方 [`Jesseovo/last30days-skill-cn`](https://github.com/Jesseovo/last30days-skill-cn) 采集；`scripts/travel/update_travel_data.py` 只负责编排 skill、过滤无关结果和生成 Astro 所需 JSON，不实现站点爬虫。
+
+### 本地安装（Miniconda）
+
+```powershell
+npx --yes skills add Jesseovo/last30days-skill-cn -g -y
+conda env create -f scripts/travel/environment.yml
+conda run -n lumos-travel python -m playwright install chromium
+conda run -n lumos-travel python "$env:USERPROFILE\.agents\skills\last30days-cn\scripts\last30days.py" --diagnose
+```
+
+`jieba` 和 Playwright 均按仓库配置指南安装。没有 API Key 时，Playwright 仍可尝试微博、小红书、抖音、B 站和知乎；平台可能要求登录或验证码。小红书在 skill v2.1 之后不再使用 ScrapeCreators 端点，因此 `SCRAPECREATORS_API_KEY` 只作为官方配置兼容项保留，不应被当作小红书采集成功的前提。
+
+无 API 刷新：
+
+```powershell
+conda run -n lumos-travel python scripts/travel/update_travel_data.py --pause 10
+```
+
+允许读取官方用户级配置 `~/.config/last30days-cn/.env` 中的可选凭据：
+
+```powershell
+conda run -n lumos-travel python scripts/travel/update_travel_data.py --allow-credentials --pause 10
+```
+
+凭据、Cookie 和浏览器登录态不得提交到仓库。GitHub Actions 使用仓库 Secrets：`ZHIHU_COOKIE`、`SCRAPECREATORS_API_KEY` 和 `LAST30DAYS_XHS_COOKIES_B64`。缺少这些 Secrets 时，采集脚本仍会回退到无 API 浏览器与公开搜索路径。
+
+`.github/workflows/travel-data.yml` 每天 `13:00 UTC`（北京时间 21:00）自动安装官方 skill、Miniconda、`jieba` 与 Playwright Chromium，刷新 `src/data/travel/snapshot.json`，通过生产构建后再提交数据。价格样本不足时页面显示“暂无可靠公开报价”，不会补造数字。
+
+### 移除模块
+
+删除以下内容即可完整卸载，不影响博客文章：
+
+- `src/pages/travel/`
+- `src/components/travel/`
+- `src/data/travel/`
+- `src/styles/travel.css`
+- `scripts/travel/`
+- `.github/workflows/travel-data.yml`
+- `src/components/Header.astro` 中的“旅行”导航项
+
 ## 发布
 
 仓库名必须是 `lumos706.github.io`，默认分支为 `main`。首次推送后，工作流会使用 GitHub Pages 的官方 artifact 部署方式。若 Pages 尚未启用，请在仓库 `Settings → Pages` 中把 Source 设为 **GitHub Actions**。

@@ -1,0 +1,376 @@
+---
+import {
+  budgetLabels,
+  defaultSelection,
+  routePlans,
+  type BudgetLevel,
+  type TripDays,
+} from '@/data/travel/plans';
+import { attractionPlaybooks, foodRegions } from '@/data/travel/guides';
+import snapshot from '@/data/travel/snapshot.json';
+
+const dayOptions: TripDays[] = [3, 4, 7];
+const budgetOptions: BudgetLevel[] = [2500, 3000, 3500];
+const defaultPlan = routePlans[defaultSelection.days];
+const platformNames: Record<string, string> = {
+  weibo: '微博',
+  xiaohongshu: '小红书',
+  bilibili: 'B站',
+  zhihu: '知乎',
+  douyin: '抖音',
+  wechat: '微信公众号',
+  baidu: '公开搜索',
+  toutiao: '今日头条',
+};
+
+const generatedAt = new Date(snapshot.generatedAt);
+const expiresAt = new Date(snapshot.expiresAt);
+const staleAtBuild = Date.now() > expiresAt.getTime();
+const generatedLabel = new Intl.DateTimeFormat('zh-CN', {
+  timeZone: 'Asia/Shanghai',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: false,
+}).format(generatedAt);
+
+const priceCategories = [
+  { key: 'flights', code: 'FLIGHTS / 01', title: '沈阳往返西宁 / 兰州', fallback: '暂无可靠公开报价' },
+  { key: 'hotels', code: 'HOTELS / 02', title: '2 间双床房 / 晚', fallback: '暂无可靠公开报价' },
+  { key: 'tickets', code: 'TICKETS / 03', title: '核心景区门票', fallback: '以官方预约页为准' },
+] as const;
+
+const trustedEvidence = (category: any, limit = 8, threshold = 0.2) =>
+  (Array.isArray(category?.evidence) ? category.evidence : [])
+    .filter((item: any) => Number(item.relevance ?? 0) >= threshold)
+    .slice(0, limit);
+
+const priceText = (category: any, fallback: string) => {
+  const range = category?.priceRange;
+  if (category?.priceStatus === 'reference' && range) {
+    return `¥${Number(range.min).toLocaleString('zh-CN')}–¥${Number(range.max).toLocaleString('zh-CN')}`;
+  }
+  return fallback;
+};
+
+const attractionGuides = attractionPlaybooks.map((guide) => ({
+  ...guide,
+  evidence: trustedEvidence((snapshot as any).attractions?.[guide.key], 4, 0.12),
+}));
+
+const foodCities = foodRegions.map((region) => {
+  const category = (snapshot as any).food?.[region.key] ?? {};
+  return {
+    ...region,
+    restaurants: Array.isArray(category.restaurants) ? category.restaurants : [],
+    evidence: trustedEvidence(category, 4, 0.12),
+  };
+});
+
+const collectionMode = snapshot.mode === 'browser-plus-optional-credentials'
+  ? '浏览器采集 + 可选凭据增强'
+  : '无 API 浏览器采集';
+
+const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
+---
+
+<div class="travel-page" data-travel-planner>
+  <section class="wrap travel-hero">
+    <div class="travel-hero-copy" data-reveal>
+      <h1>四个人，<br />向西北。</h1>
+      <p>从沈阳桃仙出发，在青海与甘肃之间选择一条刚好走得完的路线。先定天数，再定落地预算。</p>
+      <dl class="travel-facts">
+        <div><dt>WHEN</dt><dd>2026 年 8 月初</dd></div>
+        <div><dt>WHO</dt><dd>4 位成人 · 2 间双床房</dd></div>
+        <div><dt>FROM</dt><dd>沈阳桃仙国际机场</dd></div>
+        <div><dt>MOVE</dt><dd>租车 + 公共交通</dd></div>
+      </dl>
+    </div>
+
+    <div class="travel-route-board" data-reveal role="img" aria-label="沈阳至青海甘肃路线摘要">
+      <div class="travel-board-grid" aria-hidden="true"></div>
+      <svg class="travel-topography" viewBox="0 0 600 600" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1">
+          <path d="M-30 170C95 75 152 232 268 140s180-32 356-118" />
+          <path d="M-46 206C75 102 157 268 282 175S478 128 630 35" />
+          <path d="M-68 244C82 136 157 302 296 211s199-63 350-155" />
+          <path d="M-70 292C66 166 184 345 311 250s205-61 350-152" />
+          <path d="M-34 345C84 232 201 384 338 302s176-63 315-140" />
+          <path d="M-18 397C100 296 227 429 355 350s180-58 298-123" />
+          <path d="M0 448C109 352 245 480 377 403s176-51 286-98" />
+        </g>
+      </svg>
+      <div class="travel-board-head"><span>NORTHWEST FIELD ROUTE</span><span>AUG / 04 PEOPLE</span></div>
+      <div class="travel-board-stat"><strong data-board-days>{defaultPlan.days}D</strong><span data-board-name>{defaultPlan.name} · 推荐方案</span></div>
+      <svg class="travel-route-line" viewBox="0 0 430 400" aria-hidden="true">
+        <path d="M35 40C92 53 78 112 142 127s37 81 102 96 25 74 92 89 48 48 58 66" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+        <g class="travel-route-nodes" fill="var(--travel-board)" stroke="currentColor" stroke-width="4">
+          <circle cx="35" cy="40" r="9" /><circle cx="142" cy="127" r="9" /><circle cx="244" cy="223" r="9" /><circle cx="336" cy="312" r="9" /><circle cx="394" cy="378" r="9" />
+        </g>
+      </svg>
+      <p class="travel-board-stations" data-board-stations>{defaultPlan.stations.join(' → ')}</p>
+      <p class="travel-board-title">QINGHAI<br />GANSU</p>
+      <div class="travel-board-foot"><span>41.80°N → 36.06°N</span><span data-board-code>{defaultPlan.routeCode}</span></div>
+    </div>
+  </section>
+
+  <section class="travel-controls" aria-label="路线条件选择">
+    <div class="wrap travel-controls-inner">
+      <fieldset>
+        <legend>出行天数</legend>
+        <div class="travel-switches">
+          {dayOptions.map((days) => (
+            <button type="button" data-days-option={days} aria-pressed={days === defaultSelection.days ? 'true' : 'false'}>{days} 日</button>
+          ))}
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>落地预算 / 人</legend>
+        <div class="travel-switches">
+          {budgetOptions.map((budget) => (
+            <button type="button" data-budget-option={budget} aria-pressed={budget === defaultSelection.budget ? 'true' : 'false'}>¥{budget.toLocaleString('zh-CN')}</button>
+          ))}
+        </div>
+        <p>不含沈阳往返机票；机票单独看每日公开价格快照</p>
+      </fieldset>
+      <a class="travel-control-link" href="#travel-route">
+        查看当前路线
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 5h11v11M15 5 5 15" fill="none" stroke="currentColor" stroke-width="1.5" /></svg>
+      </a>
+      <output class="sr-only" data-selection-status aria-live="polite">当前为 7 日、3500 元预算方案</output>
+    </div>
+  </section>
+
+  <section id="travel-route" class="section travel-route-section">
+    <div class="wrap">
+      <div class="section-head"><h2 class="section-title">推荐游玩顺序</h2><span class="section-index" data-route-index>ROUTE / 07 DAYS</span></div>
+      {dayOptions.map((days) => {
+        const plan = routePlans[days];
+        return (
+          <div class="travel-route-layout" data-route-panel={days} hidden={days !== defaultSelection.days}>
+            <aside class="travel-route-summary">
+              <span class="travel-route-recommendation">{plan.recommendation}</span>
+              <h3>{plan.name}</h3>
+              <p>{plan.description}</p>
+              <dl class="travel-route-numbers">
+                <div><dt>{plan.distance}</dt><dd>预计陆路里程</dd></div>
+                <div><dt>{plan.highestStay}</dt><dd>最高住宿海拔</dd></div>
+                <div><dt>{plan.transportMix}</dt><dd>交通组合</dd></div>
+                <div><dt>2 间</dt><dd>每晚双床房</dd></div>
+              </dl>
+              {budgetOptions.map((budget) => {
+                const variant = plan.budgetVariants[budget];
+                const difference = budget - variant.total;
+                return (
+                  <div class="travel-budget-state" data-route-budget={`${days}-${budget}`} hidden={budget !== defaultSelection.budget}>
+                    <span>当前估算</span><strong>¥{variant.total.toLocaleString('zh-CN')} / 人</strong>
+                    <p>{difference >= 0 ? `距 ¥${budget.toLocaleString('zh-CN')} 档位余 ¥${difference.toLocaleString('zh-CN')}` : `预计超出档位 ¥${Math.abs(difference).toLocaleString('zh-CN')}`}</p>
+                  </div>
+                );
+              })}
+            </aside>
+            <div class="travel-days">
+              {plan.daysList.map((item) => (
+                <article class="travel-day">
+                  <span class="travel-day-index">D{item.day}</span>
+                  <div class="travel-day-copy"><h3>{item.route}</h3><p>{item.summary}</p>{item.caution && <small>{item.caution}</small>}</div>
+                  <div class="travel-day-meta"><span>{item.transport}</span><span>{item.distance}</span><strong>{item.stay}</strong></div>
+                </article>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </section>
+
+  <section class="section travel-ledger-section">
+    <div class="wrap travel-ledger-grid">
+      <div class="travel-ledger-copy">
+        <h2>把预算摊开看。</h2>
+        <p>住宿按四人两间双床房拆分，租车按四人分摊，机票独立显示，避免低估最容易波动的一项。</p>
+      </div>
+      <div class="travel-ledger-panels">
+        {dayOptions.flatMap((days) => budgetOptions.map((budget) => {
+          const variant = routePlans[days].budgetVariants[budget];
+          const rows = [
+            ['住宿', variant.lodgingStandard, variant.breakdown.lodging],
+            ['城际与租车', variant.transportMode, variant.breakdown.transport],
+            ['景区门票', '只保留当前路线的核心景区', variant.breakdown.tickets],
+            ['餐饮', `${days} 天正餐与途中补给`, variant.breakdown.food],
+            ['弹性金', '停车、补给与临时调整', variant.breakdown.reserve],
+          ];
+          return (
+            <div class="travel-ledger-panel" data-ledger-panel={`${days}-${budget}`} hidden={days !== defaultSelection.days || budget !== defaultSelection.budget}>
+              <div class="travel-ledger-total"><span>落地支出估算 / 人</span><strong>¥{variant.total.toLocaleString('zh-CN')}</strong><small>{days} 日 · {budgetLabels[budget]} · {variant.note}</small></div>
+              <div class="travel-ledger-rows">
+                {rows.map(([label, detail, amount]) => (
+                  <div><strong>{label}</strong><span>{detail}</span><b>¥{Number(amount).toLocaleString('zh-CN')}</b></div>
+                ))}
+              </div>
+            </div>
+          );
+        }))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section travel-market-section">
+    <div class="wrap">
+      <div class="section-head travel-market-head">
+        <h2 class="section-title">每日公开价格快照</h2>
+        <div class="travel-market-meta"><span class:list={['travel-pulse', { stale: staleAtBuild }]}></span>{generatedLabel} 更新{staleAtBuild ? ' · 数据可能过期' : ''}</div>
+      </div>
+      <div class="travel-market-grid">
+        {priceCategories.map((item) => {
+          const category = (snapshot.categories as any)[item.key];
+          const evidence = trustedEvidence(category, 5);
+          return (
+            <article class="travel-market-item">
+              <span>{item.code}</span>
+              <h3>{item.title}</h3>
+              <strong>{priceText(category, item.fallback)}</strong>
+              <p>{item.key === 'flights' ? '公开内容不足时不补造价格；购票前以航司或订票页最终含税价为准。' : item.key === 'hotels' ? '按四人两间双床房核算，公开样本不等于仍可预订的库存。' : '莫高窟先看余票和场次，所有门票以景区官方预约页为准。'}</p>
+              <details>
+                <summary>查看 {evidence.length} 条可追溯线索</summary>
+                {evidence.length ? (
+                  <ul>{evidence.map((source: any) => <li><a href={source.url} target="_blank" rel="noreferrer"><span>{platformNames[source.platform] ?? source.platform}</span>{source.title}</a></li>)}</ul>
+                ) : <div class="travel-empty">本轮没有达到相关性阈值的公开线索。</div>}
+              </details>
+            </article>
+          );
+        })}
+      </div>
+      <p class="travel-data-notice">{snapshot.notice} 当前运行模式：last30days-cn {collectionMode}；有效来源：{snapshot.activeSources.length ? snapshot.activeSources.map((source) => platformNames[source] ?? source).join('、') : '本轮暂无'}。</p>
+    </div>
+  </section>
+
+  <section class="section travel-guide-section">
+    <div class="wrap">
+      <div class="travel-guide-intro"><h2>七个景点，逐个拆开。</h2><p>先给出适合这趟四人行程的安排，再附上近 30 天检索窗口返回的公开平台线索。某个平台本轮没有有效结果时不会硬凑；门票、开放时间和交通调整仍以景区官方通知为准。</p></div>
+      <div class="travel-attraction-list">
+        {attractionGuides.map((guide, index) => (
+          <article class="travel-attraction">
+            <header><span>{String(index + 1).padStart(2, '0')} / {guide.time}</span><h3>{guide.name}</h3><p>{guide.sequence}</p></header>
+            <div class="travel-attraction-plan"><strong>怎么安排</strong><p>{guide.play}</p></div>
+            <div class="travel-attraction-checks">
+              <div><strong>出发前</strong><ul>{guide.prepare.map((item) => <li>{item}</li>)}</ul></div>
+              <div class="travel-attraction-avoid"><strong>别这样做</strong><ul>{guide.avoid.map((item) => <li>{item}</li>)}</ul></div>
+            </div>
+            <details>
+              <summary>查看 {guide.evidence.length} 条近期公开线索</summary>
+              {guide.evidence.length ? <ol>{guide.evidence.map((item: any) => (
+                <li><a href={item.url} target="_blank" rel="noreferrer"><span>{platformNames[item.platform] ?? item.platform}</span><strong>{item.title}</strong></a></li>
+              ))}</ol> : <p class="travel-empty travel-empty-light">本轮没有取得达到相关性门槛的公开线索。</p>}
+            </details>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section travel-food-section">
+    <div class="wrap">
+      <div class="section-head"><h2 class="section-title">沿途吃什么</h2><span class="section-index">FOOD / 06 STOPS</span></div>
+      <div class="travel-food-regions">
+        {foodRegions.map((region) => <article><h3>{region.city}</h3><strong>{region.dishes}</strong><p>{region.note}</p></article>)}
+      </div>
+      <div class="travel-food-intro"><h3>店名必须有出处。</h3><p>下面只列采集结果中明确出现店名、且能回到原帖的候选。推荐与避雷会并列保留；它们不是商家广告，也不保证当天营业。</p></div>
+      <div class="travel-restaurant-cities">
+        {foodCities.map((city) => (
+          <article class="travel-restaurant-city">
+            <header><h3>{city.city}</h3><span>{city.restaurants.length} 家有名有据</span></header>
+            {city.restaurants.length ? <div class="travel-restaurants">{city.restaurants.map((restaurant: any) => (
+              <section class="travel-restaurant">
+                <div><span>{restaurant.verdict === 'mixed' ? '口碑分化' : restaurant.verdict === 'caution' ? '谨慎候选' : '近期候选'}</span><h4>{restaurant.name}</h4><strong>{restaurant.specialty}</strong><p>{restaurant.note}</p></div>
+                <ul>{restaurant.sources.map((source: any) => (
+                  <li><a href={source.url} target="_blank" rel="noreferrer"><span>{platformNames[source.platform] ?? source.platform}</span>{source.title}</a></li>
+                ))}</ul>
+              </section>
+            ))}</div> : <p class="travel-empty travel-empty-light">本轮没有采到能明确核对店名的内容，不为凑数推荐。</p>}
+            {city.evidence.length > 0 && <details><summary>查看 {city.evidence.length} 条城市美食线索</summary><ol>{city.evidence.map((item: any) => (
+              <li><a href={item.url} target="_blank" rel="noreferrer"><span>{platformNames[item.platform] ?? item.platform}</span>{item.title}</a></li>
+            ))}</ol></details>}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="travel-source-strip">
+    <div class="wrap"><strong>只保留能追溯的公开线索。</strong><p>每日任务使用 last30days-cn 低频检索；Playwright 会在没有 API 时尝试访问主流平台，可选凭据只用于增强稳定性。价格不是实时库存；登录态、验证码和平台改版都可能使某次结果变少，页面会显示空状态而不是补造数据。</p></div>
+  </section>
+
+  <script is:inline type="application/json" id="travel-plans-data" set:html={plansJson}></script>
+</div>
+
+<script>
+  type TripDays = 3 | 4 | 7;
+  type BudgetLevel = 2500 | 3000 | 3500;
+
+  const planner = document.querySelector<HTMLElement>('[data-travel-planner]');
+  const plansNode = document.querySelector<HTMLScriptElement>('#travel-plans-data');
+
+  if (planner && plansNode) {
+    const plans = JSON.parse(plansNode.textContent || '{}');
+    const validDays = [3, 4, 7];
+    const validBudgets = [2500, 3000, 3500];
+    const query = new URLSearchParams(location.search);
+    let days = Number(query.get('days')) as TripDays;
+    let budget = Number(query.get('budget')) as BudgetLevel;
+    if (!validDays.includes(days)) days = 7;
+    if (!validBudgets.includes(budget)) budget = 3500;
+
+    const render = () => {
+      const plan = plans[String(days)];
+      planner.querySelectorAll<HTMLElement>('[data-days-option]').forEach((button) => {
+        button.setAttribute('aria-pressed', String(Number(button.dataset.daysOption) === days));
+      });
+      planner.querySelectorAll<HTMLElement>('[data-budget-option]').forEach((button) => {
+        button.setAttribute('aria-pressed', String(Number(button.dataset.budgetOption) === budget));
+      });
+      planner.querySelectorAll<HTMLElement>('[data-route-panel]').forEach((panel) => {
+        panel.hidden = Number(panel.dataset.routePanel) !== days;
+      });
+      planner.querySelectorAll<HTMLElement>('[data-route-budget]').forEach((panel) => {
+        panel.hidden = panel.dataset.routeBudget !== `${days}-${budget}`;
+      });
+      planner.querySelectorAll<HTMLElement>('[data-ledger-panel]').forEach((panel) => {
+        panel.hidden = panel.dataset.ledgerPanel !== `${days}-${budget}`;
+      });
+
+      const boardDays = planner.querySelector<HTMLElement>('[data-board-days]');
+      const boardName = planner.querySelector<HTMLElement>('[data-board-name]');
+      const boardStations = planner.querySelector<HTMLElement>('[data-board-stations]');
+      const boardCode = planner.querySelector<HTMLElement>('[data-board-code]');
+      const routeIndex = planner.querySelector<HTMLElement>('[data-route-index]');
+      const status = planner.querySelector<HTMLOutputElement>('[data-selection-status]');
+      if (boardDays) boardDays.textContent = `${days}D`;
+      if (boardName) boardName.textContent = `${plan.name} · 推荐方案`;
+      if (boardStations) boardStations.textContent = plan.stations.join(' → ');
+      if (boardCode) boardCode.textContent = plan.routeCode;
+      if (routeIndex) routeIndex.textContent = `ROUTE / ${String(days).padStart(2, '0')} DAYS`;
+      if (status) status.textContent = `当前为 ${days} 日、${budget.toLocaleString('zh-CN')} 元预算方案：${plan.name}`;
+
+      const next = new URLSearchParams(location.search);
+      next.set('days', String(days));
+      next.set('budget', String(budget));
+      history.replaceState(null, '', `${location.pathname}?${next.toString()}${location.hash}`);
+    };
+
+    planner.querySelectorAll<HTMLButtonElement>('[data-days-option]').forEach((button) => {
+      button.addEventListener('click', () => {
+        days = Number(button.dataset.daysOption) as TripDays;
+        render();
+      });
+    });
+    planner.querySelectorAll<HTMLButtonElement>('[data-budget-option]').forEach((button) => {
+      button.addEventListener('click', () => {
+        budget = Number(button.dataset.budgetOption) as BudgetLevel;
+        render();
+      });
+    });
+    render();
+  }
+</script>

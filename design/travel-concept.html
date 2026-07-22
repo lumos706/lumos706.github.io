@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>旅游攻略系统 — Lumos concept</title>
+    <style>
+      :root {
+        --paper: #f5f2e9;
+        --paper-deep: #ebe5d8;
+        --surface: #faf8f2;
+        --ink: #171714;
+        --muted: #6d695f;
+        --line: rgba(23, 23, 20, 0.2);
+        --line-strong: rgba(23, 23, 20, 0.42);
+        --light: #ddff57;
+        --violet: #6657d8;
+        --lake: #4f7f8d;
+        --danxia: #b85f3c;
+        --serif: Georgia, "Times New Roman", "Songti SC", STSong, SimSun, serif;
+        --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+        --content: 1240px;
+        --gutter: clamp(20px, 3.125vw, 40px);
+      }
+
+      * { box-sizing: border-box; }
+      html { min-width: 320px; background: var(--paper); color: var(--ink); scroll-behavior: smooth; }
+      body { margin: 0; overflow-x: hidden; background: var(--paper); font-family: var(--sans); }
+      a { color: inherit; text-decoration: none; }
+      button { color: inherit; font: inherit; }
+      .wrap { width: min(var(--content), calc(100% - var(--gutter) * 2)); margin-inline: auto; }
+
+      .site-header { height: 96px; }
+      .header-inner { display: flex; height: 100%; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+      .brand { display: flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: .12em; }
+      .brand-mark { position: relative; width: 23px; height: 23px; border: 2px solid var(--ink); border-radius: 50%; }
+      .brand-mark::before,
+      .brand-mark::after { position: absolute; top: 50%; left: 50%; content: ""; background: var(--ink); transform: translate(-50%, -50%); }
+      .brand-mark::before { width: 31px; height: 2px; }
+      .brand-mark::after { width: 2px; height: 31px; }
+      .nav { display: flex; align-items: center; gap: 30px; color: var(--muted); font-size: 13px; }
+      .nav a.active { color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 10px; }
+      .theme { display: flex; align-items: center; gap: 8px; color: var(--ink); border-bottom: 1px solid var(--line-strong); padding-bottom: 6px; }
+      .theme-dot { width: 13px; height: 13px; border: 1px solid currentColor; border-radius: 50%; background: linear-gradient(90deg, currentColor 50%, transparent 50%); }
+
+      .hero { display: grid; min-height: 656px; grid-template-columns: 1.03fr .97fr; gap: clamp(54px, 7vw, 96px); align-items: center; padding-block: 70px 74px; }
+      .hero h1 { max-width: 650px; margin: 0; font: 500 clamp(64px, 7vw, 96px) / .98 var(--serif); letter-spacing: -.06em; }
+      .hero-copy > p { max-width: 565px; margin: 30px 0 0; color: var(--muted); font-size: 17px; line-height: 1.9; }
+      .trip-facts { display: grid; max-width: 565px; grid-template-columns: repeat(2, 1fr); gap: 0; margin-top: 42px; border-block: 1px solid var(--line); }
+      .fact { min-height: 78px; padding: 17px 18px 16px 0; }
+      .fact:nth-child(2n) { padding-left: 24px; border-left: 1px solid var(--line); }
+      .fact-label { display: block; margin-bottom: 8px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+      .fact strong { font-size: 14px; font-weight: 560; }
+
+      .route-board { position: relative; min-height: 540px; overflow: hidden; color: var(--paper); background: var(--ink); }
+      .board-grid { position: absolute; inset: 0; opacity: .12; background-image: linear-gradient(rgba(255,255,255,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.18) 1px, transparent 1px); background-size: 44px 44px; }
+      .topography { position: absolute; inset: -10%; width: 120%; height: 120%; opacity: .24; }
+      .route-line { position: absolute; inset: 68px 42px 72px; }
+      .route-line svg { width: 100%; height: 100%; overflow: visible; }
+      .board-head,
+      .board-foot { position: absolute; z-index: 2; right: 28px; left: 28px; display: flex; justify-content: space-between; font-size: 10px; letter-spacing: .15em; }
+      .board-head { top: 25px; }
+      .board-foot { bottom: 25px; color: rgba(245,242,233,.55); }
+      .board-title { position: absolute; z-index: 2; right: 30px; bottom: 58px; margin: 0; color: rgba(245,242,233,.12); font: 500 clamp(56px, 6vw, 82px) / .88 var(--serif); letter-spacing: -.06em; text-align: right; }
+      .board-stat { position: absolute; z-index: 2; top: 84px; left: 30px; }
+      .board-stat strong { display: block; color: var(--light); font: 500 42px/1 var(--serif); }
+      .board-stat span { display: block; margin-top: 8px; color: rgba(245,242,233,.55); font-size: 10px; letter-spacing: .12em; }
+
+      .planner { padding-block: 34px; color: var(--paper); background: var(--ink); }
+      .planner-inner { display: grid; grid-template-columns: 1fr 1.25fr auto; gap: 44px; align-items: end; }
+      .control-label { display: block; margin-bottom: 13px; color: rgba(245,242,233,.56); font-size: 10px; font-weight: 700; letter-spacing: .14em; }
+      .switches { display: flex; gap: 8px; }
+      .switch { min-width: 74px; height: 48px; padding: 0 18px; border: 1px solid rgba(245,242,233,.25); color: rgba(245,242,233,.68); background: transparent; cursor: pointer; }
+      .switch.selected { border-color: var(--light); color: var(--ink); background: var(--light); }
+      .planner-note { margin-top: 10px; color: rgba(245,242,233,.48); font-size: 11px; }
+      .planner-cta { display: inline-flex; height: 48px; align-items: center; justify-content: space-between; gap: 34px; padding: 0 18px; border: 1px solid var(--paper); color: var(--paper); font-size: 13px; }
+
+      .section { padding-block: clamp(92px, 9vw, 132px); border-top: 1px solid var(--line); }
+      .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-bottom: 58px; }
+      .section-title { margin: 0; font: 500 clamp(40px, 4.5vw, 58px) / 1.05 var(--serif); letter-spacing: -.045em; }
+      .section-index { color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .14em; }
+
+      .route-summary { display: grid; grid-template-columns: .72fr 1.28fr; gap: clamp(48px, 8vw, 112px); }
+      .summary-sticky { align-self: start; }
+      .summary-kicker { color: var(--danxia); font-size: 11px; font-weight: 800; letter-spacing: .14em; }
+      .summary-sticky h3 { margin: 18px 0 22px; font: 500 clamp(38px, 4vw, 56px) / 1.06 var(--serif); letter-spacing: -.045em; }
+      .summary-sticky > p { margin: 0; color: var(--muted); line-height: 1.85; }
+      .summary-numbers { display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 38px; border-top: 1px solid var(--line); }
+      .summary-number { padding: 18px 12px 18px 0; border-bottom: 1px solid var(--line); }
+      .summary-number:nth-child(2n) { padding-left: 20px; border-left: 1px solid var(--line); }
+      .summary-number strong { display: block; font: 500 26px/1.2 var(--serif); }
+      .summary-number span { display: block; margin-top: 7px; color: var(--muted); font-size: 11px; }
+      .budget-state { margin-top: 28px; padding: 17px 0; border-block: 1px solid var(--ink); font-size: 13px; line-height: 1.7; }
+      .budget-state strong { color: var(--violet); }
+
+      .days { border-top: 1px solid var(--line-strong); }
+      .day { display: grid; min-height: 112px; grid-template-columns: 68px 1fr 150px; gap: 26px; align-items: center; border-bottom: 1px solid var(--line); }
+      .day-index { color: var(--muted); font: 500 17px/1 var(--serif); }
+      .day-route strong { display: block; margin-bottom: 10px; font: 500 25px/1.2 var(--serif); }
+      .day-route span { color: var(--muted); font-size: 13px; line-height: 1.7; }
+      .day-meta { color: var(--muted); font-size: 11px; line-height: 1.75; text-align: right; }
+      .day:nth-child(3) .day-route strong { color: var(--lake); }
+      .day:nth-child(5) .day-route strong { color: var(--danxia); }
+
+      .ledger { background: var(--paper-deep); }
+      .ledger-grid { display: grid; grid-template-columns: 1fr 1.36fr; gap: clamp(56px, 8vw, 112px); }
+      .ledger-copy h2 { margin: 0 0 25px; font: 500 clamp(44px, 5vw, 64px) / 1.02 var(--serif); letter-spacing: -.05em; }
+      .ledger-copy p { max-width: 440px; margin: 0; color: var(--muted); line-height: 1.85; }
+      .ledger-total { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line-strong); }
+      .ledger-total span { display: block; color: var(--muted); font-size: 11px; letter-spacing: .12em; }
+      .ledger-total strong { display: block; margin-top: 8px; font: 500 64px/1 var(--serif); letter-spacing: -.05em; }
+      .ledger-total small { color: var(--muted); }
+      .ledger-rows { border-top: 1px solid var(--line-strong); }
+      .ledger-row { display: grid; min-height: 76px; grid-template-columns: 1fr 110px 100px; gap: 24px; align-items: center; border-bottom: 1px solid var(--line); }
+      .ledger-row strong { font-size: 14px; }
+      .ledger-row span { color: var(--muted); font-size: 12px; }
+      .ledger-row b { font: 500 20px/1 var(--serif); text-align: right; }
+
+      .market { color: var(--paper); background: var(--ink); }
+      .market .section-head { border-bottom: 1px solid rgba(245,242,233,.22); padding-bottom: 32px; }
+      .market .section-index { color: rgba(245,242,233,.5); }
+      .market-meta { display: flex; align-items: center; gap: 12px; color: rgba(245,242,233,.55); font-size: 12px; }
+      .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--light); box-shadow: 0 0 0 5px rgba(221,255,87,.12); }
+      .market-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+      .market-item { min-height: 260px; padding: 30px 34px 30px 0; }
+      .market-item + .market-item { padding-left: 34px; border-left: 1px solid rgba(245,242,233,.18); }
+      .market-type { color: rgba(245,242,233,.5); font-size: 10px; font-weight: 800; letter-spacing: .15em; }
+      .market-item h3 { min-height: 58px; margin: 22px 0 28px; font: 500 27px/1.2 var(--serif); }
+      .market-price { color: var(--light); font: 500 34px/1 var(--serif); }
+      .market-item p { margin: 18px 0 0; color: rgba(245,242,233,.55); font-size: 12px; line-height: 1.75; }
+      .market-link { display: inline-flex; margin-top: 24px; padding-bottom: 7px; border-bottom: 1px solid rgba(245,242,233,.42); font-size: 12px; }
+
+      .tips-layout { display: grid; grid-template-columns: .72fr 1.28fr; gap: clamp(48px, 8vw, 112px); }
+      .tips-intro h2 { margin: 0; font: 500 clamp(44px, 5vw, 64px) / 1.04 var(--serif); letter-spacing: -.05em; }
+      .tips-intro p { margin: 28px 0 0; color: var(--muted); line-height: 1.85; }
+      .tips { border-top: 1px solid var(--line-strong); }
+      .tip { display: grid; grid-template-columns: 50px 1fr; gap: 22px; padding: 25px 0; border-bottom: 1px solid var(--line); }
+      .tip-index { color: var(--danxia); font: 500 14px/1.4 var(--serif); }
+      .tip strong { display: block; margin-bottom: 9px; font: 500 20px/1.25 var(--serif); }
+      .tip p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.75; }
+
+      .source-strip { padding-block: 46px; border-top: 1px solid var(--line); }
+      .source-inner { display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; }
+      .source-inner strong { font: 500 21px/1.3 var(--serif); }
+      .source-inner p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+
+      footer { padding-block: 50px 34px; color: var(--paper); background: var(--ink); }
+      .footer-top { display: flex; align-items: flex-end; justify-content: space-between; }
+      .footer-brand { font: 500 54px/1 var(--serif); letter-spacing: -.04em; }
+      .footer-note { max-width: 420px; color: rgba(245,242,233,.5); font-size: 11px; line-height: 1.7; text-align: right; }
+
+      @media (max-width: 900px) {
+        .nav a:not(.active), .theme span:first-child { display: none; }
+        .hero { min-height: auto; grid-template-columns: 1fr; }
+        .route-board { min-height: min(570px, 88vw); }
+        .planner-inner { grid-template-columns: 1fr 1fr; }
+        .planner-cta { grid-column: 1 / -1; }
+        .route-summary, .ledger-grid, .tips-layout, .source-inner { grid-template-columns: 1fr; }
+        .market-grid { grid-template-columns: 1fr; }
+        .market-item { min-height: auto; padding: 26px 0; }
+        .market-item + .market-item { padding-left: 0; border-top: 1px solid rgba(245,242,233,.18); border-left: 0; }
+      }
+
+      @media (max-width: 620px) {
+        .site-header { height: 76px; }
+        .nav { gap: 18px; }
+        .hero { gap: 48px; padding-block: 54px 62px; }
+        .hero h1 { font-size: clamp(54px, 17vw, 72px); }
+        .hero-copy > p { font-size: 15px; }
+        .trip-facts { grid-template-columns: 1fr; }
+        .fact:nth-child(2n) { padding-left: 0; border-top: 1px solid var(--line); border-left: 0; }
+        .route-board { min-height: 440px; }
+        .board-title { font-size: 55px; }
+        .planner-inner { grid-template-columns: 1fr; gap: 28px; }
+        .planner-cta { grid-column: auto; }
+        .switches { display: grid; grid-template-columns: repeat(3, 1fr); }
+        .switch { min-width: 0; padding: 0 8px; }
+        .section-head { align-items: flex-start; }
+        .section-index { padding-top: 9px; }
+        .day { min-height: 0; grid-template-columns: 42px 1fr; gap: 14px; padding: 24px 0; }
+        .day-meta { grid-column: 2; text-align: left; }
+        .summary-numbers { grid-template-columns: 1fr; }
+        .summary-number:nth-child(2n) { padding-left: 0; border-left: 0; }
+        .ledger-row { grid-template-columns: 1fr auto; padding: 18px 0; }
+        .ledger-row span { grid-column: 1; }
+        .ledger-row b { grid-column: 2; grid-row: 1 / 3; }
+        .ledger-total strong { font-size: 54px; }
+        .footer-top { align-items: flex-start; flex-direction: column; gap: 30px; }
+        .footer-note { text-align: left; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#"><span class="brand-mark"></span>LUMOS</a>
+        <nav class="nav" aria-label="主导航">
+          <a href="#">首页</a><a href="#">文章</a><a href="#">搜索</a><a class="active" href="#">旅行</a><a href="#">归档</a><a href="#">关于</a>
+          <a class="theme" href="#"><span>夜间模式</span><span class="theme-dot"></span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="wrap hero">
+        <div class="hero-copy">
+          <h1>四个人，<br />向西北。</h1>
+          <p>从沈阳桃仙出发，在青海与甘肃之间选择一条刚好走得完的路线。先定天数，再定落地预算。</p>
+          <div class="trip-facts">
+            <div class="fact"><span class="fact-label">WHEN</span><strong>2026 年 8 月初</strong></div>
+            <div class="fact"><span class="fact-label">WHO</span><strong>4 位成人 · 2 间双床房</strong></div>
+            <div class="fact"><span class="fact-label">FROM</span><strong>沈阳桃仙国际机场</strong></div>
+            <div class="fact"><span class="fact-label">MOVE</span><strong>租车 + 公共交通</strong></div>
+          </div>
+        </div>
+
+        <div class="route-board" aria-label="沈阳至青海甘肃路线板">
+          <div class="board-grid"></div>
+          <svg class="topography" viewBox="0 0 600 600" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1">
+              <path d="M-30 170C95 75 152 232 268 140s180-32 356-118" />
+              <path d="M-46 206C75 102 157 268 282 175S478 128 630 35" />
+              <path d="M-68 244C82 136 157 302 296 211s199-63 350-155" />
+              <path d="M-70 292C66 166 184 345 311 250s205-61 350-152" />
+              <path d="M-34 345C84 232 201 384 338 302s176-63 315-140" />
+              <path d="M-18 397C100 296 227 429 355 350s180-58 298-123" />
+              <path d="M0 448C109 352 245 480 377 403s176-51 286-98" />
+            </g>
+          </svg>
+          <div class="board-head"><span>NORTHWEST FIELD ROUTE</span><span>AUG / 04 PEOPLE</span></div>
+          <div class="board-stat"><strong>7D</strong><span>青甘走廊 · 推荐方案</span></div>
+          <div class="route-line">
+            <svg viewBox="0 0 430 400" aria-hidden="true">
+              <path d="M35 40C92 53 78 112 142 127s37 81 102 96 25 74 92 89 48 48 58 66" fill="none" stroke="#ddff57" stroke-width="4" stroke-linecap="round" />
+              <g fill="#171714" stroke="#ddff57" stroke-width="4">
+                <circle cx="35" cy="40" r="9" /><circle cx="142" cy="127" r="9" /><circle cx="244" cy="223" r="9" /><circle cx="336" cy="312" r="9" /><circle cx="394" cy="378" r="9" />
+              </g>
+              <g fill="#f5f2e9" font-family="sans-serif" font-size="11">
+                <text x="53" y="44">沈阳</text><text x="160" y="131">西宁</text><text x="262" y="227">大柴旦</text><text x="286" y="303">敦煌</text><text x="330" y="398">兰州</text>
+              </g>
+            </svg>
+          </div>
+          <p class="board-title">QINGHAI<br />GANSU</p>
+          <div class="board-foot"><span>41.80°N → 36.06°N</span><span>ROUTE / 07</span></div>
+        </div>
+      </section>
+
+      <section class="planner" aria-label="路线条件选择">
+        <div class="wrap planner-inner">
+          <div>
+            <span class="control-label">出行天数</span>
+            <div class="switches"><button class="switch">3 日</button><button class="switch">4 日</button><button class="switch selected">7 日</button></div>
+          </div>
+          <div>
+            <span class="control-label">落地预算 / 人</span>
+            <div class="switches"><button class="switch">¥2,500</button><button class="switch">¥3,000</button><button class="switch selected">¥3,500</button></div>
+            <div class="planner-note">不含沈阳往返机票；机票单独看每日公开价格快照</div>
+          </div>
+          <a class="planner-cta" href="#route">查看当前路线 <span>↘</span></a>
+        </div>
+      </section>
+
+      <section id="route" class="section">
+        <div class="wrap">
+          <div class="section-head"><h2 class="section-title">推荐游玩顺序</h2><span class="section-index">ROUTE / 07 DAYS</span></div>
+          <div class="route-summary">
+            <aside class="summary-sticky">
+              <span class="summary-kicker">推荐 · 一头进一头出</span>
+              <h3>青甘走廊线</h3>
+              <p>从西宁进入高原，在敦煌把节奏放慢，再沿河西走廊回到兰州。七天不硬塞祁连，避免每天都在赶路。</p>
+              <div class="summary-numbers">
+                <div class="summary-number"><strong>1,720 km</strong><span>预计陆路里程</span></div>
+                <div class="summary-number"><strong>2,850 m</strong><span>最高住宿海拔</span></div>
+                <div class="summary-number"><strong>2 + 5</strong><span>公共交通 / 租车天数</span></div>
+                <div class="summary-number"><strong>2 间</strong><span>每晚双床房</span></div>
+              </div>
+              <div class="budget-state">当前估算 <strong>¥3,320 / 人</strong><br />距 ¥3,500 档位余 ¥180</div>
+            </aside>
+
+            <div class="days">
+              <article class="day"><span class="day-index">D1</span><div class="day-route"><strong>沈阳 → 兰州 → 西宁</strong><span>桃仙机场出发；若西宁直飞价高，优先比较兰州落地后动车进西宁。</span></div><div class="day-meta">飞机 + 动车<br />住西宁</div></article>
+              <article class="day"><span class="day-index">D2</span><div class="day-route"><strong>西宁 → 青海湖 → 茶卡</strong><span>开始租车。下午走青海湖南岸，日落前到茶卡，不把两个收费湖区都塞进一天。</span></div><div class="day-meta">约 300 km / 5 h<br />住茶卡</div></article>
+              <article class="day"><span class="day-index">D3</span><div class="day-route"><strong>茶卡 → 德令哈 → 大柴旦</strong><span>上午盐湖，下午穿过柴达木盆地。补足油、水和干粮后再进无人路段。</span></div><div class="day-meta">约 410 km / 6 h<br />住大柴旦</div></article>
+              <article class="day"><span class="day-index">D4</span><div class="day-route"><strong>大柴旦 → 敦煌</strong><span>只选翡翠湖或水上雅丹其一。U 型公路禁止停车拍照，景观让位于行车安全。</span></div><div class="day-meta">约 360 km / 5 h<br />住敦煌</div></article>
+              <article class="day"><span class="day-index">D5</span><div class="day-route"><strong>莫高窟 → 鸣沙山月牙泉</strong><span>莫高窟按预约时段进场，午后休息，傍晚再去鸣沙山避开最强日晒。</span></div><div class="day-meta">市内交通<br />住敦煌</div></article>
+              <article class="day"><span class="day-index">D6</span><div class="day-route"><strong>敦煌 → 嘉峪关 → 张掖</strong><span>结束长途租车，换动车串联河西走廊；不把时间浪费在单向还车费上。</span></div><div class="day-meta">动车为主<br />住张掖</div></article>
+              <article class="day"><span class="day-index">D7</span><div class="day-route"><strong>七彩丹霞 → 兰州 → 沈阳</strong><span>早场看丹霞，午后动车回兰州。返程机票过早时，兰州再留一晚更稳妥。</span></div><div class="day-meta">动车 + 飞机<br />行程结束</div></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section ledger">
+        <div class="wrap ledger-grid">
+          <div class="ledger-copy">
+            <h2>把预算摊开看。</h2>
+            <p>价格不是一句“人均三千”就能说清。住宿按四人两间双床房拆分，租车按四人分摊，机票独立显示，避免低估最容易波动的一项。</p>
+            <div class="ledger-total"><span>落地支出估算 / 人</span><strong>¥3,320</strong><small>当前选择：7 日 · 舒展档</small></div>
+          </div>
+          <div class="ledger-rows">
+            <div class="ledger-row"><strong>住宿</strong><span>6 晚 · 2 间双床房</span><b>¥1,080</b></div>
+            <div class="ledger-row"><strong>城际与租车</strong><span>5 天分摊 + 2 段动车</span><b>¥920</b></div>
+            <div class="ledger-row"><strong>景区门票</strong><span>保留核心景区</span><b>¥520</b></div>
+            <div class="ledger-row"><strong>餐饮</strong><span>约 ¥90 / 天</span><b>¥630</b></div>
+            <div class="ledger-row"><strong>弹性金</strong><span>停车、补给与临时调整</span><b>¥170</b></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section market">
+        <div class="wrap">
+          <div class="section-head"><h2 class="section-title">每日公开价格快照</h2><div class="market-meta"><span class="pulse"></span>北京时间 07.22 · 21:00 更新</div></div>
+          <div class="market-grid">
+            <article class="market-item"><span class="market-type">FLIGHTS / 01</span><h3>沈阳往返西宁 / 兰州</h3><div class="market-price">暂无可靠公开报价</div><p>公开内容不足时不补造价格。购票前请以航司或订票页的最终含税价为准。</p><a class="market-link" href="#">查看 3 条公开线索 ↗</a></article>
+            <article class="market-item"><span class="market-type">HOTELS / 02</span><h3>2 间双床房 / 晚</h3><div class="market-price">等待首次采集</div><p>按西宁、茶卡、大柴旦、敦煌、张掖分城展示公开样本，避免用全省均价误导。</p><a class="market-link" href="#">查看采集范围 ↗</a></article>
+            <article class="market-item"><span class="market-type">TICKETS / 03</span><h3>核心景区门票</h3><div class="market-price">以预约页为准</div><p>莫高窟优先看余票和场次；价格证据缺失时只保留预约入口与更新时间。</p><a class="market-link" href="#">查看门票线索 ↗</a></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap tips-layout">
+          <div class="tips-intro"><h2>先避开这些坑。</h2><p>公开攻略只作为线索，路线里只保留与四人、八月初、租车和公共交通真正相关的提醒。</p></div>
+          <div class="tips">
+            <article class="tip"><span class="tip-index">01</span><div><strong>七天不要硬凑完整大环线</strong><p>从沈阳出发还要占用往返时间。采用西宁进、兰州出的一头进一头出，比每天 500 公里更适合第一次去西北。</p></div></article>
+            <article class="tip"><span class="tip-index">02</span><div><strong>高原第一晚不要洗太久的热水澡</strong><p>第一天降低活动强度、少饮酒、补水；如持续头痛、胸闷或血氧异常，应立即下撤并就医。</p></div></article>
+            <article class="tip"><span class="tip-index">03</span><div><strong>不要在 U 型公路停车拍照</strong><p>网红机位不是停车区。路肩、弯道和重卡盲区风险都很高，必须在正规停车点完成拍摄。</p></div></article>
+            <article class="tip"><span class="tip-index">04</span><div><strong>莫高窟先订票，再订敦煌的具体日程</strong><p>预约场次决定当天节奏。抢不到正常票时，不要依赖临时票或非官方渠道承诺。</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="source-strip">
+        <div class="wrap source-inner"><strong>只保留能追溯的公开线索。</strong><p>每日任务使用 last30days-cn 无 API 模式，低频检索小红书、抖音、知乎、B站、微博及公开搜索结果。每条线索显示平台、链接、日期可信度和采集时间；价格不是实时库存，也不替代最终预订页。</p></div>
+      </section>
+    </main>
+
+    <footer><div class="wrap footer-top"><div class="footer-brand">Lumos / Travel.</div><div class="footer-note">PERSONAL TRIP PLANNER · SHENYANG → QINGHAI / GANSU<br />可独立移除的 GitHub Pages 静态模块</div></div></footer>
+  </body>
+</html>

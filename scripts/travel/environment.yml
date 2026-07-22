@@ -1,0 +1,9 @@
+name: lumos-travel
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - jieba==0.42.1
+      - playwright==1.61.0
