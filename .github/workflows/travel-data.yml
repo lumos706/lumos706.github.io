@@ -2,7 +2,9 @@ name: Refresh travel data
 
 on:
   schedule:
-    # GitHub Actions uses UTC. 13:00 UTC = 21:00 Asia/Shanghai.
+    # GitHub Actions uses UTC. 01:00 UTC = 09:00 Asia/Shanghai.
+    - cron: '0 1 * * *'
+    # 13:00 UTC = 21:00 Asia/Shanghai.
     - cron: '0 13 * * *'
   workflow_dispatch:
     inputs:
@@ -52,9 +54,13 @@ jobs:
           auto-activate: false
           conda-remove-defaults: true
 
-      - name: Install official research skills
+      - name: Install last30days-cn research skill
         run: |
           npx --yes skills add Jesseovo/last30days-skill-cn -g -y
+
+      - name: Install FlyAI skill
+        if: github.event_name != 'schedule' || github.event.schedule == '0 13 * * *'
+        run: |
           npx --yes skills add alibaba-flyai/flyai-skill -g -y
 
       - name: Install optional tokenizer and Playwright
@@ -123,6 +129,7 @@ jobs:
           fi
 
       - name: Refresh travel snapshot
+        if: github.event_name != 'schedule' || github.event.schedule == '0 13 * * *'
         env:
           TRAVEL_ONLY: ${{ inputs.only }}
         run: |
@@ -133,7 +140,17 @@ jobs:
           python scripts/travel/update_travel_data.py "${args[@]}"
 
       - name: Refresh FlyAI flight and hotel prices
+        if: github.event_name != 'schedule' || github.event.schedule == '0 13 * * *'
         run: node scripts/travel/update_flyai_prices.mjs
+
+      - name: Refresh attraction reservation rules
+        if: github.event_name != 'schedule' || github.event.schedule == '0 1 * * *'
+        run: |
+          python scripts/travel/update_reservation_rules.py \
+            --allow-credentials \
+            --quick \
+            --pause 8 \
+            --timeout 120
 
       - name: Validate site
         run: |
@@ -141,14 +158,20 @@ jobs:
           npm run build
 
       - name: Commit refreshed snapshot
+        env:
+          RUN_SCHEDULE: ${{ github.event.schedule }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/travel/snapshot.json
+          git add src/data/travel/snapshot.json src/data/travel/reservations.json
           if git diff --cached --quiet; then
-            echo "Travel snapshot is unchanged."
+            echo "Travel data is unchanged."
             exit 0
           fi
-          git commit -m "data: refresh travel snapshot"
+          if [[ "$RUN_SCHEDULE" == "0 1 * * *" ]]; then
+            git commit -m "data: refresh attraction reservations"
+          else
+            git commit -m "data: refresh travel snapshot"
+          fi
           git pull --rebase origin main
           git push origin HEAD:main

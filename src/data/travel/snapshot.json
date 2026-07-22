@@ -88,7 +88,7 @@
       "sourceErrors": {},
       "priceStatus": "flyai-live",
       "priceRange": {
-        "min": 430,
+        "min": 495,
         "max": 1160
       },
       "priceSamples": [],
@@ -2442,9 +2442,9 @@
   },
   "flyai": {
     "status": "ok",
-    "generatedAt": "2026-07-22T10:42:03.000Z",
-    "expiresAt": "2026-07-24T10:42:03.000Z",
-    "lastSuccessfulAt": "2026-07-22T10:42:03.000Z",
+    "generatedAt": "2026-07-22T11:14:45.376Z",
+    "expiresAt": "2026-07-24T11:14:45.376Z",
+    "lastSuccessfulAt": "2026-07-22T11:14:45.376Z",
     "mode": "api-enhanced",
     "skill": {
       "name": "flyai",
@@ -2460,7 +2460,7 @@
       },
       "priceUnit": "每位成人单程",
       "priceRange": {
-        "min": 430,
+        "min": 495,
         "max": 1160
       },
       "routes": [
@@ -2473,6 +2473,7 @@
           "depDateEnd": "2026-08-04",
           "status": "ok",
           "bestPrice": 920,
+          "selectionMode": "fallback-airlines",
           "offers": [
             {
               "id": "shenyang-xining-outbound-2026-08-03 18:15:00-DR6597",
@@ -2495,8 +2496,9 @@
               "stops": 0,
               "duration": "190",
               "durationMinutes": 190,
+              "preferredAirline": false,
               "price": 920,
-              "jumpUrl": "https://a.feizhu.com/2CTSRw"
+              "jumpUrl": "https://a.feizhu.com/2JTedq"
             },
             {
               "id": "shenyang-xining-outbound-2026-08-02 18:15:00-DR6597",
@@ -2519,11 +2521,12 @@
               "stops": 0,
               "duration": "190",
               "durationMinutes": 190,
+              "preferredAirline": false,
               "price": 1040,
-              "jumpUrl": "https://a.feizhu.com/2rsAgV"
+              "jumpUrl": "https://a.feizhu.com/3sEGs2"
             }
           ],
-          "cliExitCode": 0
+          "cliExitCode": 3221226505
         },
         {
           "id": "shenyang-lanzhou-outbound",
@@ -2533,82 +2536,86 @@
           "depDateStart": "2026-08-01",
           "depDateEnd": "2026-08-04",
           "status": "ok",
-          "bestPrice": 480,
+          "bestPrice": 630,
+          "selectionMode": "preferred-airlines",
           "offers": [
             {
-              "id": "shenyang-lanzhou-outbound-2026-08-03 14:25:00-9C7731",
+              "id": "shenyang-lanzhou-outbound-2026-08-04 16:25:00-CZ5997",
               "routeId": "shenyang-lanzhou-outbound",
               "direction": "去程",
               "origin": "沈阳",
               "destination": "兰州",
               "departureAirport": "桃仙国际机场",
               "arrivalAirport": "中川机场",
-              "departureAt": "2026-08-03 14:25:00",
-              "arrivalAt": "2026-08-03 18:00:00",
+              "departureAt": "2026-08-04 16:25:00",
+              "arrivalAt": "2026-08-04 19:45:00",
               "flightNumbers": [
-                "9C7731"
+                "CZ5997"
               ],
               "airlines": [
-                "春秋"
-              ],
-              "seatClass": "经济舱",
-              "direct": true,
-              "stops": 0,
-              "duration": "215",
-              "durationMinutes": 215,
-              "price": 480,
-              "jumpUrl": "https://a.feizhu.com/4ej4rV"
-            },
-            {
-              "id": "shenyang-lanzhou-outbound-2026-08-04 07:35:00-9C8553",
-              "routeId": "shenyang-lanzhou-outbound",
-              "direction": "去程",
-              "origin": "沈阳",
-              "destination": "兰州",
-              "departureAirport": "桃仙国际机场",
-              "arrivalAirport": "中川机场",
-              "departureAt": "2026-08-04 07:35:00",
-              "arrivalAt": "2026-08-04 11:15:00",
-              "flightNumbers": [
-                "9C8553"
-              ],
-              "airlines": [
-                "春秋"
-              ],
-              "seatClass": "经济舱",
-              "direct": true,
-              "stops": 0,
-              "duration": "220",
-              "durationMinutes": 220,
-              "price": 530,
-              "jumpUrl": "https://a.feizhu.com/2zDPpS"
-            },
-            {
-              "id": "shenyang-lanzhou-outbound-2026-08-02 07:35:00-9C8553",
-              "routeId": "shenyang-lanzhou-outbound",
-              "direction": "去程",
-              "origin": "沈阳",
-              "destination": "兰州",
-              "departureAirport": "桃仙国际机场",
-              "arrivalAirport": "中川机场",
-              "departureAt": "2026-08-02 07:35:00",
-              "arrivalAt": "2026-08-02 10:55:00",
-              "flightNumbers": [
-                "9C8553"
-              ],
-              "airlines": [
-                "春秋"
+                "南航"
               ],
               "seatClass": "经济舱",
               "direct": true,
               "stops": 0,
               "duration": "200",
               "durationMinutes": 200,
-              "price": 530,
-              "jumpUrl": "https://a.feizhu.com/1s4CHl"
+              "preferredAirline": true,
+              "price": 630,
+              "jumpUrl": "https://a.feizhu.com/1HGkS8"
+            },
+            {
+              "id": "shenyang-lanzhou-outbound-2026-08-03 16:25:00-CZ5997",
+              "routeId": "shenyang-lanzhou-outbound",
+              "direction": "去程",
+              "origin": "沈阳",
+              "destination": "兰州",
+              "departureAirport": "桃仙国际机场",
+              "arrivalAirport": "中川机场",
+              "departureAt": "2026-08-03 16:25:00",
+              "arrivalAt": "2026-08-03 19:45:00",
+              "flightNumbers": [
+                "CZ5997"
+              ],
+              "airlines": [
+                "南航"
+              ],
+              "seatClass": "经济舱",
+              "direct": true,
+              "stops": 0,
+              "duration": "200",
+              "durationMinutes": 200,
+              "preferredAirline": true,
+              "price": 650,
+              "jumpUrl": "https://a.feizhu.com/4ES13z"
+            },
+            {
+              "id": "shenyang-lanzhou-outbound-2026-08-04 08:30:00-CZ5995",
+              "routeId": "shenyang-lanzhou-outbound",
+              "direction": "去程",
+              "origin": "沈阳",
+              "destination": "兰州",
+              "departureAirport": "桃仙国际机场",
+              "arrivalAirport": "中川机场",
+              "departureAt": "2026-08-04 08:30:00",
+              "arrivalAt": "2026-08-04 11:45:00",
+              "flightNumbers": [
+                "CZ5995"
+              ],
+              "airlines": [
+                "南航"
+              ],
+              "seatClass": "经济舱",
+              "direct": true,
+              "stops": 0,
+              "duration": "195",
+              "durationMinutes": 195,
+              "preferredAirline": true,
+              "price": 690,
+              "jumpUrl": "https://a.feizhu.com/3nTBKD"
             }
           ],
-          "cliExitCode": 0
+          "cliExitCode": 3221226505
         },
         {
           "id": "xining-shenyang-return",
@@ -2619,6 +2626,7 @@
           "depDateEnd": "2026-08-11",
           "status": "ok",
           "bestPrice": 1160,
+          "selectionMode": "fallback-airlines",
           "offers": [
             {
               "id": "xining-shenyang-return-2026-08-09 22:10:00-DR6598",
@@ -2641,11 +2649,12 @@
               "stops": 0,
               "duration": "160",
               "durationMinutes": 160,
+              "preferredAirline": false,
               "price": 1160,
-              "jumpUrl": "https://a.feizhu.com/2zva7C"
+              "jumpUrl": "https://a.feizhu.com/0lhw6M"
             }
           ],
-          "cliExitCode": 0
+          "cliExitCode": 3221226505
         },
         {
           "id": "lanzhou-shenyang-return",
@@ -2655,82 +2664,86 @@
           "depDateStart": "2026-08-04",
           "depDateEnd": "2026-08-11",
           "status": "ok",
-          "bestPrice": 430,
+          "bestPrice": 495,
+          "selectionMode": "preferred-airlines",
           "offers": [
             {
-              "id": "lanzhou-shenyang-return-2026-08-11 16:50:00-9C7732",
+              "id": "lanzhou-shenyang-return-2026-08-11 08:20:00-MU9855",
               "routeId": "lanzhou-shenyang-return",
               "direction": "返程",
               "origin": "兰州",
               "destination": "沈阳",
               "departureAirport": "中川机场",
               "arrivalAirport": "桃仙国际机场",
-              "departureAt": "2026-08-11 16:50:00",
-              "arrivalAt": "2026-08-11 19:55:00",
+              "departureAt": "2026-08-11 08:20:00",
+              "arrivalAt": "2026-08-11 11:15:00",
               "flightNumbers": [
-                "9C7732"
+                "MU9855"
               ],
               "airlines": [
-                "春秋"
+                "东航"
               ],
               "seatClass": "经济舱",
               "direct": true,
               "stops": 0,
-              "duration": "185",
-              "durationMinutes": 185,
-              "price": 430,
-              "jumpUrl": "https://a.feizhu.com/3VaHUC"
+              "duration": "175",
+              "durationMinutes": 175,
+              "preferredAirline": true,
+              "price": 495,
+              "jumpUrl": "https://a.feizhu.com/35G4mR"
             },
             {
-              "id": "lanzhou-shenyang-return-2026-08-05 12:55:00-9C8554",
+              "id": "lanzhou-shenyang-return-2026-08-05 20:45:00-CZ5998",
               "routeId": "lanzhou-shenyang-return",
               "direction": "返程",
               "origin": "兰州",
               "destination": "沈阳",
               "departureAirport": "中川机场",
               "arrivalAirport": "桃仙国际机场",
-              "departureAt": "2026-08-05 12:55:00",
-              "arrivalAt": "2026-08-05 16:00:00",
+              "departureAt": "2026-08-05 20:45:00",
+              "arrivalAt": "2026-08-05 23:30:00",
               "flightNumbers": [
-                "9C8554"
+                "CZ5998"
               ],
               "airlines": [
-                "春秋"
+                "南航"
               ],
               "seatClass": "经济舱",
               "direct": true,
               "stops": 0,
-              "duration": "185",
-              "durationMinutes": 185,
-              "price": 430,
-              "jumpUrl": "https://a.feizhu.com/2wUmlw"
+              "duration": "165",
+              "durationMinutes": 165,
+              "preferredAirline": true,
+              "price": 500,
+              "jumpUrl": "https://a.feizhu.com/22JU6Q"
             },
             {
-              "id": "lanzhou-shenyang-return-2026-08-05 18:50:00-9C7732",
+              "id": "lanzhou-shenyang-return-2026-08-11 21:00:00-CZ5998",
               "routeId": "lanzhou-shenyang-return",
               "direction": "返程",
               "origin": "兰州",
               "destination": "沈阳",
               "departureAirport": "中川机场",
               "arrivalAirport": "桃仙国际机场",
-              "departureAt": "2026-08-05 18:50:00",
-              "arrivalAt": "2026-08-05 22:00:00",
+              "departureAt": "2026-08-11 21:00:00",
+              "arrivalAt": "2026-08-11 23:30:00",
               "flightNumbers": [
-                "9C7732"
+                "CZ5998"
               ],
               "airlines": [
-                "春秋"
+                "南航"
               ],
               "seatClass": "经济舱",
               "direct": true,
               "stops": 0,
-              "duration": "190",
-              "durationMinutes": 190,
-              "price": 450,
-              "jumpUrl": "https://a.feizhu.com/2O5SwL"
+              "duration": "150",
+              "durationMinutes": 150,
+              "preferredAirline": true,
+              "price": 510,
+              "jumpUrl": "https://a.feizhu.com/3o1hJ1"
             }
           ],
-          "cliExitCode": 0
+          "cliExitCode": 3221226505
         }
       ],
       "featured": [
@@ -2755,32 +2768,34 @@
           "stops": 0,
           "duration": "190",
           "durationMinutes": 190,
+          "preferredAirline": false,
           "price": 920,
-          "jumpUrl": "https://a.feizhu.com/2CTSRw"
+          "jumpUrl": "https://a.feizhu.com/2JTedq"
         },
         {
-          "id": "shenyang-lanzhou-outbound-2026-08-03 14:25:00-9C7731",
+          "id": "shenyang-lanzhou-outbound-2026-08-04 16:25:00-CZ5997",
           "routeId": "shenyang-lanzhou-outbound",
           "direction": "去程",
           "origin": "沈阳",
           "destination": "兰州",
           "departureAirport": "桃仙国际机场",
           "arrivalAirport": "中川机场",
-          "departureAt": "2026-08-03 14:25:00",
-          "arrivalAt": "2026-08-03 18:00:00",
+          "departureAt": "2026-08-04 16:25:00",
+          "arrivalAt": "2026-08-04 19:45:00",
           "flightNumbers": [
-            "9C7731"
+            "CZ5997"
           ],
           "airlines": [
-            "春秋"
+            "南航"
           ],
           "seatClass": "经济舱",
           "direct": true,
           "stops": 0,
-          "duration": "215",
-          "durationMinutes": 215,
-          "price": 480,
-          "jumpUrl": "https://a.feizhu.com/4ej4rV"
+          "duration": "200",
+          "durationMinutes": 200,
+          "preferredAirline": true,
+          "price": 630,
+          "jumpUrl": "https://a.feizhu.com/1HGkS8"
         },
         {
           "id": "xining-shenyang-return-2026-08-09 22:10:00-DR6598",
@@ -2803,32 +2818,34 @@
           "stops": 0,
           "duration": "160",
           "durationMinutes": 160,
+          "preferredAirline": false,
           "price": 1160,
-          "jumpUrl": "https://a.feizhu.com/2zva7C"
+          "jumpUrl": "https://a.feizhu.com/0lhw6M"
         },
         {
-          "id": "lanzhou-shenyang-return-2026-08-11 16:50:00-9C7732",
+          "id": "lanzhou-shenyang-return-2026-08-11 08:20:00-MU9855",
           "routeId": "lanzhou-shenyang-return",
           "direction": "返程",
           "origin": "兰州",
           "destination": "沈阳",
           "departureAirport": "中川机场",
           "arrivalAirport": "桃仙国际机场",
-          "departureAt": "2026-08-11 16:50:00",
-          "arrivalAt": "2026-08-11 19:55:00",
+          "departureAt": "2026-08-11 08:20:00",
+          "arrivalAt": "2026-08-11 11:15:00",
           "flightNumbers": [
-            "9C7732"
+            "MU9855"
           ],
           "airlines": [
-            "春秋"
+            "东航"
           ],
           "seatClass": "经济舱",
           "direct": true,
           "stops": 0,
-          "duration": "185",
-          "durationMinutes": 185,
-          "price": 430,
-          "jumpUrl": "https://a.feizhu.com/3VaHUC"
+          "duration": "175",
+          "durationMinutes": 175,
+          "preferredAirline": true,
+          "price": 495,
+          "jumpUrl": "https://a.feizhu.com/35G4mR"
         }
       ],
       "freshQueries": 4,
@@ -2876,7 +2893,7 @@
               "address": "西宁市城中区麟河路31号",
               "nearby": "近西宁夏都博汇温泉水乐园",
               "mainPic": "https://img.alicdn.com/imgextra/i3/6000000004603/O1CN01KPRSHJ1jsDilqcEra_!!6000000004603-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/1oqTGX"
+              "detailUrl": "https://a.feizhu.com/0EMyvU"
             },
             {
               "id": "xining-0801-64052027",
@@ -2895,7 +2912,7 @@
               "address": "八一西路22号",
               "nearby": "近西宁站",
               "mainPic": "https://img.alicdn.com/imgextra/i3/6000000005172/O1CN01NFNHvC1o4paVPl5BI_!!6000000005172-2-hotel.png",
-              "detailUrl": "https://a.feizhu.com/1oEbCY"
+              "detailUrl": "https://a.feizhu.com/1oBWH6"
             },
             {
               "id": "xining-0801-63316090",
@@ -2914,10 +2931,10 @@
               "address": "五四西路66号",
               "nearby": "近西宁万达广场",
               "mainPic": "https://img.alicdn.com/imgextra/i4/6000000000486/O1CN015vGrpx1FSd9xS3xOV_!!6000000000486-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/3z42Gq"
+              "detailUrl": "https://a.feizhu.com/3zcNqu"
             }
           ],
-          "cliExitCode": 0
+          "cliExitCode": 3221226505
         },
         {
           "id": "chaka-0802",
@@ -2946,7 +2963,7 @@
               "address": "茶卡镇茶卡新村177号",
               "nearby": "近茶卡汽车站",
               "mainPic": "https://img.alicdn.com/imgextra/i3/6000000003456/O1CN014OHuNc1bOtwVrVa4y_!!6000000003456-2-hotel.png",
-              "detailUrl": "https://a.feizhu.com/3bR5nk"
+              "detailUrl": "https://a.feizhu.com/0dRL9i"
             },
             {
               "id": "chaka-0802-57357699",
@@ -2965,7 +2982,7 @@
               "address": "乌兰茶卡镇茶卡新村18号",
               "nearby": "近茶卡汽车站",
               "mainPic": "https://img.alicdn.com/imgextra/i1/6000000001884/O1CN01B5rr7A1PmvGq1oN7q_!!6000000001884-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/3uAh8o"
+              "detailUrl": "https://a.feizhu.com/1wSXG4"
             },
             {
               "id": "chaka-0802-80219011",
@@ -2984,10 +3001,10 @@
               "address": "乌兰县茶卡镇茶卡新村75号",
               "nearby": "近茶卡汽车站",
               "mainPic": "https://img.alicdn.com/imgextra/i3/6000000002700/O1CN016lDEI51VoeM2J5aRb_!!6000000002700-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/06vKTz"
+              "detailUrl": "https://a.feizhu.com/1ZuTN6"
             }
           ],
-          "cliExitCode": 0
+          "cliExitCode": 3221226505
         },
         {
           "id": "dachaidan-0803",
@@ -3016,7 +3033,7 @@
               "address": "青海省海西蒙古族藏族自治州大柴旦行委大柴旦镇五彩街",
               "nearby": "近大柴旦行委柴旦镇",
               "mainPic": "https://img.alicdn.com/imgextra/i2/O1CN01VKfP0T1k0vl7ZyCaC_!!4611686018427384334-0-fliggy_content_upload_image.jpg",
-              "detailUrl": "https://a.feizhu.com/0YwYwL"
+              "detailUrl": "https://a.feizhu.com/2tFayu"
             },
             {
               "id": "dachaidan-0803-72113571",
@@ -3035,7 +3052,7 @@
               "address": "大柴旦人民路与温泉路交叉口中石化西侧50米",
               "nearby": "近大柴旦行委柴旦镇",
               "mainPic": "https://img.alicdn.com/imgextra/i2/O1CN01uMg2td289Dhpt4Rjr_!!4611686018427387601-0-fliggy_content_upload_image.jpg",
-              "detailUrl": "https://a.feizhu.com/2NN7D1"
+              "detailUrl": "https://a.feizhu.com/21eDsl"
             },
             {
               "id": "dachaidan-0803-75518172",
@@ -3054,10 +3071,10 @@
               "address": "青海省海西州大柴旦人民西路35号院内1号",
               "nearby": "近大柴旦汽车站",
               "mainPic": "https://img.alicdn.com/imgextra/i2/6000000004291/O1CN01qkK3L61hZKU027ejP_!!6000000004291-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/2c9Y04"
+              "detailUrl": "https://a.feizhu.com/0QWsXM"
             }
           ],
-          "cliExitCode": 0
+          "cliExitCode": 3221226505
         },
         {
           "id": "dunhuang-0804",
@@ -3085,7 +3102,7 @@
               "address": "敦煌市月牙泉镇杨家桥乡月牙泉村三组2号",
               "nearby": "近敦煌鸣沙山月牙泉景区",
               "mainPic": "https://img.alicdn.com/imgextra/i1/6000000005854/O1CN01JubPXu1t7BepdqmOp_!!6000000005854-2-hotel.png",
-              "detailUrl": "https://a.feizhu.com/1oRnL2"
+              "detailUrl": "https://a.feizhu.com/3KqzCp"
             },
             {
               "id": "dunhuang-0804-51194180",
@@ -3104,29 +3121,10 @@
               "address": "杨家桥雷音寺对面千年敦煌月牙泉小镇（杨家桥，近鸣山路）",
               "nearby": "近敦煌鸣沙山月牙泉景区",
               "mainPic": "https://img.alicdn.com/imgextra/i3/O1CN019Yn9AK1g8wDbQOrSi_!!4611686018427383810-0-fliggy_content_upload_image.jpg",
-              "detailUrl": "https://a.feizhu.com/2cBQzw"
-            },
-            {
-              "id": "dunhuang-0804-56491273",
-              "stayId": "dunhuang-0804",
-              "city": "敦煌",
-              "checkIn": "2026-08-04",
-              "checkOut": "2026-08-06",
-              "nights": 2,
-              "name": "敦煌白老大客栈(莫高窟数字中心店)",
-              "pricePerRoomNight": 155,
-              "twoRoomsPerNight": 310,
-              "twoRoomStayTotal": 620,
-              "score": "",
-              "scoreDesc": "",
-              "star": "经济型",
-              "address": "敦煌市莫高镇新墩村三组10号",
-              "nearby": "近敦煌站",
-              "mainPic": "https://img.alicdn.com/imgextra/i4/O1CN01UQXYFL1i6IzYM4ofg_!!0-alitrip.jpg",
-              "detailUrl": "https://a.feizhu.com/3dLeVh"
+              "detailUrl": "https://a.feizhu.com/2X3JH1"
             }
           ],
-          "cliExitCode": 0
+          "cliExitCode": 3221226505
         },
         {
           "id": "zhangye-0806",
@@ -3154,7 +3152,7 @@
               "address": "甘肃省张掖市甘州区高铁西站国芳商业综合体1期项目1号楼1楼",
               "nearby": "近张掖西站",
               "mainPic": "https://img.alicdn.com/imgextra/i3/6000000002166/O1CN01plgM0C1Rs4wLcR4M1_!!6000000002166-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/4VXn12"
+              "detailUrl": "https://a.feizhu.com/1ZeHMR"
             },
             {
               "id": "zhangye-0806-54674002",
@@ -3173,7 +3171,7 @@
               "address": "临泽丹霞国家地质公园北入口梨园新村别墅区8号楼",
               "nearby": "近丹霞口文旅小镇",
               "mainPic": "https://img.alicdn.com/imgextra/i1/O1CN01Qro6Q41i6lWJj53aT_!!4611686018427380044-0-alitrip.jpg",
-              "detailUrl": "https://a.feizhu.com/0Lo0XC"
+              "detailUrl": "https://a.feizhu.com/4a8qBz"
             },
             {
               "id": "zhangye-0806-12653015",
@@ -3192,10 +3190,10 @@
               "address": "临泽--丹霞国家地质公园入口200米-，近S213国道。",
               "nearby": "近张掖丹霞国家地质公园-七彩丹霞",
               "mainPic": "https://img.alicdn.com/imgextra/i4/6000000002740/O1CN01YVbxOq1W6yK528eNM_!!6000000002740-2-hotel.png",
-              "detailUrl": "https://a.feizhu.com/4J08JJ"
+              "detailUrl": "https://a.feizhu.com/2rvYAz"
             }
           ],
-          "cliExitCode": 0
+          "cliExitCode": 3221226505
         }
       ],
       "featured": [
@@ -3216,7 +3214,7 @@
           "address": "西宁市城中区麟河路31号",
           "nearby": "近西宁夏都博汇温泉水乐园",
           "mainPic": "https://img.alicdn.com/imgextra/i3/6000000004603/O1CN01KPRSHJ1jsDilqcEra_!!6000000004603-0-hotel.jpg",
-          "detailUrl": "https://a.feizhu.com/1oqTGX"
+          "detailUrl": "https://a.feizhu.com/0EMyvU"
         },
         {
           "id": "chaka-0802-57094150",
@@ -3235,7 +3233,7 @@
           "address": "茶卡镇茶卡新村177号",
           "nearby": "近茶卡汽车站",
           "mainPic": "https://img.alicdn.com/imgextra/i3/6000000003456/O1CN014OHuNc1bOtwVrVa4y_!!6000000003456-2-hotel.png",
-          "detailUrl": "https://a.feizhu.com/3bR5nk"
+          "detailUrl": "https://a.feizhu.com/0dRL9i"
         },
         {
           "id": "dachaidan-0803-62148101",
@@ -3254,7 +3252,7 @@
           "address": "青海省海西蒙古族藏族自治州大柴旦行委大柴旦镇五彩街",
           "nearby": "近大柴旦行委柴旦镇",
           "mainPic": "https://img.alicdn.com/imgextra/i2/O1CN01VKfP0T1k0vl7ZyCaC_!!4611686018427384334-0-fliggy_content_upload_image.jpg",
-          "detailUrl": "https://a.feizhu.com/0YwYwL"
+          "detailUrl": "https://a.feizhu.com/2tFayu"
         },
         {
           "id": "dunhuang-0804-57450030",
@@ -3273,7 +3271,7 @@
           "address": "敦煌市月牙泉镇杨家桥乡月牙泉村三组2号",
           "nearby": "近敦煌鸣沙山月牙泉景区",
           "mainPic": "https://img.alicdn.com/imgextra/i1/6000000005854/O1CN01JubPXu1t7BepdqmOp_!!6000000005854-2-hotel.png",
-          "detailUrl": "https://a.feizhu.com/1oRnL2"
+          "detailUrl": "https://a.feizhu.com/3KqzCp"
         },
         {
           "id": "zhangye-0806-58461071",
@@ -3292,7 +3290,7 @@
           "address": "甘肃省张掖市甘州区高铁西站国芳商业综合体1期项目1号楼1楼",
           "nearby": "近张掖西站",
           "mainPic": "https://img.alicdn.com/imgextra/i3/6000000002166/O1CN01plgM0C1Rs4wLcR4M1_!!6000000002166-0-hotel.jpg",
-          "detailUrl": "https://a.feizhu.com/4VXn12"
+          "detailUrl": "https://a.feizhu.com/1ZeHMR"
         }
       ],
       "freshQueries": 5,

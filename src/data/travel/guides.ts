@@ -1,6 +1,10 @@
 export interface AttractionPlaybook {
   key: string;
   name: string;
+  mapLinks: {
+    label: string;
+    query: string;
+  }[];
   time: string;
   sequence: string;
   play: string;
@@ -12,6 +16,7 @@ export const attractionPlaybooks: AttractionPlaybook[] = [
   {
     key: 'qinghaiLake',
     name: '青海湖',
+    mapLinks: [{ label: '二郎剑景区', query: '青海湖二郎剑景区' }],
     time: '半天 · 西宁早出发',
     sequence: '西宁 → 南岸正规入口 → 茶卡',
     play: '不要追求“绕湖一圈”。四人只选一个正规湖区，留出停车、散步和天气变化的时间，再继续去茶卡。',
@@ -21,6 +26,7 @@ export const attractionPlaybooks: AttractionPlaybook[] = [
   {
     key: 'chakaSaltLake',
     name: '茶卡盐湖',
+    mapLinks: [{ label: '天空之镜', query: '茶卡盐湖天空之镜景区' }],
     time: '3–4 小时 · 按预约时段',
     sequence: '茶卡镇 → 景区 → 德令哈方向',
     play: '把小火车当节省体力的选项，不当必打卡项目。天气比滤镜更重要，阴雨或大风时及时缩短停留。',
@@ -30,6 +36,10 @@ export const attractionPlaybooks: AttractionPlaybook[] = [
   {
     key: 'dachaidan',
     name: '大柴旦',
+    mapLinks: [
+      { label: '翡翠湖', query: '大柴旦翡翠湖旅游景区' },
+      { label: '水上雅丹', query: '乌素特水上雅丹地质公园' },
+    ],
     time: '半天 · 二选一',
     sequence: '茶卡 → 大柴旦 → 敦煌',
     play: '翡翠湖与水上雅丹二选一。七日路线的核心是安全抵达敦煌，不把盆地里的每个网红点都塞进同一天。',
@@ -39,6 +49,7 @@ export const attractionPlaybooks: AttractionPlaybook[] = [
   {
     key: 'mogaoCaves',
     name: '莫高窟',
+    mapLinks: [{ label: '数字展示中心', query: '莫高窟数字展示中心' }],
     time: '半天 · 先订票再排路线',
     sequence: '数字展示中心 → 洞窟参观 → 市区休息',
     play: '先锁定官方预约场次，再安排敦煌当天其他项目。到场时间按票面要求倒推，下午给鸣沙山留出休息间隔。',
@@ -48,6 +59,7 @@ export const attractionPlaybooks: AttractionPlaybook[] = [
   {
     key: 'mingshaMountain',
     name: '鸣沙山月牙泉',
+    mapLinks: [{ label: '景区入口', query: '鸣沙山月牙泉景区' }],
     time: '傍晚至日落',
     sequence: '酒店休息 → 鸣沙山 → 敦煌夜间用餐',
     play: '避开午后最强日晒，把体力留给登沙坡和日落。骑骆驼、滑沙都是可选项，不影响主线观景。',
@@ -57,6 +69,7 @@ export const attractionPlaybooks: AttractionPlaybook[] = [
   {
     key: 'jiayuPass',
     name: '嘉峪关',
+    mapLinks: [{ label: '关城景区', query: '嘉峪关关城景区' }],
     time: '2–3 小时 · 只保留关城',
     sequence: '敦煌动车 → 嘉峪关关城 → 张掖',
     play: '七日路线把嘉峪关当河西走廊的中途停靠，只看一个核心点；悬壁长城等外围点留给时间更宽松的行程。',
@@ -66,6 +79,7 @@ export const attractionPlaybooks: AttractionPlaybook[] = [
   {
     key: 'zhangyeDanxia',
     name: '张掖七彩丹霞',
+    mapLinks: [{ label: '北入口', query: '张掖七彩丹霞旅游景区北入口' }],
     time: '3–4 小时 · 早场优先',
     sequence: '张掖市区 → 景区接驳环线 → 兰州',
     play: '按景区接驳顺序走，不逆向追观景台。早场温度更舒服，也更容易给当天回兰州留下缓冲。',

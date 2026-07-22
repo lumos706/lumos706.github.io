@@ -8,6 +8,7 @@ import {
 } from '@/data/travel/plans';
 import { attractionPlaybooks, foodRegions } from '@/data/travel/guides';
 import snapshot from '@/data/travel/snapshot.json';
+import reservationsSnapshot from '@/data/travel/reservations.json';
 
 const dayOptions: TripDays[] = [3, 4, 7];
 const budgetOptions: BudgetLevel[] = [2500, 3000, 3500];
@@ -34,8 +35,11 @@ const hotelStays: any[] = Array.isArray(flyaiHotels.stays)
   : [];
 const flyaiGeneratedAt = flyaiSnapshot.generatedAt ? new Date(flyaiSnapshot.generatedAt) : null;
 const flyaiExpiresAt = flyaiSnapshot.expiresAt ? new Date(flyaiSnapshot.expiresAt) : null;
+const reservationGeneratedAt = new Date(reservationsSnapshot.generatedAt);
+const reservationExpiresAt = new Date(reservationsSnapshot.expiresAt);
 const staleAtBuild = Date.now() > expiresAt.getTime()
   || Boolean(flyaiExpiresAt && Date.now() > flyaiExpiresAt.getTime());
+const reservationStaleAtBuild = Date.now() > reservationExpiresAt.getTime();
 const generatedLabel = new Intl.DateTimeFormat('zh-CN', {
   timeZone: 'Asia/Shanghai',
   month: '2-digit',
@@ -54,6 +58,14 @@ const flyaiGeneratedLabel = flyaiGeneratedAt
       hour12: false,
     }).format(flyaiGeneratedAt)
   : null;
+const reservationGeneratedLabel = new Intl.DateTimeFormat('zh-CN', {
+  timeZone: 'Asia/Shanghai',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: false,
+}).format(reservationGeneratedAt);
 const flyaiModeLabel = flyaiSnapshot.mode === 'api-enhanced' ? 'API 增强' : '公开体验';
 const flyaiSystemMessages: string[] = Array.isArray(flyaiSnapshot.systemMessages)
   ? flyaiSnapshot.systemMessages.filter(Boolean)
@@ -76,6 +88,11 @@ const readableDuration = (offer: any) => {
   const hours = Math.floor(minutes / 60);
   const remainder = minutes % 60;
   return `${hours ? `${hours} 小时` : ''}${remainder ? ` ${remainder} 分` : ''}`.trim();
+};
+
+const baiduMapUrl = (...parts: unknown[]) => {
+  const query = parts.map((part) => String(part ?? '').trim()).filter(Boolean).join(' ');
+  return `https://map.baidu.com/search/${encodeURIComponent(query)}`;
 };
 
 const priceCategories = [
@@ -103,6 +120,7 @@ const priceText = (category: any, fallback: string) => {
 const attractionGuides = attractionPlaybooks.map((guide) => ({
   ...guide,
   evidence: trustedEvidence((snapshot as any).attractions?.[guide.key], 4, 0.12),
+  reservation: (reservationsSnapshot.attractions as any)?.[guide.key],
 }));
 
 const foodCities = foodRegions.map((region) => {
@@ -277,7 +295,7 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
               <span>{item.code}</span>
               <h3>{item.title}</h3>
               <strong>{priceText(category, item.fallback)}</strong>
-              <p>{item.key === 'flights' ? '每位成人单程经济舱；日期与航班不同会改变价格，往返需分别相加。' : item.key === 'hotels' ? '主价格为两间房每晚合计；下方同时列出单间起价与本段住宿合计。' : '莫高窟先看余票和场次，所有门票以景区官方预约页为准。'}</p>
+              <p>{item.key === 'flights' ? '每位成人单程经济舱；先筛东航、南航、国航、厦航，对应航线没有可核对结果时才展示其他航司。' : item.key === 'hotels' ? '主价格为两间房每晚合计；下方同时列出单间起价与本段住宿合计。' : '七个景区的预约时限每日 09:00 单独核验，最终仍以景区官方预约页为准。'}</p>
               {item.key === 'flights' && flightOffers.length > 0 && (
                 <div class="travel-live-list" aria-label="FlyAI 机票报价">
                   <div class="travel-live-source"><span>fly.ai × 飞猪</span><b>{flyaiModeLabel}</b></div>
@@ -288,7 +306,7 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
                         <strong>¥{Number(offer.price).toLocaleString('zh-CN')}</strong>
                       </div>
                       <h4>{shortDateTime(offer.departureAt)} · {(offer.flightNumbers ?? []).join(' + ') || '航班待核对'}</h4>
-                      <p>{(offer.airlines ?? []).join('、') || '承运航司见预订页'} · {offer.direct ? '直达' : `${offer.stops} 次中转`} · {readableDuration(offer)}</p>
+                      <p>{(offer.airlines ?? []).join('、') || '承运航司见预订页'} · {offer.direct ? '直达' : `${offer.stops} 次中转`} · {readableDuration(offer)}{offer.preferredAirline && <b class="travel-preferred-airline">优先航司</b>}</p>
                       <a href={offer.jumpUrl} target="_blank" rel="noreferrer">在飞猪核对该航班</a>
                     </article>
                   ))}
@@ -304,7 +322,10 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
                         <img src={offer.mainPic} alt={`${offer.name}的飞猪公开房源图`} loading="lazy" decoding="async" referrerpolicy="no-referrer" />
                         <div>
                           <div class="travel-offer-head"><span>{stay.city} · {shortStay(stay)}</span><strong>¥{Number(offer.pricePerRoomNight).toLocaleString('zh-CN')} / 间</strong></div>
-                          <h4>{offer.name}</h4>
+                          <div class="travel-name-row">
+                            <h4>{offer.name}</h4>
+                            <a class="travel-map-link travel-map-link-dark" href={baiduMapUrl(stay.city, offer.name)} target="_blank" rel="noreferrer" aria-label={`在百度地图查看${offer.name}`}>百度地图 ↗</a>
+                          </div>
                           <p>{offer.star || '房型等级见预订页'}{offer.nearby ? ` · ${offer.nearby}` : ''}</p>
                           <small>两间每晚约 ¥{Number(offer.twoRoomsPerNight).toLocaleString('zh-CN')}{Number(stay.nights) > 1 ? ` · 本段约 ¥${Number(offer.twoRoomStayTotal).toLocaleString('zh-CN')}` : ''}</small>
                           <a href={offer.detailUrl} target="_blank" rel="noreferrer">在飞猪核对房型</a>
@@ -331,11 +352,29 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
 
   <section class="section travel-guide-section">
     <div class="wrap">
-      <div class="travel-guide-intro"><h2>七个景点，逐个拆开。</h2><p>先给出适合这趟四人行程的安排，再附上近 30 天检索窗口返回的公开平台线索。某个平台本轮没有有效结果时不会硬凑；门票、开放时间和交通调整仍以景区官方通知为准。</p></div>
+      <div class="travel-guide-intro"><h2>七个景点，逐个拆开。</h2><p>预约要求直接写在每张卡片里，不再让你先点开攻略找答案。时限由 last30days-cn 每日 09:00 核验，本次检查于 {reservationGeneratedLabel} 完成{reservationStaleAtBuild ? '，当前快照可能过期' : ''}；没有明确新证据时保留上一份稳妥规则，最终仍以景区官方通知为准。</p></div>
       <div class="travel-attraction-list">
         {attractionGuides.map((guide, index) => (
           <article class="travel-attraction">
-            <header><span>{String(index + 1).padStart(2, '0')} / {guide.time}</span><h3>{guide.name}</h3><p>{guide.sequence}</p></header>
+            <header>
+              <span>{String(index + 1).padStart(2, '0')} / {guide.time}</span>
+              <div class="travel-name-row travel-attraction-name">
+                <h3>{guide.name}</h3>
+                <div class="travel-map-links">
+                  {guide.mapLinks.map((map) => <a class="travel-map-link" href={baiduMapUrl(map.query)} target="_blank" rel="noreferrer" aria-label={`在百度地图查看${map.label}`}>{map.label}地图 ↗</a>)}
+                </div>
+              </div>
+              <p>{guide.sequence}</p>
+              {guide.reservation && (
+                <div class:list={['travel-reservation-rule', { required: guide.reservation.required }]}>
+                  <div><span>{guide.reservation.statusLabel}</span><b>每日 09:00 核验</b></div>
+                  <strong>{guide.reservation.leadTime}</strong>
+                  <p>{guide.reservation.note}</p>
+                  <small>渠道：{guide.reservation.channel}</small>
+                  {guide.reservation.evidence?.[0] && <a href={guide.reservation.evidence[0].url} target="_blank" rel="noreferrer">查看本次公开依据 ↗</a>}
+                </div>
+              )}
+            </header>
             <div class="travel-attraction-plan"><strong>怎么安排</strong><p>{guide.play}</p></div>
             <div class="travel-attraction-checks">
               <div><strong>出发前</strong><ul>{guide.prepare.map((item) => <li>{item}</li>)}</ul></div>
@@ -366,7 +405,14 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
             <header><h3>{city.city}</h3><span>{city.restaurants.length} 家有名有据</span></header>
             {city.restaurants.length ? <div class="travel-restaurants">{city.restaurants.map((restaurant: any) => (
               <section class="travel-restaurant">
-                <div><span>{restaurant.verdict === 'mixed' ? '口碑分化' : restaurant.verdict === 'caution' ? '谨慎候选' : '近期候选'}</span><h4>{restaurant.name}</h4><strong>{restaurant.specialty}</strong><p>{restaurant.note}</p></div>
+                <div>
+                  <span>{restaurant.verdict === 'mixed' ? '口碑分化' : restaurant.verdict === 'caution' ? '谨慎候选' : '近期候选'}</span>
+                  <div class="travel-name-row">
+                    <h4>{restaurant.name}</h4>
+                    <a class="travel-map-link" href={baiduMapUrl(city.city, restaurant.name)} target="_blank" rel="noreferrer" aria-label={`在百度地图查看${restaurant.name}`}>百度地图 ↗</a>
+                  </div>
+                  <strong>{restaurant.specialty}</strong><p>{restaurant.note}</p>
+                </div>
                 <ul>{restaurant.sources.map((source: any) => (
                   <li><a href={source.url} target="_blank" rel="noreferrer"><span>{platformNames[source.platform] ?? source.platform}</span>{source.title}</a></li>
                 ))}</ul>

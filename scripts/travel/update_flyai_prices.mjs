@@ -20,6 +20,8 @@ const SNAPSHOT_PATH = path.resolve(
 );
 const QUERY_TIMEOUT_MS = Number(process.env.FLYAI_QUERY_TIMEOUT_MS || 90_000);
 const TWO_DAYS_MS = 48 * 60 * 60 * 1_000;
+const PREFERRED_AIRLINE_NAME = /东航|东方航空|南航|南方航空|国航|中国国际航空|厦航|厦门航空/;
+const PREFERRED_FLIGHT_NUMBER = /^(?:MU|CZ|CA|MF)\d+/i;
 
 const flightQueries = [
   {
@@ -205,6 +207,8 @@ function normalizeFlight(item, query) {
   )];
   const direct = segments.length === 1 || cleanText(journey?.journeyType).includes('直达');
   const duration = cleanText(item?.totalDuration || journey?.totalDuration || first?.duration);
+  const preferredAirline = airlines.some((airline) => PREFERRED_AIRLINE_NAME.test(airline))
+    || flightNumbers.some((flightNumber) => PREFERRED_FLIGHT_NUMBER.test(flightNumber));
 
   return {
     id: `${query.id}-${cleanText(first?.depDateTime)}-${flightNumbers.join('-') || price}`,
@@ -223,6 +227,7 @@ function normalizeFlight(item, query) {
     stops: Math.max(0, segments.length - 1),
     duration,
     durationMinutes: durationMinutes(duration),
+    preferredAirline,
     price,
     jumpUrl,
   };
@@ -230,7 +235,7 @@ function normalizeFlight(item, query) {
 
 function chooseFlightOffers(items) {
   const seen = new Set();
-  return items
+  const ranked = [...items]
     .filter((item) => item.durationMinutes === null || item.durationMinutes <= 12 * 60)
     .sort((a, b) => {
       const aScore = a.price + (a.direct ? 0 : 220) + Math.max(0, (a.durationMinutes || 0) - 300) * 0.45;
@@ -242,8 +247,9 @@ function chooseFlightOffers(items) {
       if (seen.has(key)) return false;
       seen.add(key);
       return true;
-    })
-    .slice(0, 3);
+    });
+  const preferred = ranked.filter((item) => item.preferredAirline);
+  return (preferred.length ? preferred : ranked).slice(0, 3);
 }
 
 function nightsBetween(checkIn, checkOut) {
@@ -314,7 +320,9 @@ async function collectFlights(priorFlyai, failures, messages) {
         '--dep-date-end', query.depDateEnd,
         '--journey-type', '1',
         '--seat-class-name', '经济舱',
-        '--sort-type', '3',
+        // Recommended ordering returns a broader airline mix than the cheapest
+        // ordering. We then apply the user's explicit carrier preference below.
+        '--sort-type', '2',
       ]);
       messages.push(payload.systemMessage);
       const normalized = (Array.isArray(payload?.data?.itemList) ? payload.data.itemList : [])
@@ -326,6 +334,9 @@ async function collectFlights(priorFlyai, failures, messages) {
         ...query,
         status: 'ok',
         bestPrice: Math.min(...offers.map((offer) => offer.price)),
+        selectionMode: offers.some((offer) => offer.preferredAirline)
+          ? 'preferred-airlines'
+          : 'fallback-airlines',
         offers,
         cliExitCode: exitCode,
       });
