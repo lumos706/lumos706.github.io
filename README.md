@@ -94,6 +94,8 @@ conda run -n lumos-travel python scripts/travel/update_travel_data.py --allow-cr
 
 `.github/workflows/travel-data.yml` 每天 `13:00 UTC`（北京时间 21:00）自动安装官方 skill、Miniconda、`jieba` 与 Playwright Chromium，刷新 `src/data/travel/snapshot.json`，通过生产构建后再提交数据。采集成功完成后，Pages 工作流通过 `workflow_run` 重新构建并上线最新快照。价格样本不足时页面显示“暂无可靠公开报价”，不会补造数字。
 
+需要排查单项时，可在 Actions 手动运行任务并填写 `only`，例如 `tickets` 或 `dunhuang,zhangye`；定时任务不填写该参数，会完整刷新全部类别。
+
 ### 移除模块
 
 删除以下内容即可完整卸载，不影响博客文章：

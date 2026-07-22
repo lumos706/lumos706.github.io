@@ -5,6 +5,11 @@ on:
     # GitHub Actions uses UTC. 13:00 UTC = 21:00 Asia/Shanghai.
     - cron: '0 13 * * *'
   workflow_dispatch:
+    inputs:
+      only:
+        description: 'Optional comma-separated query keys for a targeted refresh'
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -64,11 +69,14 @@ jobs:
           fi
 
       - name: Refresh travel snapshot
-        run: >-
-          python scripts/travel/update_travel_data.py
-          --allow-credentials
-          --pause 10
-          --timeout 120
+        env:
+          TRAVEL_ONLY: ${{ inputs.only }}
+        run: |
+          args=(--allow-credentials --pause 10 --timeout 120)
+          if [[ -n "${TRAVEL_ONLY:-}" ]]; then
+            args+=(--only "$TRAVEL_ONLY")
+          fi
+          python scripts/travel/update_travel_data.py "${args[@]}"
 
       - name: Validate site
         run: |
