@@ -81,18 +81,17 @@ jobs:
             --issue-body "$RUNNER_TEMP/travel-auth-issue.md"
 
       - name: Notify when login health needs attention
+        continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
           AUTH_OVERALL: ${{ steps.auth_health.outputs.overall }}
         run: |
           title="旅游数据登录态需要更新"
           issue_number="$(
-            gh issue list \
-              --state open \
-              --limit 100 \
-              --json number,title \
-              --jq '.[] | select(.title == "旅游数据登录态需要更新") | .number' \
-              | head -n 1
+            gh api \
+              "repos/$GITHUB_REPOSITORY/issues?state=open&per_page=100" \
+              --jq 'map(select(.title == "旅游数据登录态需要更新")) | .[0].number // empty' \
+              || true
           )"
 
           if [[ "$AUTH_OVERALL" == "healthy" ]]; then
