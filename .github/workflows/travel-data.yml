@@ -41,6 +41,7 @@ jobs:
         with:
           activate-environment: travel-data
           python-version: '3.11'
+          channels: conda-forge
           auto-activate: false
           conda-remove-defaults: true
 
