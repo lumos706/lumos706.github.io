@@ -13,6 +13,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: travel-data-refresh
@@ -66,6 +67,57 @@ jobs:
               | base64 --decode \
               > "$HOME/.config/last30days-cn/browser_cookies/xiaohongshu_cookies.json"
             chmod 600 "$HOME/.config/last30days-cn/browser_cookies/xiaohongshu_cookies.json"
+          fi
+
+      - name: Check source login health
+        id: auth_health
+        run: |
+          python scripts/travel/check_travel_auth.py \
+            --attempts 2 \
+            --pause 8 \
+            --timeout 90 \
+            --report "$RUNNER_TEMP/travel-auth-health.json" \
+            --summary "$GITHUB_STEP_SUMMARY" \
+            --issue-body "$RUNNER_TEMP/travel-auth-issue.md"
+
+      - name: Notify when login health needs attention
+        env:
+          GH_TOKEN: ${{ github.token }}
+          AUTH_OVERALL: ${{ steps.auth_health.outputs.overall }}
+        run: |
+          title="旅游数据登录态需要更新"
+          issue_number="$(
+            gh issue list \
+              --state open \
+              --limit 100 \
+              --json number,title \
+              --jq '.[] | select(.title == "旅游数据登录态需要更新") | .number' \
+              | head -n 1
+          )"
+
+          if [[ "$AUTH_OVERALL" == "healthy" ]]; then
+            if [[ -n "$issue_number" ]]; then
+              gh issue comment "$issue_number" \
+                --body "每日预检已重新确认小红书和知乎主采集路径可用，自动关闭提醒。"
+              gh issue close "$issue_number" --reason completed
+            fi
+            exit 0
+          fi
+
+          echo "::warning title=旅游数据登录态需要更新::小红书或知乎主采集路径已降级；正式刷新会继续使用公开搜索兜底。"
+          if [[ -n "$issue_number" ]]; then
+            gh issue edit "$issue_number" \
+              --body-file "$RUNNER_TEMP/travel-auth-issue.md" \
+              --add-assignee "$GITHUB_REPOSITORY_OWNER"
+            if [[ "$GITHUB_EVENT_NAME" == "schedule" ]]; then
+              gh issue comment "$issue_number" \
+                --body "今日预检仍未恢复，详情已更新至 Issue 正文：$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+            fi
+          else
+            gh issue create \
+              --title "$title" \
+              --body-file "$RUNNER_TEMP/travel-auth-issue.md" \
+              --assignee "$GITHUB_REPOSITORY_OWNER"
           fi
 
       - name: Refresh travel snapshot

@@ -94,6 +94,10 @@ conda run -n lumos-travel python scripts/travel/update_travel_data.py --allow-cr
 
 `.github/workflows/travel-data.yml` 每天 `13:00 UTC`（北京时间 21:00）自动安装官方 skill、Miniconda、`jieba` 与 Playwright Chromium，刷新 `src/data/travel/snapshot.json`，通过生产构建后再提交数据。采集成功完成后，Pages 工作流通过 `workflow_run` 重新构建并上线最新快照。价格样本不足时页面显示“暂无可靠公开报价”，不会补造数字。
 
+正式刷新前，工作流会先通过官方 skill 对小红书和知乎执行最多两次低频真实查询，并检查小红书核心登录 Cookie 的本地到期字段。主采集路径降级、Cookie 缺失或临近 7 天到期时，仓库会自动创建名为“旅游数据登录态需要更新”的 Issue 并指派给仓库所有者；定时检查仍未恢复时每天提醒一次，恢复后自动关闭。预检异常不会阻断当晚刷新，脚本会继续使用公开搜索兜底并保留上一轮有效内容。
+
+Cookie 没有统一、可保证的有效期：小红书 Cookie 文件包含浏览器声明的到期时间，但平台仍可能因退出登录、密码变更、验证码或风控提前作废；从浏览器复制的知乎 `Cookie` 请求头通常不包含 `Expires` / `Max-Age`，因此无法仅靠字符串推算到期日，必须以真实查询结果为准。可以在 Actions 手动运行 `Refresh travel data` 随时复检。更新凭据时只修改 GitHub Secrets 和本机 `~/.config/last30days-cn/.env`，不得把值写入 Issue、聊天或仓库文件。
+
 需要排查单项时，可在 Actions 手动运行任务并填写 `only`，例如 `tickets` 或 `dunhuang,zhangye`；定时任务不填写该参数，会完整刷新全部类别。
 
 ### 移除模块
