@@ -10,6 +10,7 @@ import {
 } from '@/data/travel/plans';
 import { attractionPlaybooks, foodRegions } from '@/data/travel/guides';
 import snapshot from '@/data/travel/snapshot.json';
+import preparationsSnapshot from '@/data/travel/preparations.json';
 import reservationsSnapshot from '@/data/travel/reservations.json';
 import transportSnapshot from '@/data/travel/transport.json';
 
@@ -43,11 +44,15 @@ const reservationGeneratedAt = new Date(reservationsSnapshot.generatedAt);
 const reservationExpiresAt = new Date(reservationsSnapshot.expiresAt);
 const transportGeneratedAt = new Date(transportSnapshot.generatedAt);
 const transportExpiresAt = new Date(transportSnapshot.expiresAt);
+const preparationGeneratedAt = new Date(preparationsSnapshot.generatedAt);
+const preparationExpiresAt = new Date(preparationsSnapshot.expiresAt);
 const staleAtBuild = Date.now() > expiresAt.getTime()
   || Boolean(flyaiExpiresAt && Date.now() > flyaiExpiresAt.getTime());
 const reservationStaleAtBuild = Date.now() > reservationExpiresAt.getTime();
 const transportStaleAtBuild = Date.now() > transportExpiresAt.getTime();
+const preparationStaleAtBuild = Date.now() > preparationExpiresAt.getTime();
 const transportPartial = transportSnapshot.status !== 'ok';
+const preparationPartial = preparationsSnapshot.status !== 'ok';
 const generatedLabel = new Intl.DateTimeFormat('zh-CN', {
   timeZone: 'Asia/Shanghai',
   month: '2-digit',
@@ -82,6 +87,14 @@ const transportGeneratedLabel = new Intl.DateTimeFormat('zh-CN', {
   minute: '2-digit',
   hour12: false,
 }).format(transportGeneratedAt);
+const preparationGeneratedLabel = new Intl.DateTimeFormat('zh-CN', {
+  timeZone: 'Asia/Shanghai',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: false,
+}).format(preparationGeneratedAt);
 const flyaiModeLabel = flyaiSnapshot.mode === 'api-enhanced' ? 'API 增强' : '公开体验';
 const flyaiSystemMessages: string[] = Array.isArray(flyaiSnapshot.systemMessages)
   ? flyaiSnapshot.systemMessages.filter(Boolean)
@@ -148,6 +161,13 @@ const foodCities = foodRegions.map((region) => {
     evidence: trustedEvidence(category, 4, 0.12),
   };
 });
+
+const preparationCategories: any[] = Object.values(
+  (preparationsSnapshot as any).categories ?? {},
+);
+const defaultPreparationTotal = preparationCategories
+  .filter((category) => category.transport === 'all' || category.transport === defaultSelection.transport)
+  .reduce((total, category) => total + (Array.isArray(category.items) ? category.items.length : 0), 0);
 
 const collectionMode = snapshot.mode === 'browser-plus-optional-credentials'
   ? '浏览器采集 + 可选凭据增强'
@@ -441,6 +461,77 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
     </div>
   </section>
 
+  <section id="travel-preparations" class="section travel-preparation-section">
+    <div class="wrap">
+      <div class="travel-preparation-intro">
+        <div>
+          <span>BEFORE DEPARTURE / 04 PEOPLE</span>
+          <h2>出发前，<br />装什么。</h2>
+          <p>这不是越长越安心的“万能清单”。下面按四位成人、八月初和当前当地出游方式整理，只保留会影响健康、登机、预约与行程连续性的东西。依据每日 21:00 更新，本次检查于 {preparationGeneratedLabel} 完成{preparationStaleAtBuild ? '，准备清单依据可能过期' : ''}{preparationPartial ? '，部分查询失败并沿用上一轮有效依据' : ''}。</p>
+        </div>
+        <aside class="travel-preparation-progress" aria-label="出发准备进度">
+          <span>PACKING MANIFEST</span>
+          <strong data-preparation-count>0 / {defaultPreparationTotal}</strong>
+          <small>勾选状态只保存在这台设备</small>
+          <div class="travel-preparation-meter" role="progressbar" aria-label="出发准备完成度" aria-valuemin="0" aria-valuemax={defaultPreparationTotal} aria-valuenow="0" data-preparation-meter><i></i></div>
+          <button type="button" data-preparation-reset disabled>清空勾选</button>
+        </aside>
+      </div>
+
+      <div class="travel-preparation-grid">
+        {preparationCategories.map((category) => (
+          <article
+            class:list={['travel-preparation-card', { 'travel-preparation-mode-card': category.transport !== 'all' }]}
+            data-preparation-transport={category.transport}
+            data-preparation-key={category.key}
+            hidden={category.transport !== 'all' && category.transport !== defaultSelection.transport}
+          >
+            <header>
+              <div><span>{category.code}</span>{category.transport !== 'all' && <b>{transportLabels[category.transport as LocalTransportMode].label}专用</b>}</div>
+              <h3>{category.title}</h3>
+              <p>{category.summary}</p>
+            </header>
+            <ul>
+              {category.items.map((item: any) => {
+                const inputId = `prep-${category.key}-${item.key}`;
+                return (
+                  <li>
+                    <input id={inputId} type="checkbox" value={`${category.key}:${item.key}`} data-preparation-check />
+                    <label for={inputId}>
+                      <span class="travel-preparation-box" aria-hidden="true"></span>
+                      <span class="travel-preparation-copy">
+                        <span><strong>{item.title}</strong><em>{item.priority} · {item.scope}</em></span>
+                        <small>{item.detail}</small>
+                      </span>
+                    </label>
+                  </li>
+                );
+              })}
+            </ul>
+            <details>
+              <summary>
+                {category.evidence?.length
+                  ? `查看 ${category.evidence.length} 条近期公开依据${category.sourceStatus === 'retained' ? '（沿用上一轮）' : ''}`
+                  : '本轮暂无可核验的近期依据'}
+              </summary>
+              {category.evidence?.length ? (
+                <ol>{category.evidence.map((item: any) => (
+                  <li><a href={item.url} target="_blank" rel="noreferrer"><span>{platformNames[item.platform] ?? item.platform}</span>{item.title}</a></li>
+                ))}</ol>
+              ) : <p>安全基线仍保留，但不会为凑数补造来源。</p>}
+            </details>
+          </article>
+        ))}
+      </div>
+
+      <div class="travel-preparation-notice">
+        <strong>药品不是照单购买。</strong>
+        <p>{preparationsSnapshot.medicalNotice} 充电宝、氧气制品和药品的乘机规则也可能调整，出发当天以承运航司与机场要求为准。</p>
+        <small>本轮有效依据：{preparationsSnapshot.activeSources.length ? preparationsSnapshot.activeSources.map((source) => platformNames[source] ?? source).join('、') : '暂无；已保留安全基线'}</small>
+      </div>
+    </div>
+  </section>
+
   <section class="section travel-food-section">
     <div class="wrap">
       <div class="section-head"><h2 class="section-title">沿途吃什么</h2><span class="section-index">FOOD / 06 STOPS</span></div>
@@ -477,7 +568,7 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
   </section>
 
   <section class="travel-source-strip">
-    <div class="wrap"><strong>只保留能追溯的公开线索。</strong><p>每日 21:00 使用 last30days-cn 低频检索攻略、餐馆与当地交通依据，并通过 FlyAI Skill 更新飞猪机票和酒店报价；预约时限每日 09:00 单独核验。Playwright 会在没有平台 API 时尝试公开页面，采集不足时保留稳妥基线并明确标记，不补造公交线路或价格。</p></div>
+    <div class="wrap"><strong>只保留能追溯的公开线索。</strong><p>每日 21:00 使用 last30days-cn 低频检索攻略、餐馆、当地交通与出发准备依据，并通过 FlyAI Skill 更新飞猪机票和酒店报价；预约时限每日 09:00 单独核验。Playwright 会在没有平台 API 时尝试公开页面，采集不足时保留稳妥基线并明确标记，不补造公交线路、价格或医疗结论。</p></div>
   </section>
 
   <script is:inline type="application/json" id="travel-plans-data" set:html={plansJson}></script>
@@ -496,6 +587,10 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
     const validDays = [3, 4, 7];
     const validBudgets = [2500, 3000, 3500];
     const validTransport = ['drive', 'public'];
+    const preparationStorageKey = 'lumos-travel-preparations-v1';
+    const preparationChecks = Array.from(
+      planner.querySelectorAll<HTMLInputElement>('[data-preparation-check]'),
+    );
     const query = new URLSearchParams(location.search);
     let days = Number(query.get('days')) as TripDays;
     let budget = Number(query.get('budget')) as BudgetLevel;
@@ -503,6 +598,48 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
     if (!validDays.includes(days)) days = 7;
     if (!validBudgets.includes(budget)) budget = 3500;
     if (!validTransport.includes(transport)) transport = 'drive';
+
+    try {
+      const stored = JSON.parse(localStorage.getItem(preparationStorageKey) || '[]');
+      if (Array.isArray(stored)) {
+        const selected = new Set(stored.filter((value): value is string => typeof value === 'string'));
+        preparationChecks.forEach((checkbox) => {
+          checkbox.checked = selected.has(checkbox.value);
+        });
+      }
+    } catch {
+      // The checklist remains usable when storage is blocked or malformed.
+    }
+
+    const persistPreparation = () => {
+      try {
+        localStorage.setItem(
+          preparationStorageKey,
+          JSON.stringify(preparationChecks.filter((checkbox) => checkbox.checked).map((checkbox) => checkbox.value)),
+        );
+      } catch {
+        // Do not block the planner when private browsing disables storage.
+      }
+    };
+
+    const updatePreparationProgress = () => {
+      const visibleChecks = preparationChecks.filter((checkbox) => {
+        const card = checkbox.closest<HTMLElement>('[data-preparation-transport]');
+        return !card?.hidden;
+      });
+      const completed = visibleChecks.filter((checkbox) => checkbox.checked).length;
+      const count = planner.querySelector<HTMLElement>('[data-preparation-count]');
+      const meter = planner.querySelector<HTMLElement>('[data-preparation-meter]');
+      const reset = planner.querySelector<HTMLButtonElement>('[data-preparation-reset]');
+      if (count) count.textContent = `${completed} / ${visibleChecks.length}`;
+      if (meter) {
+        meter.setAttribute('aria-valuemax', String(visibleChecks.length));
+        meter.setAttribute('aria-valuenow', String(completed));
+        const fill = meter.querySelector<HTMLElement>('i');
+        if (fill) fill.style.width = `${visibleChecks.length ? (completed / visibleChecks.length) * 100 : 0}%`;
+      }
+      if (reset) reset.disabled = !preparationChecks.some((checkbox) => checkbox.checked);
+    };
 
     const render = () => {
       const plan = plans[transport][String(days)];
@@ -528,6 +665,10 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
       planner.querySelectorAll<HTMLElement>('[data-attraction-transport]').forEach((panel) => {
         panel.hidden = panel.dataset.attractionTransport !== transport;
       });
+      planner.querySelectorAll<HTMLElement>('[data-preparation-transport]').forEach((card) => {
+        const mode = card.dataset.preparationTransport;
+        card.hidden = mode !== 'all' && mode !== transport;
+      });
 
       const boardDays = planner.querySelector<HTMLElement>('[data-board-days]');
       const boardName = planner.querySelector<HTMLElement>('[data-board-name]');
@@ -543,6 +684,7 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
       if (routeIndex) routeIndex.textContent = `ROUTE / ${String(days).padStart(2, '0')}D / ${transport === 'drive' ? 'CAR' : 'PT'}`;
       if (heroTransport) heroTransport.textContent = transportLabel;
       if (status) status.textContent = `当前为 ${days} 日、${budget.toLocaleString('zh-CN')} 元预算、${transportLabel}方案：${plan.name}`;
+      updatePreparationProgress();
 
       const next = new URLSearchParams(location.search);
       next.set('days', String(days));
@@ -568,6 +710,19 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
         transport = button.dataset.transportOption as LocalTransportMode;
         render();
       });
+    });
+    preparationChecks.forEach((checkbox) => {
+      checkbox.addEventListener('change', () => {
+        persistPreparation();
+        updatePreparationProgress();
+      });
+    });
+    planner.querySelector<HTMLButtonElement>('[data-preparation-reset]')?.addEventListener('click', () => {
+      preparationChecks.forEach((checkbox) => {
+        checkbox.checked = false;
+      });
+      persistPreparation();
+      updatePreparationProgress();
     });
     render();
   }

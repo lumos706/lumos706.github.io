@@ -1,0 +1,558 @@
+{
+  "schemaVersion": 1,
+  "parserVersion": 1,
+  "generatedAt": "2026-07-22T15:20:51.212997+00:00",
+  "expiresAt": "2026-07-23T21:20:51.212997+00:00",
+  "status": "ok",
+  "schedule": "21:00 Asia/Shanghai",
+  "skill": {
+    "name": "last30days-cn",
+    "version": "3.2.0-cn",
+    "repository": "https://github.com/Jesseovo/last30days-skill-cn"
+  },
+  "activeSources": [
+    "xiaohongshu",
+    "zhihu"
+  ],
+  "categories": {
+    "health": {
+      "key": "health",
+      "code": "HEALTH / 01",
+      "title": "药品与高原健康",
+      "summary": "先照顾每个人原有的身体情况，再准备通用小药包；不要把网红药单当处方。",
+      "transport": "all",
+      "items": [
+        {
+          "key": "personal-medicine",
+          "title": "每个人的处方药和用药清单",
+          "detail": "保留原包装，按全程用量再多带 2 天；写清药名、剂量、过敏史和紧急联系人。慢性心肺疾病、严重贫血、妊娠或近期身体不适者，出发前先问医生是否适合进入高海拔地区。",
+          "scope": "每人一份",
+          "priority": "必带"
+        },
+        {
+          "key": "shared-first-aid",
+          "title": "四人共用基础小药包",
+          "detail": "结合个人禁忌，在医生或药师指导下准备晕车药、肠胃药、退热止痛药，以及创可贴、消毒棉片和纱布；处方药不要互相分着吃。",
+          "scope": "四人共用",
+          "priority": "建议"
+        },
+        {
+          "key": "altitude-plan",
+          "title": "把“休息、下撤、就医”写进计划",
+          "detail": "抵达高海拔后的第一天放慢节奏，少酒、避免剧烈运动。症状持续加重，或出现静息呼吸困难、意识异常、走路不稳等情况时，停止继续上升，尽快下撤并就医。",
+          "scope": "全员知晓",
+          "priority": "必看"
+        }
+      ],
+      "checkedAt": "2026-07-22T15:20:51.212997+00:00",
+      "lastEvidenceAt": "2026-07-22T15:20:51.212997+00:00",
+      "sourceStatus": "confirmed",
+      "evidence": [
+        {
+          "platform": "zhihu",
+          "title": "2026年西北大环线攻略，7天行程+避坑指南，看这篇就够了",
+          "snippet": "一、行前筹备：西北大环线的硬核准备 西北地区幅员辽阔，涵盖了青海、甘肃两省的精华景点，地貌从高原、湖泊、丹霞到沙漠、戈壁不断切换",
+          "url": "https://zhuanlan.zhihu.com/p/2053847626349548221",
+          "date": "2026-06-26",
+          "dateConfidence": "high",
+          "relevance": 0.28,
+          "score": 15,
+          "engagement": {
+            "num_comments": 0,
+            "collects": 0,
+            "voteups": 0
+          },
+          "author": "嘻游记",
+          "signal": "neutral"
+        },
+        {
+          "platform": "zhihu",
+          "title": "2026大西北旅行必看指南【攻略-穿搭-美食-线路-高反-住宿-清单】",
+          "snippet": "简单的讲我们要从各个地方避免高原反应。 ✅高反预防：进入高原前，多了解高原的气候特点及有关高原反应的知识，消除对高原环境的恐惧心理",
+          "url": "https://zhuanlan.zhihu.com/p/2063019757373239511",
+          "date": "2026-07-21",
+          "dateConfidence": "high",
+          "relevance": 0.22,
+          "score": 46,
+          "engagement": {
+            "num_comments": 0,
+            "collects": 0,
+            "voteups": 1
+          },
+          "author": "西北管家驴队长",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "2026最新！西北高原旅行安全指南🏔️",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a60940d00000000100251fa",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.22,
+          "score": 4,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 0,
+            "shares": 0,
+            "collects": 0
+          },
+          "author": "嘉恒国际旅行社",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "青海旅行｜高反来了怎么办？急救指南请收好",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/69d4a8d0000000001a03337f",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.2,
+          "score": 14,
+          "engagement": {
+            "num_comments": 2,
+            "likes": 18,
+            "shares": 0,
+            "collects": 19
+          },
+          "author": "玩转青海",
+          "signal": "neutral"
+        }
+      ],
+      "sourceErrors": {}
+    },
+    "weather": {
+      "key": "weather",
+      "code": "WEATHER / 02",
+      "title": "衣物、防晒与天气",
+      "summary": "八月也不能只带短袖：高原紫外线强，早晚、风口和下雨后的体感差很多。",
+      "transport": "all",
+      "items": [
+        {
+          "key": "layered-clothes",
+          "title": "分层穿衣，不押注一件厚外套",
+          "detail": "每人准备速干内层、保暖中层和防风防雨外层；茶卡、大柴旦、青海湖日出日落时再加轻薄羽绒或抓绒。当天看预报决定穿哪层。",
+          "scope": "每人一套",
+          "priority": "必带"
+        },
+        {
+          "key": "sun-protection",
+          "title": "防晒霜、墨镜、帽子和润唇",
+          "detail": "选择适合自己的高倍广谱防晒并按说明补涂；带有 UV 防护的墨镜、遮阳帽、润唇膏和保湿用品，长时间在户外时优先用衣物做物理遮挡。",
+          "scope": "每人一套",
+          "priority": "必带"
+        },
+        {
+          "key": "walking-gear",
+          "title": "防滑鞋、备用袜和轻便雨具",
+          "detail": "盐湖、戈壁和景区接驳会走不少路，鞋底要防滑且提前穿合脚；雨衣比大伞更适合风大的路段。",
+          "scope": "每人一套",
+          "priority": "建议"
+        }
+      ],
+      "checkedAt": "2026-07-22T15:20:51.212997+00:00",
+      "lastEvidenceAt": "2026-07-22T15:20:51.212997+00:00",
+      "sourceStatus": "confirmed",
+      "evidence": [
+        {
+          "platform": "zhihu",
+          "title": "【资深领队亲测｜2026西北旅行】青甘大环线｜一生必走一次的西北秘境",
+          "snippet": "冬季需要准备厚款羽绒服外套，以预防高原天气突发变化 ●防晒装备：防晒衣，防晒帽、太阳镜等； ●手足装备",
+          "url": "https://zhuanlan.zhihu.com/p/2060034126804260236",
+          "date": "2026-07-13",
+          "dateConfidence": "high",
+          "relevance": 0.38,
+          "score": 34,
+          "engagement": {
+            "num_comments": 0,
+            "collects": 0,
+            "voteups": 0
+          },
+          "author": "西北管家驴队长",
+          "signal": "neutral"
+        },
+        {
+          "platform": "zhihu",
+          "title": "去青甘大环线要注意什么？有什么注意事项？",
+          "snippet": "用洋葱三层穿法 。 内层：速干衣；中层：抓绒/薄羽绒；外层：防风防水冲锋衣。 必带：防晒帽、墨镜、防风面罩、亮色长裙、防滑徒步鞋",
+          "url": "https://www.zhihu.com/question/2043973771602744637/answer/2053244163626373753",
+          "date": "2026-06-24",
+          "dateConfidence": "high",
+          "relevance": 0.31,
+          "score": 45,
+          "engagement": {
+            "num_comments": 0,
+            "collects": 0,
+            "voteups": 2
+          },
+          "author": "宇文海",
+          "signal": "neutral"
+        }
+      ],
+      "sourceErrors": {}
+    },
+    "documents": {
+      "key": "documents",
+      "code": "DOCS / 03",
+      "title": "证件、订单与应急信息",
+      "summary": "手机没信号或临时没电时，仍要能证明身份、找到酒店并联系同行人。",
+      "transport": "all",
+      "items": [
+        {
+          "key": "identity-documents",
+          "title": "身份证原件和必要驾驶证件",
+          "detail": "四人分别保管身份证原件；自驾司机另带有效驾驶证。证件照片只作应急备份，不能替代现场要求的原件。",
+          "scope": "每人保管",
+          "priority": "必带"
+        },
+        {
+          "key": "offline-orders",
+          "title": "把关键订单离线保存",
+          "detail": "保存航班、酒店、租车、莫高窟及其他景区预约截图，标出日期、报到地点和退改规则；四人群里放一份，另给一位同行人离线备份。",
+          "scope": "两人备份",
+          "priority": "必做"
+        },
+        {
+          "key": "insurance-contacts",
+          "title": "旅行保险、紧急联系人和简短病史",
+          "detail": "核对保障范围是否覆盖高原旅行和自驾；记录保险报案电话、租车救援电话、紧急联系人及每个人的重要病史和过敏信息。",
+          "scope": "四人共享",
+          "priority": "建议"
+        }
+      ],
+      "checkedAt": "2026-07-22T15:20:51.212997+00:00",
+      "lastEvidenceAt": "2026-07-22T15:20:51.212997+00:00",
+      "sourceStatus": "confirmed",
+      "evidence": [
+        {
+          "platform": "xiaohongshu",
+          "title": "2026青甘大环线门票预约表！准备要来的看看",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a4eed4000000000080303fa",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.44,
+          "score": 28,
+          "engagement": {
+            "num_comments": 2,
+            "likes": 81,
+            "shares": 0,
+            "collects": 109
+          },
+          "author": "💕",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "6🈷青甘大环线门票分享❤️",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a565fda000000001101194c",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.33,
+          "score": 19,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 46,
+            "shares": 0,
+            "collects": 32
+          },
+          "author": "宸阿喵",
+          "signal": "neutral"
+        },
+        {
+          "platform": "zhihu",
+          "title": "8天7晚青甘大环线回来，把你们问爆的\"真实花费+住宿门票明细\"拆给你看",
+          "snippet": "8天7晚青甘大环线回来，把你们问爆的\"真实花费+住宿门票明细\"拆给你看 出发前我也被网上报价搞懵——自由行算下来人均5000+",
+          "url": "https://zhuanlan.zhihu.com/p/2055693962938152533",
+          "date": "2026-07-01",
+          "dateConfidence": "high",
+          "relevance": 0.17,
+          "score": 15,
+          "engagement": {
+            "num_comments": 0,
+            "collects": 0,
+            "voteups": 0
+          },
+          "author": "豆豆芙",
+          "signal": "neutral"
+        }
+      ],
+      "sourceErrors": {}
+    },
+    "flightTech": {
+      "key": "flightTech",
+      "code": "CABIN / 04",
+      "title": "乘机、充电与离线导航",
+      "summary": "从沈阳飞过去，行李规则比“带不带”更重要；易变规定每天只做提醒，最终看航司和机场。",
+      "transport": "all",
+      "items": [
+        {
+          "key": "power-bank",
+          "title": "标识清楚的合规充电宝",
+          "detail": "容量和 3C 等标识必须清晰，放随身行李，不托运；出发当天再次核对承运航司和机场的最新要求，不按旧攻略判断。",
+          "scope": "每人确认",
+          "priority": "出发前确认"
+        },
+        {
+          "key": "oxygen-flight",
+          "title": "不要把一次性氧气罐直接装进行李",
+          "detail": "压缩气体通常受航空运输限制；如确有需要，到达后在正规渠道购买或租用，并先咨询航司、机场及医生，不自行携带登机。",
+          "scope": "全员知晓",
+          "priority": "必看"
+        },
+        {
+          "key": "offline-kit",
+          "title": "离线地图、充电线和车载电源",
+          "detail": "提前下载青海、甘肃离线地图和关键订单；四人至少准备两套充电线与电源。自驾方案另带车充，公共交通方案把充电宝放进随身小包。",
+          "scope": "四人共用",
+          "priority": "必带"
+        }
+      ],
+      "checkedAt": "2026-07-22T15:20:51.212997+00:00",
+      "lastEvidenceAt": "2026-07-22T15:20:51.212997+00:00",
+      "sourceStatus": "confirmed",
+      "evidence": [
+        {
+          "platform": "xiaohongshu",
+          "title": "没有3C标记的充电宝不能上飞机哦",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/69e5e0bd000000001a0219aa",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.25,
+          "score": 9,
+          "engagement": {
+            "num_comments": 4,
+            "likes": 8,
+            "shares": 0,
+            "collects": 0
+          },
+          "author": "相对自由",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "我的充电宝被中国机场没收了！❌3C认证",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/69679f120000000021028fb3",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.23,
+          "score": 18,
+          "engagement": {
+            "num_comments": 28,
+            "likes": 44,
+            "shares": 0,
+            "collects": 22
+          },
+          "author": "尹尹若现",
+          "signal": "neutral"
+        },
+        {
+          "platform": "zhihu",
+          "title": "为什么有些充电宝不能带上飞机？",
+          "snippet": "外壳印刷清晰CCC（3C）标志、标识完整 ❌ 禁止登机： 三无充电宝、没有 3C 标识 3C 字样磨损、模糊、贴纸后贴的",
+          "url": "https://www.zhihu.com/question/2063118736131994467/answer/2063192554804401401",
+          "date": "2026-07-22",
+          "dateConfidence": "high",
+          "relevance": 0.18,
+          "score": 48,
+          "engagement": {
+            "num_comments": 0,
+            "collects": 0,
+            "voteups": 0
+          },
+          "author": "善良的屠夫",
+          "signal": "neutral"
+        }
+      ],
+      "sourceErrors": {}
+    },
+    "driveKit": {
+      "key": "driveKit",
+      "code": "DRIVE / 05",
+      "title": "自驾专用准备",
+      "summary": "租车不是拿到钥匙就走：先留证据、确认保险，再把长路段拆给两位司机。",
+      "transport": "drive",
+      "items": [
+        {
+          "key": "rental-check",
+          "title": "取还车合同、保险和全车视频",
+          "detail": "确认驾驶人、押金、里程、异地还车、保险免赔和道路救援；取车时连续拍摄车身、玻璃、轮胎、油表和仪表告警。",
+          "scope": "两位司机",
+          "priority": "必做"
+        },
+        {
+          "key": "route-safety",
+          "title": "两位司机轮换，长路段提前加油",
+          "detail": "茶卡—德令哈—大柴旦等长路段先下载离线地图、查加油点和天气；不疲劳驾驶、不为赶日落夜间赶路，遇封路以交警和道路通知为准。",
+          "scope": "驾驶组",
+          "priority": "必做"
+        },
+        {
+          "key": "shared-car-supplies",
+          "title": "水、易保存零食、纸巾和垃圾袋",
+          "detail": "按当天路线补给，不把车内堆满；水和食物避免长时间暴晒，垃圾带到有处理条件的地方再丢。",
+          "scope": "四人共用",
+          "priority": "建议"
+        }
+      ],
+      "checkedAt": "2026-07-22T15:20:51.212997+00:00",
+      "lastEvidenceAt": "2026-07-22T15:20:51.212997+00:00",
+      "sourceStatus": "confirmed",
+      "evidence": [
+        {
+          "platform": "xiaohongshu",
+          "title": "青甘大环线自驾-番外：租车",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a49b7590000000011017a76",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.33,
+          "score": 19,
+          "engagement": {
+            "num_comments": 22,
+            "likes": 6,
+            "shares": 0,
+            "collects": 8
+          },
+          "author": "蓝宇河",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "青甘大环线前期准备（自驾版）",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/688a17310000000005009c21",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.31,
+          "score": 33,
+          "engagement": {
+            "num_comments": 32,
+            "likes": 326,
+            "shares": 0,
+            "collects": 389
+          },
+          "author": "换个刊投我又是好汉",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "青甘大环线自驾租车防坑攻略",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/68d8e006000000000e00dc88",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.31,
+          "score": 25,
+          "engagement": {
+            "num_comments": 6,
+            "likes": 65,
+            "shares": 0,
+            "collects": 85
+          },
+          "author": "你好我系陈Mm",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "青甘大环线自驾租车分享，女生友好‼️",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a101a9a0000000007011ef6",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.31,
+          "score": 22,
+          "engagement": {
+            "num_comments": 16,
+            "likes": 40,
+            "shares": 0,
+            "collects": 15
+          },
+          "author": "雪球球、",
+          "signal": "neutral"
+        }
+      ],
+      "sourceErrors": {}
+    },
+    "publicKit": {
+      "key": "publicKit",
+      "code": "TRANSIT / 05",
+      "title": "公共交通专用准备",
+      "summary": "动车、客运、公交和打车之间要频繁换乘，轻装和时间余量比多塞一件衣服更有用。",
+      "transport": "public",
+      "items": [
+        {
+          "key": "light-luggage",
+          "title": "每人一只好移动的行李和随身小包",
+          "detail": "减少需要两个人抬的箱子；身份证、药品、充电宝、雨具和当天车票放随身小包，行李加姓名与联系电话。",
+          "scope": "每人整理",
+          "priority": "建议"
+        },
+        {
+          "key": "transfer-buffer",
+          "title": "换乘预留余量，保存车站全名",
+          "detail": "保存“嘉峪关站 / 嘉峪关南站”等完整站名和地址；动车、客运与景区接驳之间不做极限衔接，末班车前准备正规打车备选。",
+          "scope": "行程负责人",
+          "priority": "必做"
+        },
+        {
+          "key": "shared-arrival-note",
+          "title": "四人共享住宿地址和到达方案",
+          "detail": "把酒店中文地址、电话、百度地图链接及夜间到达方式放进群公告；打车时核对平台订单和车牌。",
+          "scope": "四人共享",
+          "priority": "必做"
+        }
+      ],
+      "checkedAt": "2026-07-22T15:20:51.212997+00:00",
+      "lastEvidenceAt": "2026-07-22T15:20:51.212997+00:00",
+      "sourceStatus": "confirmed",
+      "evidence": [
+        {
+          "platform": "xiaohongshu",
+          "title": "青海湖（公共交通版）",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/66c5b2e1000000001d039f07",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.11,
+          "score": 19,
+          "engagement": {
+            "num_comments": 95,
+            "likes": 762,
+            "shares": 0,
+            "collects": 1090
+          },
+          "author": "大鱼",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "青海湖公共交通攻略",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/68b155fa000000001d03ad00",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.11,
+          "score": 0,
+          "engagement": {
+            "num_comments": 4,
+            "likes": 33,
+            "shares": 0,
+            "collects": 46
+          },
+          "author": "小红薯AD7B1F19",
+          "signal": "neutral"
+        }
+      ],
+      "sourceErrors": {}
+    }
+  },
+  "medicalNotice": "药品与高原健康内容仅用于一般旅行准备，不替代医生诊断或个体化用药建议；如有基础疾病、孕期、近期不适或高原经历不佳，请在出发前咨询医生。",
+  "collection": {
+    "mode": "browser-plus-optional-credentials",
+    "failures": []
+  }
+}
