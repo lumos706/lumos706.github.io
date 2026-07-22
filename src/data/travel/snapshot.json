@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-22T07:59:22.375851+00:00",
-  "expiresAt": "2026-07-23T19:59:22.375851+00:00",
+  "generatedAt": "2026-07-22T08:19:40.009632+00:00",
+  "expiresAt": "2026-07-23T20:19:40.009632+00:00",
   "status": "ok",
   "mode": "browser-plus-optional-credentials",
   "skill": {
@@ -24,16 +24,16 @@
     "zhihu"
   ],
   "sourceCoverage": {
-    "baidu": 1,
-    "bilibili": 3,
-    "xiaohongshu": 51,
-    "zhihu": 34
+    "baidu": 4,
+    "bilibili": 4,
+    "xiaohongshu": 55,
+    "zhihu": 32
   },
   "categories": {
     "flights": {
       "label": "机票",
       "status": "ok",
-      "evidenceCount": 4,
+      "evidenceCount": 3,
       "evidence": [
         {
           "platform": "xiaohongshu",
@@ -72,27 +72,10 @@
           "signal": "neutral"
         },
         {
-          "platform": "zhihu",
-          "title": "你第一次坐飞机是 xx 年？去了哪里？",
-          "snippet": "1990年，沈阳桃仙机场到北京，全家去旅游。那时候买飞机票需要单位开介绍信，好像是我爸在他单位开好他和我的介绍信，需要户口本，我妈在自己单位开好。当时飞机是麦道，我爸和我说了好几次，现在好像没这个飞机了。飞机上送了一小盒硬糖，盒子扑克牌大小，没舍得吃过，留了很久",
-          "url": "https://www.zhihu.com/question/648235688/answer/2062692115780481477",
-          "date": "2026-07-21",
-          "dateConfidence": "high",
-          "relevance": 0.26,
-          "score": 48,
-          "engagement": {
-            "num_comments": 2,
-            "collects": 0,
-            "voteups": 2
-          },
-          "author": "红泥小火炉",
-          "signal": "neutral"
-        },
-        {
           "platform": "baidu",
           "title": "杭州飞西宁的机票价格大概什么时候会稳定?|西宁市|杭州市|宁波...",
           "snippet": "",
-          "url": "http://www.baidu.com/link?url=7DXCLnTGs62T0HmhL7k0zccVbmXyuGBDNLIQQWDs33RusVHVKUUEST3Vcp1RIic6ibQHhK8F2OV1d0oLdnZVINnj2nAsgkOYSI5mk5zDubq",
+          "url": "http://www.baidu.com/link?url=9boGwiqHv12-mfBt3pdcM0VKLL3dIyo-naX6ZraoUx_AaZbWF9XP_pLJskO5D_rBUIoA7ju_dJOfquLVxSC9CNEnmlT2qpQMM-aRCGxAP3y",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.13,
@@ -110,7 +93,7 @@
     "hotels": {
       "label": "住宿",
       "status": "ok",
-      "evidenceCount": 4,
+      "evidenceCount": 5,
       "evidence": [
         {
           "platform": "zhihu",
@@ -154,7 +137,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.15,
-          "score": 1,
+          "score": 3,
           "engagement": {
             "num_comments": 15,
             "likes": 19,
@@ -180,6 +163,24 @@
           },
           "author": "青甘领队驴队长",
           "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "避雷青甘大环线大柴旦酒店和餐厅",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6894b712000000002203a8b1",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.13,
+          "score": 7,
+          "engagement": {
+            "num_comments": 113,
+            "likes": 29,
+            "shares": 0,
+            "collects": 6
+          },
+          "author": "熙熙哈哈喵呜",
+          "signal": "caution"
         }
       ],
       "sourceErrors": {},
@@ -197,7 +198,7 @@
     "tickets": {
       "label": "门票",
       "status": "ok",
-      "evidenceCount": 5,
+      "evidenceCount": 8,
       "evidence": [
         {
           "platform": "zhihu",
@@ -268,6 +269,19 @@
           "signal": "neutral"
         },
         {
+          "platform": "baidu",
+          "title": "青海湖今天开放吗?2026年7月20日实地探访:门票90元限流1.2万,但20...",
+          "snippet": "",
+          "url": "http://www.baidu.com/link?url=OWXFTJ637Tj5aKObEXpLhe3iyL6h2fwPjZzT-5FJ3NUjj2n--VvWNSOLkHWp3CP3PNXklnuCgtcJNqLvwh2D7cY3rg3fEovg3noyITGjobO",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.28,
+          "score": 0,
+          "engagement": {},
+          "author": "",
+          "signal": "neutral"
+        },
+        {
           "platform": "xiaohongshu",
           "title": "青甘大环线｜2026年最新门票预约表，看看吧",
           "snippet": "",
@@ -275,7 +289,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.24,
-          "score": 16,
+          "score": 13,
           "engagement": {
             "num_comments": 4,
             "likes": 51,
@@ -284,17 +298,52 @@
           },
           "author": "明日晴",
           "signal": "neutral"
+        },
+        {
+          "platform": "baidu",
+          "title": "...价格,最新报价一览|青海湖|翡翠湖|茶卡盐湖|张掖丹霞|酒店门票...",
+          "snippet": "",
+          "url": "http://www.baidu.com/link?url=_-Awu96EMZ1PF0dhT66Sq5q4D3GXba5LISsPw3pT-WkChllUCmLvdv1TcY1ZU57pKSgCaBfoqqQvMaFq80uT-a",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.22,
+          "score": 0,
+          "engagement": {},
+          "author": "",
+          "signal": "neutral"
+        },
+        {
+          "platform": "baidu",
+          "title": "...黑独山,青海湖,茶卡盐湖,大柴旦翡翠湖,翡翠湖,艾肯泉,莫高窟...",
+          "snippet": "",
+          "url": "http://www.baidu.com/link?url=-61VyRIszPPMgd3tBnJuc-6wq5mfnk9oAcY6Fr_1lcbyLLzF1TRPKXPaIIxrxImmlorcRgwdJWWG9JQFf0l_na",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.22,
+          "score": 0,
+          "engagement": {},
+          "author": "",
+          "signal": "neutral"
         }
       ],
       "sourceErrors": {},
-      "priceStatus": "insufficient",
-      "priceRange": null,
+      "priceStatus": "reference",
+      "priceRange": {
+        "min": 90,
+        "max": 923
+      },
       "priceSamples": [
         {
           "value": 923,
           "platform": "zhihu",
           "title": "8天7晚青甘大环线回来，把你们问爆的\"真实花费+住宿门票明细\"拆给你看",
           "url": "https://zhuanlan.zhihu.com/p/2055693962938152533"
+        },
+        {
+          "value": 90,
+          "platform": "baidu",
+          "title": "青海湖今天开放吗?2026年7月20日实地探访:门票90元限流1.2万,但20...",
+          "url": "http://www.baidu.com/link?url=OWXFTJ637Tj5aKObEXpLhe3iyL6h2fwPjZzT-5FJ3NUjj2n--VvWNSOLkHWp3CP3PNXklnuCgtcJNqLvwh2D7cY3rg3fEovg3noyITGjobO"
         }
       ]
     }
@@ -303,7 +352,7 @@
     "qinghaiLake": {
       "label": "青海湖",
       "status": "ok",
-      "evidenceCount": 4,
+      "evidenceCount": 3,
       "evidence": [
         {
           "platform": "xiaohongshu",
@@ -313,15 +362,33 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.25,
-          "score": 8,
+          "score": 9,
           "engagement": {
-            "num_comments": 0,
-            "likes": 0,
+            "num_comments": 4,
+            "likes": 6,
             "shares": 0,
             "collects": 1
           },
           "author": "哇噻今天又干点啥",
           "signal": "caution"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "懒人青海湖自驾一日游",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a490ca9000000002103d9d6",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.21,
+          "score": 14,
+          "engagement": {
+            "num_comments": 7,
+            "likes": 47,
+            "shares": 0,
+            "collects": 9
+          },
+          "author": "光屁股外星人",
+          "signal": "neutral"
         },
         {
           "platform": "xiaohongshu",
@@ -331,49 +398,14 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.18,
-          "score": 13,
+          "score": 11,
           "engagement": {
-            "num_comments": 0,
-            "likes": 0,
+            "num_comments": 4,
+            "likes": 17,
             "shares": 0,
             "collects": 12
           },
           "author": "范范FANFAN的旅居生活",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "📍青海湖｜绝对不要去牧民自有牧场！！🤺🤺🤺",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a0f249600000000070116e3",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.18,
-          "score": 10,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 0,
-            "shares": 0,
-            "collects": 6
-          },
-          "author": "朱小鹿",
-          "signal": "neutral"
-        },
-        {
-          "platform": "zhihu",
-          "title": "你去过最离谱的景区是什么？",
-          "snippet": "青海湖卖门票？ 中国第一大湖，面积4600平方公里，它还能给你围起来啊？ 它能…… 青海湖二郎剑景区",
-          "url": "https://www.zhihu.com/question/641122020/answer/2055590606282532041",
-          "date": "2026-07-01",
-          "dateConfidence": "high",
-          "relevance": 0.14,
-          "score": 43,
-          "engagement": {
-            "num_comments": 529,
-            "collects": 0,
-            "voteups": 2435
-          },
-          "author": "牛奶超人",
           "signal": "neutral"
         }
       ],
@@ -420,6 +452,24 @@
         },
         {
           "platform": "xiaohongshu",
+          "title": "茶卡盐湖小火车无必要",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a5766fc000000001102fa56",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.36,
+          "score": 28,
+          "engagement": {
+            "num_comments": 54,
+            "likes": 89,
+            "shares": 0,
+            "collects": 39
+          },
+          "author": "栀栀栀w",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
           "title": "茶卡盐湖游玩以及拍照避坑攻略",
           "snippet": "",
           "url": "https://www.xiaohongshu.com/explore/6a5de157000000000c014ed9",
@@ -438,57 +488,40 @@
         },
         {
           "platform": "bilibili",
-          "title": "20260716 四 茶卡盐湖 湖面行走 感谢雨鞋套 虽然小了一点 体验不错",
+          "title": "茶卡盐湖天空之镜的硬核拍照攻略 男女老少都适用",
           "snippet": "",
-          "url": "https://www.bilibili.com/video/BV1MRKm6YE4z",
-          "date": "2026-07-21",
+          "url": "https://www.bilibili.com/video/BV1MsMe6YEf4",
+          "date": "2026-07-09",
           "dateConfidence": "high",
-          "relevance": 0.18,
-          "score": 32,
+          "relevance": 0.2,
+          "score": 38,
           "engagement": {
             "num_comments": 0,
-            "likes": 33,
-            "views": 32,
+            "likes": 3,
+            "views": 358,
             "danmaku": 0,
-            "favorites": 1
+            "favorites": 5
           },
-          "author": "宇献5255",
-          "signal": "neutral"
-        },
-        {
-          "platform": "zhihu",
-          "title": "青海茶卡盐湖什么时候去合适？",
-          "snippet": "二刷西北我专门实测总结了茶卡盐湖黄金游玩时段，走完完整8天7晚路线，整理了全套旅游避坑和行程规划干货，新手出游可以点击下方名片免费领取参考攻略",
-          "url": "https://www.zhihu.com/question/263422177/answer/2055963204103279703",
-          "date": "2026-07-02",
-          "dateConfidence": "high",
-          "relevance": 0.18,
-          "score": 16,
-          "engagement": {
-            "num_comments": 0,
-            "collects": 0,
-            "voteups": 0
-          },
-          "author": "风伴我远行",
+          "author": "老高-青甘旅游全攻略",
           "signal": "neutral"
         },
         {
           "platform": "bilibili",
-          "title": "6.25茶卡盐湖现状！不要穿靴子...",
+          "title": "20260716 一 茶卡盐湖6点30极限入园错过网红小火车",
           "snippet": "",
-          "url": "https://www.bilibili.com/video/BV1Tq7863Egf",
-          "date": "2026-06-25",
+          "url": "https://www.bilibili.com/video/BV18aKU6TEcp",
+          "date": "2026-07-21",
           "dateConfidence": "high",
-          "relevance": 0.1,
-          "score": 17,
+          "relevance": 0.19,
+          "score": 32,
           "engagement": {
             "num_comments": 0,
-            "likes": 8,
-            "views": 2174,
+            "likes": 13,
+            "views": 16,
             "danmaku": 0,
-            "favorites": 18
+            "favorites": 0
           },
-          "author": "西北领队小周",
+          "author": "宇献5255",
           "signal": "neutral"
         }
       ],
@@ -551,24 +584,6 @@
           "signal": "neutral"
         },
         {
-          "platform": "xiaohongshu",
-          "title": "9月30日 大柴旦-翡翠湖-U型公路-水上雅丹",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/68ddd5540000000007003df7",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.69,
-          "score": 29,
-          "engagement": {
-            "num_comments": 6,
-            "likes": 11,
-            "shares": 0,
-            "collects": 10
-          },
-          "author": "可爱的小杨老师",
-          "signal": "neutral"
-        },
-        {
           "platform": "zhihu",
           "title": "青甘大环线到底几天最合适？跑了20多趟的我，说点掏心窝的话",
           "snippet": "格尔木 D3：U型公路（千万停路边别站路中间拍照！）→ 水上雅丹 → 大柴旦 D4：翡翠湖（那个Tiffany蓝真的绝）→",
@@ -604,23 +619,6 @@
         },
         {
           "platform": "zhihu",
-          "title": "青甘大环线自驾8天，花了1.3w到底值不值？我把每天开销和真实感受全写出来了",
-          "snippet": "Day 4：大柴旦→U型公路→水上雅丹→敦煌 这一天是地狱模式。开车5小时到水上雅丹，途经U型公路停下来拍照",
-          "url": "https://zhuanlan.zhihu.com/p/2054244984413500623",
-          "date": "2026-06-27",
-          "dateConfidence": "high",
-          "relevance": 0.55,
-          "score": 58,
-          "engagement": {
-            "num_comments": 2,
-            "collects": 0,
-            "voteups": 2
-          },
-          "author": "豆豆芙",
-          "signal": "neutral"
-        },
-        {
-          "platform": "zhihu",
           "title": "青甘领队驴队长｜跑西北9年老领队｜7天青甘环线零踩坑完整版攻略",
           "snippet": "茶卡盐湖—G315 U型公路—大柴旦翡翠湖｜宿大柴旦 车程5h ✅打卡：清晨茶卡天空之镜、网红戈壁公路、彩色翡翠盐湖",
           "url": "https://zhuanlan.zhihu.com/p/2060357994534147160",
@@ -634,7 +632,7 @@
             "voteups": 0
           },
           "author": "青甘领队驴队长",
-          "signal": "neutral"
+          "signal": "caution"
         },
         {
           "platform": "xiaohongshu",
@@ -662,7 +660,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.51,
-          "score": 23,
+          "score": 22,
           "engagement": {
             "num_comments": 35,
             "likes": 9,
@@ -680,13 +678,30 @@
           "date": "2026-06-23",
           "dateConfidence": "high",
           "relevance": 0.46,
-          "score": 50,
+          "score": 51,
           "engagement": {
             "num_comments": 1,
             "collects": 0,
             "voteups": 3
           },
           "author": "渝帆",
+          "signal": "neutral"
+        },
+        {
+          "platform": "zhihu",
+          "title": "2026西北大环线爆火攻略｜7天走完半个中国，这才是夏天的终极浪漫✨",
+          "snippet": "大柴旦镇（夜晚可看戈壁绝美星空） Day4 大柴旦→水上雅丹→西台吉乃尔湖｜荒野极致浪漫 关键词：全球唯一水上雅丹、双色盐湖、无人区大片",
+          "url": "https://zhuanlan.zhihu.com/p/2063009203480966593",
+          "date": "2026-07-21",
+          "dateConfidence": "high",
+          "relevance": 0.46,
+          "score": 44,
+          "engagement": {
+            "num_comments": 0,
+            "collects": 0,
+            "voteups": 0
+          },
+          "author": "西北领队驴队长",
           "signal": "neutral"
         },
         {
@@ -704,6 +719,24 @@
             "voteups": 0
           },
           "author": "西北领队驴队长",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "🎨大地调色盘大柴旦翡翠湖｜超细保姆级攻略✨",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/699b5374000000001a0300a0",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.4,
+          "score": 31,
+          "engagement": {
+            "num_comments": 32,
+            "likes": 462,
+            "shares": 0,
+            "collects": 631
+          },
+          "author": "上帝的行李箱",
           "signal": "neutral"
         }
       ],
@@ -813,7 +846,7 @@
             "num_comments": 2,
             "likes": 234,
             "shares": 0,
-            "collects": 268
+            "collects": 269
           },
           "author": "猪迪玩转小破球",
           "signal": "neutral"
@@ -824,7 +857,7 @@
     "mingshaMountain": {
       "label": "鸣沙山月牙泉",
       "status": "ok",
-      "evidenceCount": 12,
+      "evidenceCount": 11,
       "evidence": [
         {
           "platform": "zhihu",
@@ -861,6 +894,24 @@
           "signal": "neutral"
         },
         {
+          "platform": "xiaohongshu",
+          "title": "鸣沙山月牙泉｜日落实测全攻略！省钱避坑干货",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a5ed4ad0000000022018910",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.44,
+          "score": 16,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 1,
+            "shares": 0,
+            "collects": 1
+          },
+          "author": "蓝琪儿",
+          "signal": "neutral"
+        },
+        {
           "platform": "zhihu",
           "title": "暑期去敦煌，千万别只会拍月牙泉！这份避坑攻略太及时了",
           "snippet": "敦煌不是只适合“赶白天景点”，而是要把节奏放慢。 坑3：鸣沙山去得太早，热到怀疑人生鸣沙山月牙泉是必去的，但时间选不好，体验会大打折扣",
@@ -885,7 +936,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.39,
-          "score": 26,
+          "score": 21,
           "engagement": {
             "num_comments": 5,
             "likes": 13,
@@ -897,31 +948,13 @@
         },
         {
           "platform": "xiaohongshu",
-          "title": "我的鸣沙山月牙泉保姆级攻略！",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a3ba32300000000150256a3",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.36,
-          "score": 19,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 9,
-            "shares": 0,
-            "collects": 3
-          },
-          "author": "公主要暴富",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
           "title": "鸣沙山月牙泉｜保姆级攻略",
           "snippet": "",
           "url": "https://www.xiaohongshu.com/explore/6a5dccfe0000000001030049",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.36,
-          "score": 17,
+          "score": 15,
           "engagement": {
             "num_comments": 0,
             "likes": 4,
@@ -939,7 +972,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.34,
-          "score": 18,
+          "score": 15,
           "engagement": {
             "num_comments": 3,
             "likes": 2,
@@ -950,22 +983,21 @@
           "signal": "neutral"
         },
         {
-          "platform": "bilibili",
-          "title": "爬鸣沙山月牙泉先看看这份攻略",
-          "snippet": "-",
-          "url": "https://www.bilibili.com/video/BV1oW7s6yE2p",
-          "date": "2026-06-27",
-          "dateConfidence": "high",
+          "platform": "xiaohongshu",
+          "title": "敦煌鸣沙山月牙泉超全必备品穿衣攻略",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/69ec68ab000000003700e81e",
+          "date": null,
+          "dateConfidence": "low",
           "relevance": 0.33,
-          "score": 34,
+          "score": 39,
           "engagement": {
-            "num_comments": 0,
-            "likes": 19,
-            "views": 444,
-            "danmaku": 0,
-            "favorites": 12
+            "num_comments": 88,
+            "likes": 2838,
+            "shares": 0,
+            "collects": 4128
           },
-          "author": "汤汤带你游",
+          "author": "千千-青甘旅游全攻略",
           "signal": "neutral"
         },
         {
@@ -976,10 +1008,10 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.33,
-          "score": 32,
+          "score": 24,
           "engagement": {
             "num_comments": 16,
-            "likes": 46,
+            "likes": 48,
             "shares": 0,
             "collects": 50
           },
@@ -994,7 +1026,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.33,
-          "score": 29,
+          "score": 22,
           "engagement": {
             "num_comments": 10,
             "likes": 24,
@@ -1006,38 +1038,20 @@
         },
         {
           "platform": "xiaohongshu",
-          "title": "# 敦煌鸣沙山避坑｜本地人都认的干货攻略",
+          "title": "鸣沙山月牙泉ִֶָ🌙.*没做攻略来的后悔到哭…",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a3cea830000000017009b0b",
+          "url": "https://www.xiaohongshu.com/explore/6a3a513f000000001503cf8c",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.33,
-          "score": 12,
+          "relevance": 0.32,
+          "score": 28,
           "engagement": {
-            "num_comments": 0,
-            "likes": 1,
+            "num_comments": 11,
+            "likes": 237,
             "shares": 0,
-            "collects": 1
+            "collects": 191
           },
-          "author": "公主要暴富",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "敦煌鸣沙山必体验项目！骑骆驼干货攻略来啦",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/69c62a030000000023011ad6",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.3,
-          "score": 31,
-          "engagement": {
-            "num_comments": 8,
-            "likes": 100,
-            "shares": 0,
-            "collects": 38
-          },
-          "author": "西北向导阿东",
+          "author": "王夜里",
           "signal": "neutral"
         }
       ],
@@ -1111,56 +1125,40 @@
       "evidenceCount": 12,
       "evidence": [
         {
-          "platform": "zhihu",
-          "title": "西北大环线8天7晚保姆级旅游攻略（新手无脑冲）",
-          "snippet": "下午抵达张掖七彩丹霞景区，打卡1-4号核心观景台，层层叠叠的红橙黄丹霞地貌，雨后、日落时分色彩最为艳丽",
-          "url": "https://zhuanlan.zhihu.com/p/2060371453489501792",
-          "date": "2026-07-14",
+          "platform": "bilibili",
+          "title": "张掖七彩丹霞游玩攻略",
+          "snippet": "-",
+          "url": "https://www.bilibili.com/video/BV18MTg6AEW7",
+          "date": "2026-06-28",
           "dateConfidence": "high",
           "relevance": 0.46,
-          "score": 53,
+          "score": 55,
           "engagement": {
-            "num_comments": 0,
-            "collects": 0,
-            "voteups": 1
+            "num_comments": 11,
+            "likes": 49,
+            "views": 1306,
+            "danmaku": 0,
+            "favorites": 48
           },
-          "author": "西北旅游驴队长",
+          "author": "汤汤带你游",
           "signal": "neutral"
         },
         {
           "platform": "xiaohongshu",
-          "title": "张掖七彩丹霞旅游攻略",
+          "title": "🌈 张掖七彩丹霞保姆级攻略",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a34b1ee0000000006022fa1",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.46,
-          "score": 37,
-          "engagement": {
-            "num_comments": 12,
-            "likes": 291,
-            "shares": 0,
-            "collects": 229
-          },
-          "author": "微笑向暖",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "张掖2️⃣七彩丹霞下午游攻略",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a6027c300000000010335f3",
+          "url": "https://www.xiaohongshu.com/explore/6a2eac7d0000000006032d37",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.43,
-          "score": 16,
+          "score": 21,
           "engagement": {
             "num_comments": 0,
-            "likes": 3,
+            "likes": 17,
             "shares": 0,
-            "collects": 3
+            "collects": 19
           },
-          "author": "番茄蓝莓",
+          "author": "刘晶臭美晶",
           "signal": "neutral"
         },
         {
@@ -1189,12 +1187,12 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.41,
-          "score": 23,
+          "score": 22,
           "engagement": {
             "num_comments": 4,
-            "likes": 15,
+            "likes": 14,
             "shares": 0,
-            "collects": 15
+            "collects": 16
           },
           "author": "提拉米莎",
           "signal": "neutral"
@@ -1207,7 +1205,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.41,
-          "score": 21,
+          "score": 20,
           "engagement": {
             "num_comments": 0,
             "likes": 23,
@@ -1237,6 +1235,24 @@
         },
         {
           "platform": "xiaohongshu",
+          "title": "张掖七彩丹霞攻略🔥别瞎逛！这样玩才绝美",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a5111710000000006031449",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.4,
+          "score": 17,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 7,
+            "shares": 0,
+            "collects": 10
+          },
+          "author": "敦煌进行时",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
           "title": "西北必冲｜张掖七彩丹霞保姆级攻略✨看完直接",
           "snippet": "",
           "url": "https://www.xiaohongshu.com/explore/6a5647ed0000000022009668",
@@ -1246,83 +1262,84 @@
           "score": 35,
           "engagement": {
             "num_comments": 23,
-            "likes": 257,
+            "likes": 260,
             "shares": 0,
-            "collects": 290
+            "collects": 292
           },
           "author": "月亮以西",
           "signal": "neutral"
         },
         {
           "platform": "xiaohongshu",
-          "title": "七彩丹霞游玩攻略🌈",
+          "title": "七彩丹霞保姆级攻略｜不走冤枉路❗看绝美日落",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a60586a000000001f01ef76",
+          "url": "https://www.xiaohongshu.com/explore/69ff2d610000000038035cf3",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.36,
+          "relevance": 0.38,
+          "score": 28,
+          "engagement": {
+            "num_comments": 3,
+            "likes": 98,
+            "shares": 0,
+            "collects": 109
+          },
+          "author": "Yy的旅行徒步日记",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "张掖七彩丹霞保姆级观景台路线｜少走冤枉路",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a4903870000000021021923",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.38,
+          "score": 22,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 30,
+            "shares": 0,
+            "collects": 55
+          },
+          "author": "七七嘻游记",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "张掖七彩丹霞｜懒人极简攻略✨不绕路不踩雷",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a506003000000002101b460",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.38,
           "score": 12,
           "engagement": {
             "num_comments": 0,
-            "likes": 4,
+            "likes": 2,
             "shares": 0,
-            "collects": 1
+            "collects": 3
           },
-          "author": "蔚蓝素拾光",
-          "signal": "neutral"
+          "author": "开心薯饼",
+          "signal": "mixed"
         },
         {
-          "platform": "xiaohongshu",
-          "title": "可以，七彩丹霞避坑指南来了！",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a1ea3a1000000003601892e",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.33,
-          "score": 24,
+          "platform": "bilibili",
+          "title": "张掖七彩丹霞景区观光巴士（七彩云海台→七彩锦绣观景台→七彩虹霞）POV",
+          "snippet": "-",
+          "url": "https://www.bilibili.com/video/BV1frKh6TEga",
+          "date": "2026-07-21",
+          "dateConfidence": "high",
+          "relevance": 0.36,
+          "score": 40,
           "engagement": {
-            "num_comments": 17,
-            "likes": 37,
-            "shares": 0,
-            "collects": 33
+            "num_comments": 0,
+            "likes": 14,
+            "views": 13,
+            "danmaku": 0,
+            "favorites": 1
           },
-          "author": "一颗南瓜🎃",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "👭暑假游第三站：张掖七彩丹霞",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a451be80000000011015a14",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.31,
-          "score": 29,
-          "engagement": {
-            "num_comments": 30,
-            "likes": 120,
-            "shares": 0,
-            "collects": 166
-          },
-          "author": "Alria522🏠📷",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "张掖七彩丹霞｜来到了英语书的世界～",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a562d98000000001702b785",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.31,
-          "score": 20,
-          "engagement": {
-            "num_comments": 12,
-            "likes": 29,
-            "shares": 0,
-            "collects": 9
-          },
-          "author": "777",
+          "author": "04759D",
           "signal": "neutral"
         }
       ],
@@ -1333,7 +1350,7 @@
     "xining": {
       "label": "西宁",
       "status": "ok",
-      "evidenceCount": 6,
+      "evidenceCount": 4,
       "evidence": [
         {
           "platform": "zhihu",
@@ -1343,7 +1360,7 @@
           "date": "2026-07-08",
           "dateConfidence": "high",
           "relevance": 0.58,
-          "score": 68,
+          "score": 53,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -1360,7 +1377,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.51,
-          "score": 31,
+          "score": 30,
           "engagement": {
             "num_comments": 4,
             "likes": 60,
@@ -1378,7 +1395,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.37,
-          "score": 25,
+          "score": 24,
           "engagement": {
             "num_comments": 70,
             "likes": 27,
@@ -1390,48 +1407,13 @@
         },
         {
           "platform": "xiaohongshu",
-          "title": "西宁避雷马忠",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/687cae8100000000220301d3",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.35,
-          "score": 16,
-          "engagement": {
-            "num_comments": 13,
-            "likes": 7,
-            "shares": 0,
-            "collects": 0
-          },
-          "author": "丢丢小地瓜",
-          "signal": "caution"
-        },
-        {
-          "platform": "zhihu",
-          "title": "青甘大环线7天速查手册：路线住宿美食一张表搞定",
-          "snippet": "推荐店铺/去处 人均参考 西宁 手抓羊肉、甜醅子、酿皮、老酸奶 益鑫手抓羊肉、莫家街/下南关街 手抓50-80元 茶卡/大柴旦",
-          "url": "https://zhuanlan.zhihu.com/p/2058489228703667733",
-          "date": "2026-07-09",
-          "dateConfidence": "high",
-          "relevance": 0.34,
-          "score": 29,
-          "engagement": {
-            "num_comments": 0,
-            "collects": 0,
-            "voteups": 1
-          },
-          "author": "王秋水",
-          "signal": "positive"
-        },
-        {
-          "platform": "xiaohongshu",
           "title": "别再推荐西宁的“德禄酸奶”了！",
           "snippet": "",
           "url": "https://www.xiaohongshu.com/explore/66ff8af9000000001b022366",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.3,
-          "score": 17,
+          "score": 15,
           "engagement": {
             "num_comments": 35,
             "likes": 13,
@@ -1439,7 +1421,7 @@
             "collects": 1
           },
           "author": "disneykaka",
-          "signal": "positive"
+          "signal": "mixed"
         }
       ],
       "sourceErrors": {},
@@ -1458,7 +1440,7 @@
               "date": "2026-07-08",
               "dateConfidence": "high",
               "relevance": 0.58,
-              "score": 68,
+              "score": 53,
               "engagement": {
                 "num_comments": 0,
                 "collects": 0,
@@ -1475,7 +1457,7 @@
               "date": null,
               "dateConfidence": "low",
               "relevance": 0.51,
-              "score": 31,
+              "score": 30,
               "engagement": {
                 "num_comments": 4,
                 "likes": 60,
@@ -1493,7 +1475,7 @@
               "date": null,
               "dateConfidence": "low",
               "relevance": 0.37,
-              "score": 25,
+              "score": 24,
               "engagement": {
                 "num_comments": 70,
                 "likes": 27,
@@ -1509,7 +1491,7 @@
           "name": "德禄酸奶",
           "specialty": "青海酸奶",
           "note": "近期口碑分化，先买小杯试味，不把它当作唯一酸奶选择。",
-          "verdict": "candidate",
+          "verdict": "mixed",
           "sources": [
             {
               "platform": "zhihu",
@@ -1519,7 +1501,7 @@
               "date": "2026-07-08",
               "dateConfidence": "high",
               "relevance": 0.58,
-              "score": 68,
+              "score": 53,
               "engagement": {
                 "num_comments": 0,
                 "collects": 0,
@@ -1536,7 +1518,7 @@
               "date": null,
               "dateConfidence": "low",
               "relevance": 0.3,
-              "score": 17,
+              "score": 15,
               "engagement": {
                 "num_comments": 35,
                 "likes": 13,
@@ -1544,16 +1526,17 @@
                 "collects": 1
               },
               "author": "disneykaka",
-              "signal": "positive"
+              "signal": "mixed"
             }
           ]
         }
-      ]
+      ],
+      "lastRestaurantSuccessfulAt": "2026-07-22T08:19:40.009632+00:00"
     },
     "chaka": {
       "label": "茶卡",
       "status": "ok",
-      "evidenceCount": 3,
+      "evidenceCount": 6,
       "evidence": [
         {
           "platform": "zhihu",
@@ -1563,7 +1546,7 @@
           "date": "2026-07-09",
           "dateConfidence": "high",
           "relevance": 0.61,
-          "score": 56,
+          "score": 41,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -1580,7 +1563,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.33,
-          "score": 28,
+          "score": 27,
           "engagement": {
             "num_comments": 47,
             "likes": 73,
@@ -1588,6 +1571,57 @@
             "collects": 50
           },
           "author": "木头的木",
+          "signal": "neutral"
+        },
+        {
+          "platform": "zhihu",
+          "title": "近期去青海甘肃8天行程攻略，青甘大环线行程要怎么规划",
+          "snippet": "优先锁定七彩丹霞、莫高窟、鸣沙山、青海湖、茶卡盐湖等核心地标，省时又出片。 美食推荐：手抓羊肉/炕锅羊肉，西北特色，肉质鲜嫩不膻",
+          "url": "https://zhuanlan.zhihu.com/p/2062587680748312146",
+          "date": "2026-07-20",
+          "dateConfidence": "high",
+          "relevance": 0.32,
+          "score": 67,
+          "engagement": {
+            "num_comments": 0,
+            "collects": 0,
+            "voteups": 3
+          },
+          "author": "空城旧梦",
+          "signal": "positive"
+        },
+        {
+          "platform": "zhihu",
+          "title": "深耕西北9年领队实拍｜7-8天青甘大环线完整版攻略，高反、穿搭、避坑一次说清",
+          "snippet": "介意住宿可调整行程住低海拔城镇 第六大块：本地特色美食推荐 青海段： 手抓羊肉、牦牛酸奶、酿皮、炕锅羊肉、青海面片、甜醅 甘肃敦煌",
+          "url": "https://zhuanlan.zhihu.com/p/2055962894831969819",
+          "date": "2026-07-02",
+          "dateConfidence": "high",
+          "relevance": 0.32,
+          "score": 22,
+          "engagement": {
+            "num_comments": 0,
+            "collects": 0,
+            "voteups": 1
+          },
+          "author": "青甘领队驴队长",
+          "signal": "positive"
+        },
+        {
+          "platform": "zhihu",
+          "title": "青甘大环线8天7晚纯玩团实测，青海湖茶卡敦煌张掖经典串联人均1600起避坑指南",
+          "snippet": "搭配卤制入味的驴肉和秘制卤汁，是敦煌烟火气的代表。 3.炕锅羊肉。 羊肉、土豆、粉条、青椒一同焖煮在铁锅中，焦香四溢",
+          "url": "https://zhuanlan.zhihu.com/p/2055332773976610563",
+          "date": "2026-06-30",
+          "dateConfidence": "high",
+          "relevance": 0.32,
+          "score": 20,
+          "engagement": {
+            "num_comments": 0,
+            "collects": 0,
+            "voteups": 1
+          },
+          "author": "豆豆芙",
           "signal": "neutral"
         },
         {
@@ -1625,7 +1659,7 @@
               "date": "2026-07-09",
               "dateConfidence": "high",
               "relevance": 0.61,
-              "score": 56,
+              "score": 41,
               "engagement": {
                 "num_comments": 0,
                 "collects": 0,
@@ -1636,12 +1670,13 @@
             }
           ]
         }
-      ]
+      ],
+      "lastRestaurantSuccessfulAt": "2026-07-22T08:19:40.009632+00:00"
     },
     "dachaidan": {
       "label": "大柴旦",
       "status": "ok",
-      "evidenceCount": 1,
+      "evidenceCount": 6,
       "evidence": [
         {
           "platform": "zhihu",
@@ -1659,11 +1694,99 @@
           },
           "author": "王秋水",
           "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "大柴旦餐厅避雷",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6871c22f000000000d0193f7",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.6,
+          "score": 31,
+          "engagement": {
+            "num_comments": 1,
+            "likes": 6,
+            "shares": 0,
+            "collects": 0
+          },
+          "author": "快乐的小芋圆",
+          "signal": "caution"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "青甘环线大柴旦餐饮避雷❗",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6867831600000000100121a5",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.38,
+          "score": 39,
+          "engagement": {
+            "num_comments": 16,
+            "likes": 17,
+            "shares": 0,
+            "collects": 12
+          },
+          "author": "知世",
+          "signal": "caution"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "大柴旦 干锅牦牛肉一锅出！",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a1808480000000036030371",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.38,
+          "score": 23,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 9,
+            "shares": 0,
+            "collects": 1
+          },
+          "author": "米米🌾",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "大柴旦顶顶牛特色干锅牦牛肉好吃！",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a5a38cb0000000014005fe5",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.36,
+          "score": 11,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 0,
+            "shares": 0,
+            "collects": 0
+          },
+          "author": "🌱",
+          "signal": "positive"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "大柴旦好吃好吃",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a5f7f31000000000f005b62",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.31,
+          "score": 8,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 0,
+            "shares": 0,
+            "collects": 0
+          },
+          "author": "Zzzzzzzzzzzzzz",
+          "signal": "positive"
         }
       ],
-      "sourceErrors": {
-        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
-      },
+      "sourceErrors": {},
       "restaurants": [
         {
           "name": "鼎鼎牛干锅牦牛肉",
@@ -1690,7 +1813,8 @@
             }
           ]
         }
-      ]
+      ],
+      "lastRestaurantSuccessfulAt": "2026-07-22T08:19:40.009632+00:00"
     },
     "dunhuang": {
       "label": "敦煌",
@@ -1705,7 +1829,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.49,
-          "score": 28,
+          "score": 32,
           "engagement": {
             "num_comments": 3,
             "likes": 70,
@@ -1723,7 +1847,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.38,
-          "score": 30,
+          "score": 35,
           "engagement": {
             "num_comments": 163,
             "likes": 50,
@@ -1741,7 +1865,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.31,
-          "score": 15,
+          "score": 17,
           "engagement": {
             "num_comments": 2,
             "likes": 15,
@@ -1759,7 +1883,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.3,
-          "score": 28,
+          "score": 34,
           "engagement": {
             "num_comments": 27,
             "likes": 180,
@@ -1786,7 +1910,7 @@
               "date": null,
               "dateConfidence": "low",
               "relevance": 0.49,
-              "score": 28,
+              "score": 32,
               "engagement": {
                 "num_comments": 3,
                 "likes": 70,
@@ -1804,7 +1928,7 @@
               "date": null,
               "dateConfidence": "low",
               "relevance": 0.38,
-              "score": 30,
+              "score": 35,
               "engagement": {
                 "num_comments": 163,
                 "likes": 50,
@@ -1817,7 +1941,7 @@
           ]
         }
       ],
-      "lastRestaurantSuccessfulAt": "2026-07-22T07:59:22.375851+00:00"
+      "lastRestaurantSuccessfulAt": "2026-07-22T08:19:40.009632+00:00"
     },
     "zhangye": {
       "label": "张掖",
@@ -1844,21 +1968,21 @@
         },
         {
           "platform": "xiaohongshu",
-          "title": "张掖苗氏卷子鸡避雷贴",
+          "title": "张掖的孙记炒炮。。。真咸",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/68c93da0000000001300eb86",
+          "url": "https://www.xiaohongshu.com/explore/6a2799ba000000003502e21e",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.43,
-          "score": 14,
+          "relevance": 0.36,
+          "score": 19,
           "engagement": {
-            "num_comments": 1,
-            "likes": 0,
+            "num_comments": 49,
+            "likes": 4,
             "shares": 0,
-            "collects": 0
+            "collects": 2
           },
-          "author": "皮卡丘电你噢「",
-          "signal": "caution"
+          "author": "文水上",
+          "signal": "neutral"
         }
       ],
       "sourceErrors": {},
@@ -1886,42 +2010,34 @@
               },
               "author": "潜水捞鱼吃🐟🐳🦐🐚⭐",
               "signal": "neutral"
-            }
-          ]
-        },
-        {
-          "name": "苗氏卷子鸡",
-          "specialty": "卷子鸡",
-          "note": "有近期避雷反馈，去前先看最新评价并确认份量。",
-          "verdict": "caution",
-          "sources": [
+            },
             {
               "platform": "xiaohongshu",
-              "title": "张掖苗氏卷子鸡避雷贴",
+              "title": "张掖的孙记炒炮。。。真咸",
               "snippet": "",
-              "url": "https://www.xiaohongshu.com/explore/68c93da0000000001300eb86",
+              "url": "https://www.xiaohongshu.com/explore/6a2799ba000000003502e21e",
               "date": null,
               "dateConfidence": "low",
-              "relevance": 0.43,
-              "score": 14,
+              "relevance": 0.36,
+              "score": 19,
               "engagement": {
-                "num_comments": 1,
-                "likes": 0,
+                "num_comments": 49,
+                "likes": 4,
                 "shares": 0,
-                "collects": 0
+                "collects": 2
               },
-              "author": "皮卡丘电你噢「",
-              "signal": "caution"
+              "author": "文水上",
+              "signal": "neutral"
             }
           ]
         }
       ],
-      "lastRestaurantSuccessfulAt": "2026-07-22T07:58:32.659123+00:00"
+      "lastRestaurantSuccessfulAt": "2026-07-22T08:19:40.009632+00:00"
     },
     "lanzhou": {
       "label": "兰州",
       "status": "ok",
-      "evidenceCount": 5,
+      "evidenceCount": 4,
       "evidence": [
         {
           "platform": "xiaohongshu",
@@ -1967,7 +2083,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.33,
-          "score": 21,
+          "score": 20,
           "engagement": {
             "num_comments": 3,
             "likes": 18,
@@ -1976,24 +2092,6 @@
           },
           "author": "Feng398-",
           "signal": "positive"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "兰州 · 牛肉面",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a29f2d7000000002201ab16",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.31,
-          "score": 10,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 3,
-            "shares": 0,
-            "collects": 0
-          },
-          "author": "小明同学逛世界",
-          "signal": "neutral"
         },
         {
           "platform": "zhihu",
@@ -2081,7 +2179,7 @@
               "date": null,
               "dateConfidence": "low",
               "relevance": 0.33,
-              "score": 21,
+              "score": 20,
               "engagement": {
                 "num_comments": 3,
                 "likes": 18,
@@ -2094,18 +2192,18 @@
           ]
         }
       ],
-      "lastRestaurantSuccessfulAt": "2026-07-22T07:58:32.659123+00:00"
+      "lastRestaurantSuccessfulAt": "2026-07-22T08:19:40.009632+00:00"
     }
   },
   "collection": {
     "python": "3.11.15",
-    "pythonPrefix": "D:\\miniconda3\\envs\\py311",
+    "pythonPrefix": "/usr/share/miniconda/envs/travel-data",
     "browserDisabled": false,
     "optionalCredentialsEnabled": true,
     "diagnose": {
       "summary": {
-        "ok": 3,
-        "warn": 5,
+        "ok": 4,
+        "warn": 4,
         "error": 0
       },
       "sources": [
@@ -2126,9 +2224,9 @@
         {
           "source": "bilibili",
           "label": "B站",
-          "status": "warn",
+          "status": "ok",
           "available": true,
-          "reason": "公开搜索 API 探测失败；可尝试 Playwright 兜底"
+          "reason": "公开搜索 API 可用"
         },
         {
           "source": "zhihu",
@@ -2169,12 +2267,9 @@
       "crawlerEngine": {
         "playwright_available": true,
         "cached_logins": [
-          "bilibili",
-          "douyin",
-          "xiaohongshu",
-          "zhihu"
+          "xiaohongshu"
         ],
-        "cookie_dir": "C:\\Users\\Lumos\\.config\\last30days-cn\\browser_cookies",
+        "cookie_dir": "/home/runner/.config/last30days-cn/browser_cookies",
         "browser": {
           "mode": "managed",
           "path": null,
@@ -2362,7 +2457,6 @@
         "topic": "西宁 益鑫羊肉手抓馆 德禄酸奶 马忠羊肠面 美食 推荐 避雷",
         "sources": [
           "xiaohongshu",
-          "douyin",
           "zhihu"
         ],
         "range": {
@@ -2378,7 +2472,6 @@
         "topic": "茶卡 应财特色炕锅肉 炕锅羊肉 本地餐厅 推荐 避雷",
         "sources": [
           "xiaohongshu",
-          "douyin",
           "zhihu"
         ],
         "range": {
@@ -2394,7 +2487,21 @@
         "topic": "大柴旦 鼎鼎牛干锅牦牛肉 餐厅 推荐 避雷",
         "sources": [
           "xiaohongshu",
-          "douyin",
+          "zhihu"
+        ],
+        "range": {
+          "from": "2026-06-22",
+          "to": "2026-07-22"
+        },
+        "exitCode": 0
+      },
+      {
+        "key": "dunhuang",
+        "label": "敦煌",
+        "group": "food",
+        "topic": "敦煌 达记驴肉黄面 靖远尕六美味羊羔肉 夏家合汁 推荐 避雷",
+        "sources": [
+          "xiaohongshu",
           "zhihu"
         ],
         "range": {
@@ -2423,21 +2530,6 @@
         "label": "兰州",
         "group": "food",
         "topic": "兰州 马子禄牛肉面 吾穆勒蓬灰牛肉面 杜记甜食 再回首酿皮",
-        "sources": [
-          "xiaohongshu",
-          "zhihu"
-        ],
-        "range": {
-          "from": "2026-06-22",
-          "to": "2026-07-22"
-        },
-        "exitCode": 0
-      },
-      {
-        "key": "dunhuang",
-        "label": "敦煌",
-        "group": "food",
-        "topic": "敦煌 达记驴肉黄面 靖远尕六美味羊羔肉 夏家合汁 推荐 避雷",
         "sources": [
           "xiaohongshu",
           "zhihu"
