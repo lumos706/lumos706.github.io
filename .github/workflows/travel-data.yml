@@ -37,11 +37,12 @@ jobs:
           cache: npm
 
       - name: Setup Miniconda
-        uses: conda-incubator/setup-miniconda@v3
+        uses: conda-incubator/setup-miniconda@v4
         with:
           activate-environment: travel-data
           python-version: '3.11'
-          auto-activate-base: false
+          auto-activate: false
+          conda-remove-defaults: true
 
       - name: Install official research skill
         run: npx --yes skills add Jesseovo/last30days-skill-cn -g -y

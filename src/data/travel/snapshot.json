@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-22T08:19:40.009632+00:00",
-  "expiresAt": "2026-07-23T20:19:40.009632+00:00",
+  "generatedAt": "2026-07-22T08:29:56.767626+00:00",
+  "expiresAt": "2026-07-23T20:29:56.767626+00:00",
   "status": "ok",
   "mode": "browser-plus-optional-credentials",
   "skill": {
@@ -24,7 +24,7 @@
     "zhihu"
   ],
   "sourceCoverage": {
-    "baidu": 4,
+    "baidu": 2,
     "bilibili": 4,
     "xiaohongshu": 55,
     "zhihu": 32
@@ -198,7 +198,7 @@
     "tickets": {
       "label": "门票",
       "status": "ok",
-      "evidenceCount": 8,
+      "evidenceCount": 6,
       "evidence": [
         {
           "platform": "zhihu",
@@ -270,12 +270,12 @@
         },
         {
           "platform": "baidu",
-          "title": "青海湖今天开放吗?2026年7月20日实地探访:门票90元限流1.2万,但20...",
+          "title": "...怎么走?2026年暑期经典路线+预算+避坑全解析|茶卡盐湖|鸣沙山...",
           "snippet": "",
-          "url": "http://www.baidu.com/link?url=OWXFTJ637Tj5aKObEXpLhe3iyL6h2fwPjZzT-5FJ3NUjj2n--VvWNSOLkHWp3CP3PNXklnuCgtcJNqLvwh2D7cY3rg3fEovg3noyITGjobO",
+          "url": "http://www.baidu.com/link?url=oKy38DMUUPLDEcQMmwbJlfy4z-FaI02yuyLTeFJzqgOdkwYw37XSnTs413eomPtx8qff1WrnDrDJXYTFvMorlNWNbMxBxxVWUeboT1UTWO_",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.28,
+          "relevance": 0.3,
           "score": 0,
           "engagement": {},
           "author": "",
@@ -289,7 +289,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.24,
-          "score": 13,
+          "score": 10,
           "engagement": {
             "num_comments": 4,
             "likes": 51,
@@ -298,52 +298,17 @@
           },
           "author": "明日晴",
           "signal": "neutral"
-        },
-        {
-          "platform": "baidu",
-          "title": "...价格,最新报价一览|青海湖|翡翠湖|茶卡盐湖|张掖丹霞|酒店门票...",
-          "snippet": "",
-          "url": "http://www.baidu.com/link?url=_-Awu96EMZ1PF0dhT66Sq5q4D3GXba5LISsPw3pT-WkChllUCmLvdv1TcY1ZU57pKSgCaBfoqqQvMaFq80uT-a",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.22,
-          "score": 0,
-          "engagement": {},
-          "author": "",
-          "signal": "neutral"
-        },
-        {
-          "platform": "baidu",
-          "title": "...黑独山,青海湖,茶卡盐湖,大柴旦翡翠湖,翡翠湖,艾肯泉,莫高窟...",
-          "snippet": "",
-          "url": "http://www.baidu.com/link?url=-61VyRIszPPMgd3tBnJuc-6wq5mfnk9oAcY6Fr_1lcbyLLzF1TRPKXPaIIxrxImmlorcRgwdJWWG9JQFf0l_na",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.22,
-          "score": 0,
-          "engagement": {},
-          "author": "",
-          "signal": "neutral"
         }
       ],
       "sourceErrors": {},
-      "priceStatus": "reference",
-      "priceRange": {
-        "min": 90,
-        "max": 923
-      },
+      "priceStatus": "insufficient",
+      "priceRange": null,
       "priceSamples": [
         {
           "value": 923,
           "platform": "zhihu",
           "title": "8天7晚青甘大环线回来，把你们问爆的\"真实花费+住宿门票明细\"拆给你看",
           "url": "https://zhuanlan.zhihu.com/p/2055693962938152533"
-        },
-        {
-          "value": 90,
-          "platform": "baidu",
-          "title": "青海湖今天开放吗?2026年7月20日实地探访:门票90元限流1.2万,但20...",
-          "url": "http://www.baidu.com/link?url=OWXFTJ637Tj5aKObEXpLhe3iyL6h2fwPjZzT-5FJ3NUjj2n--VvWNSOLkHWp3CP3PNXklnuCgtcJNqLvwh2D7cY3rg3fEovg3noyITGjobO"
         }
       ]
     }
@@ -2197,7 +2162,7 @@
   },
   "collection": {
     "python": "3.11.15",
-    "pythonPrefix": "/usr/share/miniconda/envs/travel-data",
+    "pythonPrefix": "D:\\miniconda3\\envs\\py311",
     "browserDisabled": false,
     "optionalCredentialsEnabled": true,
     "diagnose": {
@@ -2267,9 +2232,12 @@
       "crawlerEngine": {
         "playwright_available": true,
         "cached_logins": [
-          "xiaohongshu"
+          "bilibili",
+          "douyin",
+          "xiaohongshu",
+          "zhihu"
         ],
-        "cookie_dir": "/home/runner/.config/last30days-cn/browser_cookies",
+        "cookie_dir": "C:\\Users\\Lumos\\.config\\last30days-cn\\browser_cookies",
         "browser": {
           "mode": "managed",
           "path": null,
@@ -2302,23 +2270,6 @@
         "label": "住宿",
         "group": "category",
         "topic": "2026年8月 青海甘肃 西宁茶卡大柴旦敦煌张掖 酒店双床房 每晚价格",
-        "sources": [
-          "xiaohongshu",
-          "douyin",
-          "zhihu",
-          "baidu"
-        ],
-        "range": {
-          "from": "2026-06-22",
-          "to": "2026-07-22"
-        },
-        "exitCode": 0
-      },
-      {
-        "key": "tickets",
-        "label": "门票",
-        "group": "category",
-        "topic": "2026年8月 青海湖茶卡盐湖莫高窟鸣沙山七彩丹霞 门票价格 预约",
         "sources": [
           "xiaohongshu",
           "douyin",
@@ -2533,6 +2484,23 @@
         "sources": [
           "xiaohongshu",
           "zhihu"
+        ],
+        "range": {
+          "from": "2026-06-22",
+          "to": "2026-07-22"
+        },
+        "exitCode": 0
+      },
+      {
+        "key": "tickets",
+        "label": "门票",
+        "group": "category",
+        "topic": "2026年8月 青海湖茶卡盐湖莫高窟鸣沙山七彩丹霞 门票价格 预约",
+        "sources": [
+          "xiaohongshu",
+          "douyin",
+          "zhihu",
+          "baidu"
         ],
         "range": {
           "from": "2026-06-22",

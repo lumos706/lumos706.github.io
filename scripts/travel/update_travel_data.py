@@ -589,7 +589,11 @@ def category_snapshot(spec: QuerySpec, payload: dict[str, Any]) -> dict[str, Any
 
     candidates = price_candidates(evidence, spec.min_price, spec.max_price)
     unique_values = sorted({item["value"] for item in candidates})
-    reliable = len(candidates) >= 2 and len({item["url"] for item in candidates}) >= 2
+    reliable = (
+        spec.key != "tickets"
+        and len(candidates) >= 2
+        and len({item["url"] for item in candidates}) >= 2
+    )
     category.update(
         {
             "priceStatus": "reference" if reliable else "insufficient",
