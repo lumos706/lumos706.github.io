@@ -25,7 +25,17 @@ const platformNames: Record<string, string> = {
 
 const generatedAt = new Date(snapshot.generatedAt);
 const expiresAt = new Date(snapshot.expiresAt);
-const staleAtBuild = Date.now() > expiresAt.getTime();
+const flyaiSnapshot: any = (snapshot as any).flyai ?? {};
+const flyaiFlights: any = flyaiSnapshot.flights ?? {};
+const flyaiHotels: any = flyaiSnapshot.hotels ?? {};
+const flightOffers: any[] = Array.isArray(flyaiFlights.featured) ? flyaiFlights.featured : [];
+const hotelStays: any[] = Array.isArray(flyaiHotels.stays)
+  ? flyaiHotels.stays.filter((stay: any) => Array.isArray(stay.offers) && stay.offers.length)
+  : [];
+const flyaiGeneratedAt = flyaiSnapshot.generatedAt ? new Date(flyaiSnapshot.generatedAt) : null;
+const flyaiExpiresAt = flyaiSnapshot.expiresAt ? new Date(flyaiSnapshot.expiresAt) : null;
+const staleAtBuild = Date.now() > expiresAt.getTime()
+  || Boolean(flyaiExpiresAt && Date.now() > flyaiExpiresAt.getTime());
 const generatedLabel = new Intl.DateTimeFormat('zh-CN', {
   timeZone: 'Asia/Shanghai',
   month: '2-digit',
@@ -34,6 +44,39 @@ const generatedLabel = new Intl.DateTimeFormat('zh-CN', {
   minute: '2-digit',
   hour12: false,
 }).format(generatedAt);
+const flyaiGeneratedLabel = flyaiGeneratedAt
+  ? new Intl.DateTimeFormat('zh-CN', {
+      timeZone: 'Asia/Shanghai',
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false,
+    }).format(flyaiGeneratedAt)
+  : null;
+const flyaiModeLabel = flyaiSnapshot.mode === 'api-enhanced' ? 'API 增强' : '公开体验';
+const flyaiSystemMessages: string[] = Array.isArray(flyaiSnapshot.systemMessages)
+  ? flyaiSnapshot.systemMessages.filter(Boolean)
+  : [];
+
+const shortDateTime = (value: string) => {
+  const [date = '', time = ''] = String(value ?? '').split(' ');
+  return `${date.slice(5).replace('-', '/')} ${time.slice(0, 5)}`.trim();
+};
+
+const shortStay = (stay: any) => {
+  const checkIn = String(stay.checkIn ?? '').slice(5).replace('-', '/');
+  const checkOut = String(stay.checkOut ?? '').slice(5).replace('-', '/');
+  return `${checkIn}—${checkOut} · ${stay.nights ?? 1} 晚`;
+};
+
+const readableDuration = (offer: any) => {
+  const minutes = Number(offer.durationMinutes);
+  if (!Number.isFinite(minutes) || minutes <= 0) return offer.duration || '时长以预订页为准';
+  const hours = Math.floor(minutes / 60);
+  const remainder = minutes % 60;
+  return `${hours ? `${hours} 小时` : ''}${remainder ? ` ${remainder} 分` : ''}`.trim();
+};
 
 const priceCategories = [
   { key: 'flights', code: 'FLIGHTS / 01', title: '沈阳往返西宁 / 兰州', fallback: '暂无可靠公开报价' },
@@ -48,7 +91,10 @@ const trustedEvidence = (category: any, limit = 8, threshold = 0.2) =>
 
 const priceText = (category: any, fallback: string) => {
   const range = category?.priceRange;
-  if (category?.priceStatus === 'reference' && range) {
+  if (['reference', 'flyai-live'].includes(category?.priceStatus) && range) {
+    if (Number(range.min) === Number(range.max)) {
+      return `¥${Number(range.min).toLocaleString('zh-CN')}`;
+    }
     return `¥${Number(range.min).toLocaleString('zh-CN')}–¥${Number(range.max).toLocaleString('zh-CN')}`;
   }
   return fallback;
@@ -216,24 +262,60 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
     </div>
   </section>
 
-  <section class="section travel-market-section">
+  <section id="travel-market" class="section travel-market-section">
     <div class="wrap">
       <div class="section-head travel-market-head">
         <h2 class="section-title">每日公开价格快照</h2>
-        <div class="travel-market-meta"><span class:list={['travel-pulse', { stale: staleAtBuild }]}></span>{generatedLabel} 更新{staleAtBuild ? ' · 数据可能过期' : ''}</div>
+        <div class="travel-market-meta"><span class:list={['travel-pulse', { stale: staleAtBuild }]}></span>攻略 {generatedLabel}{flyaiGeneratedLabel ? ` · 报价 ${flyaiGeneratedLabel}` : ''}{staleAtBuild ? ' · 数据可能过期' : ''}</div>
       </div>
       <div class="travel-market-grid">
         {priceCategories.map((item) => {
           const category = (snapshot.categories as any)[item.key];
           const evidence = trustedEvidence(category, 5);
           return (
-            <article class="travel-market-item">
+            <article class="travel-market-item" data-market-kind={item.key}>
               <span>{item.code}</span>
               <h3>{item.title}</h3>
               <strong>{priceText(category, item.fallback)}</strong>
-              <p>{item.key === 'flights' ? '公开内容不足时不补造价格；购票前以航司或订票页最终含税价为准。' : item.key === 'hotels' ? '按四人两间双床房核算，公开样本不等于仍可预订的库存。' : '莫高窟先看余票和场次，所有门票以景区官方预约页为准。'}</p>
+              <p>{item.key === 'flights' ? '每位成人单程经济舱；日期与航班不同会改变价格，往返需分别相加。' : item.key === 'hotels' ? '主价格为两间房每晚合计；下方同时列出单间起价与本段住宿合计。' : '莫高窟先看余票和场次，所有门票以景区官方预约页为准。'}</p>
+              {item.key === 'flights' && flightOffers.length > 0 && (
+                <div class="travel-live-list" aria-label="FlyAI 机票报价">
+                  <div class="travel-live-source"><span>fly.ai × 飞猪</span><b>{flyaiModeLabel}</b></div>
+                  {flightOffers.map((offer: any) => (
+                    <article class="travel-flight-offer">
+                      <div class="travel-offer-head">
+                        <span>{offer.direction} · {offer.origin} → {offer.destination}</span>
+                        <strong>¥{Number(offer.price).toLocaleString('zh-CN')}</strong>
+                      </div>
+                      <h4>{shortDateTime(offer.departureAt)} · {(offer.flightNumbers ?? []).join(' + ') || '航班待核对'}</h4>
+                      <p>{(offer.airlines ?? []).join('、') || '承运航司见预订页'} · {offer.direct ? '直达' : `${offer.stops} 次中转`} · {readableDuration(offer)}</p>
+                      <a href={offer.jumpUrl} target="_blank" rel="noreferrer">在飞猪核对该航班</a>
+                    </article>
+                  ))}
+                </div>
+              )}
+              {item.key === 'hotels' && hotelStays.length > 0 && (
+                <div class="travel-live-list" aria-label="FlyAI 酒店报价">
+                  <div class="travel-live-source"><span>fly.ai × 飞猪</span><b>{flyaiModeLabel}</b></div>
+                  {hotelStays.map((stay: any) => {
+                    const offer = stay.offers[0];
+                    return (
+                      <article class="travel-hotel-offer">
+                        <img src={offer.mainPic} alt={`${offer.name}的飞猪公开房源图`} loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+                        <div>
+                          <div class="travel-offer-head"><span>{stay.city} · {shortStay(stay)}</span><strong>¥{Number(offer.pricePerRoomNight).toLocaleString('zh-CN')} / 间</strong></div>
+                          <h4>{offer.name}</h4>
+                          <p>{offer.star || '房型等级见预订页'}{offer.nearby ? ` · ${offer.nearby}` : ''}</p>
+                          <small>两间每晚约 ¥{Number(offer.twoRoomsPerNight).toLocaleString('zh-CN')}{Number(stay.nights) > 1 ? ` · 本段约 ¥${Number(offer.twoRoomStayTotal).toLocaleString('zh-CN')}` : ''}</small>
+                          <a href={offer.detailUrl} target="_blank" rel="noreferrer">在飞猪核对房型</a>
+                        </div>
+                      </article>
+                    );
+                  })}
+                </div>
+              )}
               <details>
-                <summary>查看 {evidence.length} 条可追溯线索</summary>
+                <summary>查看 {evidence.length} 条近期攻略线索</summary>
                 {evidence.length ? (
                   <ul>{evidence.map((source: any) => <li><a href={source.url} target="_blank" rel="noreferrer"><span>{platformNames[source.platform] ?? source.platform}</span>{source.title}</a></li>)}</ul>
                 ) : <div class="travel-empty">本轮没有达到相关性阈值的公开线索。</div>}
@@ -242,7 +324,8 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
           );
         })}
       </div>
-      <p class="travel-data-notice">{snapshot.notice} 当前运行模式：last30days-cn {collectionMode}；有效来源：{snapshot.activeSources.length ? snapshot.activeSources.map((source) => platformNames[source] ?? source).join('、') : '本轮暂无'}。</p>
+      <p class="travel-data-notice">{snapshot.notice} 攻略由 last30days-cn {collectionMode}采集，有效来源：{snapshot.activeSources.length ? snapshot.activeSources.map((source) => platformNames[source] ?? source).join('、') : '本轮暂无'}；机票与酒店为 fly.ai / 飞猪查询结果。酒店报价不代表当前仍有两间双床房库存，最终含税价、余票、房型、退改与库存均以下单页为准。</p>
+      {flyaiSystemMessages.length > 0 && <div class="travel-platform-hint">{flyaiSystemMessages.map((message) => <p>{message}</p>)}</div>}
     </div>
   </section>
 
@@ -299,7 +382,7 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
   </section>
 
   <section class="travel-source-strip">
-    <div class="wrap"><strong>只保留能追溯的公开线索。</strong><p>每日任务使用 last30days-cn 低频检索；Playwright 会在没有 API 时尝试访问主流平台，可选凭据只用于增强稳定性。价格不是实时库存；登录态、验证码和平台改版都可能使某次结果变少，页面会显示空状态而不是补造数据。</p></div>
+    <div class="wrap"><strong>只保留能追溯的公开线索。</strong><p>每日任务使用 last30days-cn 低频检索攻略，并通过 FlyAI Skill 的官方命令更新飞猪机票与酒店报价。Playwright 会在没有平台 API 时尝试访问公开页面，可选凭据只用于增强稳定性；某次采集不足时保留上一份可核对快照并标记状态，不补造数据。</p></div>
   </section>
 
   <script is:inline type="application/json" id="travel-plans-data" set:html={plansJson}></script>

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "generatedAt": "2026-07-22T09:27:49.830110+00:00",
   "expiresAt": "2026-07-23T21:27:49.830110+00:00",
   "status": "ok",
@@ -86,9 +86,15 @@
         }
       ],
       "sourceErrors": {},
-      "priceStatus": "insufficient",
-      "priceRange": null,
-      "priceSamples": []
+      "priceStatus": "flyai-live",
+      "priceRange": {
+        "min": 430,
+        "max": 1160
+      },
+      "priceSamples": [],
+      "priceUnit": "每位成人单程",
+      "liveSource": "fly.ai / 飞猪",
+      "flyaiStatus": "ok"
     },
     "hotels": {
       "label": "住宿",
@@ -184,8 +190,11 @@
         }
       ],
       "sourceErrors": {},
-      "priceStatus": "insufficient",
-      "priceRange": null,
+      "priceStatus": "flyai-live",
+      "priceRange": {
+        "min": 658,
+        "max": 1238
+      },
       "priceSamples": [
         {
           "value": 700,
@@ -193,7 +202,10 @@
           "title": "8天7晚青甘大环线回来，把你们问爆的\"真实花费+住宿门票明细\"拆给你看",
           "url": "https://zhuanlan.zhihu.com/p/2055693962938152533"
         }
-      ]
+      ],
+      "priceUnit": "两间房每晚合计",
+      "liveSource": "fly.ai / 飞猪",
+      "flyaiStatus": "ok"
     },
     "tickets": {
       "label": "门票",
@@ -2471,6 +2483,867 @@
         "exitCode": 0
       }
     ],
+    "failures": []
+  },
+  "flyai": {
+    "status": "ok",
+    "generatedAt": "2026-07-22T10:05:19.342Z",
+    "expiresAt": "2026-07-24T10:05:19.342Z",
+    "lastSuccessfulAt": "2026-07-22T10:05:19.342Z",
+    "mode": "api-enhanced",
+    "skill": {
+      "name": "flyai",
+      "repository": "https://github.com/alibaba-flyai/flyai-skill",
+      "cliPackage": "@fly-ai/flyai-cli",
+      "cliVersion": "1.0.16"
+    },
+    "flights": {
+      "status": "ok",
+      "queryWindow": {
+        "outbound": "2026-08-01—08-04",
+        "return": "2026-08-04—08-11"
+      },
+      "priceUnit": "每位成人单程",
+      "priceRange": {
+        "min": 430,
+        "max": 1160
+      },
+      "routes": [
+        {
+          "id": "shenyang-xining-outbound",
+          "direction": "去程",
+          "origin": "沈阳",
+          "destination": "西宁",
+          "depDateStart": "2026-08-01",
+          "depDateEnd": "2026-08-04",
+          "status": "ok",
+          "bestPrice": 920,
+          "offers": [
+            {
+              "id": "shenyang-xining-outbound-2026-08-03 18:15:00-DR6597",
+              "routeId": "shenyang-xining-outbound",
+              "direction": "去程",
+              "origin": "沈阳",
+              "destination": "西宁",
+              "departureAirport": "桃仙国际机场",
+              "arrivalAirport": "曹家堡机场",
+              "departureAt": "2026-08-03 18:15:00",
+              "arrivalAt": "2026-08-03 21:25:00",
+              "flightNumbers": [
+                "DR6597"
+              ],
+              "airlines": [
+                "苏南瑞丽航空"
+              ],
+              "seatClass": "经济舱",
+              "direct": true,
+              "stops": 0,
+              "duration": "190",
+              "durationMinutes": 190,
+              "price": 920,
+              "jumpUrl": "https://a.feizhu.com/3p2iLf"
+            },
+            {
+              "id": "shenyang-xining-outbound-2026-08-02 18:15:00-DR6597",
+              "routeId": "shenyang-xining-outbound",
+              "direction": "去程",
+              "origin": "沈阳",
+              "destination": "西宁",
+              "departureAirport": "桃仙国际机场",
+              "arrivalAirport": "曹家堡机场",
+              "departureAt": "2026-08-02 18:15:00",
+              "arrivalAt": "2026-08-02 21:25:00",
+              "flightNumbers": [
+                "DR6597"
+              ],
+              "airlines": [
+                "苏南瑞丽航空"
+              ],
+              "seatClass": "经济舱",
+              "direct": true,
+              "stops": 0,
+              "duration": "190",
+              "durationMinutes": 190,
+              "price": 1040,
+              "jumpUrl": "https://a.feizhu.com/3gm2qi"
+            }
+          ],
+          "cliExitCode": 3221226505
+        },
+        {
+          "id": "shenyang-lanzhou-outbound",
+          "direction": "去程",
+          "origin": "沈阳",
+          "destination": "兰州",
+          "depDateStart": "2026-08-01",
+          "depDateEnd": "2026-08-04",
+          "status": "ok",
+          "bestPrice": 480,
+          "offers": [
+            {
+              "id": "shenyang-lanzhou-outbound-2026-08-03 14:25:00-9C7731",
+              "routeId": "shenyang-lanzhou-outbound",
+              "direction": "去程",
+              "origin": "沈阳",
+              "destination": "兰州",
+              "departureAirport": "桃仙国际机场",
+              "arrivalAirport": "中川机场",
+              "departureAt": "2026-08-03 14:25:00",
+              "arrivalAt": "2026-08-03 18:00:00",
+              "flightNumbers": [
+                "9C7731"
+              ],
+              "airlines": [
+                "春秋"
+              ],
+              "seatClass": "经济舱",
+              "direct": true,
+              "stops": 0,
+              "duration": "215",
+              "durationMinutes": 215,
+              "price": 480,
+              "jumpUrl": "https://a.feizhu.com/2lSBk5"
+            },
+            {
+              "id": "shenyang-lanzhou-outbound-2026-08-04 07:35:00-9C8553",
+              "routeId": "shenyang-lanzhou-outbound",
+              "direction": "去程",
+              "origin": "沈阳",
+              "destination": "兰州",
+              "departureAirport": "桃仙国际机场",
+              "arrivalAirport": "中川机场",
+              "departureAt": "2026-08-04 07:35:00",
+              "arrivalAt": "2026-08-04 11:15:00",
+              "flightNumbers": [
+                "9C8553"
+              ],
+              "airlines": [
+                "春秋"
+              ],
+              "seatClass": "经济舱",
+              "direct": true,
+              "stops": 0,
+              "duration": "220",
+              "durationMinutes": 220,
+              "price": 530,
+              "jumpUrl": "https://a.feizhu.com/0M4Hwi"
+            },
+            {
+              "id": "shenyang-lanzhou-outbound-2026-08-02 07:35:00-9C8553",
+              "routeId": "shenyang-lanzhou-outbound",
+              "direction": "去程",
+              "origin": "沈阳",
+              "destination": "兰州",
+              "departureAirport": "桃仙国际机场",
+              "arrivalAirport": "中川机场",
+              "departureAt": "2026-08-02 07:35:00",
+              "arrivalAt": "2026-08-02 10:55:00",
+              "flightNumbers": [
+                "9C8553"
+              ],
+              "airlines": [
+                "春秋"
+              ],
+              "seatClass": "经济舱",
+              "direct": true,
+              "stops": 0,
+              "duration": "200",
+              "durationMinutes": 200,
+              "price": 530,
+              "jumpUrl": "https://a.feizhu.com/3CDxvs"
+            }
+          ],
+          "cliExitCode": 3221226505
+        },
+        {
+          "id": "xining-shenyang-return",
+          "direction": "返程",
+          "origin": "西宁",
+          "destination": "沈阳",
+          "depDateStart": "2026-08-04",
+          "depDateEnd": "2026-08-11",
+          "status": "ok",
+          "bestPrice": 1160,
+          "offers": [
+            {
+              "id": "xining-shenyang-return-2026-08-09 22:10:00-DR6598",
+              "routeId": "xining-shenyang-return",
+              "direction": "返程",
+              "origin": "西宁",
+              "destination": "沈阳",
+              "departureAirport": "曹家堡机场",
+              "arrivalAirport": "桃仙国际机场",
+              "departureAt": "2026-08-09 22:10:00",
+              "arrivalAt": "2026-08-10 00:50:00",
+              "flightNumbers": [
+                "DR6598"
+              ],
+              "airlines": [
+                "苏南瑞丽航空"
+              ],
+              "seatClass": "经济舱",
+              "direct": true,
+              "stops": 0,
+              "duration": "160",
+              "durationMinutes": 160,
+              "price": 1160,
+              "jumpUrl": "https://a.feizhu.com/0jAfVw"
+            }
+          ],
+          "cliExitCode": 3221226505
+        },
+        {
+          "id": "lanzhou-shenyang-return",
+          "direction": "返程",
+          "origin": "兰州",
+          "destination": "沈阳",
+          "depDateStart": "2026-08-04",
+          "depDateEnd": "2026-08-11",
+          "status": "ok",
+          "bestPrice": 430,
+          "offers": [
+            {
+              "id": "lanzhou-shenyang-return-2026-08-11 16:50:00-9C7732",
+              "routeId": "lanzhou-shenyang-return",
+              "direction": "返程",
+              "origin": "兰州",
+              "destination": "沈阳",
+              "departureAirport": "中川机场",
+              "arrivalAirport": "桃仙国际机场",
+              "departureAt": "2026-08-11 16:50:00",
+              "arrivalAt": "2026-08-11 19:55:00",
+              "flightNumbers": [
+                "9C7732"
+              ],
+              "airlines": [
+                "春秋"
+              ],
+              "seatClass": "经济舱",
+              "direct": true,
+              "stops": 0,
+              "duration": "185",
+              "durationMinutes": 185,
+              "price": 430,
+              "jumpUrl": "https://a.feizhu.com/1dk8F4"
+            },
+            {
+              "id": "lanzhou-shenyang-return-2026-08-05 12:55:00-9C8554",
+              "routeId": "lanzhou-shenyang-return",
+              "direction": "返程",
+              "origin": "兰州",
+              "destination": "沈阳",
+              "departureAirport": "中川机场",
+              "arrivalAirport": "桃仙国际机场",
+              "departureAt": "2026-08-05 12:55:00",
+              "arrivalAt": "2026-08-05 16:00:00",
+              "flightNumbers": [
+                "9C8554"
+              ],
+              "airlines": [
+                "春秋"
+              ],
+              "seatClass": "经济舱",
+              "direct": true,
+              "stops": 0,
+              "duration": "185",
+              "durationMinutes": 185,
+              "price": 430,
+              "jumpUrl": "https://a.feizhu.com/1mzWnm"
+            },
+            {
+              "id": "lanzhou-shenyang-return-2026-08-05 18:50:00-9C7732",
+              "routeId": "lanzhou-shenyang-return",
+              "direction": "返程",
+              "origin": "兰州",
+              "destination": "沈阳",
+              "departureAirport": "中川机场",
+              "arrivalAirport": "桃仙国际机场",
+              "departureAt": "2026-08-05 18:50:00",
+              "arrivalAt": "2026-08-05 22:00:00",
+              "flightNumbers": [
+                "9C7732"
+              ],
+              "airlines": [
+                "春秋"
+              ],
+              "seatClass": "经济舱",
+              "direct": true,
+              "stops": 0,
+              "duration": "190",
+              "durationMinutes": 190,
+              "price": 450,
+              "jumpUrl": "https://a.feizhu.com/1hpoZW"
+            }
+          ],
+          "cliExitCode": 3221226505
+        }
+      ],
+      "featured": [
+        {
+          "id": "shenyang-xining-outbound-2026-08-03 18:15:00-DR6597",
+          "routeId": "shenyang-xining-outbound",
+          "direction": "去程",
+          "origin": "沈阳",
+          "destination": "西宁",
+          "departureAirport": "桃仙国际机场",
+          "arrivalAirport": "曹家堡机场",
+          "departureAt": "2026-08-03 18:15:00",
+          "arrivalAt": "2026-08-03 21:25:00",
+          "flightNumbers": [
+            "DR6597"
+          ],
+          "airlines": [
+            "苏南瑞丽航空"
+          ],
+          "seatClass": "经济舱",
+          "direct": true,
+          "stops": 0,
+          "duration": "190",
+          "durationMinutes": 190,
+          "price": 920,
+          "jumpUrl": "https://a.feizhu.com/3p2iLf"
+        },
+        {
+          "id": "shenyang-lanzhou-outbound-2026-08-03 14:25:00-9C7731",
+          "routeId": "shenyang-lanzhou-outbound",
+          "direction": "去程",
+          "origin": "沈阳",
+          "destination": "兰州",
+          "departureAirport": "桃仙国际机场",
+          "arrivalAirport": "中川机场",
+          "departureAt": "2026-08-03 14:25:00",
+          "arrivalAt": "2026-08-03 18:00:00",
+          "flightNumbers": [
+            "9C7731"
+          ],
+          "airlines": [
+            "春秋"
+          ],
+          "seatClass": "经济舱",
+          "direct": true,
+          "stops": 0,
+          "duration": "215",
+          "durationMinutes": 215,
+          "price": 480,
+          "jumpUrl": "https://a.feizhu.com/2lSBk5"
+        },
+        {
+          "id": "xining-shenyang-return-2026-08-09 22:10:00-DR6598",
+          "routeId": "xining-shenyang-return",
+          "direction": "返程",
+          "origin": "西宁",
+          "destination": "沈阳",
+          "departureAirport": "曹家堡机场",
+          "arrivalAirport": "桃仙国际机场",
+          "departureAt": "2026-08-09 22:10:00",
+          "arrivalAt": "2026-08-10 00:50:00",
+          "flightNumbers": [
+            "DR6598"
+          ],
+          "airlines": [
+            "苏南瑞丽航空"
+          ],
+          "seatClass": "经济舱",
+          "direct": true,
+          "stops": 0,
+          "duration": "160",
+          "durationMinutes": 160,
+          "price": 1160,
+          "jumpUrl": "https://a.feizhu.com/0jAfVw"
+        },
+        {
+          "id": "lanzhou-shenyang-return-2026-08-11 16:50:00-9C7732",
+          "routeId": "lanzhou-shenyang-return",
+          "direction": "返程",
+          "origin": "兰州",
+          "destination": "沈阳",
+          "departureAirport": "中川机场",
+          "arrivalAirport": "桃仙国际机场",
+          "departureAt": "2026-08-11 16:50:00",
+          "arrivalAt": "2026-08-11 19:55:00",
+          "flightNumbers": [
+            "9C7732"
+          ],
+          "airlines": [
+            "春秋"
+          ],
+          "seatClass": "经济舱",
+          "direct": true,
+          "stops": 0,
+          "duration": "185",
+          "durationMinutes": 185,
+          "price": 430,
+          "jumpUrl": "https://a.feizhu.com/1dk8F4"
+        }
+      ],
+      "freshQueries": 4,
+      "totalQueries": 4
+    },
+    "hotels": {
+      "status": "ok",
+      "priceUnit": "两间房每晚合计",
+      "singleRoomNightRange": {
+        "min": 329,
+        "max": 619
+      },
+      "priceRange": {
+        "min": 658,
+        "max": 1238
+      },
+      "sevenDayTwoRoomEstimate": 5614,
+      "roomsRequested": 2,
+      "roomTypeRequested": "双床房",
+      "inventoryConfirmed": false,
+      "stays": [
+        {
+          "id": "xining-0801",
+          "city": "西宁",
+          "destName": "西宁",
+          "checkIn": "2026-08-01",
+          "checkOut": "2026-08-02",
+          "nights": 1,
+          "status": "ok",
+          "offers": [
+            {
+              "id": "xining-0801-58816074",
+              "stayId": "xining-0801",
+              "city": "西宁",
+              "checkIn": "2026-08-01",
+              "checkOut": "2026-08-02",
+              "nights": 1,
+              "name": "Holiday Inn 西宁温泉假日酒店",
+              "pricePerRoomNight": 488,
+              "twoRoomsPerNight": 976,
+              "twoRoomStayTotal": 976,
+              "score": "",
+              "scoreDesc": "",
+              "star": "豪华型",
+              "address": "西宁市城中区麟河路31号",
+              "nearby": "近西宁夏都博汇温泉水乐园",
+              "mainPic": "https://img.alicdn.com/imgextra/i3/6000000004603/O1CN01KPRSHJ1jsDilqcEra_!!6000000004603-0-hotel.jpg",
+              "detailUrl": "https://a.feizhu.com/3J10gD"
+            },
+            {
+              "id": "xining-0801-64052027",
+              "stayId": "xining-0801",
+              "city": "西宁",
+              "checkIn": "2026-08-01",
+              "checkOut": "2026-08-02",
+              "nights": 1,
+              "name": "汉庭优佳西宁八一路民航大厦酒店",
+              "pricePerRoomNight": 414,
+              "twoRoomsPerNight": 828,
+              "twoRoomStayTotal": 828,
+              "score": "",
+              "scoreDesc": "",
+              "star": "舒适型",
+              "address": "八一西路22号",
+              "nearby": "近西宁站",
+              "mainPic": "https://img.alicdn.com/imgextra/i3/6000000005172/O1CN01NFNHvC1o4paVPl5BI_!!6000000005172-2-hotel.png",
+              "detailUrl": "https://a.feizhu.com/3vzWMp"
+            },
+            {
+              "id": "xining-0801-63316090",
+              "stayId": "xining-0801",
+              "city": "西宁",
+              "checkIn": "2026-08-01",
+              "checkOut": "2026-08-02",
+              "nights": 1,
+              "name": "西宁海湖新区美居酒店",
+              "pricePerRoomNight": 721,
+              "twoRoomsPerNight": 1442,
+              "twoRoomStayTotal": 1442,
+              "score": "",
+              "scoreDesc": "",
+              "star": "高档型",
+              "address": "五四西路66号",
+              "nearby": "近西宁万达广场",
+              "mainPic": "https://img.alicdn.com/imgextra/i4/6000000000486/O1CN015vGrpx1FSd9xS3xOV_!!6000000000486-0-hotel.jpg",
+              "detailUrl": "https://a.feizhu.com/0PFjMy"
+            }
+          ],
+          "cliExitCode": 3221226505
+        },
+        {
+          "id": "chaka-0802",
+          "city": "茶卡",
+          "destName": "乌兰县",
+          "poiName": "茶卡盐湖",
+          "checkIn": "2026-08-02",
+          "checkOut": "2026-08-03",
+          "nights": 1,
+          "status": "ok",
+          "offers": [
+            {
+              "id": "chaka-0802-57094150",
+              "stayId": "chaka-0802",
+              "city": "茶卡",
+              "checkIn": "2026-08-02",
+              "checkOut": "2026-08-03",
+              "nights": 1,
+              "name": "晴朗客栈（茶卡店）",
+              "pricePerRoomNight": 329,
+              "twoRoomsPerNight": 658,
+              "twoRoomStayTotal": 658,
+              "score": "",
+              "scoreDesc": "",
+              "star": "经济型",
+              "address": "茶卡镇茶卡新村177号",
+              "nearby": "近茶卡汽车站",
+              "mainPic": "https://img.alicdn.com/imgextra/i3/6000000003456/O1CN014OHuNc1bOtwVrVa4y_!!6000000003456-2-hotel.png",
+              "detailUrl": "https://a.feizhu.com/1sjowY"
+            },
+            {
+              "id": "chaka-0802-57357699",
+              "stayId": "chaka-0802",
+              "city": "茶卡",
+              "checkIn": "2026-08-02",
+              "checkOut": "2026-08-03",
+              "nights": 1,
+              "name": "歌斐民宿（茶卡店）",
+              "pricePerRoomNight": 219,
+              "twoRoomsPerNight": 438,
+              "twoRoomStayTotal": 438,
+              "score": "",
+              "scoreDesc": "",
+              "star": "经济型",
+              "address": "乌兰茶卡镇茶卡新村18号",
+              "nearby": "近茶卡汽车站",
+              "mainPic": "https://img.alicdn.com/imgextra/i1/6000000001884/O1CN01B5rr7A1PmvGq1oN7q_!!6000000001884-0-hotel.jpg",
+              "detailUrl": "https://a.feizhu.com/4SvyGO"
+            },
+            {
+              "id": "chaka-0802-80219011",
+              "stayId": "chaka-0802",
+              "city": "茶卡",
+              "checkIn": "2026-08-02",
+              "checkOut": "2026-08-03",
+              "nights": 1,
+              "name": "茶卡泊心云舍",
+              "pricePerRoomNight": 373,
+              "twoRoomsPerNight": 746,
+              "twoRoomStayTotal": 746,
+              "score": "",
+              "scoreDesc": "",
+              "star": "经济型",
+              "address": "乌兰县茶卡镇茶卡新村75号",
+              "nearby": "近茶卡汽车站",
+              "mainPic": "https://img.alicdn.com/imgextra/i3/6000000002700/O1CN016lDEI51VoeM2J5aRb_!!6000000002700-0-hotel.jpg",
+              "detailUrl": "https://a.feizhu.com/0zXgcn"
+            }
+          ],
+          "cliExitCode": 3221226505
+        },
+        {
+          "id": "dachaidan-0803",
+          "city": "大柴旦",
+          "destName": "海西蒙古族藏族自治州",
+          "keyWords": "大柴旦",
+          "checkIn": "2026-08-03",
+          "checkOut": "2026-08-04",
+          "nights": 1,
+          "status": "ok",
+          "offers": [
+            {
+              "id": "dachaidan-0803-62148101",
+              "stayId": "dachaidan-0803",
+              "city": "大柴旦",
+              "checkIn": "2026-08-03",
+              "checkOut": "2026-08-04",
+              "nights": 1,
+              "name": "维也纳酒店（5.0青海大柴旦店）",
+              "pricePerRoomNight": 619,
+              "twoRoomsPerNight": 1238,
+              "twoRoomStayTotal": 1238,
+              "score": "",
+              "scoreDesc": "",
+              "star": "舒适型",
+              "address": "青海省海西蒙古族藏族自治州大柴旦行委大柴旦镇五彩街",
+              "nearby": "近大柴旦行委柴旦镇",
+              "mainPic": "https://img.alicdn.com/imgextra/i2/O1CN01VKfP0T1k0vl7ZyCaC_!!4611686018427384334-0-fliggy_content_upload_image.jpg",
+              "detailUrl": "https://a.feizhu.com/2U52B4"
+            },
+            {
+              "id": "dachaidan-0803-72113571",
+              "stayId": "dachaidan-0803",
+              "city": "大柴旦",
+              "checkIn": "2026-08-03",
+              "checkOut": "2026-08-04",
+              "nights": 1,
+              "name": "超越国际大酒店",
+              "pricePerRoomNight": 950,
+              "twoRoomsPerNight": 1900,
+              "twoRoomStayTotal": 1900,
+              "score": "",
+              "scoreDesc": "",
+              "star": "舒适型",
+              "address": "大柴旦人民路与温泉路交叉口中石化西侧50米",
+              "nearby": "近大柴旦行委柴旦镇",
+              "mainPic": "https://img.alicdn.com/imgextra/i2/O1CN01uMg2td289Dhpt4Rjr_!!4611686018427387601-0-fliggy_content_upload_image.jpg",
+              "detailUrl": "https://a.feizhu.com/3PUzYK"
+            },
+            {
+              "id": "dachaidan-0803-75518172",
+              "stayId": "dachaidan-0803",
+              "city": "大柴旦",
+              "checkIn": "2026-08-03",
+              "checkOut": "2026-08-04",
+              "nights": 1,
+              "name": "苏扬宾馆（大柴旦翡翠湖店）",
+              "pricePerRoomNight": 880,
+              "twoRoomsPerNight": 1760,
+              "twoRoomStayTotal": 1760,
+              "score": "",
+              "scoreDesc": "",
+              "star": "经济型",
+              "address": "青海省海西州大柴旦人民西路35号院内1号",
+              "nearby": "近大柴旦汽车站",
+              "mainPic": "https://img.alicdn.com/imgextra/i2/6000000004291/O1CN01qkK3L61hZKU027ejP_!!6000000004291-0-hotel.jpg",
+              "detailUrl": "https://a.feizhu.com/2oYQWE"
+            }
+          ],
+          "cliExitCode": 3221226505
+        },
+        {
+          "id": "dunhuang-0804",
+          "city": "敦煌",
+          "destName": "敦煌市",
+          "checkIn": "2026-08-04",
+          "checkOut": "2026-08-06",
+          "nights": 2,
+          "status": "ok",
+          "offers": [
+            {
+              "id": "dunhuang-0804-57450030",
+              "stayId": "dunhuang-0804",
+              "city": "敦煌",
+              "checkIn": "2026-08-04",
+              "checkOut": "2026-08-06",
+              "nights": 2,
+              "name": "敦煌山堤美宿(鸣沙山月牙泉店)",
+              "pricePerRoomNight": 438,
+              "twoRoomsPerNight": 876,
+              "twoRoomStayTotal": 1752,
+              "score": "",
+              "scoreDesc": "",
+              "star": "舒适型",
+              "address": "敦煌市月牙泉镇杨家桥乡月牙泉村三组2号",
+              "nearby": "近敦煌鸣沙山月牙泉景区",
+              "mainPic": "https://img.alicdn.com/imgextra/i1/6000000005854/O1CN01JubPXu1t7BepdqmOp_!!6000000005854-2-hotel.png",
+              "detailUrl": "https://a.feizhu.com/00x9Uu"
+            },
+            {
+              "id": "dunhuang-0804-51194180",
+              "stayId": "dunhuang-0804",
+              "city": "敦煌",
+              "checkIn": "2026-08-04",
+              "checkOut": "2026-08-06",
+              "nights": 2,
+              "name": "敦煌漠上花主题客栈(敦煌月牙泉店)",
+              "pricePerRoomNight": 172,
+              "twoRoomsPerNight": 344,
+              "twoRoomStayTotal": 688,
+              "score": "",
+              "scoreDesc": "",
+              "star": "经济型",
+              "address": "杨家桥雷音寺对面千年敦煌月牙泉小镇（杨家桥，近鸣山路）",
+              "nearby": "近敦煌鸣沙山月牙泉景区",
+              "mainPic": "https://img.alicdn.com/imgextra/i3/O1CN019Yn9AK1g8wDbQOrSi_!!4611686018427383810-0-fliggy_content_upload_image.jpg",
+              "detailUrl": "https://a.feizhu.com/0XTY7S"
+            },
+            {
+              "id": "dunhuang-0804-56491273",
+              "stayId": "dunhuang-0804",
+              "city": "敦煌",
+              "checkIn": "2026-08-04",
+              "checkOut": "2026-08-06",
+              "nights": 2,
+              "name": "敦煌白老大客栈(莫高窟数字中心店)",
+              "pricePerRoomNight": 155,
+              "twoRoomsPerNight": 310,
+              "twoRoomStayTotal": 620,
+              "score": "",
+              "scoreDesc": "",
+              "star": "经济型",
+              "address": "敦煌市莫高镇新墩村三组10号",
+              "nearby": "近敦煌站",
+              "mainPic": "https://img.alicdn.com/imgextra/i4/O1CN01UQXYFL1i6IzYM4ofg_!!0-alitrip.jpg",
+              "detailUrl": "https://a.feizhu.com/32bP59"
+            }
+          ],
+          "cliExitCode": 3221226505
+        },
+        {
+          "id": "zhangye-0806",
+          "city": "张掖",
+          "destName": "张掖市",
+          "checkIn": "2026-08-06",
+          "checkOut": "2026-08-07",
+          "nights": 1,
+          "status": "ok",
+          "offers": [
+            {
+              "id": "zhangye-0806-58461071",
+              "stayId": "zhangye-0806",
+              "city": "张掖",
+              "checkIn": "2026-08-06",
+              "checkOut": "2026-08-07",
+              "nights": 1,
+              "name": "全季张掖西站酒店",
+              "pricePerRoomNight": 495,
+              "twoRoomsPerNight": 990,
+              "twoRoomStayTotal": 990,
+              "score": "",
+              "scoreDesc": "",
+              "star": "舒适型",
+              "address": "甘肃省张掖市甘州区高铁西站国芳商业综合体1期项目1号楼1楼",
+              "nearby": "近张掖西站",
+              "mainPic": "https://img.alicdn.com/imgextra/i3/6000000002166/O1CN01plgM0C1Rs4wLcR4M1_!!6000000002166-0-hotel.jpg",
+              "detailUrl": "https://a.feizhu.com/32FJ0C"
+            },
+            {
+              "id": "zhangye-0806-54674002",
+              "stayId": "zhangye-0806",
+              "city": "张掖",
+              "checkIn": "2026-08-06",
+              "checkOut": "2026-08-07",
+              "nights": 1,
+              "name": "张掖丹霞彩韵山居酒店（丹霞口文旅小镇店）",
+              "pricePerRoomNight": 168,
+              "twoRoomsPerNight": 336,
+              "twoRoomStayTotal": 336,
+              "score": "",
+              "scoreDesc": "",
+              "star": "经济型",
+              "address": "临泽丹霞国家地质公园北入口梨园新村别墅区8号楼",
+              "nearby": "近丹霞口文旅小镇",
+              "mainPic": "https://img.alicdn.com/imgextra/i1/O1CN01Qro6Q41i6lWJj53aT_!!4611686018427380044-0-alitrip.jpg",
+              "detailUrl": "https://a.feizhu.com/2GbdV9"
+            },
+            {
+              "id": "zhangye-0806-12653015",
+              "stayId": "zhangye-0806",
+              "city": "张掖",
+              "checkIn": "2026-08-06",
+              "checkOut": "2026-08-07",
+              "nights": 1,
+              "name": "张掖丹霞鑫源宾馆",
+              "pricePerRoomNight": 134,
+              "twoRoomsPerNight": 268,
+              "twoRoomStayTotal": 268,
+              "score": "",
+              "scoreDesc": "",
+              "star": "经济型",
+              "address": "临泽--丹霞国家地质公园入口200米-，近S213国道。",
+              "nearby": "近张掖丹霞国家地质公园-七彩丹霞",
+              "mainPic": "https://img.alicdn.com/imgextra/i4/6000000002740/O1CN01YVbxOq1W6yK528eNM_!!6000000002740-2-hotel.png",
+              "detailUrl": "https://a.feizhu.com/3NaHuu"
+            }
+          ],
+          "cliExitCode": 3221226505
+        }
+      ],
+      "featured": [
+        {
+          "id": "xining-0801-58816074",
+          "stayId": "xining-0801",
+          "city": "西宁",
+          "checkIn": "2026-08-01",
+          "checkOut": "2026-08-02",
+          "nights": 1,
+          "name": "Holiday Inn 西宁温泉假日酒店",
+          "pricePerRoomNight": 488,
+          "twoRoomsPerNight": 976,
+          "twoRoomStayTotal": 976,
+          "score": "",
+          "scoreDesc": "",
+          "star": "豪华型",
+          "address": "西宁市城中区麟河路31号",
+          "nearby": "近西宁夏都博汇温泉水乐园",
+          "mainPic": "https://img.alicdn.com/imgextra/i3/6000000004603/O1CN01KPRSHJ1jsDilqcEra_!!6000000004603-0-hotel.jpg",
+          "detailUrl": "https://a.feizhu.com/3J10gD"
+        },
+        {
+          "id": "chaka-0802-57094150",
+          "stayId": "chaka-0802",
+          "city": "茶卡",
+          "checkIn": "2026-08-02",
+          "checkOut": "2026-08-03",
+          "nights": 1,
+          "name": "晴朗客栈（茶卡店）",
+          "pricePerRoomNight": 329,
+          "twoRoomsPerNight": 658,
+          "twoRoomStayTotal": 658,
+          "score": "",
+          "scoreDesc": "",
+          "star": "经济型",
+          "address": "茶卡镇茶卡新村177号",
+          "nearby": "近茶卡汽车站",
+          "mainPic": "https://img.alicdn.com/imgextra/i3/6000000003456/O1CN014OHuNc1bOtwVrVa4y_!!6000000003456-2-hotel.png",
+          "detailUrl": "https://a.feizhu.com/1sjowY"
+        },
+        {
+          "id": "dachaidan-0803-62148101",
+          "stayId": "dachaidan-0803",
+          "city": "大柴旦",
+          "checkIn": "2026-08-03",
+          "checkOut": "2026-08-04",
+          "nights": 1,
+          "name": "维也纳酒店（5.0青海大柴旦店）",
+          "pricePerRoomNight": 619,
+          "twoRoomsPerNight": 1238,
+          "twoRoomStayTotal": 1238,
+          "score": "",
+          "scoreDesc": "",
+          "star": "舒适型",
+          "address": "青海省海西蒙古族藏族自治州大柴旦行委大柴旦镇五彩街",
+          "nearby": "近大柴旦行委柴旦镇",
+          "mainPic": "https://img.alicdn.com/imgextra/i2/O1CN01VKfP0T1k0vl7ZyCaC_!!4611686018427384334-0-fliggy_content_upload_image.jpg",
+          "detailUrl": "https://a.feizhu.com/2U52B4"
+        },
+        {
+          "id": "dunhuang-0804-57450030",
+          "stayId": "dunhuang-0804",
+          "city": "敦煌",
+          "checkIn": "2026-08-04",
+          "checkOut": "2026-08-06",
+          "nights": 2,
+          "name": "敦煌山堤美宿(鸣沙山月牙泉店)",
+          "pricePerRoomNight": 438,
+          "twoRoomsPerNight": 876,
+          "twoRoomStayTotal": 1752,
+          "score": "",
+          "scoreDesc": "",
+          "star": "舒适型",
+          "address": "敦煌市月牙泉镇杨家桥乡月牙泉村三组2号",
+          "nearby": "近敦煌鸣沙山月牙泉景区",
+          "mainPic": "https://img.alicdn.com/imgextra/i1/6000000005854/O1CN01JubPXu1t7BepdqmOp_!!6000000005854-2-hotel.png",
+          "detailUrl": "https://a.feizhu.com/00x9Uu"
+        },
+        {
+          "id": "zhangye-0806-58461071",
+          "stayId": "zhangye-0806",
+          "city": "张掖",
+          "checkIn": "2026-08-06",
+          "checkOut": "2026-08-07",
+          "nights": 1,
+          "name": "全季张掖西站酒店",
+          "pricePerRoomNight": 495,
+          "twoRoomsPerNight": 990,
+          "twoRoomStayTotal": 990,
+          "score": "",
+          "scoreDesc": "",
+          "star": "舒适型",
+          "address": "甘肃省张掖市甘州区高铁西站国芳商业综合体1期项目1号楼1楼",
+          "nearby": "近张掖西站",
+          "mainPic": "https://img.alicdn.com/imgextra/i3/6000000002166/O1CN01plgM0C1Rs4wLcR4M1_!!6000000002166-0-hotel.jpg",
+          "detailUrl": "https://a.feizhu.com/32FJ0C"
+        }
+      ],
+      "freshQueries": 5,
+      "totalQueries": 5
+    },
+    "systemMessages": [],
     "failures": []
   }
 }

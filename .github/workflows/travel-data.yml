@@ -31,6 +31,7 @@ jobs:
       SCRAPECREATORS_API_KEY: ${{ secrets.SCRAPECREATORS_API_KEY }}
       ZHIHU_COOKIE: ${{ secrets.ZHIHU_COOKIE }}
       LAST30DAYS_XHS_COOKIES_B64: ${{ secrets.LAST30DAYS_XHS_COOKIES_B64 }}
+      FLYAI_API_KEY: ${{ secrets.FLYAI_API_KEY }}
 
     steps:
       - name: Checkout
@@ -51,8 +52,10 @@ jobs:
           auto-activate: false
           conda-remove-defaults: true
 
-      - name: Install official research skill
-        run: npx --yes skills add Jesseovo/last30days-skill-cn -g -y
+      - name: Install official research skills
+        run: |
+          npx --yes skills add Jesseovo/last30days-skill-cn -g -y
+          npx --yes skills add alibaba-flyai/flyai-skill -g -y
 
       - name: Install optional tokenizer and Playwright
         run: |
@@ -128,6 +131,9 @@ jobs:
             args+=(--only "$TRAVEL_ONLY")
           fi
           python scripts/travel/update_travel_data.py "${args[@]}"
+
+      - name: Refresh FlyAI flight and hotel prices
+        run: node scripts/travel/update_flyai_prices.mjs
 
       - name: Validate site
         run: |

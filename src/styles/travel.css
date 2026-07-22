@@ -521,7 +521,7 @@
 
 .travel-market-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .travel-market-item {
@@ -533,6 +533,33 @@
 .travel-market-item + .travel-market-item {
   padding-left: 34px;
   border-left: 1px solid rgba(245, 242, 233, 0.18);
+}
+
+.travel-market-item[data-market-kind='tickets'] {
+  display: grid;
+  min-height: 0;
+  grid-column: 1 / -1;
+  grid-template-columns: 130px minmax(190px, 0.9fr) minmax(160px, 0.6fr) minmax(280px, 1.35fr);
+  gap: 20px 28px;
+  align-items: center;
+  padding: 26px 0;
+  border-top: 1px solid rgba(245, 242, 233, 0.18);
+  border-left: 0;
+}
+
+.travel-market-item[data-market-kind='tickets'] > h3,
+.travel-market-item[data-market-kind='tickets'] > p {
+  min-height: 0;
+  margin: 0;
+}
+
+.travel-market-item[data-market-kind='tickets'] > strong {
+  font-size: 1.45rem;
+}
+
+.travel-market-item[data-market-kind='tickets'] details {
+  grid-column: 2 / -1;
+  margin-top: 0;
 }
 
 .travel-market-item > span {
@@ -560,6 +587,123 @@
   color: rgba(245, 242, 233, 0.55);
   font-size: 0.72rem;
   line-height: 1.7;
+}
+
+.travel-live-list {
+  margin-top: 22px;
+  border-top: 1px solid rgba(245, 242, 233, 0.18);
+}
+
+.travel-live-source {
+  display: flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--travel-route);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.travel-live-source b {
+  color: rgba(245, 242, 233, 0.48);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.travel-flight-offer,
+.travel-hotel-offer {
+  padding: 15px 0;
+  border-top: 1px solid rgba(245, 242, 233, 0.12);
+}
+
+.travel-offer-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.travel-offer-head > span {
+  color: rgba(245, 242, 233, 0.5);
+  font-size: 0.61rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+}
+
+.travel-offer-head > strong {
+  flex: 0 0 auto;
+  color: var(--travel-route);
+  font: 700 0.78rem/1 var(--sans);
+}
+
+.travel-flight-offer h4,
+.travel-hotel-offer h4 {
+  margin: 7px 0 0;
+  color: var(--travel-board-text);
+  font: 600 0.78rem/1.45 var(--sans);
+}
+
+.travel-flight-offer p,
+.travel-hotel-offer p {
+  margin: 5px 0 0;
+  color: rgba(245, 242, 233, 0.52);
+  font-size: 0.63rem;
+  line-height: 1.55;
+}
+
+.travel-flight-offer a,
+.travel-hotel-offer a {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  margin-top: 7px;
+  color: rgba(245, 242, 233, 0.82);
+  font-size: 0.64rem;
+  font-weight: 750;
+  text-decoration: underline;
+  text-decoration-color: rgba(221, 255, 87, 0.5);
+  text-underline-offset: 4px;
+}
+
+.travel-flight-offer a::after,
+.travel-hotel-offer a::after {
+  margin-left: 5px;
+  content: '↗';
+}
+
+.travel-flight-offer a:focus-visible,
+.travel-hotel-offer a:focus-visible {
+  outline: 2px solid var(--travel-route);
+  outline-offset: 3px;
+}
+
+.travel-hotel-offer {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 13px;
+}
+
+.travel-hotel-offer img {
+  width: 72px;
+  height: 82px;
+  object-fit: cover;
+  background: rgba(245, 242, 233, 0.08);
+}
+
+.travel-hotel-offer > div {
+  min-width: 0;
+}
+
+.travel-hotel-offer small {
+  display: block;
+  margin-top: 6px;
+  color: rgba(245, 242, 233, 0.7);
+  font-size: 0.61rem;
+  line-height: 1.5;
 }
 
 .travel-market-item details {
@@ -613,6 +757,17 @@
   color: rgba(245, 242, 233, 0.48);
   font-size: 0.7rem;
   line-height: 1.7;
+}
+
+.travel-platform-hint {
+  padding: 14px 0 0;
+  color: rgba(245, 242, 233, 0.48);
+  font-size: 0.68rem;
+  line-height: 1.65;
+}
+
+.travel-platform-hint p {
+  margin: 0;
 }
 
 .travel-guide-intro h2 {
@@ -1025,6 +1180,24 @@
     border-left: 0;
   }
 
+  .travel-market-item[data-market-kind='tickets'] {
+    display: block;
+    grid-column: auto;
+    padding: 28px 0;
+  }
+
+  .travel-market-item[data-market-kind='tickets'] > h3 {
+    margin: 22px 0 26px;
+  }
+
+  .travel-market-item[data-market-kind='tickets'] > p {
+    margin-top: 17px;
+  }
+
+  .travel-market-item[data-market-kind='tickets'] details {
+    margin-top: 20px;
+  }
+
   .travel-market-item > h3,
   .travel-market-item > p {
     min-height: 0;
@@ -1146,6 +1319,22 @@
   .travel-market-head {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .travel-offer-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .travel-hotel-offer {
+    grid-template-columns: 84px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .travel-hotel-offer img {
+    width: 84px;
+    height: 96px;
   }
 
   .travel-food-regions {
