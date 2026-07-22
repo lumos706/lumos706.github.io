@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "parserVersion": 1,
-  "generatedAt": "2026-07-22T15:20:51.212997+00:00",
-  "expiresAt": "2026-07-23T21:20:51.212997+00:00",
+  "generatedAt": "2026-07-22T16:00:39.305082+00:00",
+  "expiresAt": "2026-07-23T22:00:39.305082+00:00",
   "status": "ok",
   "schedule": "21:00 Asia/Shanghai",
   "skill": {
@@ -44,62 +44,10 @@
           "priority": "必看"
         }
       ],
-      "checkedAt": "2026-07-22T15:20:51.212997+00:00",
-      "lastEvidenceAt": "2026-07-22T15:20:51.212997+00:00",
+      "checkedAt": "2026-07-22T16:00:39.305082+00:00",
+      "lastEvidenceAt": "2026-07-22T16:00:39.305082+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
-        {
-          "platform": "zhihu",
-          "title": "2026年西北大环线攻略，7天行程+避坑指南，看这篇就够了",
-          "snippet": "一、行前筹备：西北大环线的硬核准备 西北地区幅员辽阔，涵盖了青海、甘肃两省的精华景点，地貌从高原、湖泊、丹霞到沙漠、戈壁不断切换",
-          "url": "https://zhuanlan.zhihu.com/p/2053847626349548221",
-          "date": "2026-06-26",
-          "dateConfidence": "high",
-          "relevance": 0.28,
-          "score": 15,
-          "engagement": {
-            "num_comments": 0,
-            "collects": 0,
-            "voteups": 0
-          },
-          "author": "嘻游记",
-          "signal": "neutral"
-        },
-        {
-          "platform": "zhihu",
-          "title": "2026大西北旅行必看指南【攻略-穿搭-美食-线路-高反-住宿-清单】",
-          "snippet": "简单的讲我们要从各个地方避免高原反应。 ✅高反预防：进入高原前，多了解高原的气候特点及有关高原反应的知识，消除对高原环境的恐惧心理",
-          "url": "https://zhuanlan.zhihu.com/p/2063019757373239511",
-          "date": "2026-07-21",
-          "dateConfidence": "high",
-          "relevance": 0.22,
-          "score": 46,
-          "engagement": {
-            "num_comments": 0,
-            "collects": 0,
-            "voteups": 1
-          },
-          "author": "西北管家驴队长",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "2026最新！西北高原旅行安全指南🏔️",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a60940d00000000100251fa",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.22,
-          "score": 4,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 0,
-            "shares": 0,
-            "collects": 0
-          },
-          "author": "嘉恒国际旅行社",
-          "signal": "neutral"
-        },
         {
           "platform": "xiaohongshu",
           "title": "青海旅行｜高反来了怎么办？急救指南请收好",
@@ -108,7 +56,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.2,
-          "score": 14,
+          "score": 10,
           "engagement": {
             "num_comments": 2,
             "likes": 18,
@@ -116,6 +64,24 @@
             "collects": 19
           },
           "author": "玩转青海",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "高原旅行清单 应对高反必备清单💊",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6881d369000000000b02fcec",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.14,
+          "score": 28,
+          "engagement": {
+            "num_comments": 23,
+            "likes": 1783,
+            "shares": 0,
+            "collects": 1822
+          },
+          "author": "游民阿温",
           "signal": "neutral"
         }
       ],
@@ -150,8 +116,8 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-22T15:20:51.212997+00:00",
-      "lastEvidenceAt": "2026-07-22T15:20:51.212997+00:00",
+      "checkedAt": "2026-07-22T16:00:39.305082+00:00",
+      "lastEvidenceAt": "2026-07-22T16:00:39.305082+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
@@ -162,7 +128,7 @@
           "date": "2026-07-13",
           "dateConfidence": "high",
           "relevance": 0.38,
-          "score": 34,
+          "score": 33,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -179,7 +145,7 @@
           "date": "2026-06-24",
           "dateConfidence": "high",
           "relevance": 0.31,
-          "score": 45,
+          "score": 44,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -220,46 +186,10 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-22T15:20:51.212997+00:00",
-      "lastEvidenceAt": "2026-07-22T15:20:51.212997+00:00",
+      "checkedAt": "2026-07-22T16:00:39.305082+00:00",
+      "lastEvidenceAt": "2026-07-22T16:00:39.305082+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
-        {
-          "platform": "xiaohongshu",
-          "title": "2026青甘大环线门票预约表！准备要来的看看",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a4eed4000000000080303fa",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.44,
-          "score": 28,
-          "engagement": {
-            "num_comments": 2,
-            "likes": 81,
-            "shares": 0,
-            "collects": 109
-          },
-          "author": "💕",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "6🈷青甘大环线门票分享❤️",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a565fda000000001101194c",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.33,
-          "score": 19,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 46,
-            "shares": 0,
-            "collects": 32
-          },
-          "author": "宸阿喵",
-          "signal": "neutral"
-        },
         {
           "platform": "zhihu",
           "title": "8天7晚青甘大环线回来，把你们问爆的\"真实花费+住宿门票明细\"拆给你看",
@@ -268,7 +198,7 @@
           "date": "2026-07-01",
           "dateConfidence": "high",
           "relevance": 0.17,
-          "score": 15,
+          "score": 14,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -309,46 +239,10 @@
           "priority": "必带"
         }
       ],
-      "checkedAt": "2026-07-22T15:20:51.212997+00:00",
-      "lastEvidenceAt": "2026-07-22T15:20:51.212997+00:00",
+      "checkedAt": "2026-07-22T16:00:39.305082+00:00",
+      "lastEvidenceAt": "2026-07-22T16:00:39.305082+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
-        {
-          "platform": "xiaohongshu",
-          "title": "没有3C标记的充电宝不能上飞机哦",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/69e5e0bd000000001a0219aa",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.25,
-          "score": 9,
-          "engagement": {
-            "num_comments": 4,
-            "likes": 8,
-            "shares": 0,
-            "collects": 0
-          },
-          "author": "相对自由",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "我的充电宝被中国机场没收了！❌3C认证",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/69679f120000000021028fb3",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.23,
-          "score": 18,
-          "engagement": {
-            "num_comments": 28,
-            "likes": 44,
-            "shares": 0,
-            "collects": 22
-          },
-          "author": "尹尹若现",
-          "signal": "neutral"
-        },
         {
           "platform": "zhihu",
           "title": "为什么有些充电宝不能带上飞机？",
@@ -357,7 +251,7 @@
           "date": "2026-07-22",
           "dateConfidence": "high",
           "relevance": 0.18,
-          "score": 48,
+          "score": 47,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -398,8 +292,8 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-22T15:20:51.212997+00:00",
-      "lastEvidenceAt": "2026-07-22T15:20:51.212997+00:00",
+      "checkedAt": "2026-07-22T16:00:39.305082+00:00",
+      "lastEvidenceAt": "2026-07-22T16:00:39.305082+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
@@ -410,7 +304,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.33,
-          "score": 19,
+          "score": 11,
           "engagement": {
             "num_comments": 22,
             "likes": 6,
@@ -428,7 +322,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.31,
-          "score": 33,
+          "score": 30,
           "engagement": {
             "num_comments": 32,
             "likes": 326,
@@ -446,7 +340,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.31,
-          "score": 25,
+          "score": 19,
           "engagement": {
             "num_comments": 6,
             "likes": 65,
@@ -457,21 +351,20 @@
           "signal": "neutral"
         },
         {
-          "platform": "xiaohongshu",
-          "title": "青甘大环线自驾租车分享，女生友好‼️",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a101a9a0000000007011ef6",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.31,
-          "score": 22,
+          "platform": "zhihu",
+          "title": "真要开始长途自驾旅行了，出发前这5件事一定要想清楚",
+          "snippet": "欢迎评论区聊聊！ 附：出发前简易自查清单 车辆：轮胎、油液、刹车、灯光、电瓶 证件：身份证、驾驶证、行驶证、保险单",
+          "url": "https://zhuanlan.zhihu.com/p/2058213953428367004",
+          "date": "2026-07-08",
+          "dateConfidence": "high",
+          "relevance": 0.22,
+          "score": 52,
           "engagement": {
-            "num_comments": 16,
-            "likes": 40,
-            "shares": 0,
-            "collects": 15
+            "num_comments": 4,
+            "collects": 0,
+            "voteups": 3
           },
-          "author": "雪球球、",
+          "author": "古月弓",
           "signal": "neutral"
         }
       ],
@@ -506,8 +399,8 @@
           "priority": "必做"
         }
       ],
-      "checkedAt": "2026-07-22T15:20:51.212997+00:00",
-      "lastEvidenceAt": "2026-07-22T15:20:51.212997+00:00",
+      "checkedAt": "2026-07-22T16:00:39.305082+00:00",
+      "lastEvidenceAt": "2026-07-22T16:00:39.305082+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {

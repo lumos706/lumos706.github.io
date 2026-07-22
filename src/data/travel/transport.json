@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "parserVersion": 1,
-  "generatedAt": "2026-07-22T15:09:58.985166+00:00",
-  "expiresAt": "2026-07-23T21:09:58.985166+00:00",
+  "generatedAt": "2026-07-22T15:58:33.867297+00:00",
+  "expiresAt": "2026-07-23T21:58:33.867297+00:00",
   "status": "ok",
   "schedule": "21:00 Asia/Shanghai",
   "skill": {
@@ -22,8 +22,8 @@
         "headline": "西宁 → 二郎剑约 150 km，预留 2.5–3 小时",
         "route": "西宁早出发 → 青海湖南岸正规入口 → 景区停车场",
         "note": "暑期把拥堵、停车和天气余量算进去；不在公路路肩停车，也不临时驶入未明码标价的私人牧场。",
-        "checkedAt": "2026-07-22T15:09:58.985166+00:00",
-        "lastEvidenceAt": "2026-07-22T15:09:58.985166+00:00",
+        "checkedAt": "2026-07-22T15:58:33.867297+00:00",
+        "lastEvidenceAt": "2026-07-22T15:58:33.867297+00:00",
         "sourceStatus": "confirmed",
         "evidence": [
           {
@@ -43,43 +43,6 @@
             },
             "author": "大美",
             "signal": "positive"
-          },
-          {
-            "platform": "xiaohongshu",
-            "title": "西宁出发环青海湖自驾其实花不了多少钱",
-            "snippet": "",
-            "url": "https://www.xiaohongshu.com/explore/6a48eb9d00000000110126d5",
-            "date": null,
-            "dateConfidence": "low",
-            "relevance": 0.24,
-            "score": 18,
-            "engagement": {
-              "num_comments": 7,
-              "likes": 122,
-              "shares": 0,
-              "collects": 10
-            },
-            "author": "阿蒙跑马",
-            "signal": "neutral"
-          },
-          {
-            "platform": "bilibili",
-            "title": "自驾青甘大环线，青海湖二郎剑游玩攻略，蓝天湖泊沙滩岛屿美不胜收！",
-            "snippet": "",
-            "url": "https://www.bilibili.com/video/BV1rGgC6JEzb",
-            "date": "2026-07-22",
-            "dateConfidence": "high",
-            "relevance": 0.22,
-            "score": 64,
-            "engagement": {
-              "num_comments": 0,
-              "likes": 39,
-              "views": 459,
-              "danmaku": 2,
-              "favorites": 4
-            },
-            "author": "六月带你去旅行",
-            "signal": "neutral"
           }
         ]
       },
@@ -87,10 +50,28 @@
         "headline": "优先选择西宁往返二郎剑的正规旅游直通车",
         "route": "西宁官方旅游集散点 → 二郎剑景区 → 按约定时间原车返回",
         "note": "班次会随季节和成团情况调整；付款前确认集合点、返程时间、是否含门票及是否有购物安排。",
-        "checkedAt": "2026-07-22T15:09:58.985166+00:00",
-        "lastEvidenceAt": "2026-07-22T15:09:58.985166+00:00",
+        "checkedAt": "2026-07-22T15:58:33.867297+00:00",
+        "lastEvidenceAt": "2026-07-22T15:58:33.867297+00:00",
         "sourceStatus": "confirmed",
         "evidence": [
+          {
+            "platform": "xiaohongshu",
+            "title": "公共交通勇闯大西北Day3—青海湖二郎剑",
+            "snippet": "",
+            "url": "https://www.xiaohongshu.com/explore/6880fd2e0000000012033ff8",
+            "date": null,
+            "dateConfidence": "low",
+            "relevance": 0.27,
+            "score": 29,
+            "engagement": {
+              "num_comments": 72,
+              "likes": 345,
+              "shares": 0,
+              "collects": 476
+            },
+            "author": "麻辣牛肉卷不够辣",
+            "signal": "neutral"
+          },
           {
             "platform": "xiaohongshu",
             "title": "西宁-青海湖直通车攻略",
@@ -102,9 +83,9 @@
             "score": 25,
             "engagement": {
               "num_comments": 52,
-              "likes": 146,
+              "likes": 147,
               "shares": 0,
-              "collects": 143
+              "collects": 144
             },
             "author": "百里洛乘风",
             "signal": "neutral"
@@ -113,23 +94,10 @@
             "platform": "baidu",
             "title": "西宁曹家堡国际机场到青海湖二郎剑景区的包车费用受哪些因素影响...",
             "snippet": "",
-            "url": "http://www.baidu.com/link?url=BVw6TuQitoe6mV9YYFb6N7AVxrUVWnzr4qStOeH3zq54WD-eNTtexY2CGo5AS7rM6948ea-JjDgfG503JSkr6DlJdR5Ym_7ODuO16JLavUC",
+            "url": "http://www.baidu.com/link?url=pQl3T4o-RF0qbE7Bueldh9MXDza_8o3X664I-OKM3ZqAfAnWrpObMbBGqftMFdFFu5LnLK7omZ91IaEIdTyY8QDXsI2FbBrv-DDrSrfQCUC",
             "date": null,
             "dateConfidence": "low",
             "relevance": 0.23,
-            "score": 0,
-            "engagement": {},
-            "author": "",
-            "signal": "neutral"
-          },
-          {
-            "platform": "baidu",
-            "title": "青海湖景区门票价格开放时间交通路线及核心景点详解|二郎剑|...",
-            "snippet": "",
-            "url": "http://www.baidu.com/link?url=ZO1ZkMAHpsbx8bkPcilAivoYVdG_S8v5HVep8U18UU9tp8e0U-NGPbakvpdXJoxKooonfe_DMyf3Tr3Qcjxo_a_heivICw-pze9U8kUcpH3",
-            "date": null,
-            "dateConfidence": "low",
-            "relevance": 0.17,
             "score": 0,
             "engagement": {},
             "author": "",
@@ -145,17 +113,36 @@
         "headline": "青海湖 → 茶卡约 150 km，日落前完成入住",
         "route": "二郎剑一带 → 橡皮山方向 → 茶卡镇 / 景区停车场",
         "note": "高原天气和路况变化快，不为追日落安排夜间赶路；进景区前先确认停车场与预约入口。",
-        "checkedAt": "2026-07-22T15:09:58.985166+00:00",
-        "lastEvidenceAt": "2026-07-22T14:33:58.371314+00:00",
-        "sourceStatus": "fallback",
-        "evidence": []
+        "checkedAt": "2026-07-22T15:58:33.867297+00:00",
+        "lastEvidenceAt": "2026-07-22T15:58:33.867297+00:00",
+        "sourceStatus": "confirmed",
+        "evidence": [
+          {
+            "platform": "xiaohongshu",
+            "title": "重庆出发：青海湖+茶卡盐湖租车两日休闲游",
+            "snippet": "",
+            "url": "https://www.xiaohongshu.com/explore/6a4a72700000000021008470",
+            "date": null,
+            "dateConfidence": "low",
+            "relevance": 0.21,
+            "score": 18,
+            "engagement": {
+              "num_comments": 8,
+              "likes": 17,
+              "shares": 0,
+              "collects": 18
+            },
+            "author": "bubble",
+            "signal": "neutral"
+          }
+        ]
       },
       "public": {
         "headline": "先到茶卡镇，再用正规打车补景区最后一段",
         "route": "西宁乘当日可售铁路或客运班次 → 茶卡镇 → 景区入口",
         "note": "铁路和客运班次并非每天、每季都相同；先锁定去回两程再订住宿，不把返程航班接在同一天。",
-        "checkedAt": "2026-07-22T15:09:58.985166+00:00",
-        "lastEvidenceAt": "2026-07-22T15:09:58.985166+00:00",
+        "checkedAt": "2026-07-22T15:58:33.867297+00:00",
+        "lastEvidenceAt": "2026-07-22T15:58:33.867297+00:00",
         "sourceStatus": "confirmed",
         "evidence": [
           {
@@ -166,12 +153,12 @@
             "date": null,
             "dateConfidence": "low",
             "relevance": 0.21,
-            "score": 14,
+            "score": 21,
             "engagement": {
               "num_comments": 14,
-              "likes": 31,
+              "likes": 32,
               "shares": 0,
-              "collects": 38
+              "collects": 39
             },
             "author": "李不空",
             "signal": "neutral"
@@ -186,7 +173,7 @@
         "headline": "茶卡 → 大柴旦是长距离高原路段",
         "route": "茶卡 → 德令哈补给 → 大柴旦镇 → 翡翠湖或水上雅丹二选一",
         "note": "出发前加满油并下载离线地图，至少两人轮换驾驶；翡翠湖和水上雅丹不要塞进同一个下午。",
-        "checkedAt": "2026-07-22T15:09:58.985166+00:00",
+        "checkedAt": "2026-07-22T15:58:33.867297+00:00",
         "lastEvidenceAt": "2026-07-22T14:33:58.371314+00:00",
         "sourceStatus": "fallback",
         "evidence": []
@@ -195,7 +182,7 @@
         "headline": "常规公共交通覆盖弱，七日不自驾方案建议跳过",
         "route": "若坚持前往：先到大柴旦镇，再预订可核验资质的当地接驳",
         "note": "镇区到翡翠湖、水上雅丹仍有明显最后一公里问题；不要到站后再临时接受陌生人揽客包车。",
-        "checkedAt": "2026-07-22T15:09:58.985166+00:00",
+        "checkedAt": "2026-07-22T15:58:33.867297+00:00",
         "lastEvidenceAt": null,
         "sourceStatus": "fallback",
         "evidence": []
@@ -208,7 +195,7 @@
         "headline": "按票面报到时间直达数字展示中心停车场",
         "route": "敦煌市区 → 莫高窟数字展示中心 → 统一乘景区接驳前往洞窟",
         "note": "导航目的地应是数字展示中心而不是直接开往洞窟；旺季停车、取票和安检都要另留时间。",
-        "checkedAt": "2026-07-22T15:09:58.985166+00:00",
+        "checkedAt": "2026-07-22T15:58:33.867297+00:00",
         "lastEvidenceAt": "2026-07-22T14:33:58.371314+00:00",
         "sourceStatus": "fallback",
         "evidence": []
@@ -217,8 +204,8 @@
         "headline": "市区先到数字展示中心，再乘景区统一接驳",
         "route": "敦煌市区 → 当日官方直通车 / 公交 / 正规打车 → 数字展示中心",
         "note": "市区公交与直通车可能季节性调整，因此不凭旧攻略写死线路号；出发前一天用官方通知和地图实时公交复核。",
-        "checkedAt": "2026-07-22T15:09:58.985166+00:00",
-        "lastEvidenceAt": "2026-07-22T15:09:58.985166+00:00",
+        "checkedAt": "2026-07-22T15:58:33.867297+00:00",
+        "lastEvidenceAt": "2026-07-22T15:58:33.867297+00:00",
         "sourceStatus": "confirmed",
         "evidence": [
           {
@@ -229,12 +216,12 @@
             "date": null,
             "dateConfidence": "low",
             "relevance": 0.35,
-            "score": 32,
+            "score": 37,
             "engagement": {
               "num_comments": 13,
               "likes": 99,
               "shares": 0,
-              "collects": 150
+              "collects": 152
             },
             "author": "seal",
             "signal": "neutral"
@@ -249,8 +236,8 @@
         "headline": "敦煌市区短途前往，先确认景区停车入口",
         "route": "酒店休息 → 景区正规停车场 → 日落后按现场导流离场",
         "note": "日落散场车辆集中，不把车停在非正规路边；把骑骆驼和滑沙当可选项，不影响离场时间。",
-        "checkedAt": "2026-07-22T15:09:58.985166+00:00",
-        "lastEvidenceAt": "2026-07-22T15:09:58.985166+00:00",
+        "checkedAt": "2026-07-22T15:58:33.867297+00:00",
+        "lastEvidenceAt": "2026-07-22T15:58:33.867297+00:00",
         "sourceStatus": "confirmed",
         "evidence": [
           {
@@ -261,7 +248,7 @@
             "date": "2026-07-21",
             "dateConfidence": "high",
             "relevance": 0.36,
-            "score": 47,
+            "score": 46,
             "engagement": {
               "num_comments": 0,
               "likes": 13,
@@ -278,7 +265,7 @@
         "headline": "市区公交去、散场后四人打车回更稳",
         "route": "敦煌市区 → 当日可用公交 / 正规打车 → 鸣沙山月牙泉入口",
         "note": "晚间公交班次可能减少，去程就准备正规打车备选；上车前核对车牌和平台订单。",
-        "checkedAt": "2026-07-22T15:09:58.985166+00:00",
+        "checkedAt": "2026-07-22T15:58:33.867297+00:00",
         "lastEvidenceAt": null,
         "sourceStatus": "fallback",
         "evidence": []
@@ -291,7 +278,7 @@
         "headline": "市区短途到关城，只保留一个核心景点",
         "route": "市区 / 酒店 → 关城景区停车场 → 原路返回",
         "note": "先看清单景点票与套票范围；七日线不再串悬壁长城等外围点，避免挤压下一段动车。",
-        "checkedAt": "2026-07-22T15:09:58.985166+00:00",
+        "checkedAt": "2026-07-22T15:58:33.867297+00:00",
         "lastEvidenceAt": "2026-07-22T14:04:41.694160+00:00",
         "sourceStatus": "fallback",
         "evidence": []
@@ -300,7 +287,7 @@
         "headline": "从到达站用公交或四人打车分摊前往关城",
         "route": "嘉峪关站 / 嘉峪关南站 → 市区寄存行李 → 关城景区",
         "note": "两个铁路站与市区距离不同；买票后按实际到达站重新查路线，不套用另一车站的公交攻略。",
-        "checkedAt": "2026-07-22T15:09:58.985166+00:00",
+        "checkedAt": "2026-07-22T15:58:33.867297+00:00",
         "lastEvidenceAt": "2026-07-22T14:04:41.694160+00:00",
         "sourceStatus": "fallback",
         "evidence": []
@@ -313,7 +300,7 @@
         "headline": "市区 → 北入口约 40 km，早场更容易控时",
         "route": "张掖市区 → 七彩丹霞北入口停车场 → 按景区接驳环线游览",
         "note": "进景区后服从内部接驳顺序；日落场散场集中，返兰州当天优先选择早场。",
-        "checkedAt": "2026-07-22T15:09:58.985166+00:00",
+        "checkedAt": "2026-07-22T15:58:33.867297+00:00",
         "lastEvidenceAt": null,
         "sourceStatus": "fallback",
         "evidence": []
@@ -322,14 +309,31 @@
         "headline": "用当日景区专线或四人正规打车往返",
         "route": "张掖市区 / 张掖西站 → 旅游集散点或正规打车 → 北入口",
         "note": "日落时间可能晚于末班公共接驳，去程前必须确认返程；无法确认就改早场，不在景区外临时找黑车。",
-        "checkedAt": "2026-07-22T15:09:58.985166+00:00",
-        "lastEvidenceAt": "2026-07-22T14:33:58.371314+00:00",
-        "sourceStatus": "fallback",
-        "evidence": []
+        "checkedAt": "2026-07-22T15:58:33.867297+00:00",
+        "lastEvidenceAt": "2026-07-22T15:58:33.867297+00:00",
+        "sourceStatus": "confirmed",
+        "evidence": [
+          {
+            "platform": "xiaohongshu",
+            "title": "张掖西站有往来七彩丹霞的班车",
+            "snippet": "",
+            "url": "https://www.xiaohongshu.com/explore/6a523b3b00000000080276a2",
+            "date": null,
+            "dateConfidence": "low",
+            "relevance": 0.28,
+            "score": 32,
+            "engagement": {
+              "num_comments": 45,
+              "likes": 216,
+              "shares": 0,
+              "collects": 318
+            },
+            "author": "黑咖啡来一杯（旅游版）",
+            "signal": "neutral"
+          }
+        ]
       },
-      "sourceErrors": {
-        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
-      }
+      "sourceErrors": {}
     }
   },
   "collection": {
