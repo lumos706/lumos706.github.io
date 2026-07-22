@@ -3,16 +3,20 @@ import {
   budgetLabels,
   defaultSelection,
   routePlans,
+  transportLabels,
   type BudgetLevel,
+  type LocalTransportMode,
   type TripDays,
 } from '@/data/travel/plans';
 import { attractionPlaybooks, foodRegions } from '@/data/travel/guides';
 import snapshot from '@/data/travel/snapshot.json';
 import reservationsSnapshot from '@/data/travel/reservations.json';
+import transportSnapshot from '@/data/travel/transport.json';
 
 const dayOptions: TripDays[] = [3, 4, 7];
 const budgetOptions: BudgetLevel[] = [2500, 3000, 3500];
-const defaultPlan = routePlans[defaultSelection.days];
+const transportOptions: LocalTransportMode[] = ['drive', 'public'];
+const defaultPlan = routePlans[defaultSelection.transport][defaultSelection.days];
 const platformNames: Record<string, string> = {
   weibo: '微博',
   xiaohongshu: '小红书',
@@ -37,9 +41,13 @@ const flyaiGeneratedAt = flyaiSnapshot.generatedAt ? new Date(flyaiSnapshot.gene
 const flyaiExpiresAt = flyaiSnapshot.expiresAt ? new Date(flyaiSnapshot.expiresAt) : null;
 const reservationGeneratedAt = new Date(reservationsSnapshot.generatedAt);
 const reservationExpiresAt = new Date(reservationsSnapshot.expiresAt);
+const transportGeneratedAt = new Date(transportSnapshot.generatedAt);
+const transportExpiresAt = new Date(transportSnapshot.expiresAt);
 const staleAtBuild = Date.now() > expiresAt.getTime()
   || Boolean(flyaiExpiresAt && Date.now() > flyaiExpiresAt.getTime());
 const reservationStaleAtBuild = Date.now() > reservationExpiresAt.getTime();
+const transportStaleAtBuild = Date.now() > transportExpiresAt.getTime();
+const transportPartial = transportSnapshot.status !== 'ok';
 const generatedLabel = new Intl.DateTimeFormat('zh-CN', {
   timeZone: 'Asia/Shanghai',
   month: '2-digit',
@@ -66,6 +74,14 @@ const reservationGeneratedLabel = new Intl.DateTimeFormat('zh-CN', {
   minute: '2-digit',
   hour12: false,
 }).format(reservationGeneratedAt);
+const transportGeneratedLabel = new Intl.DateTimeFormat('zh-CN', {
+  timeZone: 'Asia/Shanghai',
+  month: '2-digit',
+  day: '2-digit',
+  hour: '2-digit',
+  minute: '2-digit',
+  hour12: false,
+}).format(transportGeneratedAt);
 const flyaiModeLabel = flyaiSnapshot.mode === 'api-enhanced' ? 'API 增强' : '公开体验';
 const flyaiSystemMessages: string[] = Array.isArray(flyaiSnapshot.systemMessages)
   ? flyaiSnapshot.systemMessages.filter(Boolean)
@@ -121,6 +137,7 @@ const attractionGuides = attractionPlaybooks.map((guide) => ({
   ...guide,
   evidence: trustedEvidence((snapshot as any).attractions?.[guide.key], 4, 0.12),
   reservation: (reservationsSnapshot.attractions as any)?.[guide.key],
+  transport: (transportSnapshot.attractions as any)?.[guide.key],
 }));
 
 const foodCities = foodRegions.map((region) => {
@@ -143,12 +160,12 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
   <section class="wrap travel-hero">
     <div class="travel-hero-copy" data-reveal>
       <h1>四个人，<br />向西北。</h1>
-      <p>从沈阳桃仙出发，在青海与甘肃之间选择一条刚好走得完的路线。先定天数，再定落地预算。</p>
+      <p>从沈阳桃仙出发，在青海与甘肃之间选择一条刚好走得完的路线。先定天数和预算，再决定要不要自己开车。</p>
       <dl class="travel-facts">
         <div><dt>WHEN</dt><dd>2026 年 8 月初</dd></div>
         <div><dt>WHO</dt><dd>4 位成人 · 2 间双床房</dd></div>
         <div><dt>FROM</dt><dd>沈阳桃仙国际机场</dd></div>
-        <div><dt>MOVE</dt><dd>租车 + 公共交通</dd></div>
+        <div><dt>MOVE</dt><dd data-hero-transport>{transportLabels[defaultSelection.transport].label}</dd></div>
       </dl>
     </div>
 
@@ -179,7 +196,7 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
     </div>
   </section>
 
-  <section class="travel-controls" aria-label="路线条件选择">
+  <section id="travel-controls" class="travel-controls" aria-label="路线条件选择">
     <div class="wrap travel-controls-inner">
       <fieldset>
         <legend>出行天数</legend>
@@ -198,23 +215,35 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
         </div>
         <p>不含沈阳往返机票；机票单独看每日公开价格快照</p>
       </fieldset>
+      <fieldset>
+        <legend>当地出游方式</legend>
+        <div class="travel-switches travel-switches-mode">
+          {transportOptions.map((transport) => (
+            <button type="button" data-transport-option={transport} aria-pressed={transport === defaultSelection.transport ? 'true' : 'false'}>
+              <strong>{transportLabels[transport].label}</strong>
+              <small>{transportLabels[transport].note}</small>
+            </button>
+          ))}
+        </div>
+        <p>公共交通方案会主动跳过班次稀疏、最后一公里不稳的路段</p>
+      </fieldset>
       <a class="travel-control-link" href="#travel-route">
         查看当前路线
         <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 5h11v11M15 5 5 15" fill="none" stroke="currentColor" stroke-width="1.5" /></svg>
       </a>
-      <output class="sr-only" data-selection-status aria-live="polite">当前为 7 日、3500 元预算方案</output>
+      <output class="sr-only" data-selection-status aria-live="polite">当前为 7 日、3500 元预算、自驾方案</output>
     </div>
   </section>
 
   <section id="travel-route" class="section travel-route-section">
     <div class="wrap">
-      <div class="section-head"><h2 class="section-title">推荐游玩顺序</h2><span class="section-index" data-route-index>ROUTE / 07 DAYS</span></div>
-      {dayOptions.map((days) => {
-        const plan = routePlans[days];
+      <div class="section-head"><h2 class="section-title">推荐游玩顺序</h2><span class="section-index" data-route-index>ROUTE / 07D / CAR</span></div>
+      {transportOptions.flatMap((transport) => dayOptions.map((days) => {
+        const plan = routePlans[transport][days];
         return (
-          <div class="travel-route-layout" data-route-panel={days} hidden={days !== defaultSelection.days}>
+          <div class="travel-route-layout" data-route-panel={`${transport}-${days}`} hidden={days !== defaultSelection.days || transport !== defaultSelection.transport}>
             <aside class="travel-route-summary">
-              <span class="travel-route-recommendation">{plan.recommendation}</span>
+              <span class="travel-route-recommendation">{transportLabels[transport].label} · {plan.recommendation}</span>
               <h3>{plan.name}</h3>
               <p>{plan.description}</p>
               <dl class="travel-route-numbers">
@@ -227,7 +256,7 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
                 const variant = plan.budgetVariants[budget];
                 const difference = budget - variant.total;
                 return (
-                  <div class="travel-budget-state" data-route-budget={`${days}-${budget}`} hidden={budget !== defaultSelection.budget}>
+                  <div class="travel-budget-state" data-route-budget={`${transport}-${days}-${budget}`} hidden={budget !== defaultSelection.budget}>
                     <span>当前估算</span><strong>¥{variant.total.toLocaleString('zh-CN')} / 人</strong>
                     <p>{difference >= 0 ? `距 ¥${budget.toLocaleString('zh-CN')} 档位余 ¥${difference.toLocaleString('zh-CN')}` : `预计超出档位 ¥${Math.abs(difference).toLocaleString('zh-CN')}`}</p>
                   </div>
@@ -245,7 +274,7 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
             </div>
           </div>
         );
-      })}
+      }))}
     </div>
   </section>
 
@@ -253,21 +282,21 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
     <div class="wrap travel-ledger-grid">
       <div class="travel-ledger-copy">
         <h2>把预算摊开看。</h2>
-        <p>住宿按四人两间双床房拆分，租车按四人分摊，机票独立显示，避免低估最容易波动的一项。</p>
+        <p>住宿按四人两间双床房拆分；自驾计算租车、油费和停车分摊，公共交通计算动车、直通车、公交与打车。沈阳往返机票独立显示。</p>
       </div>
       <div class="travel-ledger-panels">
-        {dayOptions.flatMap((days) => budgetOptions.map((budget) => {
-          const variant = routePlans[days].budgetVariants[budget];
+        {transportOptions.flatMap((transport) => dayOptions.flatMap((days) => budgetOptions.map((budget) => {
+          const variant = routePlans[transport][days].budgetVariants[budget];
           const rows = [
             ['住宿', variant.lodgingStandard, variant.breakdown.lodging],
-            ['城际与租车', variant.transportMode, variant.breakdown.transport],
+            ['当地交通', variant.transportMode, variant.breakdown.transport],
             ['景区门票', '只保留当前路线的核心景区', variant.breakdown.tickets],
             ['餐饮', `${days} 天正餐与途中补给`, variant.breakdown.food],
-            ['弹性金', '停车、补给与临时调整', variant.breakdown.reserve],
+            ['弹性金', transport === 'drive' ? '停车、补给与临时调整' : '寄存、候车与临时打车', variant.breakdown.reserve],
           ];
           return (
-            <div class="travel-ledger-panel" data-ledger-panel={`${days}-${budget}`} hidden={days !== defaultSelection.days || budget !== defaultSelection.budget}>
-              <div class="travel-ledger-total"><span>落地支出估算 / 人</span><strong>¥{variant.total.toLocaleString('zh-CN')}</strong><small>{days} 日 · {budgetLabels[budget]} · {variant.note}</small></div>
+            <div class="travel-ledger-panel" data-ledger-panel={`${transport}-${days}-${budget}`} hidden={days !== defaultSelection.days || budget !== defaultSelection.budget || transport !== defaultSelection.transport}>
+              <div class="travel-ledger-total"><span>落地支出估算 / 人</span><strong>¥{variant.total.toLocaleString('zh-CN')}</strong><small>{days} 日 · {transportLabels[transport].label} · {budgetLabels[budget]} · {variant.note}</small></div>
               <div class="travel-ledger-rows">
                 {rows.map(([label, detail, amount]) => (
                   <div><strong>{label}</strong><span>{detail}</span><b>¥{Number(amount).toLocaleString('zh-CN')}</b></div>
@@ -275,7 +304,7 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
               </div>
             </div>
           );
-        }))}
+        })))}
       </div>
     </div>
   </section>
@@ -350,9 +379,9 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
     </div>
   </section>
 
-  <section class="section travel-guide-section">
+  <section id="travel-attractions" class="section travel-guide-section">
     <div class="wrap">
-      <div class="travel-guide-intro"><h2>七个景点，逐个拆开。</h2><p>预约要求直接写在每张卡片里，不再让你先点开攻略找答案。时限由 last30days-cn 每日 09:00 核验，本次检查于 {reservationGeneratedLabel} 完成{reservationStaleAtBuild ? '，当前快照可能过期' : ''}；没有明确新证据时保留上一份稳妥规则，最终仍以景区官方通知为准。</p></div>
+      <div class="travel-guide-intro"><h2>七个景点，逐个拆开。</h2><p>预约时限每日 09:00 核验，本次检查于 {reservationGeneratedLabel} 完成{reservationStaleAtBuild ? '，预约快照可能过期' : ''}；交通依据每日 21:00 更新，本次检查于 {transportGeneratedLabel} 完成{transportStaleAtBuild ? '，交通快照可能过期' : ''}{transportPartial ? '，部分查询失败并保留了上一份依据' : ''}。公交线路和班次可能季节性调整，页面只写稳妥基线，出发前仍要用景区官方通知和地图实时公交复核。</p></div>
       <div class="travel-attraction-list">
         {attractionGuides.map((guide, index) => (
           <article class="travel-attraction">
@@ -374,6 +403,26 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
                   {guide.reservation.evidence?.[0] && <a href={guide.reservation.evidence[0].url} target="_blank" rel="noreferrer">查看本次公开依据 ↗</a>}
                 </div>
               )}
+              {transportOptions.map((transport) => {
+                const access = guide.transport?.[transport];
+                if (!access) return null;
+                return (
+                  <div class:list={['travel-access-rule', { public: transport === 'public' }]} data-attraction-transport={transport} hidden={transport !== defaultSelection.transport}>
+                    <div><span>{transportLabels[transport].label}怎么到</span><b>依据每日 21:00 更新</b></div>
+                    <strong>{access.headline}</strong>
+                    <p>{access.route}</p>
+                    <small>{access.note}</small>
+                    {access.evidence?.length ? (
+                      <details>
+                        <summary>查看 {access.evidence.length} 条近期交通线索</summary>
+                        <ol>{access.evidence.map((item: any) => (
+                          <li><a href={item.url} target="_blank" rel="noreferrer"><span>{platformNames[item.platform] ?? item.platform}</span>{item.title}</a></li>
+                        ))}</ol>
+                      </details>
+                    ) : <em>本轮没有取得能直接核对该方式的近期线索，暂时保留稳妥基线。</em>}
+                  </div>
+                );
+              })}
             </header>
             <div class="travel-attraction-plan"><strong>怎么安排</strong><p>{guide.play}</p></div>
             <div class="travel-attraction-checks">
@@ -428,7 +477,7 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
   </section>
 
   <section class="travel-source-strip">
-    <div class="wrap"><strong>只保留能追溯的公开线索。</strong><p>每日任务使用 last30days-cn 低频检索攻略，并通过 FlyAI Skill 的官方命令更新飞猪机票与酒店报价。Playwright 会在没有平台 API 时尝试访问公开页面，可选凭据只用于增强稳定性；某次采集不足时保留上一份可核对快照并标记状态，不补造数据。</p></div>
+    <div class="wrap"><strong>只保留能追溯的公开线索。</strong><p>每日 21:00 使用 last30days-cn 低频检索攻略、餐馆与当地交通依据，并通过 FlyAI Skill 更新飞猪机票和酒店报价；预约时限每日 09:00 单独核验。Playwright 会在没有平台 API 时尝试公开页面，采集不足时保留稳妥基线并明确标记，不补造公交线路或价格。</p></div>
   </section>
 
   <script is:inline type="application/json" id="travel-plans-data" set:html={plansJson}></script>
@@ -437,6 +486,7 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
 <script>
   type TripDays = 3 | 4 | 7;
   type BudgetLevel = 2500 | 3000 | 3500;
+  type LocalTransportMode = 'drive' | 'public';
 
   const planner = document.querySelector<HTMLElement>('[data-travel-planner]');
   const plansNode = document.querySelector<HTMLScriptElement>('#travel-plans-data');
@@ -445,28 +495,38 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
     const plans = JSON.parse(plansNode.textContent || '{}');
     const validDays = [3, 4, 7];
     const validBudgets = [2500, 3000, 3500];
+    const validTransport = ['drive', 'public'];
     const query = new URLSearchParams(location.search);
     let days = Number(query.get('days')) as TripDays;
     let budget = Number(query.get('budget')) as BudgetLevel;
+    let transport = query.get('transport') as LocalTransportMode;
     if (!validDays.includes(days)) days = 7;
     if (!validBudgets.includes(budget)) budget = 3500;
+    if (!validTransport.includes(transport)) transport = 'drive';
 
     const render = () => {
-      const plan = plans[String(days)];
+      const plan = plans[transport][String(days)];
+      const transportLabel = transport === 'drive' ? '自驾（租车）' : '公共交通';
       planner.querySelectorAll<HTMLElement>('[data-days-option]').forEach((button) => {
         button.setAttribute('aria-pressed', String(Number(button.dataset.daysOption) === days));
       });
       planner.querySelectorAll<HTMLElement>('[data-budget-option]').forEach((button) => {
         button.setAttribute('aria-pressed', String(Number(button.dataset.budgetOption) === budget));
       });
+      planner.querySelectorAll<HTMLElement>('[data-transport-option]').forEach((button) => {
+        button.setAttribute('aria-pressed', String(button.dataset.transportOption === transport));
+      });
       planner.querySelectorAll<HTMLElement>('[data-route-panel]').forEach((panel) => {
-        panel.hidden = Number(panel.dataset.routePanel) !== days;
+        panel.hidden = panel.dataset.routePanel !== `${transport}-${days}`;
       });
       planner.querySelectorAll<HTMLElement>('[data-route-budget]').forEach((panel) => {
-        panel.hidden = panel.dataset.routeBudget !== `${days}-${budget}`;
+        panel.hidden = panel.dataset.routeBudget !== `${transport}-${days}-${budget}`;
       });
       planner.querySelectorAll<HTMLElement>('[data-ledger-panel]').forEach((panel) => {
-        panel.hidden = panel.dataset.ledgerPanel !== `${days}-${budget}`;
+        panel.hidden = panel.dataset.ledgerPanel !== `${transport}-${days}-${budget}`;
+      });
+      planner.querySelectorAll<HTMLElement>('[data-attraction-transport]').forEach((panel) => {
+        panel.hidden = panel.dataset.attractionTransport !== transport;
       });
 
       const boardDays = planner.querySelector<HTMLElement>('[data-board-days]');
@@ -474,17 +534,20 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
       const boardStations = planner.querySelector<HTMLElement>('[data-board-stations]');
       const boardCode = planner.querySelector<HTMLElement>('[data-board-code]');
       const routeIndex = planner.querySelector<HTMLElement>('[data-route-index]');
+      const heroTransport = planner.querySelector<HTMLElement>('[data-hero-transport]');
       const status = planner.querySelector<HTMLOutputElement>('[data-selection-status]');
       if (boardDays) boardDays.textContent = `${days}D`;
       if (boardName) boardName.textContent = `${plan.name} · 推荐方案`;
       if (boardStations) boardStations.textContent = plan.stations.join(' → ');
       if (boardCode) boardCode.textContent = plan.routeCode;
-      if (routeIndex) routeIndex.textContent = `ROUTE / ${String(days).padStart(2, '0')} DAYS`;
-      if (status) status.textContent = `当前为 ${days} 日、${budget.toLocaleString('zh-CN')} 元预算方案：${plan.name}`;
+      if (routeIndex) routeIndex.textContent = `ROUTE / ${String(days).padStart(2, '0')}D / ${transport === 'drive' ? 'CAR' : 'PT'}`;
+      if (heroTransport) heroTransport.textContent = transportLabel;
+      if (status) status.textContent = `当前为 ${days} 日、${budget.toLocaleString('zh-CN')} 元预算、${transportLabel}方案：${plan.name}`;
 
       const next = new URLSearchParams(location.search);
       next.set('days', String(days));
       next.set('budget', String(budget));
+      next.set('transport', transport);
       history.replaceState(null, '', `${location.pathname}?${next.toString()}${location.hash}`);
     };
 
@@ -497,6 +560,12 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
     planner.querySelectorAll<HTMLButtonElement>('[data-budget-option]').forEach((button) => {
       button.addEventListener('click', () => {
         budget = Number(button.dataset.budgetOption) as BudgetLevel;
+        render();
+      });
+    });
+    planner.querySelectorAll<HTMLButtonElement>('[data-transport-option]').forEach((button) => {
+      button.addEventListener('click', () => {
+        transport = button.dataset.transportOption as LocalTransportMode;
         render();
       });
     });
