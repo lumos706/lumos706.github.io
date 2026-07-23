@@ -3,14 +3,10 @@ name: Refresh travel data
 on:
   schedule:
     # Avoid minute 0, where GitHub documents the heaviest scheduler load.
-    # Check every 20 minutes from 21:07 through 23:47 Asia/Shanghai. After one
-    # successful nightly refresh, later runs exit before installing dependencies
+    # Check every 20 minutes from 09:07 through 11:47 Asia/Shanghai. After one
+    # successful daily refresh, later runs exit before installing dependencies
     # or collecting data.
-    - cron: '7,27,47 21-23 * * *'
-      timezone: 'Asia/Shanghai'
-    # Temporary live scheduler check for 2026-07-23 22:55 Asia/Shanghai.
-    # Remove after GitHub emits one real schedule event.
-    - cron: '55 22 * * *'
+    - cron: '7,27,47 9-11 * * *'
       timezone: 'Asia/Shanghai'
   workflow_dispatch:
     inputs:
@@ -43,7 +39,7 @@ jobs:
         with:
           ref: main
 
-      - name: Decide whether a nightly refresh is still needed
+      - name: Decide whether today's refresh is still needed
         id: refresh_gate
         env:
           EVENT_NAME: ${{ github.event_name }}
@@ -63,7 +59,7 @@ jobs:
 
           timezone_shanghai = ZoneInfo("Asia/Shanghai")
           now = datetime.now(timezone_shanghai)
-          freshness_boundary = now.replace(hour=20, minute=0, second=0, microsecond=0)
+          freshness_boundary = now.replace(hour=8, minute=0, second=0, microsecond=0)
           snapshot_path = Path("src/data/travel/snapshot.json")
           generated_at = None
 
@@ -80,9 +76,9 @@ jobs:
 
           should_refresh = generated_at is None or generated_at < freshness_boundary
           reason = (
-              "nightly data is missing or stale"
+              "today's data is missing or stale"
               if should_refresh
-              else f"nightly data already refreshed at {generated_at.isoformat()}"
+              else f"today's data already refreshed at {generated_at.isoformat()}"
           )
           with Path(os.environ["GITHUB_OUTPUT"]).open("a", encoding="utf-8") as output:
               output.write(f"should_refresh={'true' if should_refresh else 'false'}\n")

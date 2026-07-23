@@ -344,7 +344,7 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
               <span>{item.code}</span>
               <h3>{item.title}</h3>
               <strong>{priceText(category, item.fallback)}</strong>
-              <p>{item.key === 'flights' ? '每位成人单程经济舱；先筛东航、南航、国航、厦航，对应航线没有可核对结果时才展示其他航司。' : item.key === 'hotels' ? '主价格为两间房每晚合计；下方同时列出单间起价与本段住宿合计。' : '七个景区的预约时限随每日晚间任务统一核验，最终仍以景区官方预约页为准。'}</p>
+              <p>{item.key === 'flights' ? '每位成人单程经济舱；先筛东航、南航、国航、厦航，对应航线没有可核对结果时才展示其他航司。' : item.key === 'hotels' ? '主价格为两间房每晚合计；下方同时列出单间起价与本段住宿合计。' : '七个景区的预约时限随每日早间任务统一核验，最终仍以景区官方预约页为准。'}</p>
               {item.key === 'flights' && flightOffers.length > 0 && (
                 <div class="travel-live-list" aria-label="FlyAI 机票报价">
                   <div class="travel-live-source"><span>fly.ai × 飞猪</span><b>{flyaiModeLabel}</b></div>
@@ -401,7 +401,7 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
 
   <section id="travel-attractions" class="section travel-guide-section">
     <div class="wrap">
-      <div class="travel-guide-intro"><h2>七个景点，逐个拆开。</h2><p>预约时限与交通依据每日晚间统一更新；21:07–23:47 每 20 分钟检查一次，成功后当晚不再重复采集。本次预约检查于 {reservationGeneratedLabel} 完成{reservationStaleAtBuild ? '，预约快照可能过期' : ''}，交通检查于 {transportGeneratedLabel} 完成{transportStaleAtBuild ? '，交通快照可能过期' : ''}{transportPartial ? '，部分查询失败并保留了上一份依据' : ''}。公交线路和班次可能季节性调整，页面只写稳妥基线，出发前仍要用景区官方通知和地图实时公交复核。</p></div>
+      <div class="travel-guide-intro"><h2>七个景点，逐个拆开。</h2><p>预约时限与交通依据每日早间统一更新；09:07–11:47 每 20 分钟检查一次，成功后当天不再重复采集。本次预约检查于 {reservationGeneratedLabel} 完成{reservationStaleAtBuild ? '，预约快照可能过期' : ''}，交通检查于 {transportGeneratedLabel} 完成{transportStaleAtBuild ? '，交通快照可能过期' : ''}{transportPartial ? '，部分查询失败并保留了上一份依据' : ''}。公交线路和班次可能季节性调整，页面只写稳妥基线，出发前仍要用景区官方通知和地图实时公交复核。</p></div>
       <div class="travel-attraction-list">
         {attractionGuides.map((guide, index) => (
           <article class="travel-attraction">
@@ -416,7 +416,7 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
               <p>{guide.sequence}</p>
               {guide.reservation && (
                 <div class:list={['travel-reservation-rule', { required: guide.reservation.required }]}>
-                  <div><span>{guide.reservation.statusLabel}</span><b>每日晚间核验</b></div>
+                  <div><span>{guide.reservation.statusLabel}</span><b>每日早间核验</b></div>
                   <strong>{guide.reservation.leadTime}</strong>
                   <p>{guide.reservation.note}</p>
                   <small>渠道：{guide.reservation.channel}</small>
@@ -428,7 +428,7 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
                 if (!access) return null;
                 return (
                   <div class:list={['travel-access-rule', { public: transport === 'public' }]} data-attraction-transport={transport} hidden={transport !== defaultSelection.transport}>
-                    <div><span>{transportLabels[transport].label}怎么到</span><b>依据每日晚间更新</b></div>
+                    <div><span>{transportLabels[transport].label}怎么到</span><b>依据每日早间更新</b></div>
                     <strong>{access.headline}</strong>
                     <p>{access.route}</p>
                     <small>{access.note}</small>
@@ -467,7 +467,7 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
         <div>
           <span>BEFORE DEPARTURE / 04 PEOPLE</span>
           <h2>出发前，<br />装什么。</h2>
-          <p>这不是越长越安心的“万能清单”。下面按四位成人、八月初和当前当地出游方式整理，只保留会影响健康、登机、预约与行程连续性的东西。依据每日晚间统一更新，本次检查于 {preparationGeneratedLabel} 完成{preparationStaleAtBuild ? '，准备清单依据可能过期' : ''}{preparationPartial ? '，部分查询失败并沿用上一轮有效依据' : ''}。</p>
+          <p>这不是越长越安心的“万能清单”。下面按四位成人、八月初和当前当地出游方式整理，只保留会影响健康、登机、预约与行程连续性的东西。依据每日早间统一更新，本次检查于 {preparationGeneratedLabel} 完成{preparationStaleAtBuild ? '，准备清单依据可能过期' : ''}{preparationPartial ? '，部分查询失败并沿用上一轮有效依据' : ''}。</p>
         </div>
         <aside class="travel-preparation-progress" aria-label="出发准备进度">
           <span>PACKING MANIFEST</span>
@@ -568,7 +568,7 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
   </section>
 
   <section class="travel-source-strip">
-    <div class="wrap"><strong>只保留能追溯的公开线索。</strong><p>每日晚间使用 last30days-cn 低频检索攻略、餐馆、当地交通、出发准备与预约依据，并通过 FlyAI Skill 更新飞猪机票和酒店报价。为抵抗 GitHub 定时事件延迟或丢失，21:07–23:47 每 20 分钟检查一次；同一晚成功一次后不再重复采集。Playwright 会在没有平台 API 时尝试公开页面，采集不足时保留稳妥基线并明确标记，不补造公交线路、价格或医疗结论。</p></div>
+    <div class="wrap"><strong>只保留能追溯的公开线索。</strong><p>每日早间使用 last30days-cn 低频检索攻略、餐馆、当地交通、出发准备与预约依据，并通过 FlyAI Skill 更新飞猪机票和酒店报价。为抵抗 GitHub 定时事件延迟或丢失，09:07–11:47 每 20 分钟检查一次；当天成功一次后不再重复采集。Playwright 会在没有平台 API 时尝试公开页面，采集不足时保留稳妥基线并明确标记，不补造公交线路、价格或医疗结论。</p></div>
   </section>
 
   <script is:inline type="application/json" id="travel-plans-data" set:html={plansJson}></script>
