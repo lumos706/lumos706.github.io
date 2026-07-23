@@ -33,6 +33,7 @@ jobs:
       SCRAPECREATORS_API_KEY: ${{ secrets.SCRAPECREATORS_API_KEY }}
       ZHIHU_COOKIE: ${{ secrets.ZHIHU_COOKIE }}
       LAST30DAYS_XHS_COOKIES_B64: ${{ secrets.LAST30DAYS_XHS_COOKIES_B64 }}
+      LAST30DAYS_DOUYIN_COOKIES_B64: ${{ secrets.LAST30DAYS_DOUYIN_COOKIES_B64 }}
       FLYAI_API_KEY: ${{ secrets.FLYAI_API_KEY }}
 
     steps:
@@ -76,6 +77,13 @@ jobs:
               | base64 --decode \
               > "$HOME/.config/last30days-cn/browser_cookies/xiaohongshu_cookies.json"
             chmod 600 "$HOME/.config/last30days-cn/browser_cookies/xiaohongshu_cookies.json"
+          fi
+          if [[ -n "${LAST30DAYS_DOUYIN_COOKIES_B64:-}" ]]; then
+            mkdir -p "$HOME/.config/last30days-cn/browser_cookies"
+            printf '%s' "$LAST30DAYS_DOUYIN_COOKIES_B64" \
+              | base64 --decode \
+              > "$HOME/.config/last30days-cn/browser_cookies/douyin_cookies.json"
+            chmod 600 "$HOME/.config/last30days-cn/browser_cookies/douyin_cookies.json"
           fi
 
       - name: Check source login health
@@ -167,6 +175,48 @@ jobs:
             --quick \
             --pause 8 \
             --timeout 120
+
+      - name: Check generated Douyin evidence
+        id: douyin_health
+        run: |
+          python scripts/travel/check_douyin_evidence.py \
+            --summary "$GITHUB_STEP_SUMMARY" \
+            --issue-body "$RUNNER_TEMP/douyin-health-issue.md"
+
+      - name: Notify when Douyin verification is needed
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DOUYIN_OVERALL: ${{ steps.douyin_health.outputs.overall }}
+        run: |
+          title="抖音旅游数据需要验证"
+          issue_number="$(
+            gh api \
+              "repos/$GITHUB_REPOSITORY/issues?state=open&per_page=100" \
+              --jq 'map(select(.title == "抖音旅游数据需要验证")) | .[0].number // empty' \
+              || true
+          )"
+
+          if [[ "$DOUYIN_OVERALL" == "healthy" ]]; then
+            if [[ -n "$issue_number" ]]; then
+              gh issue comment "$issue_number" \
+                --body "最新一次刷新已重新取得可追溯的抖音攻略链接，自动关闭提醒。"
+              gh issue close "$issue_number" --reason completed
+            fi
+            exit 0
+          fi
+
+          echo "::warning title=抖音旅游数据需要验证::last30days-cn 本轮没有在至少两个数据栏目中取得抖音依据，请在本机完成验证并更新加密 Cookie Secret。"
+          if [[ -n "$issue_number" ]]; then
+            gh issue edit "$issue_number" \
+              --body-file "$RUNNER_TEMP/douyin-health-issue.md" \
+              --add-assignee "$GITHUB_REPOSITORY_OWNER"
+          else
+            gh issue create \
+              --title "$title" \
+              --body-file "$RUNNER_TEMP/douyin-health-issue.md" \
+              --assignee "$GITHUB_REPOSITORY_OWNER"
+          fi
 
       - name: Validate site
         run: |

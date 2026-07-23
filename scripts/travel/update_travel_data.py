@@ -108,7 +108,7 @@ ATTRACTION_QUERIES = (
     QuerySpec(
         key="qinghaiLake",
         label="青海湖",
-        topic="青海湖 8月 自驾 拍照 门票 避坑 私人牧场 路边停车",
+        topic="青海湖 8月 自驾 拍照 攻略 避坑",
         sources="xiaohongshu,douyin,bilibili,zhihu",
         group="attraction",
         required_terms=("青海湖",),
@@ -116,7 +116,7 @@ ATTRACTION_QUERIES = (
     QuerySpec(
         key="chakaSaltLake",
         label="茶卡盐湖",
-        topic="茶卡盐湖 8月 小火车 拍照 鞋套 预约 避坑",
+        topic="茶卡盐湖 8月 拍照 攻略 避坑",
         sources="xiaohongshu,douyin,bilibili,zhihu",
         group="attraction",
         required_terms=("茶卡", "盐湖"),
@@ -124,7 +124,7 @@ ATTRACTION_QUERIES = (
     QuerySpec(
         key="dachaidan",
         label="大柴旦",
-        topic="大柴旦 翡翠湖 水上雅丹 U型公路 自驾 攻略 避坑",
+        topic="大柴旦 翡翠湖 水上雅丹 自驾 攻略 避坑",
         sources="xiaohongshu,douyin,bilibili,zhihu",
         group="attraction",
         required_terms=("大柴旦", "翡翠湖", "水上雅丹", "U型公路"),
@@ -132,7 +132,7 @@ ATTRACTION_QUERIES = (
     QuerySpec(
         key="mogaoCaves",
         label="莫高窟",
-        topic="莫高窟 8月 官方预约 A类票 参观 攻略 避坑",
+        topic="莫高窟 攻略 预约 避坑",
         sources="xiaohongshu,douyin,bilibili,zhihu",
         group="attraction",
         required_terms=("莫高窟",),
@@ -140,7 +140,7 @@ ATTRACTION_QUERIES = (
     QuerySpec(
         key="mingshaMountain",
         label="鸣沙山月牙泉",
-        topic="鸣沙山 月牙泉 8月 日落 骑骆驼 鞋套 攻略 避坑",
+        topic="鸣沙山 月牙泉 日落 攻略 避坑",
         sources="xiaohongshu,douyin,bilibili,zhihu",
         group="attraction",
         required_terms=("鸣沙山", "月牙泉"),
@@ -148,7 +148,7 @@ ATTRACTION_QUERIES = (
     QuerySpec(
         key="jiayuPass",
         label="嘉峪关",
-        topic="嘉峪关 关城 8月 门票 游玩顺序 攻略 避坑",
+        topic="嘉峪关 关城 攻略 避坑",
         sources="xiaohongshu,douyin,bilibili,zhihu",
         group="attraction",
         required_terms=("嘉峪关", "关城"),
@@ -156,7 +156,7 @@ ATTRACTION_QUERIES = (
     QuerySpec(
         key="zhangyeDanxia",
         label="张掖七彩丹霞",
-        topic="张掖 七彩丹霞 8月 日出 日落 观景台 攻略 避坑",
+        topic="张掖 七彩丹霞 日落 攻略 避坑",
         sources="xiaohongshu,douyin,bilibili,zhihu",
         group="attraction",
         required_terms=("张掖", "七彩丹霞", "丹霞"),
@@ -168,8 +168,8 @@ FOOD_QUERIES = (
     QuerySpec(
         key="xining",
         label="西宁",
-        topic="西宁 益鑫羊肉手抓馆 德禄酸奶 马忠羊肠面 美食 推荐 避雷",
-        sources="xiaohongshu,zhihu",
+        topic="西宁 美食 益鑫 德禄酸奶 推荐 避雷",
+        sources="xiaohongshu,douyin,zhihu",
         group="food",
         required_terms=("西宁", "益鑫", "德禄", "马忠"),
         restaurants=(
@@ -181,8 +181,8 @@ FOOD_QUERIES = (
     QuerySpec(
         key="chaka",
         label="茶卡",
-        topic="茶卡 应财特色炕锅肉 炕锅羊肉 本地餐厅 推荐 避雷",
-        sources="xiaohongshu,zhihu",
+        topic="茶卡 美食 炕锅羊肉 推荐 避雷",
+        sources="xiaohongshu,douyin,zhihu",
         group="food",
         required_terms=("茶卡", "应财", "炕锅"),
         restaurants=(
@@ -192,8 +192,8 @@ FOOD_QUERIES = (
     QuerySpec(
         key="dachaidan",
         label="大柴旦",
-        topic="大柴旦 鼎鼎牛干锅牦牛肉 餐厅 推荐 避雷",
-        sources="xiaohongshu,zhihu",
+        topic="大柴旦 美食 牦牛肉 推荐 避雷",
+        sources="xiaohongshu,douyin,zhihu",
         group="food",
         required_terms=("大柴旦", "鼎鼎", "牦牛肉"),
         restaurants=(
@@ -203,8 +203,8 @@ FOOD_QUERIES = (
     QuerySpec(
         key="dunhuang",
         label="敦煌",
-        topic="敦煌 达记驴肉黄面 靖远尕六美味羊羔肉 夏家合汁 推荐 避雷",
-        sources="xiaohongshu,zhihu",
+        topic="敦煌 美食 驴肉黄面 羊羔肉 推荐 避雷",
+        sources="xiaohongshu,douyin,zhihu",
         group="food",
         required_terms=("敦煌", "达记", "尕六", "夏家合汁"),
         restaurants=(
@@ -216,8 +216,8 @@ FOOD_QUERIES = (
     QuerySpec(
         key="zhangye",
         label="张掖",
-        topic="张掖 孙记炒炮 苗氏卷子鸡 甘州名吃",
-        sources="xiaohongshu,zhihu",
+        topic="张掖 美食 炒炮 卷子鸡 推荐 避雷",
+        sources="xiaohongshu,douyin,zhihu",
         group="food",
         required_terms=("张掖", "孙记", "苗氏", "甘州"),
         restaurants=(
@@ -229,8 +229,8 @@ FOOD_QUERIES = (
     QuerySpec(
         key="lanzhou",
         label="兰州",
-        topic="兰州 马子禄牛肉面 吾穆勒蓬灰牛肉面 杜记甜食 再回首酿皮",
-        sources="xiaohongshu,zhihu",
+        topic="兰州 美食 牛肉面 甜醅 酿皮 推荐 避雷",
+        sources="xiaohongshu,douyin,zhihu",
         group="food",
         required_terms=("兰州", "马子禄", "吾穆勒", "杜记", "再回首"),
         restaurants=(

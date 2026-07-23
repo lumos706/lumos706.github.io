@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "parserVersion": 1,
-  "generatedAt": "2026-07-22T16:00:39.305082+00:00",
-  "expiresAt": "2026-07-23T22:00:39.305082+00:00",
+  "generatedAt": "2026-07-23T04:22:13.964992+00:00",
+  "expiresAt": "2026-07-24T10:22:13.964992+00:00",
   "status": "ok",
   "schedule": "21:00 Asia/Shanghai",
   "skill": {
@@ -11,7 +11,8 @@
     "repository": "https://github.com/Jesseovo/last30days-skill-cn"
   },
   "activeSources": [
-    "xiaohongshu",
+    "baidu",
+    "douyin",
     "zhihu"
   ],
   "categories": {
@@ -44,48 +45,71 @@
           "priority": "必看"
         }
       ],
-      "checkedAt": "2026-07-22T16:00:39.305082+00:00",
-      "lastEvidenceAt": "2026-07-22T16:00:39.305082+00:00",
+      "checkedAt": "2026-07-23T04:22:13.964992+00:00",
+      "lastEvidenceAt": "2026-07-23T04:22:13.964992+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
-          "platform": "xiaohongshu",
-          "title": "青海旅行｜高反来了怎么办？急救指南请收好",
+          "platform": "douyin",
+          "title": "#高海拔旅游如何应对高原反应#红景天#洋参含片#严重高反降低海拔高度就近就医",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/69d4a8d0000000001a03337f",
+          "url": "https://www.douyin.com/video/7662392187082908401",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.2,
-          "score": 10,
+          "relevance": 0.29,
+          "score": 15,
           "engagement": {
-            "num_comments": 2,
-            "likes": 18,
-            "shares": 0,
-            "collects": 19
+            "num_comments": 1,
+            "likes": 4,
+            "views": 0,
+            "shares": 0
           },
-          "author": "玩转青海",
+          "author": "酒哥实话",
           "signal": "neutral"
         },
         {
-          "platform": "xiaohongshu",
-          "title": "高原旅行清单 应对高反必备清单💊",
+          "platform": "baidu",
+          "title": "去甘南旅游必备哪三种药?高原反应、肠胃不适、感冒发烧都得防 - 百度文库",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6881d369000000000b02fcec",
+          "url": "http://www.baidu.com/link?url=5xDgYyaEq8lvWZjlAAI_4ForWC6rkwXdpiWkozPNdESZw7utB2MqsWoyoDaJEIeM7h2vweLIJxKZMVk2eVfzKVpWzHrlDzs08ZIUxMgWz_LZ-zi0nnW-WAjETnXUzmW6",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.14,
-          "score": 28,
-          "engagement": {
-            "num_comments": 23,
-            "likes": 1783,
-            "shares": 0,
-            "collects": 1822
-          },
-          "author": "游民阿温",
+          "relevance": 0.29,
+          "score": 0,
+          "engagement": {},
+          "author": "",
+          "signal": "neutral"
+        },
+        {
+          "platform": "baidu",
+          "title": "抗高原反应的药必备 - 民福康",
+          "snippet": "",
+          "url": "http://www.baidu.com/link?url=DO8G064PRjkTR6xRn76xqObxhteKZqP4ar4Ssjk0EcAz87pslU_BUq2VXlzjg_VCzFTTmsRD1CSS7MQaTHA9ta",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.21,
+          "score": 0,
+          "engagement": {},
+          "author": "",
+          "signal": "neutral"
+        },
+        {
+          "platform": "baidu",
+          "title": "去高原预防肺水肿要准备什么 - 问答频道 - 博禾医生",
+          "snippet": "",
+          "url": "http://www.baidu.com/link?url=akoHoxDUrZLpHIX1OrIHeMsJTQIeTzKPBxttskUZe95QN2OVei5xXsJm2BYUrW9Hi-Ghcw-UUeMeG7Z-cT3I2a",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.2,
+          "score": 0,
+          "engagement": {},
+          "author": "",
           "signal": "neutral"
         }
       ],
-      "sourceErrors": {}
+      "sourceErrors": {
+        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
+      }
     },
     "weather": {
       "key": "weather",
@@ -116,46 +140,31 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-22T16:00:39.305082+00:00",
-      "lastEvidenceAt": "2026-07-22T16:00:39.305082+00:00",
+      "checkedAt": "2026-07-23T04:22:13.964992+00:00",
+      "lastEvidenceAt": "2026-07-23T04:22:13.964992+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
           "platform": "zhihu",
-          "title": "【资深领队亲测｜2026西北旅行】青甘大环线｜一生必走一次的西北秘境",
-          "snippet": "冬季需要准备厚款羽绒服外套，以预防高原天气突发变化 ●防晒装备：防晒衣，防晒帽、太阳镜等； ●手足装备",
-          "url": "https://zhuanlan.zhihu.com/p/2060034126804260236",
-          "date": "2026-07-13",
+          "title": "青甘大环线到底该怎么玩，外地人有哪些要准备的？",
+          "snippet": "1. 防晒类：高倍防晒霜、墨镜、防晒帽、面罩、冰袖（西北紫外线极强，全年必备） 2. 保暖类：冲锋衣、薄羽绒、长裤、舒适运动鞋（盐湖、沙漠走路必备）",
+          "url": "https://www.zhihu.com/question/2041406335040894913/answer/2061186104104169870",
+          "date": "2026-07-16",
           "dateConfidence": "high",
-          "relevance": 0.38,
-          "score": 33,
+          "relevance": 0.41,
+          "score": 49,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
-            "voteups": 0
+            "voteups": 1
           },
-          "author": "西北管家驴队长",
-          "signal": "neutral"
-        },
-        {
-          "platform": "zhihu",
-          "title": "去青甘大环线要注意什么？有什么注意事项？",
-          "snippet": "用洋葱三层穿法 。 内层：速干衣；中层：抓绒/薄羽绒；外层：防风防水冲锋衣。 必带：防晒帽、墨镜、防风面罩、亮色长裙、防滑徒步鞋",
-          "url": "https://www.zhihu.com/question/2043973771602744637/answer/2053244163626373753",
-          "date": "2026-06-24",
-          "dateConfidence": "high",
-          "relevance": 0.31,
-          "score": 44,
-          "engagement": {
-            "num_comments": 0,
-            "collects": 0,
-            "voteups": 2
-          },
-          "author": "宇文海",
+          "author": "大西北旅游领队",
           "signal": "neutral"
         }
       ],
-      "sourceErrors": {}
+      "sourceErrors": {
+        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
+      }
     },
     "documents": {
       "key": "documents",
@@ -186,29 +195,53 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-22T16:00:39.305082+00:00",
-      "lastEvidenceAt": "2026-07-22T16:00:39.305082+00:00",
+      "checkedAt": "2026-07-23T04:22:13.964992+00:00",
+      "lastEvidenceAt": "2026-07-23T04:22:13.964992+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
-          "platform": "zhihu",
-          "title": "8天7晚青甘大环线回来，把你们问爆的\"真实花费+住宿门票明细\"拆给你看",
-          "snippet": "8天7晚青甘大环线回来，把你们问爆的\"真实花费+住宿门票明细\"拆给你看 出发前我也被网上报价搞懵——自由行算下来人均5000+",
-          "url": "https://zhuanlan.zhihu.com/p/2055693962938152533",
-          "date": "2026-07-01",
-          "dateConfidence": "high",
-          "relevance": 0.17,
-          "score": 14,
-          "engagement": {
-            "num_comments": 0,
-            "collects": 0,
-            "voteups": 0
-          },
-          "author": "豆豆芙",
+          "platform": "baidu",
+          "title": "2026青甘大环线完整版攻略|行程路线+门票预约+避坑指南|大环线|...",
+          "snippet": "",
+          "url": "http://www.baidu.com/link?url=hlXDHDeeAKUJzQjyctEGQahrx1WeeSRE7uHbXgnMo2TLyxY_VBqT0FLRTdnMvCRv4bcJRrGuZyFLaPZzxuK-J_",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.34,
+          "score": 0,
+          "engagement": {},
+          "author": "",
+          "signal": "neutral"
+        },
+        {
+          "platform": "baidu",
+          "title": "青甘大环线7日游导游避坑指南|正规预约渠道与持证领队团队推荐...",
+          "snippet": "",
+          "url": "http://www.baidu.com/link?url=1Ioe3e-vKUlfO6gkfxkl-8bhrqk69gHqnaNdTBCgozy1k7zfEaxJ6lxySh6NvEZx5qcuvWssNw8UitpmQwJ-EK",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.34,
+          "score": 0,
+          "engagement": {},
+          "author": "",
+          "signal": "positive"
+        },
+        {
+          "platform": "baidu",
+          "title": "青甘大环线必备清单:证件现金穿搭全攻略_国内度假__财经头条...",
+          "snippet": "",
+          "url": "http://www.baidu.com/link?url=hlXDHDeeAKUJzQjyctEGQgv5Cip_WCG9VkME1xwkblLVgj_1Xlrzah20OKahvh6GIrTtlXXqFecnzsxLaYPFnyNNA2Jmg4oK1wp6HBg8B8S",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.34,
+          "score": 0,
+          "engagement": {},
+          "author": "",
           "signal": "neutral"
         }
       ],
-      "sourceErrors": {}
+      "sourceErrors": {
+        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
+      }
     },
     "flightTech": {
       "key": "flightTech",
@@ -239,10 +272,64 @@
           "priority": "必带"
         }
       ],
-      "checkedAt": "2026-07-22T16:00:39.305082+00:00",
-      "lastEvidenceAt": "2026-07-22T16:00:39.305082+00:00",
+      "checkedAt": "2026-07-23T04:22:13.964992+00:00",
+      "lastEvidenceAt": "2026-07-23T04:22:13.964992+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
+        {
+          "platform": "douyin",
+          "title": "第一次坐飞机必看！ 行李、托运、充电宝一次讲清 20000毫安以内+3C认证才能带上飞机 收藏起来，出行不踩坑✈️#每天跟我涨知识 #瑞金机场 #乘机小知识 #旅游",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7619521046190955194",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.66,
+          "score": 28,
+          "engagement": {
+            "num_comments": 1,
+            "likes": 35,
+            "views": 0,
+            "shares": 1
+          },
+          "author": "🌟舒玲行山河",
+          "signal": "caution"
+        },
+        {
+          "platform": "douyin",
+          "title": "坐飞机带行李，多大的箱子就得托运，一般免费的额度有多少？没买行李额临时想要托运咋办呢？酒/充电宝/笔记本之类的可以托运吗？......潮汕机场小五的解答来了~#揭阳潮汕机场#飞机托运#托运行李#坐飞机#行李打包",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7613323965322235177",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.53,
+          "score": 29,
+          "engagement": {
+            "num_comments": 10,
+            "likes": 100,
+            "views": 0,
+            "shares": 48
+          },
+          "author": "潮汕机场小五",
+          "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "只有3C标志的充电宝才能带上飞机，不然过不了安检哦 充电宝不能托运，只能随身携带，且飞行过程中不能使用哈#关注我带你去旅行 #石家庄跟团游 #充电宝 #乘坐飞机注意事项",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7657689742755166449",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.53,
+          "score": 18,
+          "engagement": {
+            "num_comments": 2,
+            "likes": 3,
+            "views": 0,
+            "shares": 0
+          },
+          "author": "爱旅游的耿耿",
+          "signal": "neutral"
+        },
         {
           "platform": "zhihu",
           "title": "为什么有些充电宝不能带上飞机？",
@@ -250,8 +337,8 @@
           "url": "https://www.zhihu.com/question/2063118736131994467/answer/2063192554804401401",
           "date": "2026-07-22",
           "dateConfidence": "high",
-          "relevance": 0.18,
-          "score": 47,
+          "relevance": 0.41,
+          "score": 57,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -261,7 +348,9 @@
           "signal": "neutral"
         }
       ],
-      "sourceErrors": {}
+      "sourceErrors": {
+        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
+      }
     },
     "driveKit": {
       "key": "driveKit",
@@ -292,83 +381,81 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-22T16:00:39.305082+00:00",
-      "lastEvidenceAt": "2026-07-22T16:00:39.305082+00:00",
+      "checkedAt": "2026-07-23T04:22:13.964992+00:00",
+      "lastEvidenceAt": "2026-07-23T04:22:13.964992+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
-          "platform": "xiaohongshu",
-          "title": "青甘大环线自驾-番外：租车",
+          "platform": "douyin",
+          "title": "📌宝子们，准备去青甘大环线玩，出行方式的选择可太重要啦！ 今天就来给大家唠唠自驾租车、拼车、包车的区别、优缺点、适合人群、费用，还有超实用攻略，保证不踩坑！💪 #旅游攻略扶持计划 #创作者中心 #创作灵感#青甘大环线 #大西北",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a49b7590000000011017a76",
+          "url": "https://www.douyin.com/video/7616205321019851505",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.33,
-          "score": 11,
+          "relevance": 0.53,
+          "score": 21,
           "engagement": {
-            "num_comments": 22,
-            "likes": 6,
-            "shares": 0,
-            "collects": 8
+            "num_comments": 0,
+            "likes": 8,
+            "views": 0,
+            "shares": 2
           },
-          "author": "蓝宇河",
+          "author": "🚗青海领队-佳佳👑✨",
+          "signal": "caution"
+        },
+        {
+          "platform": "baidu",
+          "title": "租车自驾推荐:青甘大环线9天实测,平台/车型/保险怎么选?+FAQ|神州...",
+          "snippet": "",
+          "url": "http://www.baidu.com/link?url=8OkJHOFLzpmPhWH17QnsbYpLfFeOthC1bXj4JVUWpPxNlfMrN1pdTtzTp2d0yuv_viivluqKnXg41vy8ujZ8lkzUrSQ_x_IY5NafH82avn_",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.53,
+          "score": 0,
+          "engagement": {},
+          "author": "",
+          "signal": "positive"
+        },
+        {
+          "platform": "douyin",
+          "title": "#青甘环线自驾 #创作灵感 #西宁租车 #自驾青甘大环线 西宁自驾无套路",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7661241732566543744",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.42,
+          "score": 13,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 5,
+            "views": 0,
+            "shares": 0
+          },
+          "author": "西宁租车旅游-楠哥",
           "signal": "neutral"
         },
         {
-          "platform": "xiaohongshu",
-          "title": "青甘大环线前期准备（自驾版）",
+          "platform": "douyin",
+          "title": "和老公的第一次租车自驾旅行，顺利收官，青甘这条线真的很值得自驾去，今天总结了一下我们这一趟5天4夜的行程的总体花费，不知道两个人一共花费五千多算不算多？ #旅行vlog #青甘大环线自驾游 #我的旅行日记",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/688a17310000000005009c21",
+          "url": "https://www.douyin.com/video/7411701973130497280",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.31,
-          "score": 30,
+          "relevance": 0.41,
+          "score": 43,
           "engagement": {
-            "num_comments": 32,
-            "likes": 326,
-            "shares": 0,
-            "collects": 389
+            "num_comments": 77,
+            "likes": 544,
+            "views": 0,
+            "shares": 468
           },
-          "author": "换个刊投我又是好汉",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "青甘大环线自驾租车防坑攻略",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/68d8e006000000000e00dc88",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.31,
-          "score": 19,
-          "engagement": {
-            "num_comments": 6,
-            "likes": 65,
-            "shares": 0,
-            "collects": 85
-          },
-          "author": "你好我系陈Mm",
-          "signal": "neutral"
-        },
-        {
-          "platform": "zhihu",
-          "title": "真要开始长途自驾旅行了，出发前这5件事一定要想清楚",
-          "snippet": "欢迎评论区聊聊！ 附：出发前简易自查清单 车辆：轮胎、油液、刹车、灯光、电瓶 证件：身份证、驾驶证、行驶证、保险单",
-          "url": "https://zhuanlan.zhihu.com/p/2058213953428367004",
-          "date": "2026-07-08",
-          "dateConfidence": "high",
-          "relevance": 0.22,
-          "score": 52,
-          "engagement": {
-            "num_comments": 4,
-            "collects": 0,
-            "voteups": 3
-          },
-          "author": "古月弓",
-          "signal": "neutral"
+          "author": "是小云呐",
+          "signal": "positive"
         }
       ],
-      "sourceErrors": {}
+      "sourceErrors": {
+        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
+      }
     },
     "publicKit": {
       "key": "publicKit",
@@ -399,48 +486,49 @@
           "priority": "必做"
         }
       ],
-      "checkedAt": "2026-07-22T16:00:39.305082+00:00",
-      "lastEvidenceAt": "2026-07-22T16:00:39.305082+00:00",
+      "checkedAt": "2026-07-23T04:22:13.964992+00:00",
+      "lastEvidenceAt": "2026-07-23T04:22:13.964992+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
-          "platform": "xiaohongshu",
-          "title": "青海湖（公共交通版）",
+          "platform": "douyin",
+          "title": "来青甘大环线到底要怎么准备行李？ #青甘大环线 #青甘 #青甘环线 #青甘环线游 #旅游攻略扶持计划",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/66c5b2e1000000001d039f07",
+          "url": "https://www.douyin.com/video/7660490282216011200",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.11,
-          "score": 19,
+          "relevance": 0.41,
+          "score": 16,
           "engagement": {
-            "num_comments": 95,
-            "likes": 762,
-            "shares": 0,
-            "collects": 1090
+            "num_comments": 0,
+            "likes": 9,
+            "views": 0,
+            "shares": 5
           },
-          "author": "大鱼",
+          "author": "晞禾青甘游",
           "signal": "neutral"
         },
         {
-          "platform": "xiaohongshu",
-          "title": "青海湖公共交通攻略",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/68b155fa000000001d03ad00",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.11,
-          "score": 0,
+          "platform": "zhihu",
+          "title": "带6岁娃和60岁婆婆去西北8天，青甘八日游亲测行程+避坑全记录",
+          "snippet": "比海盐水温和。 关于行李：别带大箱子。一个24寸箱+一个双肩包就够。在茶卡和祁连可以让车把行李提前运到下一站",
+          "url": "https://zhuanlan.zhihu.com/p/2053154314961604907",
+          "date": "2026-06-24",
+          "dateConfidence": "high",
+          "relevance": 0.18,
+          "score": 8,
           "engagement": {
-            "num_comments": 4,
-            "likes": 33,
-            "shares": 0,
-            "collects": 46
+            "num_comments": 0,
+            "collects": 0,
+            "voteups": 0
           },
-          "author": "小红薯AD7B1F19",
+          "author": "豆豆芙",
           "signal": "neutral"
         }
       ],
-      "sourceErrors": {}
+      "sourceErrors": {
+        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
+      }
     }
   },
   "medicalNotice": "药品与高原健康内容仅用于一般旅行准备，不替代医生诊断或个体化用药建议；如有基础疾病、孕期、近期不适或高原经历不佳，请在出发前咨询医生。",

@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 3,
-  "generatedAt": "2026-07-22T15:52:54.711810+00:00",
-  "expiresAt": "2026-07-24T03:52:54.711810+00:00",
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-23T04:18:24.060807+00:00",
+  "expiresAt": "2026-07-24T16:18:24.060807+00:00",
   "status": "ok",
   "mode": "browser-plus-optional-credentials",
   "skill": {
@@ -20,13 +20,15 @@
   "activeSources": [
     "baidu",
     "bilibili",
+    "douyin",
     "xiaohongshu",
     "zhihu"
   ],
   "sourceCoverage": {
     "baidu": 2,
-    "bilibili": 3,
-    "xiaohongshu": 53,
+    "bilibili": 2,
+    "douyin": 20,
+    "xiaohongshu": 49,
     "zhihu": 31
   },
   "categories": {
@@ -682,17 +684,35 @@
     "mogaoCaves": {
       "label": "莫高窟",
       "status": "ok",
-      "evidenceCount": 6,
+      "evidenceCount": 12,
       "evidence": [
+        {
+          "platform": "douyin",
+          "title": "敦煌莫高窟门票怎么预约#敦煌莫高窟门票 #莫高窟门票 #莫高窟门票预约 #莫高窟攻略 #莫高窟门票攻略",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7527275289908579599",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.68,
+          "score": 44,
+          "engagement": {
+            "num_comments": 40,
+            "likes": 385,
+            "views": 0,
+            "shares": 453
+          },
+          "author": "浮云呆呆",
+          "signal": "neutral"
+        },
         {
           "platform": "zhihu",
           "title": "暑期去敦煌，千万别只会拍月牙泉！这份避坑攻略太及时了",
-          "snippet": "结果发现： 旺季票难买票型分普通票和应急票参观时间不同，体验也不同建议：提前关注莫高窟官方渠道，尽量早订",
+          "snippet": "二、敦煌最容易踩的6个坑，出发前一定要看坑1：莫高窟门票没提前抢，到了才后悔莫高窟是敦煌的灵魂，但也是最容易让人“计划翻车”的地方",
           "url": "https://zhuanlan.zhihu.com/p/2056018926203622979",
           "date": "2026-07-02",
           "dateConfidence": "high",
-          "relevance": 0.53,
-          "score": 62,
+          "relevance": 0.64,
+          "score": 66,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -703,30 +723,13 @@
         },
         {
           "platform": "zhihu",
-          "title": "青海龙清旅行社带你玩转敦煌：莫高窟、鸣沙山、沙漠露营全攻略",
-          "snippet": "这里有几个要点： 官方渠道：通过\"莫高窟参观预约网\"或小程序提前预约，旺季一般提前30天放票 票种：A类票（全价238元左右）可以看8个窟+2场数字电影",
-          "url": "https://zhuanlan.zhihu.com/p/2061849289232536746",
-          "date": "2026-07-18",
-          "dateConfidence": "high",
-          "relevance": 0.53,
-          "score": 45,
-          "engagement": {
-            "num_comments": 0,
-            "collects": 0,
-            "voteups": 0
-          },
-          "author": "小看山C7mix7wN",
-          "signal": "neutral"
-        },
-        {
-          "platform": "zhihu",
           "title": "有什么去敦煌莫高窟参观打卡的攻略？",
           "snippet": "想一次性玩好莫高窟、顺畅走完8天7晚青甘大环线，可点击下方名片领取完整行程规划与新手专属避坑攻略。联系当地导游小鹏",
           "url": "https://www.zhihu.com/question/595126829/answer/2055956658371802689",
           "date": "2026-07-02",
           "dateConfidence": "high",
-          "relevance": 0.41,
-          "score": 56,
+          "relevance": 0.64,
+          "score": 66,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -736,61 +739,170 @@
           "signal": "neutral"
         },
         {
+          "platform": "douyin",
+          "title": "敦煌莫高窟怎么打卡？攻略来了！建议收藏，一定要记得提前30天预约正常票啊大家#跟着课本去旅行 #甘肃dou是好风光 #山里dou是好风光 #人类敦煌心向往之 #莫高窟 @如意甘肃（甘肃文旅官方号） @敦煌文旅局",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7267525631506648331",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.64,
+          "score": 53,
+          "engagement": {
+            "num_comments": 1028,
+            "likes": 7102,
+            "views": 0,
+            "shares": 2520
+          },
+          "author": "行走的番茄",
+          "signal": "neutral"
+        },
+        {
           "platform": "zhihu",
-          "title": "自由行游客注意！莫高窟门票预约新政与窟内参观禁忌详解",
-          "snippet": "务必提前做好功课。 • 官方预约渠道 唯一官方指定预约平台为“莫高窟参观预约网”微信小程序。建议出行前关注该公众号",
-          "url": "https://zhuanlan.zhihu.com/p/2053877566247900201",
-          "date": "2026-06-26",
+          "title": "第一次去敦煌怎么玩？3天2晚纯干货攻略（行程+住宿+避坑全整理）",
+          "snippet": "早晚备好薄冲锋衣保暖。 五、核心避坑指南（新手重点看） 1、莫高窟洞窟内禁止拍照、触摸壁画，违规会被工作人员制止处罚",
+          "url": "https://zhuanlan.zhihu.com/p/2062564500260262171",
+          "date": "2026-07-20",
           "dateConfidence": "high",
-          "relevance": 0.41,
-          "score": 21,
+          "relevance": 0.64,
+          "score": 51,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
             "voteups": 0
           },
-          "author": "阿里妍旅游",
+          "author": "知乎用户SMrc5L",
           "signal": "neutral"
         },
         {
-          "platform": "xiaohongshu",
-          "title": "莫高窟保姆级参观攻略！一篇讲透，看完再去",
+          "platform": "douyin",
+          "title": "敦煌莫高窟门票没约上也能进#敦煌莫高窟门票#莫高窟门票预约#莫高窟门票 #敦煌莫高窟门票预约#莫高窟攻略",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a2f96250000000022018836",
+          "url": "https://www.douyin.com/video/7529873442091453696",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.32,
-          "score": 28,
+          "relevance": 0.64,
+          "score": 45,
           "engagement": {
-            "num_comments": 2,
-            "likes": 237,
-            "shares": 0,
-            "collects": 271
+            "num_comments": 335,
+            "likes": 366,
+            "views": 0,
+            "shares": 325
           },
-          "author": "猪迪玩转小破球",
+          "author": "浮云呆呆",
           "signal": "neutral"
         },
         {
-          "platform": "bilibili",
-          "title": "莫高窟门票 什么时间预约",
-          "snippet": "-",
-          "url": "https://www.bilibili.com/video/BV1GETr6oEM7",
-          "date": "2026-07-02",
-          "dateConfidence": "high",
-          "relevance": 0.25,
-          "score": 19,
+          "platform": "douyin",
+          "title": "莫高窟门票预约攻略，到了甘肃，没约到莫高窟门票怎么办？ #莫高窟 #莫高窟门票 #莫高窟应急票 #莫高窟攻略 #甘肃旅游 #热点",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7529681534564011279",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.64,
+          "score": 38,
+          "engagement": {
+            "num_comments": 32,
+            "likes": 100,
+            "views": 0,
+            "shares": 94
+          },
+          "author": "旅途愉快",
+          "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "你知道莫高窟常规票，应急票，特窟窟，复制窟他们有什么区别吗，怎么去预约这些门票，怎么游玩不踩坑#莫高窟攻略 #敦煌旅游攻略 #莫高窟门票攻略 #敦煌旅游包车",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7635618111735836325",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.64,
+          "score": 32,
+          "engagement": {
+            "num_comments": 5,
+            "likes": 61,
+            "views": 0,
+            "shares": 8
+          },
+          "author": "西北定制旅游|徽骆驼",
+          "signal": "caution"
+        },
+        {
+          "platform": "douyin",
+          "title": "敦煌避坑就看这条 #敦煌旅游攻略 #创作者中心 #创作灵感 #莫高窟攻略 #鸣沙山",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7631514052443162979",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.64,
+          "score": 32,
+          "engagement": {
+            "num_comments": 15,
+            "likes": 31,
+            "views": 0,
+            "shares": 8
+          },
+          "author": "爱拍照的小柳哥",
+          "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "青甘大环线到了敦煌站，鸣沙山月牙泉莫高窟玩法大全！ 6-7月份，青甘大环线敦煌这一站，鸣沙山月牙泉以及莫高窟的玩法大全整理好了，从游玩顺序及莫高窟门票预约都有详细的说明！#青甘大环线 #甘青大环线 #青甘大环线自驾游 #敦煌旅游 #莫高窟攻略",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7642023710517415209",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.64,
+          "score": 31,
           "engagement": {
             "num_comments": 0,
-            "likes": 7,
-            "views": 3,
-            "danmaku": 0,
-            "favorites": 0
+            "likes": 106,
+            "views": 0,
+            "shares": 13
           },
-          "author": "旅游-小岩",
+          "author": "敦煌寻漠【西北青甘环线领队】",
           "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "莫高窟门票预约攻略！到了甘肃可敦煌莫高窟的门票没约上该怎么办呢？#莫高窟 #莫高窟门票 #莫高窟应急票 #莫高窟攻略 #甘肃旅游推荐",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7529808801769098555",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.64,
+          "score": 30,
+          "engagement": {
+            "num_comments": 11,
+            "likes": 14,
+            "views": 0,
+            "shares": 2
+          },
+          "author": "眼睛想旅行",
+          "signal": "positive"
+        },
+        {
+          "platform": "douyin",
+          "title": "敦煌旅游攻略，本地人整理出来的避坑指南，一定要收藏起来#敦煌旅游攻略 #避坑攻略 #旅游推荐官 #敦煌 #莫高窟",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7641441169264965234",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.64,
+          "score": 29,
+          "engagement": {
+            "num_comments": 1,
+            "likes": 15,
+            "views": 0,
+            "shares": 13
+          },
+          "author": "大飞的旅游攻略",
+          "signal": "positive"
         }
       ],
-      "sourceErrors": {}
+      "sourceErrors": {
+        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
+      }
     },
     "mingshaMountain": {
       "label": "鸣沙山月牙泉",
@@ -1742,93 +1854,256 @@
     "dunhuang": {
       "label": "敦煌",
       "status": "ok",
-      "evidenceCount": 3,
+      "evidenceCount": 12,
       "evidence": [
         {
-          "platform": "xiaohongshu",
-          "title": "第一批「靖远尕六美味羊羔肉」的受害者已出現",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6992c396000000001a02d716",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.38,
-          "score": 37,
+          "platform": "zhihu",
+          "title": "第一次去敦煌怎么玩？3天2晚纯干货攻略（行程+住宿+避坑全整理）",
+          "snippet": "2、本地必吃美食 敦煌西北特色美食风味独特，招牌菜品有驴肉黄面、胡羊焖饼、红柳烤羊肉、手抓羊羔肉；特色小吃包含羊肉合汁、沙葱牛肉饼、酿皮、泡儿油糕",
+          "url": "https://zhuanlan.zhihu.com/p/2062564500260262171",
+          "date": "2026-07-20",
+          "dateConfidence": "high",
+          "relevance": 0.74,
+          "score": 55,
           "engagement": {
-            "num_comments": 163,
-            "likes": 50,
-            "shares": 0,
-            "collects": 48
+            "num_comments": 0,
+            "collects": 0,
+            "voteups": 0
           },
-          "author": "BANGzzz",
-          "signal": "caution"
+          "author": "知乎用户SMrc5L",
+          "signal": "positive"
         },
         {
-          "platform": "xiaohongshu",
-          "title": "排队5分钟，我吃到了敦煌顶流【靖远尕六】",
+          "platform": "douyin",
+          "title": "打卡敦煌美食之驴肉黄面，避雷还是推荐？ #敦煌 #敦煌美食 #敦煌美食打卡 #旅行推荐官 #旅行vlog",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/68f4f6c300000000040283d0",
+          "url": "https://www.douyin.com/video/7572183691523312923",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.31,
-          "score": 21,
+          "relevance": 0.74,
+          "score": 40,
           "engagement": {
-            "num_comments": 2,
-            "likes": 15,
-            "shares": 0,
-            "collects": 18
+            "num_comments": 77,
+            "likes": 106,
+            "views": 0,
+            "shares": 69
           },
-          "author": "火锅续命",
+          "author": "管管酱的旅行日记",
+          "signal": "mixed"
+        },
+        {
+          "platform": "douyin",
+          "title": "敦煌特色美食 ——驴肉黄面 馋到你了吗##分享美食分享快乐😋😋 #地方特色美食文化",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7226285646812286245",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.57,
+          "score": 30,
+          "engagement": {
+            "num_comments": 28,
+            "likes": 106,
+            "views": 0,
+            "shares": 62
+          },
+          "author": "掌上敦煌",
           "signal": "neutral"
         },
         {
-          "platform": "xiaohongshu",
-          "title": "不愧是敦煌排队王🐫 尕六靖远羔羊肉",
+          "platform": "douyin",
+          "title": "来碗敦煌的驴肉臊子黄面#妈呀太香了 #陕西吃啥 #美食推荐官 #美食分享官 #美食趣胃计划 @DOU+小助手",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/69d65ce9000000001a026d45",
+          "url": "https://www.douyin.com/video/6936020778680962311",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.3,
-          "score": 35,
+          "relevance": 0.56,
+          "score": 41,
           "engagement": {
-            "num_comments": 27,
-            "likes": 180,
-            "shares": 0,
-            "collects": 146
+            "num_comments": 650,
+            "likes": 6032,
+            "views": 0,
+            "shares": 388
           },
-          "author": "好玩和有趣",
+          "author": "吃住玩大总管",
+          "signal": "positive"
+        },
+        {
+          "platform": "douyin",
+          "title": "天上龙肉，地上驴肉，敦煌本地人爱吃的驴肉黄面，味道怎样呢？#本地人爱吃的店 #抖音美食推荐官 #美食推荐 #西北美食 #地方特色美食 #敦煌美食 #驴肉黄面",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7052907119208647967",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 40,
+          "engagement": {
+            "num_comments": 576,
+            "likes": 3501,
+            "views": 0,
+            "shares": 477
+          },
+          "author": "大眼吃遍天",
+          "signal": "positive"
+        },
+        {
+          "platform": "douyin",
+          "title": "愿君如松柏，岁寒亦长青#同城美食 #敦煌 ##驴肉黄面",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7516883640397614393",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 28,
+          "engagement": {
+            "num_comments": 21,
+            "likes": 99,
+            "views": 0,
+            "shares": 5
+          },
+          "author": "敦煌市顺阖黄面馆官方号",
+          "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "🐑的敦煌食记 1.阿西娅西北妈妈拿手菜 2.城边边烧烤 3.舅舅家一羊两吃 4.尕古丽西域风味餐厅 5.国辉胡杨焖饼 6.石室冰室 7.达记驴肉黄面 #旅游吃啥 #吃货必去城市 #敦煌 #敦煌美食 #敦煌美食推荐",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7654099837424388710",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 27,
+          "engagement": {
+            "num_comments": 22,
+            "likes": 32,
+            "views": 0,
+            "shares": 11
+          },
+          "author": "得意🐑🐑",
+          "signal": "positive"
+        },
+        {
+          "platform": "douyin",
+          "title": "敦煌美食记 夜幕落下的沙洲夜市，藏尽敦煌地道烟火。 烤包子、驴肉黄面、沙葱牛肉饼、杏仁茶、酿皮…… 整理完整美食合集，来敦煌照着吃不踩雷，沉浸式感受西域舌尖浪漫。#敦煌美食#敦煌夜市#敦煌 #西北大环线 #自驾路线",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7654088164198860774",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 26,
+          "engagement": {
+            "num_comments": 12,
+            "likes": 35,
+            "views": 0,
+            "shares": 6
+          },
+          "author": "白白漫行记『在新疆",
+          "signal": "mixed"
+        },
+        {
+          "platform": "douyin",
+          "title": "在敦煌，怎么能不吃一顿地道的当地美食！#敦煌美食 #驴肉黄面 #手抓羊肉 #烤串 #烧烤",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7528698106206063898",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 25,
+          "engagement": {
+            "num_comments": 10,
+            "likes": 52,
+            "views": 0,
+            "shares": 1
+          },
+          "author": "喂嘴咆～张多肉",
+          "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "来敦煌不知道吃啥，收藏这条视频就够了 来敦煌千万别乱吃饭，本地人常去的馆子在。 逛完鸣沙山一定要来这家店，性价比真的绝了 #敦煌西北菜 #胡羊焖饼 #驴肉黄面 #河西美食",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7657536185934598278",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 23,
+          "engagement": {
+            "num_comments": 2,
+            "likes": 15,
+            "views": 0,
+            "shares": 4
+          },
+          "author": "敦煌八菜一汤私房菜",
+          "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "敦煌美食测评来咯 吃了敦煌夜市和小红书推荐比较多的店，大部分都没有踩雷。 #吃喝玩乐分享计划 #敦煌夜市 #敦煌美食 #李广杏 #驴肉黄面",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7664974197710182011",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 22,
+          "engagement": {
+            "num_comments": 6,
+            "likes": 6,
+            "views": 0,
+            "shares": 0
+          },
+          "author": "走马观花花世界",
+          "signal": "mixed"
+        },
+        {
+          "platform": "douyin",
+          "title": "敦煌魏记驴肉黄面胡杨焖饼店 #让人拒绝不了的美食 #好吃到停不下来的菜 #接地气的小吃",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7643347441357823866",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 20,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 8,
+            "views": 0,
+            "shares": 0
+          },
+          "author": "敦煌魏记驴肉黄面胡羊焖饼82号",
           "signal": "positive"
         }
       ],
-      "sourceErrors": {},
+      "sourceErrors": {
+        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
+      },
       "restaurants": [
         {
-          "name": "靖远尕六美味羊羔肉",
-          "specialty": "羊羔肉",
-          "note": "热门时段可能排队，先取号再决定是否等待。",
-          "verdict": "caution",
+          "name": "达记驴肉黄面",
+          "specialty": "驴肉黄面",
+          "note": "驴肉和黄面可能分开计价，点单前确认套餐内容。",
+          "verdict": "candidate",
           "sources": [
             {
-              "platform": "xiaohongshu",
-              "title": "第一批「靖远尕六美味羊羔肉」的受害者已出現",
+              "platform": "douyin",
+              "title": "🐑的敦煌食记 1.阿西娅西北妈妈拿手菜 2.城边边烧烤 3.舅舅家一羊两吃 4.尕古丽西域风味餐厅 5.国辉胡杨焖饼 6.石室冰室 7.达记驴肉黄面 #旅游吃啥 #吃货必去城市 #敦煌 #敦煌美食 #敦煌美食推荐",
               "snippet": "",
-              "url": "https://www.xiaohongshu.com/explore/6992c396000000001a02d716",
+              "url": "https://www.douyin.com/video/7654099837424388710",
               "date": null,
               "dateConfidence": "low",
-              "relevance": 0.38,
-              "score": 37,
+              "relevance": 0.56,
+              "score": 27,
               "engagement": {
-                "num_comments": 163,
-                "likes": 50,
-                "shares": 0,
-                "collects": 48
+                "num_comments": 22,
+                "likes": 32,
+                "views": 0,
+                "shares": 11
               },
-              "author": "BANGzzz",
-              "signal": "caution"
+              "author": "得意🐑🐑",
+              "signal": "positive"
             }
           ]
         }
       ],
-      "lastRestaurantSuccessfulAt": "2026-07-22T15:52:54.711810+00:00"
+      "lastRestaurantSuccessfulAt": "2026-07-23T04:18:24.060807+00:00"
     },
     "zhangye": {
       "label": "张掖",
@@ -2066,7 +2341,7 @@
   },
   "collection": {
     "python": "3.11.15",
-    "pythonPrefix": "/usr/share/miniconda/envs/travel-data",
+    "pythonPrefix": "D:\\miniconda3\\envs\\py311",
     "browserDisabled": false,
     "optionalCredentialsEnabled": true,
     "diagnose": {
@@ -2136,9 +2411,12 @@
       "crawlerEngine": {
         "playwright_available": true,
         "cached_logins": [
-          "xiaohongshu"
+          "bilibili",
+          "douyin",
+          "xiaohongshu",
+          "zhihu"
         ],
-        "cookie_dir": "/home/runner/.config/last30days-cn/browser_cookies",
+        "cookie_dir": "C:\\Users\\Lumos\\.config\\last30days-cn\\browser_cookies",
         "browser": {
           "mode": "managed",
           "path": null,
@@ -2252,23 +2530,6 @@
         "exitCode": 0
       },
       {
-        "key": "mogaoCaves",
-        "label": "莫高窟",
-        "group": "attraction",
-        "topic": "莫高窟 8月 官方预约 A类票 参观 攻略 避坑",
-        "sources": [
-          "xiaohongshu",
-          "douyin",
-          "bilibili",
-          "zhihu"
-        ],
-        "range": {
-          "from": "2026-06-22",
-          "to": "2026-07-22"
-        },
-        "exitCode": 0
-      },
-      {
         "key": "mingshaMountain",
         "label": "鸣沙山月牙泉",
         "group": "attraction",
@@ -2365,21 +2626,6 @@
         "exitCode": 0
       },
       {
-        "key": "dunhuang",
-        "label": "敦煌",
-        "group": "food",
-        "topic": "敦煌 达记驴肉黄面 靖远尕六美味羊羔肉 夏家合汁 推荐 避雷",
-        "sources": [
-          "xiaohongshu",
-          "zhihu"
-        ],
-        "range": {
-          "from": "2026-06-22",
-          "to": "2026-07-22"
-        },
-        "exitCode": 0
-      },
-      {
         "key": "zhangye",
         "label": "张掖",
         "group": "food",
@@ -2408,936 +2654,41 @@
           "to": "2026-07-22"
         },
         "exitCode": 0
+      },
+      {
+        "key": "mogaoCaves",
+        "label": "莫高窟",
+        "group": "attraction",
+        "topic": "莫高窟 攻略 预约 避坑",
+        "sources": [
+          "xiaohongshu",
+          "douyin",
+          "bilibili",
+          "zhihu"
+        ],
+        "range": {
+          "from": "2026-06-23",
+          "to": "2026-07-23"
+        },
+        "exitCode": 0
+      },
+      {
+        "key": "dunhuang",
+        "label": "敦煌",
+        "group": "food",
+        "topic": "敦煌 美食 驴肉黄面 羊羔肉 推荐 避雷",
+        "sources": [
+          "xiaohongshu",
+          "douyin",
+          "zhihu"
+        ],
+        "range": {
+          "from": "2026-06-23",
+          "to": "2026-07-23"
+        },
+        "exitCode": 0
       }
     ],
-    "failures": []
-  },
-  "flyai": {
-    "status": "ok",
-    "generatedAt": "2026-07-22T15:58:08.963Z",
-    "expiresAt": "2026-07-24T15:58:08.963Z",
-    "lastSuccessfulAt": "2026-07-22T15:58:08.963Z",
-    "mode": "api-enhanced",
-    "skill": {
-      "name": "flyai",
-      "repository": "https://github.com/alibaba-flyai/flyai-skill",
-      "cliPackage": "@fly-ai/flyai-cli",
-      "cliVersion": "1.0.16"
-    },
-    "flights": {
-      "status": "ok",
-      "queryWindow": {
-        "outbound": "2026-08-01—08-04",
-        "return": "2026-08-04—08-11"
-      },
-      "priceUnit": "每位成人单程",
-      "priceRange": {
-        "min": 500,
-        "max": 920
-      },
-      "routes": [
-        {
-          "id": "shenyang-xining-outbound",
-          "direction": "去程",
-          "origin": "沈阳",
-          "destination": "西宁",
-          "depDateStart": "2026-08-01",
-          "depDateEnd": "2026-08-04",
-          "status": "ok",
-          "bestPrice": 920,
-          "selectionMode": "fallback-airlines",
-          "offers": [
-            {
-              "id": "shenyang-xining-outbound-2026-08-03 18:15:00-DR6597",
-              "routeId": "shenyang-xining-outbound",
-              "direction": "去程",
-              "origin": "沈阳",
-              "destination": "西宁",
-              "departureAirport": "桃仙国际机场",
-              "arrivalAirport": "曹家堡机场",
-              "departureAt": "2026-08-03 18:15:00",
-              "arrivalAt": "2026-08-03 21:25:00",
-              "flightNumbers": [
-                "DR6597"
-              ],
-              "airlines": [
-                "苏南瑞丽航空"
-              ],
-              "seatClass": "经济舱",
-              "direct": true,
-              "stops": 0,
-              "duration": "190",
-              "durationMinutes": 190,
-              "preferredAirline": false,
-              "price": 920,
-              "jumpUrl": "https://a.feizhu.com/0tsA9h"
-            },
-            {
-              "id": "shenyang-xining-outbound-2026-08-02 18:15:00-DR6597",
-              "routeId": "shenyang-xining-outbound",
-              "direction": "去程",
-              "origin": "沈阳",
-              "destination": "西宁",
-              "departureAirport": "桃仙国际机场",
-              "arrivalAirport": "曹家堡机场",
-              "departureAt": "2026-08-02 18:15:00",
-              "arrivalAt": "2026-08-02 21:25:00",
-              "flightNumbers": [
-                "DR6597"
-              ],
-              "airlines": [
-                "苏南瑞丽航空"
-              ],
-              "seatClass": "经济舱",
-              "direct": true,
-              "stops": 0,
-              "duration": "190",
-              "durationMinutes": 190,
-              "preferredAirline": false,
-              "price": 1040,
-              "jumpUrl": "https://a.feizhu.com/2dtiQl"
-            }
-          ],
-          "cliExitCode": 0
-        },
-        {
-          "id": "shenyang-lanzhou-outbound",
-          "direction": "去程",
-          "origin": "沈阳",
-          "destination": "兰州",
-          "depDateStart": "2026-08-01",
-          "depDateEnd": "2026-08-04",
-          "status": "ok",
-          "bestPrice": 630,
-          "selectionMode": "preferred-airlines",
-          "offers": [
-            {
-              "id": "shenyang-lanzhou-outbound-2026-08-04 16:25:00-CZ5997",
-              "routeId": "shenyang-lanzhou-outbound",
-              "direction": "去程",
-              "origin": "沈阳",
-              "destination": "兰州",
-              "departureAirport": "桃仙国际机场",
-              "arrivalAirport": "中川机场",
-              "departureAt": "2026-08-04 16:25:00",
-              "arrivalAt": "2026-08-04 19:45:00",
-              "flightNumbers": [
-                "CZ5997"
-              ],
-              "airlines": [
-                "南航"
-              ],
-              "seatClass": "经济舱",
-              "direct": true,
-              "stops": 0,
-              "duration": "200",
-              "durationMinutes": 200,
-              "preferredAirline": true,
-              "price": 630,
-              "jumpUrl": "https://a.feizhu.com/07jX0l"
-            },
-            {
-              "id": "shenyang-lanzhou-outbound-2026-08-03 16:25:00-CZ5997",
-              "routeId": "shenyang-lanzhou-outbound",
-              "direction": "去程",
-              "origin": "沈阳",
-              "destination": "兰州",
-              "departureAirport": "桃仙国际机场",
-              "arrivalAirport": "中川机场",
-              "departureAt": "2026-08-03 16:25:00",
-              "arrivalAt": "2026-08-03 19:45:00",
-              "flightNumbers": [
-                "CZ5997"
-              ],
-              "airlines": [
-                "南航"
-              ],
-              "seatClass": "经济舱",
-              "direct": true,
-              "stops": 0,
-              "duration": "200",
-              "durationMinutes": 200,
-              "preferredAirline": true,
-              "price": 650,
-              "jumpUrl": "https://a.feizhu.com/4GONYi"
-            },
-            {
-              "id": "shenyang-lanzhou-outbound-2026-08-04 08:30:00-CZ5995",
-              "routeId": "shenyang-lanzhou-outbound",
-              "direction": "去程",
-              "origin": "沈阳",
-              "destination": "兰州",
-              "departureAirport": "桃仙国际机场",
-              "arrivalAirport": "中川机场",
-              "departureAt": "2026-08-04 08:30:00",
-              "arrivalAt": "2026-08-04 11:45:00",
-              "flightNumbers": [
-                "CZ5995"
-              ],
-              "airlines": [
-                "南航"
-              ],
-              "seatClass": "经济舱",
-              "direct": true,
-              "stops": 0,
-              "duration": "195",
-              "durationMinutes": 195,
-              "preferredAirline": true,
-              "price": 700,
-              "jumpUrl": "https://a.feizhu.com/4ABSN3"
-            }
-          ],
-          "cliExitCode": 0
-        },
-        {
-          "id": "xining-shenyang-return",
-          "direction": "返程",
-          "origin": "西宁",
-          "destination": "沈阳",
-          "depDateStart": "2026-08-04",
-          "depDateEnd": "2026-08-11",
-          "status": "ok",
-          "bestPrice": 810,
-          "selectionMode": "fallback-airlines",
-          "offers": [
-            {
-              "id": "xining-shenyang-return-2026-08-05 22:10:00-DR6598",
-              "routeId": "xining-shenyang-return",
-              "direction": "返程",
-              "origin": "西宁",
-              "destination": "沈阳",
-              "departureAirport": "曹家堡机场",
-              "arrivalAirport": "桃仙国际机场",
-              "departureAt": "2026-08-05 22:10:00",
-              "arrivalAt": "2026-08-06 00:50:00",
-              "flightNumbers": [
-                "DR6598"
-              ],
-              "airlines": [
-                "苏南瑞丽航空"
-              ],
-              "seatClass": "经济舱",
-              "direct": true,
-              "stops": 0,
-              "duration": "160",
-              "durationMinutes": 160,
-              "preferredAirline": false,
-              "price": 810,
-              "jumpUrl": "https://a.feizhu.com/0sBJv5"
-            },
-            {
-              "id": "xining-shenyang-return-2026-08-07 22:10:00-DR6598",
-              "routeId": "xining-shenyang-return",
-              "direction": "返程",
-              "origin": "西宁",
-              "destination": "沈阳",
-              "departureAirport": "曹家堡机场",
-              "arrivalAirport": "桃仙国际机场",
-              "departureAt": "2026-08-07 22:10:00",
-              "arrivalAt": "2026-08-08 00:50:00",
-              "flightNumbers": [
-                "DR6598"
-              ],
-              "airlines": [
-                "苏南瑞丽航空"
-              ],
-              "seatClass": "经济舱",
-              "direct": true,
-              "stops": 0,
-              "duration": "160",
-              "durationMinutes": 160,
-              "preferredAirline": false,
-              "price": 1160,
-              "jumpUrl": "https://a.feizhu.com/06lDQT"
-            },
-            {
-              "id": "xining-shenyang-return-2026-08-09 22:10:00-DR6598",
-              "routeId": "xining-shenyang-return",
-              "direction": "返程",
-              "origin": "西宁",
-              "destination": "沈阳",
-              "departureAirport": "曹家堡机场",
-              "arrivalAirport": "桃仙国际机场",
-              "departureAt": "2026-08-09 22:10:00",
-              "arrivalAt": "2026-08-10 00:50:00",
-              "flightNumbers": [
-                "DR6598"
-              ],
-              "airlines": [
-                "苏南瑞丽航空"
-              ],
-              "seatClass": "经济舱",
-              "direct": true,
-              "stops": 0,
-              "duration": "160",
-              "durationMinutes": 160,
-              "preferredAirline": false,
-              "price": 1160,
-              "jumpUrl": "https://a.feizhu.com/3Bn7Ap"
-            }
-          ],
-          "cliExitCode": 0
-        },
-        {
-          "id": "lanzhou-shenyang-return",
-          "direction": "返程",
-          "origin": "兰州",
-          "destination": "沈阳",
-          "depDateStart": "2026-08-04",
-          "depDateEnd": "2026-08-11",
-          "status": "ok",
-          "bestPrice": 500,
-          "selectionMode": "preferred-airlines",
-          "offers": [
-            {
-              "id": "lanzhou-shenyang-return-2026-08-05 20:45:00-CZ5998",
-              "routeId": "lanzhou-shenyang-return",
-              "direction": "返程",
-              "origin": "兰州",
-              "destination": "沈阳",
-              "departureAirport": "中川机场",
-              "arrivalAirport": "桃仙国际机场",
-              "departureAt": "2026-08-05 20:45:00",
-              "arrivalAt": "2026-08-05 23:30:00",
-              "flightNumbers": [
-                "CZ5998"
-              ],
-              "airlines": [
-                "南航"
-              ],
-              "seatClass": "经济舱",
-              "direct": true,
-              "stops": 0,
-              "duration": "165",
-              "durationMinutes": 165,
-              "preferredAirline": true,
-              "price": 500,
-              "jumpUrl": "https://a.feizhu.com/4Ptzts"
-            },
-            {
-              "id": "lanzhou-shenyang-return-2026-08-11 08:20:00-MU9855",
-              "routeId": "lanzhou-shenyang-return",
-              "direction": "返程",
-              "origin": "兰州",
-              "destination": "沈阳",
-              "departureAirport": "中川机场",
-              "arrivalAirport": "桃仙国际机场",
-              "departureAt": "2026-08-11 08:20:00",
-              "arrivalAt": "2026-08-11 11:15:00",
-              "flightNumbers": [
-                "MU9855"
-              ],
-              "airlines": [
-                "东航"
-              ],
-              "seatClass": "经济舱",
-              "direct": true,
-              "stops": 0,
-              "duration": "175",
-              "durationMinutes": 175,
-              "preferredAirline": true,
-              "price": 500,
-              "jumpUrl": "https://a.feizhu.com/1CvFr2"
-            },
-            {
-              "id": "lanzhou-shenyang-return-2026-08-04 21:00:00-CZ5998",
-              "routeId": "lanzhou-shenyang-return",
-              "direction": "返程",
-              "origin": "兰州",
-              "destination": "沈阳",
-              "departureAirport": "中川机场",
-              "arrivalAirport": "桃仙国际机场",
-              "departureAt": "2026-08-04 21:00:00",
-              "arrivalAt": "2026-08-04 23:30:00",
-              "flightNumbers": [
-                "CZ5998"
-              ],
-              "airlines": [
-                "南航"
-              ],
-              "seatClass": "经济舱",
-              "direct": true,
-              "stops": 0,
-              "duration": "150",
-              "durationMinutes": 150,
-              "preferredAirline": true,
-              "price": 510,
-              "jumpUrl": "https://a.feizhu.com/1rV0LF"
-            }
-          ],
-          "cliExitCode": 0
-        }
-      ],
-      "featured": [
-        {
-          "id": "shenyang-xining-outbound-2026-08-03 18:15:00-DR6597",
-          "routeId": "shenyang-xining-outbound",
-          "direction": "去程",
-          "origin": "沈阳",
-          "destination": "西宁",
-          "departureAirport": "桃仙国际机场",
-          "arrivalAirport": "曹家堡机场",
-          "departureAt": "2026-08-03 18:15:00",
-          "arrivalAt": "2026-08-03 21:25:00",
-          "flightNumbers": [
-            "DR6597"
-          ],
-          "airlines": [
-            "苏南瑞丽航空"
-          ],
-          "seatClass": "经济舱",
-          "direct": true,
-          "stops": 0,
-          "duration": "190",
-          "durationMinutes": 190,
-          "preferredAirline": false,
-          "price": 920,
-          "jumpUrl": "https://a.feizhu.com/0tsA9h"
-        },
-        {
-          "id": "shenyang-lanzhou-outbound-2026-08-04 16:25:00-CZ5997",
-          "routeId": "shenyang-lanzhou-outbound",
-          "direction": "去程",
-          "origin": "沈阳",
-          "destination": "兰州",
-          "departureAirport": "桃仙国际机场",
-          "arrivalAirport": "中川机场",
-          "departureAt": "2026-08-04 16:25:00",
-          "arrivalAt": "2026-08-04 19:45:00",
-          "flightNumbers": [
-            "CZ5997"
-          ],
-          "airlines": [
-            "南航"
-          ],
-          "seatClass": "经济舱",
-          "direct": true,
-          "stops": 0,
-          "duration": "200",
-          "durationMinutes": 200,
-          "preferredAirline": true,
-          "price": 630,
-          "jumpUrl": "https://a.feizhu.com/07jX0l"
-        },
-        {
-          "id": "xining-shenyang-return-2026-08-05 22:10:00-DR6598",
-          "routeId": "xining-shenyang-return",
-          "direction": "返程",
-          "origin": "西宁",
-          "destination": "沈阳",
-          "departureAirport": "曹家堡机场",
-          "arrivalAirport": "桃仙国际机场",
-          "departureAt": "2026-08-05 22:10:00",
-          "arrivalAt": "2026-08-06 00:50:00",
-          "flightNumbers": [
-            "DR6598"
-          ],
-          "airlines": [
-            "苏南瑞丽航空"
-          ],
-          "seatClass": "经济舱",
-          "direct": true,
-          "stops": 0,
-          "duration": "160",
-          "durationMinutes": 160,
-          "preferredAirline": false,
-          "price": 810,
-          "jumpUrl": "https://a.feizhu.com/0sBJv5"
-        },
-        {
-          "id": "lanzhou-shenyang-return-2026-08-05 20:45:00-CZ5998",
-          "routeId": "lanzhou-shenyang-return",
-          "direction": "返程",
-          "origin": "兰州",
-          "destination": "沈阳",
-          "departureAirport": "中川机场",
-          "arrivalAirport": "桃仙国际机场",
-          "departureAt": "2026-08-05 20:45:00",
-          "arrivalAt": "2026-08-05 23:30:00",
-          "flightNumbers": [
-            "CZ5998"
-          ],
-          "airlines": [
-            "南航"
-          ],
-          "seatClass": "经济舱",
-          "direct": true,
-          "stops": 0,
-          "duration": "165",
-          "durationMinutes": 165,
-          "preferredAirline": true,
-          "price": 500,
-          "jumpUrl": "https://a.feizhu.com/4Ptzts"
-        }
-      ],
-      "freshQueries": 4,
-      "totalQueries": 4
-    },
-    "hotels": {
-      "status": "ok",
-      "priceUnit": "两间房每晚合计",
-      "singleRoomNightRange": {
-        "min": 329,
-        "max": 619
-      },
-      "priceRange": {
-        "min": 658,
-        "max": 1238
-      },
-      "sevenDayTwoRoomEstimate": 5614,
-      "roomsRequested": 2,
-      "roomTypeRequested": "双床房",
-      "inventoryConfirmed": false,
-      "stays": [
-        {
-          "id": "xining-0801",
-          "city": "西宁",
-          "destName": "西宁",
-          "checkIn": "2026-08-01",
-          "checkOut": "2026-08-02",
-          "nights": 1,
-          "status": "ok",
-          "offers": [
-            {
-              "id": "xining-0801-58816074",
-              "stayId": "xining-0801",
-              "city": "西宁",
-              "checkIn": "2026-08-01",
-              "checkOut": "2026-08-02",
-              "nights": 1,
-              "name": "Holiday Inn 西宁温泉假日酒店",
-              "pricePerRoomNight": 488,
-              "twoRoomsPerNight": 976,
-              "twoRoomStayTotal": 976,
-              "score": "",
-              "scoreDesc": "",
-              "star": "豪华型",
-              "address": "西宁市城中区麟河路31号",
-              "nearby": "近西宁夏都博汇温泉水乐园",
-              "mainPic": "https://img.alicdn.com/imgextra/i3/6000000004603/O1CN01KPRSHJ1jsDilqcEra_!!6000000004603-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/3EVlTG"
-            },
-            {
-              "id": "xining-0801-64052027",
-              "stayId": "xining-0801",
-              "city": "西宁",
-              "checkIn": "2026-08-01",
-              "checkOut": "2026-08-02",
-              "nights": 1,
-              "name": "汉庭优佳西宁八一路民航大厦酒店",
-              "pricePerRoomNight": 414,
-              "twoRoomsPerNight": 828,
-              "twoRoomStayTotal": 828,
-              "score": "",
-              "scoreDesc": "",
-              "star": "舒适型",
-              "address": "八一西路22号",
-              "nearby": "近西宁站",
-              "mainPic": "https://img.alicdn.com/imgextra/i3/6000000005172/O1CN01NFNHvC1o4paVPl5BI_!!6000000005172-2-hotel.png",
-              "detailUrl": "https://a.feizhu.com/2cHJVx"
-            },
-            {
-              "id": "xining-0801-63316090",
-              "stayId": "xining-0801",
-              "city": "西宁",
-              "checkIn": "2026-08-01",
-              "checkOut": "2026-08-02",
-              "nights": 1,
-              "name": "西宁海湖新区美居酒店",
-              "pricePerRoomNight": 721,
-              "twoRoomsPerNight": 1442,
-              "twoRoomStayTotal": 1442,
-              "score": "",
-              "scoreDesc": "",
-              "star": "高档型",
-              "address": "五四西路66号",
-              "nearby": "近西宁万达广场",
-              "mainPic": "https://img.alicdn.com/imgextra/i4/6000000000486/O1CN015vGrpx1FSd9xS3xOV_!!6000000000486-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/0KrGVs"
-            }
-          ],
-          "cliExitCode": 0
-        },
-        {
-          "id": "chaka-0802",
-          "city": "茶卡",
-          "destName": "乌兰县",
-          "poiName": "茶卡盐湖",
-          "checkIn": "2026-08-02",
-          "checkOut": "2026-08-03",
-          "nights": 1,
-          "status": "ok",
-          "offers": [
-            {
-              "id": "chaka-0802-57094150",
-              "stayId": "chaka-0802",
-              "city": "茶卡",
-              "checkIn": "2026-08-02",
-              "checkOut": "2026-08-03",
-              "nights": 1,
-              "name": "晴朗客栈（茶卡店）",
-              "pricePerRoomNight": 329,
-              "twoRoomsPerNight": 658,
-              "twoRoomStayTotal": 658,
-              "score": "",
-              "scoreDesc": "",
-              "star": "经济型",
-              "address": "茶卡镇茶卡新村177号",
-              "nearby": "近茶卡汽车站",
-              "mainPic": "https://img.alicdn.com/imgextra/i3/6000000003456/O1CN014OHuNc1bOtwVrVa4y_!!6000000003456-2-hotel.png",
-              "detailUrl": "https://a.feizhu.com/37I2Dn"
-            },
-            {
-              "id": "chaka-0802-57357699",
-              "stayId": "chaka-0802",
-              "city": "茶卡",
-              "checkIn": "2026-08-02",
-              "checkOut": "2026-08-03",
-              "nights": 1,
-              "name": "歌斐民宿（茶卡店）",
-              "pricePerRoomNight": 219,
-              "twoRoomsPerNight": 438,
-              "twoRoomStayTotal": 438,
-              "score": "",
-              "scoreDesc": "",
-              "star": "经济型",
-              "address": "乌兰茶卡镇茶卡新村18号",
-              "nearby": "近茶卡汽车站",
-              "mainPic": "https://img.alicdn.com/imgextra/i1/6000000001884/O1CN01B5rr7A1PmvGq1oN7q_!!6000000001884-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/0hivHt"
-            },
-            {
-              "id": "chaka-0802-80219011",
-              "stayId": "chaka-0802",
-              "city": "茶卡",
-              "checkIn": "2026-08-02",
-              "checkOut": "2026-08-03",
-              "nights": 1,
-              "name": "茶卡泊心云舍",
-              "pricePerRoomNight": 341,
-              "twoRoomsPerNight": 682,
-              "twoRoomStayTotal": 682,
-              "score": "",
-              "scoreDesc": "",
-              "star": "经济型",
-              "address": "乌兰县茶卡镇茶卡新村75号",
-              "nearby": "近茶卡汽车站",
-              "mainPic": "https://img.alicdn.com/imgextra/i3/6000000002700/O1CN016lDEI51VoeM2J5aRb_!!6000000002700-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/3k9mtb"
-            }
-          ],
-          "cliExitCode": 0
-        },
-        {
-          "id": "dachaidan-0803",
-          "city": "大柴旦",
-          "destName": "海西蒙古族藏族自治州",
-          "keyWords": "大柴旦",
-          "checkIn": "2026-08-03",
-          "checkOut": "2026-08-04",
-          "nights": 1,
-          "status": "ok",
-          "offers": [
-            {
-              "id": "dachaidan-0803-62148101",
-              "stayId": "dachaidan-0803",
-              "city": "大柴旦",
-              "checkIn": "2026-08-03",
-              "checkOut": "2026-08-04",
-              "nights": 1,
-              "name": "维也纳酒店（5.0青海大柴旦店）",
-              "pricePerRoomNight": 619,
-              "twoRoomsPerNight": 1238,
-              "twoRoomStayTotal": 1238,
-              "score": "",
-              "scoreDesc": "",
-              "star": "舒适型",
-              "address": "青海省海西蒙古族藏族自治州大柴旦行委大柴旦镇五彩街",
-              "nearby": "近大柴旦行委柴旦镇",
-              "mainPic": "https://img.alicdn.com/imgextra/i2/O1CN01VKfP0T1k0vl7ZyCaC_!!4611686018427384334-0-fliggy_content_upload_image.jpg",
-              "detailUrl": "https://a.feizhu.com/3jiIdc"
-            },
-            {
-              "id": "dachaidan-0803-72113571",
-              "stayId": "dachaidan-0803",
-              "city": "大柴旦",
-              "checkIn": "2026-08-03",
-              "checkOut": "2026-08-04",
-              "nights": 1,
-              "name": "超越国际大酒店",
-              "pricePerRoomNight": 950,
-              "twoRoomsPerNight": 1900,
-              "twoRoomStayTotal": 1900,
-              "score": "",
-              "scoreDesc": "",
-              "star": "舒适型",
-              "address": "大柴旦人民路与温泉路交叉口中石化西侧50米",
-              "nearby": "近大柴旦行委柴旦镇",
-              "mainPic": "https://img.alicdn.com/imgextra/i2/O1CN01uMg2td289Dhpt4Rjr_!!4611686018427387601-0-fliggy_content_upload_image.jpg",
-              "detailUrl": "https://a.feizhu.com/2OG8Uh"
-            },
-            {
-              "id": "dachaidan-0803-72095413",
-              "stayId": "dachaidan-0803",
-              "city": "大柴旦",
-              "checkIn": "2026-08-03",
-              "checkOut": "2026-08-04",
-              "nights": 1,
-              "name": "海西大柴旦守信凤之韵大酒店",
-              "pricePerRoomNight": 920,
-              "twoRoomsPerNight": 1840,
-              "twoRoomStayTotal": 1840,
-              "score": "",
-              "scoreDesc": "",
-              "star": "高档型",
-              "address": "大柴旦行政委员会直辖翡翠步行街人民东路16号",
-              "nearby": "近大柴旦行委柴旦镇",
-              "mainPic": "https://img.alicdn.com/imgextra/i2/6000000002196/O1CN01LI60aK1S5oXcqvWg0_!!6000000002196-0-fliggyimage.jpg",
-              "detailUrl": "https://a.feizhu.com/1WNWZC"
-            }
-          ],
-          "cliExitCode": 0
-        },
-        {
-          "id": "dunhuang-0804",
-          "city": "敦煌",
-          "destName": "敦煌市",
-          "checkIn": "2026-08-04",
-          "checkOut": "2026-08-06",
-          "nights": 2,
-          "status": "ok",
-          "offers": [
-            {
-              "id": "dunhuang-0804-57450030",
-              "stayId": "dunhuang-0804",
-              "city": "敦煌",
-              "checkIn": "2026-08-04",
-              "checkOut": "2026-08-06",
-              "nights": 2,
-              "name": "敦煌山堤美宿(鸣沙山月牙泉店)",
-              "pricePerRoomNight": 438,
-              "twoRoomsPerNight": 876,
-              "twoRoomStayTotal": 1752,
-              "score": "",
-              "scoreDesc": "",
-              "star": "舒适型",
-              "address": "敦煌市月牙泉镇杨家桥乡月牙泉村三组2号",
-              "nearby": "近敦煌鸣沙山月牙泉景区",
-              "mainPic": "https://img.alicdn.com/imgextra/i1/6000000005854/O1CN01JubPXu1t7BepdqmOp_!!6000000005854-2-hotel.png",
-              "detailUrl": "https://a.feizhu.com/3xUtNi"
-            },
-            {
-              "id": "dunhuang-0804-51194180",
-              "stayId": "dunhuang-0804",
-              "city": "敦煌",
-              "checkIn": "2026-08-04",
-              "checkOut": "2026-08-06",
-              "nights": 2,
-              "name": "敦煌漠上花主题客栈(敦煌月牙泉店)",
-              "pricePerRoomNight": 172,
-              "twoRoomsPerNight": 344,
-              "twoRoomStayTotal": 688,
-              "score": "",
-              "scoreDesc": "",
-              "star": "经济型",
-              "address": "杨家桥雷音寺对面千年敦煌月牙泉小镇（杨家桥，近鸣山路）",
-              "nearby": "近敦煌鸣沙山月牙泉景区",
-              "mainPic": "https://img.alicdn.com/imgextra/i3/O1CN019Yn9AK1g8wDbQOrSi_!!4611686018427383810-0-fliggy_content_upload_image.jpg",
-              "detailUrl": "https://a.feizhu.com/0o5Nns"
-            },
-            {
-              "id": "dunhuang-0804-56491273",
-              "stayId": "dunhuang-0804",
-              "city": "敦煌",
-              "checkIn": "2026-08-04",
-              "checkOut": "2026-08-06",
-              "nights": 2,
-              "name": "敦煌白老大客栈(莫高窟数字中心店)",
-              "pricePerRoomNight": 155,
-              "twoRoomsPerNight": 310,
-              "twoRoomStayTotal": 620,
-              "score": "",
-              "scoreDesc": "",
-              "star": "经济型",
-              "address": "敦煌市莫高镇新墩村三组10号",
-              "nearby": "近敦煌站",
-              "mainPic": "https://img.alicdn.com/imgextra/i4/O1CN01UQXYFL1i6IzYM4ofg_!!0-alitrip.jpg",
-              "detailUrl": "https://a.feizhu.com/3HM9c4"
-            }
-          ],
-          "cliExitCode": 0
-        },
-        {
-          "id": "zhangye-0806",
-          "city": "张掖",
-          "destName": "张掖市",
-          "checkIn": "2026-08-06",
-          "checkOut": "2026-08-07",
-          "nights": 1,
-          "status": "ok",
-          "offers": [
-            {
-              "id": "zhangye-0806-58461071",
-              "stayId": "zhangye-0806",
-              "city": "张掖",
-              "checkIn": "2026-08-06",
-              "checkOut": "2026-08-07",
-              "nights": 1,
-              "name": "全季张掖西站酒店",
-              "pricePerRoomNight": 495,
-              "twoRoomsPerNight": 990,
-              "twoRoomStayTotal": 990,
-              "score": "",
-              "scoreDesc": "",
-              "star": "舒适型",
-              "address": "甘肃省张掖市甘州区高铁西站国芳商业综合体1期项目1号楼1楼",
-              "nearby": "近张掖西站",
-              "mainPic": "https://img.alicdn.com/imgextra/i3/6000000002166/O1CN01plgM0C1Rs4wLcR4M1_!!6000000002166-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/1qbKGy"
-            },
-            {
-              "id": "zhangye-0806-54674002",
-              "stayId": "zhangye-0806",
-              "city": "张掖",
-              "checkIn": "2026-08-06",
-              "checkOut": "2026-08-07",
-              "nights": 1,
-              "name": "张掖丹霞彩韵山居酒店（丹霞口文旅小镇店）",
-              "pricePerRoomNight": 168,
-              "twoRoomsPerNight": 336,
-              "twoRoomStayTotal": 336,
-              "score": "",
-              "scoreDesc": "",
-              "star": "经济型",
-              "address": "临泽丹霞国家地质公园北入口梨园新村别墅区8号楼",
-              "nearby": "近丹霞口文旅小镇",
-              "mainPic": "https://img.alicdn.com/imgextra/i3/O1CN01q88X141VVPsrLivUl_!!4611686018427382370-0-fliggy_content_upload_image.jpg",
-              "detailUrl": "https://a.feizhu.com/1lL1Rl"
-            },
-            {
-              "id": "zhangye-0806-12653015",
-              "stayId": "zhangye-0806",
-              "city": "张掖",
-              "checkIn": "2026-08-06",
-              "checkOut": "2026-08-07",
-              "nights": 1,
-              "name": "张掖丹霞鑫源宾馆",
-              "pricePerRoomNight": 134,
-              "twoRoomsPerNight": 268,
-              "twoRoomStayTotal": 268,
-              "score": "",
-              "scoreDesc": "",
-              "star": "经济型",
-              "address": "临泽--丹霞国家地质公园入口200米-，近S213国道。",
-              "nearby": "近张掖丹霞国家地质公园-七彩丹霞",
-              "mainPic": "https://img.alicdn.com/imgextra/i4/6000000002740/O1CN01YVbxOq1W6yK528eNM_!!6000000002740-2-hotel.png",
-              "detailUrl": "https://a.feizhu.com/0VzHuy"
-            }
-          ],
-          "cliExitCode": 0
-        }
-      ],
-      "featured": [
-        {
-          "id": "xining-0801-58816074",
-          "stayId": "xining-0801",
-          "city": "西宁",
-          "checkIn": "2026-08-01",
-          "checkOut": "2026-08-02",
-          "nights": 1,
-          "name": "Holiday Inn 西宁温泉假日酒店",
-          "pricePerRoomNight": 488,
-          "twoRoomsPerNight": 976,
-          "twoRoomStayTotal": 976,
-          "score": "",
-          "scoreDesc": "",
-          "star": "豪华型",
-          "address": "西宁市城中区麟河路31号",
-          "nearby": "近西宁夏都博汇温泉水乐园",
-          "mainPic": "https://img.alicdn.com/imgextra/i3/6000000004603/O1CN01KPRSHJ1jsDilqcEra_!!6000000004603-0-hotel.jpg",
-          "detailUrl": "https://a.feizhu.com/3EVlTG"
-        },
-        {
-          "id": "chaka-0802-57094150",
-          "stayId": "chaka-0802",
-          "city": "茶卡",
-          "checkIn": "2026-08-02",
-          "checkOut": "2026-08-03",
-          "nights": 1,
-          "name": "晴朗客栈（茶卡店）",
-          "pricePerRoomNight": 329,
-          "twoRoomsPerNight": 658,
-          "twoRoomStayTotal": 658,
-          "score": "",
-          "scoreDesc": "",
-          "star": "经济型",
-          "address": "茶卡镇茶卡新村177号",
-          "nearby": "近茶卡汽车站",
-          "mainPic": "https://img.alicdn.com/imgextra/i3/6000000003456/O1CN014OHuNc1bOtwVrVa4y_!!6000000003456-2-hotel.png",
-          "detailUrl": "https://a.feizhu.com/37I2Dn"
-        },
-        {
-          "id": "dachaidan-0803-62148101",
-          "stayId": "dachaidan-0803",
-          "city": "大柴旦",
-          "checkIn": "2026-08-03",
-          "checkOut": "2026-08-04",
-          "nights": 1,
-          "name": "维也纳酒店（5.0青海大柴旦店）",
-          "pricePerRoomNight": 619,
-          "twoRoomsPerNight": 1238,
-          "twoRoomStayTotal": 1238,
-          "score": "",
-          "scoreDesc": "",
-          "star": "舒适型",
-          "address": "青海省海西蒙古族藏族自治州大柴旦行委大柴旦镇五彩街",
-          "nearby": "近大柴旦行委柴旦镇",
-          "mainPic": "https://img.alicdn.com/imgextra/i2/O1CN01VKfP0T1k0vl7ZyCaC_!!4611686018427384334-0-fliggy_content_upload_image.jpg",
-          "detailUrl": "https://a.feizhu.com/3jiIdc"
-        },
-        {
-          "id": "dunhuang-0804-57450030",
-          "stayId": "dunhuang-0804",
-          "city": "敦煌",
-          "checkIn": "2026-08-04",
-          "checkOut": "2026-08-06",
-          "nights": 2,
-          "name": "敦煌山堤美宿(鸣沙山月牙泉店)",
-          "pricePerRoomNight": 438,
-          "twoRoomsPerNight": 876,
-          "twoRoomStayTotal": 1752,
-          "score": "",
-          "scoreDesc": "",
-          "star": "舒适型",
-          "address": "敦煌市月牙泉镇杨家桥乡月牙泉村三组2号",
-          "nearby": "近敦煌鸣沙山月牙泉景区",
-          "mainPic": "https://img.alicdn.com/imgextra/i1/6000000005854/O1CN01JubPXu1t7BepdqmOp_!!6000000005854-2-hotel.png",
-          "detailUrl": "https://a.feizhu.com/3xUtNi"
-        },
-        {
-          "id": "zhangye-0806-58461071",
-          "stayId": "zhangye-0806",
-          "city": "张掖",
-          "checkIn": "2026-08-06",
-          "checkOut": "2026-08-07",
-          "nights": 1,
-          "name": "全季张掖西站酒店",
-          "pricePerRoomNight": 495,
-          "twoRoomsPerNight": 990,
-          "twoRoomStayTotal": 990,
-          "score": "",
-          "scoreDesc": "",
-          "star": "舒适型",
-          "address": "甘肃省张掖市甘州区高铁西站国芳商业综合体1期项目1号楼1楼",
-          "nearby": "近张掖西站",
-          "mainPic": "https://img.alicdn.com/imgextra/i3/6000000002166/O1CN01plgM0C1Rs4wLcR4M1_!!6000000002166-0-hotel.jpg",
-          "detailUrl": "https://a.feizhu.com/1qbKGy"
-        }
-      ],
-      "freshQueries": 5,
-      "totalQueries": 5
-    },
-    "systemMessages": [],
     "failures": []
   }
 }

@@ -72,7 +72,7 @@ TRANSPORT_GUIDES = (
     TransportSpec(
         key="qinghaiLake",
         name="青海湖",
-        topic="2026 青海湖二郎剑 西宁出发 自驾 租车 停车 旅游直通车 大巴 公共交通 往返 集合点",
+        topic="青海湖 二郎剑 西宁 自驾 公交 直通车 攻略",
         required_terms=("青海湖", "二郎剑"),
         drive=ModeBaseline(
             headline="西宁 → 二郎剑约 150 km，预留 2.5–3 小时",
@@ -88,7 +88,7 @@ TRANSPORT_GUIDES = (
     TransportSpec(
         key="chakaSaltLake",
         name="茶卡盐湖",
-        topic="2026 茶卡盐湖 西宁 青海湖 出发 自驾 停车 火车 客运 大巴 公共交通 打车 景区接驳",
+        topic="茶卡盐湖 西宁 自驾 火车 大巴 打车 攻略",
         required_terms=("茶卡", "盐湖"),
         drive=ModeBaseline(
             headline="青海湖 → 茶卡约 150 km，日落前完成入住",
@@ -104,7 +104,7 @@ TRANSPORT_GUIDES = (
     TransportSpec(
         key="dachaidan",
         name="大柴旦",
-        topic="2026 大柴旦 翡翠湖 水上雅丹 自驾 路况 加油 停车 公共交通 大巴 客运 拼车 包车",
+        topic="大柴旦 翡翠湖 水上雅丹 自驾 拼车 交通攻略",
         required_terms=("大柴旦", "翡翠湖", "水上雅丹"),
         drive=ModeBaseline(
             headline="茶卡 → 大柴旦是长距离高原路段",
@@ -120,7 +120,7 @@ TRANSPORT_GUIDES = (
     TransportSpec(
         key="mogaoCaves",
         name="莫高窟",
-        topic="2026 敦煌市区 莫高窟 数字展示中心 自驾 停车 公交 直通车 打车 景区接驳 乘车点",
+        topic="莫高窟 敦煌市区 公交 直通车 打车 攻略",
         required_terms=("莫高窟", "数字展示中心"),
         drive=ModeBaseline(
             headline="按票面报到时间直达数字展示中心停车场",
@@ -136,7 +136,7 @@ TRANSPORT_GUIDES = (
     TransportSpec(
         key="mingshaMountain",
         name="鸣沙山月牙泉",
-        topic="2026 敦煌市区 鸣沙山月牙泉 自驾 停车 公交 打车 日落 散场 返程",
+        topic="鸣沙山 月牙泉 敦煌市区 公交 打车 日落返程",
         required_terms=("鸣沙山", "月牙泉"),
         drive=ModeBaseline(
             headline="敦煌市区短途前往，先确认景区停车入口",
@@ -152,7 +152,7 @@ TRANSPORT_GUIDES = (
     TransportSpec(
         key="jiayuPass",
         name="嘉峪关",
-        topic="2026 嘉峪关站 嘉峪关南站 关城景区 自驾 停车 公交 旅游专线 打车 公共交通",
+        topic="嘉峪关 关城 公交 打车 自驾 攻略",
         required_terms=("嘉峪关", "关城"),
         drive=ModeBaseline(
             headline="市区短途到关城，只保留一个核心景点",
@@ -168,7 +168,7 @@ TRANSPORT_GUIDES = (
     TransportSpec(
         key="zhangyeDanxia",
         name="张掖七彩丹霞",
-        topic="2026 张掖市区 张掖西站 七彩丹霞 北入口 自驾 停车 景区直通车 公交 打车 日落返程",
+        topic="张掖 七彩丹霞 直通车 公交 自驾 日落返程",
         required_terms=("张掖", "七彩丹霞", "丹霞"),
         drive=ModeBaseline(
             headline="市区 → 北入口约 40 km，早场更容易控时",

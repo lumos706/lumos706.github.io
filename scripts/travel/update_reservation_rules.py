@@ -48,7 +48,7 @@ class ReservationSpec:
             key=self.key,
             label=self.name,
             topic=self.topic,
-            sources="xiaohongshu,zhihu,bilibili,baidu",
+            sources="xiaohongshu,douyin,zhihu,bilibili,baidu",
             group="attraction",
             required_terms=self.required_terms,
         )
@@ -58,7 +58,7 @@ RESERVATIONS = (
     ReservationSpec(
         key="qinghaiLake",
         name="青海湖",
-        topic="2026 青海湖二郎剑景区 门票 是否需要提前预约 提前几天 官方",
+        topic="青海湖 二郎剑 门票 预约 提前几天",
         required_terms=("青海湖", "二郎剑"),
         required=False,
         planning_lead_days=1,
@@ -68,7 +68,7 @@ RESERVATIONS = (
     ReservationSpec(
         key="chakaSaltLake",
         name="茶卡盐湖",
-        topic="2026 茶卡盐湖天空之镜 门票 是否需要提前预约 提前几天 官方",
+        topic="茶卡盐湖 门票 预约 提前几天",
         required_terms=("茶卡盐湖", "茶卡", "盐湖"),
         required=False,
         planning_lead_days=1,
@@ -78,7 +78,7 @@ RESERVATIONS = (
     ReservationSpec(
         key="dachaidan",
         name="大柴旦",
-        topic="2026 大柴旦翡翠湖 水上雅丹 门票 是否需要提前预约 提前几天 官方",
+        topic="大柴旦 翡翠湖 水上雅丹 门票 预约",
         required_terms=("大柴旦", "翡翠湖", "水上雅丹"),
         required=False,
         planning_lead_days=1,
@@ -88,7 +88,7 @@ RESERVATIONS = (
     ReservationSpec(
         key="mogaoCaves",
         name="莫高窟",
-        topic="莫高窟 2026 旺季 门票 官方预约 提前15天 提前30天 放票",
+        topic="莫高窟 门票 预约 提前几天 攻略",
         required_terms=("莫高窟",),
         required=True,
         planning_lead_days=15,
@@ -98,7 +98,7 @@ RESERVATIONS = (
     ReservationSpec(
         key="mingshaMountain",
         name="鸣沙山月牙泉",
-        topic="2026 鸣沙山月牙泉 门票 是否需要提前预约 提前几天 官方",
+        topic="鸣沙山 月牙泉 门票 预约 提前几天",
         required_terms=("鸣沙山", "月牙泉"),
         required=False,
         planning_lead_days=1,
@@ -108,7 +108,7 @@ RESERVATIONS = (
     ReservationSpec(
         key="jiayuPass",
         name="嘉峪关",
-        topic="2026 嘉峪关关城 门票 是否需要提前预约 提前几天 官方",
+        topic="嘉峪关 关城 门票 预约 提前几天",
         required_terms=("嘉峪关", "关城"),
         required=False,
         planning_lead_days=1,
@@ -118,7 +118,7 @@ RESERVATIONS = (
     ReservationSpec(
         key="zhangyeDanxia",
         name="张掖七彩丹霞",
-        topic="2026 张掖七彩丹霞 门票 是否需要提前预约 提前几天 日出 深度游 官方",
+        topic="张掖 七彩丹霞 门票 预约 提前几天",
         required_terms=("张掖", "七彩丹霞", "丹霞"),
         required=False,
         planning_lead_days=1,
