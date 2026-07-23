@@ -4,7 +4,7 @@
   "generatedAt": "2026-07-23T05:00:15.089550+00:00",
   "expiresAt": "2026-07-24T11:00:15.089550+00:00",
   "status": "ok",
-  "schedule": "21:00 Asia/Shanghai",
+  "schedule": "21:17/22:17/23:17 Asia/Shanghai",
   "skill": {
     "name": "last30days-cn",
     "version": "3.2.0-cn",

@@ -322,7 +322,7 @@ def main() -> int:
         "generatedAt": checked_at,
         "expiresAt": (now + timedelta(hours=30)).isoformat(),
         "status": "partial" if failures else "ok",
-        "schedule": "21:00 Asia/Shanghai",
+        "schedule": "21:17/22:17/23:17 Asia/Shanghai",
         "skill": {
             "name": SKILL_NAME,
             "version": SKILL_VERSION,

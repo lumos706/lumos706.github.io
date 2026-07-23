@@ -2,10 +2,10 @@ name: Refresh travel data
 
 on:
   schedule:
-    # GitHub Actions uses UTC. 01:00 UTC = 09:00 Asia/Shanghai.
-    - cron: '0 1 * * *'
-    # 13:00 UTC = 21:00 Asia/Shanghai.
-    - cron: '0 13 * * *'
+    # GitHub Actions uses UTC. Run at 21:17, 22:17, and 23:17 Asia/Shanghai.
+    # The later checkpoints are guarded fallbacks: after one successful nightly
+    # refresh, they exit before installing dependencies or collecting data.
+    - cron: '17 13-15 * * *'
   workflow_dispatch:
     inputs:
       only:
@@ -26,7 +26,67 @@ defaults:
     shell: bash -el {0}
 
 jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      should_refresh: ${{ steps.refresh_gate.outputs.should_refresh }}
+      reason: ${{ steps.refresh_gate.outputs.reason }}
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Decide whether a nightly refresh is still needed
+        id: refresh_gate
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if [[ "$EVENT_NAME" != "schedule" ]]; then
+            echo "should_refresh=true" >> "$GITHUB_OUTPUT"
+            echo "reason=manual trigger" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          python - <<'PY'
+          import json
+          import os
+          from datetime import datetime, timezone
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+
+          timezone_shanghai = ZoneInfo("Asia/Shanghai")
+          now = datetime.now(timezone_shanghai)
+          freshness_boundary = now.replace(hour=20, minute=0, second=0, microsecond=0)
+          snapshot_path = Path("src/data/travel/snapshot.json")
+          generated_at = None
+
+          try:
+              payload = json.loads(snapshot_path.read_text(encoding="utf-8"))
+              raw_generated_at = payload.get("generatedAt")
+              if isinstance(raw_generated_at, str) and raw_generated_at:
+                  generated_at = datetime.fromisoformat(raw_generated_at.replace("Z", "+00:00"))
+                  if generated_at.tzinfo is None:
+                      generated_at = generated_at.replace(tzinfo=timezone.utc)
+                  generated_at = generated_at.astimezone(timezone_shanghai)
+          except (OSError, ValueError, TypeError, json.JSONDecodeError):
+              generated_at = None
+
+          should_refresh = generated_at is None or generated_at < freshness_boundary
+          reason = (
+              "nightly data is missing or stale"
+              if should_refresh
+              else f"nightly data already refreshed at {generated_at.isoformat()}"
+          )
+          with Path(os.environ["GITHUB_OUTPUT"]).open("a", encoding="utf-8") as output:
+              output.write(f"should_refresh={'true' if should_refresh else 'false'}\n")
+              output.write(f"reason={reason}\n")
+          print(json.dumps({"shouldRefresh": should_refresh, "reason": reason}))
+          PY
+
   refresh:
+    needs: gate
+    if: needs.gate.outputs.should_refresh == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
@@ -60,7 +120,6 @@ jobs:
           npx --yes skills add Jesseovo/last30days-skill-cn -g -y
 
       - name: Install FlyAI skill
-        if: github.event_name != 'schedule' || github.event.schedule == '0 13 * * *'
         run: |
           npx --yes skills add alibaba-flyai/flyai-skill -g -y
 
@@ -137,7 +196,6 @@ jobs:
           fi
 
       - name: Refresh travel snapshot
-        if: github.event_name != 'schedule' || github.event.schedule == '0 13 * * *'
         env:
           TRAVEL_ONLY: ${{ inputs.only }}
         run: |
@@ -148,11 +206,9 @@ jobs:
           python scripts/travel/update_travel_data.py "${args[@]}"
 
       - name: Refresh FlyAI flight and hotel prices
-        if: github.event_name != 'schedule' || github.event.schedule == '0 13 * * *'
         run: node scripts/travel/update_flyai_prices.mjs
 
       - name: Refresh local transport evidence
-        if: github.event_name != 'schedule' || github.event.schedule == '0 13 * * *'
         run: |
           python scripts/travel/update_transport_guides.py \
             --allow-credentials \
@@ -160,7 +216,6 @@ jobs:
             --timeout 120
 
       - name: Refresh departure preparation evidence
-        if: github.event_name != 'schedule' || github.event.schedule == '0 13 * * *'
         run: |
           python scripts/travel/update_departure_preparations.py \
             --allow-credentials \
@@ -168,7 +223,6 @@ jobs:
             --timeout 120
 
       - name: Refresh attraction reservation rules
-        if: github.event_name != 'schedule' || github.event.schedule == '0 1 * * *'
         run: |
           python scripts/travel/update_reservation_rules.py \
             --allow-credentials \
@@ -224,8 +278,6 @@ jobs:
           npm run build
 
       - name: Commit refreshed snapshot
-        env:
-          RUN_SCHEDULE: ${{ github.event.schedule }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -234,10 +286,6 @@ jobs:
             echo "Travel data is unchanged."
             exit 0
           fi
-          if [[ "$RUN_SCHEDULE" == "0 1 * * *" ]]; then
-            git commit -m "data: refresh attraction reservations"
-          else
-            git commit -m "data: refresh travel snapshot"
-          fi
+          git commit -m "data: refresh travel snapshot"
           git pull --rebase origin main
           git push origin HEAD:main
