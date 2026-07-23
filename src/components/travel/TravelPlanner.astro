@@ -401,7 +401,7 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
 
   <section id="travel-attractions" class="section travel-guide-section">
     <div class="wrap">
-      <div class="travel-guide-intro"><h2>七个景点，逐个拆开。</h2><p>预约时限与交通依据每日晚间统一更新；首选 21:17，若 GitHub 延迟则在 22:17、23:17 自动补跑。本次预约检查于 {reservationGeneratedLabel} 完成{reservationStaleAtBuild ? '，预约快照可能过期' : ''}，交通检查于 {transportGeneratedLabel} 完成{transportStaleAtBuild ? '，交通快照可能过期' : ''}{transportPartial ? '，部分查询失败并保留了上一份依据' : ''}。公交线路和班次可能季节性调整，页面只写稳妥基线，出发前仍要用景区官方通知和地图实时公交复核。</p></div>
+      <div class="travel-guide-intro"><h2>七个景点，逐个拆开。</h2><p>预约时限与交通依据每日晚间统一更新；21:07–23:47 每 20 分钟检查一次，成功后当晚不再重复采集。本次预约检查于 {reservationGeneratedLabel} 完成{reservationStaleAtBuild ? '，预约快照可能过期' : ''}，交通检查于 {transportGeneratedLabel} 完成{transportStaleAtBuild ? '，交通快照可能过期' : ''}{transportPartial ? '，部分查询失败并保留了上一份依据' : ''}。公交线路和班次可能季节性调整，页面只写稳妥基线，出发前仍要用景区官方通知和地图实时公交复核。</p></div>
       <div class="travel-attraction-list">
         {attractionGuides.map((guide, index) => (
           <article class="travel-attraction">
@@ -568,7 +568,7 @@ const plansJson = JSON.stringify(routePlans).replace(/</g, '\\u003c');
   </section>
 
   <section class="travel-source-strip">
-    <div class="wrap"><strong>只保留能追溯的公开线索。</strong><p>每日晚间使用 last30days-cn 低频检索攻略、餐馆、当地交通、出发准备与预约依据，并通过 FlyAI Skill 更新飞猪机票和酒店报价。首选 21:17；若 GitHub 定时事件延迟或失败，22:17、23:17 会检查并补跑，同一晚成功一次后不再重复采集。Playwright 会在没有平台 API 时尝试公开页面，采集不足时保留稳妥基线并明确标记，不补造公交线路、价格或医疗结论。</p></div>
+    <div class="wrap"><strong>只保留能追溯的公开线索。</strong><p>每日晚间使用 last30days-cn 低频检索攻略、餐馆、当地交通、出发准备与预约依据，并通过 FlyAI Skill 更新飞猪机票和酒店报价。为抵抗 GitHub 定时事件延迟或丢失，21:07–23:47 每 20 分钟检查一次；同一晚成功一次后不再重复采集。Playwright 会在没有平台 API 时尝试公开页面，采集不足时保留稳妥基线并明确标记，不补造公交线路、价格或医疗结论。</p></div>
   </section>
 
   <script is:inline type="application/json" id="travel-plans-data" set:html={plansJson}></script>

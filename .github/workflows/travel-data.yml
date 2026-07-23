@@ -2,13 +2,16 @@ name: Refresh travel data
 
 on:
   schedule:
-    # GitHub Actions uses UTC. Run at 21:17, 22:17, and 23:17 Asia/Shanghai.
-    # The later checkpoints are guarded fallbacks: after one successful nightly
-    # refresh, they exit before installing dependencies or collecting data.
-    - cron: '17 13-15 * * *'
-    # Temporary live scheduler check for 2026-07-23 22:30 Asia/Shanghai.
+    # Avoid minute 0, where GitHub documents the heaviest scheduler load.
+    # Check every 20 minutes from 21:07 through 23:47 Asia/Shanghai. After one
+    # successful nightly refresh, later runs exit before installing dependencies
+    # or collecting data.
+    - cron: '7,27,47 21-23 * * *'
+      timezone: 'Asia/Shanghai'
+    # Temporary live scheduler check for 2026-07-23 22:55 Asia/Shanghai.
     # Remove after GitHub emits one real schedule event.
-    - cron: '30 14 * * *'
+    - cron: '55 22 * * *'
+      timezone: 'Asia/Shanghai'
   workflow_dispatch:
     inputs:
       only:
