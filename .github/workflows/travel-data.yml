@@ -2,12 +2,8 @@ name: Refresh travel data
 
 on:
   schedule:
-    # Avoid minute 0, where GitHub documents the heaviest scheduler load.
-    # Check every 20 minutes from 09:07 through 11:47 Asia/Shanghai. After one
-    # successful daily refresh, later runs exit before installing dependencies
-    # or collecting data.
-    - cron: '7,27,47 9-11 * * *'
-      timezone: 'Asia/Shanghai'
+    # GitHub Actions uses UTC. 01:00 UTC = 09:00 Asia/Shanghai.
+    - cron: '0 1 * * *'
   workflow_dispatch:
     inputs:
       only:
@@ -28,67 +24,7 @@ defaults:
     shell: bash -el {0}
 
 jobs:
-  gate:
-    runs-on: ubuntu-latest
-    outputs:
-      should_refresh: ${{ steps.refresh_gate.outputs.should_refresh }}
-      reason: ${{ steps.refresh_gate.outputs.reason }}
-    steps:
-      - name: Checkout latest main
-        uses: actions/checkout@v7
-        with:
-          ref: main
-
-      - name: Decide whether today's refresh is still needed
-        id: refresh_gate
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-        run: |
-          if [[ "$EVENT_NAME" != "schedule" ]]; then
-            echo "should_refresh=true" >> "$GITHUB_OUTPUT"
-            echo "reason=manual trigger" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          python - <<'PY'
-          import json
-          import os
-          from datetime import datetime, timezone
-          from pathlib import Path
-          from zoneinfo import ZoneInfo
-
-          timezone_shanghai = ZoneInfo("Asia/Shanghai")
-          now = datetime.now(timezone_shanghai)
-          freshness_boundary = now.replace(hour=8, minute=0, second=0, microsecond=0)
-          snapshot_path = Path("src/data/travel/snapshot.json")
-          generated_at = None
-
-          try:
-              payload = json.loads(snapshot_path.read_text(encoding="utf-8"))
-              raw_generated_at = payload.get("generatedAt")
-              if isinstance(raw_generated_at, str) and raw_generated_at:
-                  generated_at = datetime.fromisoformat(raw_generated_at.replace("Z", "+00:00"))
-                  if generated_at.tzinfo is None:
-                      generated_at = generated_at.replace(tzinfo=timezone.utc)
-                  generated_at = generated_at.astimezone(timezone_shanghai)
-          except (OSError, ValueError, TypeError, json.JSONDecodeError):
-              generated_at = None
-
-          should_refresh = generated_at is None or generated_at < freshness_boundary
-          reason = (
-              "today's data is missing or stale"
-              if should_refresh
-              else f"today's data already refreshed at {generated_at.isoformat()}"
-          )
-          with Path(os.environ["GITHUB_OUTPUT"]).open("a", encoding="utf-8") as output:
-              output.write(f"should_refresh={'true' if should_refresh else 'false'}\n")
-              output.write(f"reason={reason}\n")
-          print(json.dumps({"shouldRefresh": should_refresh, "reason": reason}))
-          PY
-
   refresh:
-    needs: gate
-    if: needs.gate.outputs.should_refresh == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:

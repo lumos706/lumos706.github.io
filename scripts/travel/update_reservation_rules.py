@@ -362,7 +362,7 @@ def main() -> int:
         "generatedAt": checked_at,
         "expiresAt": (now + timedelta(hours=30)).isoformat(),
         "status": status,
-        "schedule": "09:07-11:47 every 20m Asia/Shanghai",
+        "schedule": "09:00 Asia/Shanghai",
         "skill": {
             "name": SKILL_NAME,
             "version": SKILL_VERSION,
