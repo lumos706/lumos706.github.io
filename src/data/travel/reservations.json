@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-23T04:24:27.274572+00:00",
-  "expiresAt": "2026-07-24T10:24:27.274572+00:00",
+  "generatedAt": "2026-07-23T04:49:28.061779+00:00",
+  "expiresAt": "2026-07-24T10:49:28.061779+00:00",
   "status": "ok",
   "schedule": "09:00 Asia/Shanghai",
   "skill": {
@@ -10,7 +10,6 @@
     "repository": "https://github.com/Jesseovo/last30days-skill-cn"
   },
   "activeSources": [
-    "baidu",
     "bilibili",
     "douyin",
     "toutiao",
@@ -26,7 +25,7 @@
       "observedBookingWindowDays": 2,
       "channel": "青海湖景区官方平台或现场售票窗口",
       "note": "当前保留的稳妥值按约提前2天的预约或放票窗口。二郎剑等正规收费景区可实名购票；只走合法入口，不进入未确认价格的私人牧场。",
-      "checkedAt": "2026-07-23T04:24:27.274572+00:00",
+      "checkedAt": "2026-07-23T04:49:28.061779+00:00",
       "lastEvidenceAt": "2026-07-22T14:36:06.494681+00:00",
       "sourceStatus": "fallback",
       "evidence": [],
@@ -44,24 +43,10 @@
       "observedBookingWindowDays": null,
       "channel": "茶卡盐湖景区官方平台或现场售票窗口",
       "note": "普通门票通常可当天实名购买；暑期提前购票更方便同时确认小火车套票与入园时段。",
-      "checkedAt": "2026-07-23T04:24:27.274572+00:00",
+      "checkedAt": "2026-07-23T04:49:28.061779+00:00",
       "lastEvidenceAt": "2026-07-23T04:24:27.274572+00:00",
-      "sourceStatus": "confirmed",
-      "evidence": [
-        {
-          "platform": "baidu",
-          "title": "茶卡盐湖暑假必须预约吗?3个关键点+FAQ_手机新浪网",
-          "snippet": "",
-          "url": "http://www.baidu.com/link?url=QQoJ24shBsolYw9h904qqD087L5L2Z9DcMgBJUnCNgx8gpJyS3PvSpeES3__Lwh9ykVeX6TEBH6wcp4cdZsMYOJI8rpeKIWKKkLzvpxL2mK",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.3,
-          "score": 0,
-          "engagement": {},
-          "author": "",
-          "signal": "neutral"
-        }
-      ],
+      "sourceStatus": "fallback",
+      "evidence": [],
       "parserVersion": 2,
       "sourceErrors": {
         "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
@@ -76,7 +61,7 @@
       "observedBookingWindowDays": null,
       "channel": "翡翠湖或水上雅丹景区官方平台",
       "note": "翡翠湖和水上雅丹是两个独立景区，决定二选一后再购买对应门票。",
-      "checkedAt": "2026-07-23T04:24:27.274572+00:00",
+      "checkedAt": "2026-07-23T04:49:28.061779+00:00",
       "lastEvidenceAt": null,
       "sourceStatus": "fallback",
       "evidence": [],
@@ -94,8 +79,8 @@
       "observedBookingWindowDays": 30,
       "channel": "“莫高窟参观预约网”公众号或微信小程序",
       "note": "本次公开信息出现约提前30天的预约或放票窗口。至少提前15天开始处理；放票后应立即下单，15天不是有票保证。",
-      "checkedAt": "2026-07-23T04:24:27.274572+00:00",
-      "lastEvidenceAt": "2026-07-23T04:24:27.274572+00:00",
+      "checkedAt": "2026-07-23T04:49:28.061779+00:00",
+      "lastEvidenceAt": "2026-07-23T04:49:28.061779+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
@@ -117,38 +102,38 @@
         },
         {
           "platform": "douyin",
-          "title": "没有力气拍照发圈啦哈哈哈🫠上午莫高窟，晚上鸣沙山。莫高窟需提前半月预约，我们买的应急票，虽匆匆一撇，仍被千年文明所震撼。鸣沙山值得一去，无人机表演，万人演唱会，现场气氛很不错。#穿越无人区沙漠公路 #旅途路上",
+          "title": "敦煌莫高窟到底值不值得来？ 运气还是不错，提前半个月线上预约到A类常规票，就是看八个窟。为了看一眼人类敦煌，千年莫高，我足足在敦煌慢游居住了五天四晚才走进莫高窟。当你提前攻略做的再好想看你喜欢的哪几个窟？可到了预约票的时间日，该参观洞窟时当天就跟开盲盒一样，大厅排队验票及看两部电影再到坐区间车到景区，总共用时三个来小时，下车走到洞窟山壁下要等给你分配的导游。当导游到了给大家发放完耳机后带着一大群人，不知所然的跟着导游屁股后面进了窟，每个窟也就停留2_3分钟左右，里面黑咕隆咚人挤人，全靠导游手里拿的小手电一束光凑合看，默默听，要求不能摄像拍照🙄体验感只能说一般般，但八个窟看完走出后，陈列馆的复制窟给了我很大惊喜，如45号复制窟，285号1：1复制窟…弥补了许多遗憾，在这里可以随便看，随便拍感觉物超所值非常过瘾。有一种来时只知盛名，看完才懂沧桑…（2026.7.5莫高窟观后感）#甘肃敦煌莫高窟#敦煌莫高窟壁画 #旅行记录真实生活",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7665031129628905353",
+          "url": "https://www.douyin.com/video/7664892245129119603",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.4,
-          "score": 17,
+          "relevance": 0.56,
+          "score": 24,
           "engagement": {
-            "num_comments": 14,
-            "likes": 39,
+            "num_comments": 11,
+            "likes": 12,
             "views": 0,
             "shares": 0
           },
-          "author": "刘雅微",
+          "author": "金橘",
           "signal": "positive"
         },
         {
           "platform": "douyin",
-          "title": "新疆之旅路过敦煌，本想去孩子们心心念念的莫高窟，但是莫高窟A类票需提前一个月预约最后选择去了鸣沙山月牙泉虽有遗憾但风景犹在 #新疆之旅 #最美风景在路上 #鸣沙山月牙泉 #敦煌",
+          "title": "千万听劝！旺季来敦煌莫高窟一定要提前30天预约 #敦煌莫高窟门票 #敦煌莫高窟预约 #莫高窟门票预约 #敦煌莫高窟门票预约 #莫高窟预约",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7664845373118354661",
+          "url": "https://www.douyin.com/video/7633307858432696037",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.4,
-          "score": 17,
+          "relevance": 0.56,
+          "score": 23,
           "engagement": {
-            "num_comments": 10,
-            "likes": 39,
+            "num_comments": 0,
+            "likes": 14,
             "views": 0,
-            "shares": 0
+            "shares": 18
           },
-          "author": "是旺仔吖",
+          "author": "好想出去玩🫥",
           "signal": "neutral"
         }
       ],
@@ -161,15 +146,70 @@
       "name": "鸣沙山月牙泉",
       "required": false,
       "statusLabel": "不需要提前预约",
-      "leadDays": 1,
-      "leadTime": "当天可买；暑期建议提前 1 天",
-      "observedBookingWindowDays": null,
+      "leadDays": 7,
+      "leadTime": "当天可买；暑期建议提前 7 天",
+      "observedBookingWindowDays": 15,
       "channel": "鸣沙山月牙泉景区官方平台或现场售票窗口",
       "note": "普通门票可实名购买；暑期日落前客流集中，提前购票可以减少现场排队。",
-      "checkedAt": "2026-07-23T04:24:27.274572+00:00",
-      "lastEvidenceAt": null,
-      "sourceStatus": "fallback",
-      "evidence": [],
+      "checkedAt": "2026-07-23T04:49:28.061779+00:00",
+      "lastEvidenceAt": "2026-07-23T04:49:28.061779+00:00",
+      "sourceStatus": "confirmed",
+      "evidence": [
+        {
+          "platform": "douyin",
+          "title": "鸣沙山月牙泉五一门票官方开售，提前15天预售，一票畅玩3天，5月1日-5日 万人星空演唱会专场，千架无人机大秀等你来！套票购买更划算，原价145元门票+骆驼公仔套票，五一专享125元！～点击下方链接抢购吧#万人星空演唱会 #鸣沙山月牙泉门票 #敦煌旅游 #五一去哪儿 #鸣沙山月牙泉",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7632603658407906600",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 50,
+          "engagement": {
+            "num_comments": 117,
+            "likes": 426,
+            "views": 0,
+            "shares": 488
+          },
+          "author": "小楠敦煌智慧旅游",
+          "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "鸣沙山月牙泉五一演唱会｜沙漠星空演唱会全攻略 ✨ 五一赴一场沙漠与歌声的约会，这份攻略直接抄作业！ 🔑 预约购票必看 ✅ 官方渠道：「鸣沙山月牙泉」公众号，携程、美团、i游敦煌同步可约 ✅ 门票价格：110元/人，三日有效（活动期可能取消二次入园） ✅ 预约时间：提前15天蹲点抢票，五一严格限流，售完即止 ✅ 入园凭证：务必带身份证原件，刷脸快速入园 📍 三大神仙观赏位 1. 山腰C位（首选） 木梯2/3处平台，正对舞台斜上方 视野拉满，舞台、月牙泉夜景、歌词屏一键全收 18点前上山占位，记得带折叠坐垫 2. 山顶星空位（出片天花板） 舞台后方沙丘或山顶国旗旁 俯瞰全场，星空、灯光、泉水同框，拍照巨出片 适合体力好、想拍氛围感大片的小伙伴 3. 山脚互动位（沉浸式嗨唱） 舞台正前方区域 近距离看舞台，大合唱氛围感拉满 缺点：看不到全景与星空，音效偏吵 ⚠️ 出行实用贴士 🚗 入园选择：自驾走西门，人少观光车免费；中门近但易拥堵 ⏰ 错峰指南：避开17:00-18:30高峰，推荐上午/傍晚入园 🎒 必备装备：防沙鞋套、防风外套、防晒用品、饮用水、充电宝、手机防沙套 ⏯️ 演出时间：21:10-22:30，22:00无人机天幕秀千万别错过 📞 咨询电话：0937-8883388（限流、活动变动可致电） 📌 懒人行程参考 1. 提前预约，选16:00-17:00入园时段 2. 入园先逛月牙泉，18:00登山抢山腰绝佳位置 3. 21:10准时开启沙漠星空演唱会，沉浸式感受浪漫 #鸣沙山演唱会 #鸣沙山月牙泉 #青海旅游攻略 #青甘大环线",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7629203800394822345",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 39,
+          "engagement": {
+            "num_comments": 9,
+            "likes": 61,
+            "views": 0,
+            "shares": 93
+          },
+          "author": "青甘真纯玩（玩转大西北）",
+          "signal": "positive"
+        },
+        {
+          "platform": "douyin",
+          "title": "重‼️2026年6月11日通知📢 鸣沙山月牙泉星空演唱活动暂停举办的通知！ 景区正常入园游玩不受影响，游客朋友可以正常出行~点击下方链接提前15天即可预定门票，未使用随时退#鸣沙山月牙泉景区 #敦煌旅游 #万人星空演唱会",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7650305092167830769",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 31,
+          "engagement": {
+            "num_comments": 4,
+            "likes": 4,
+            "views": 0,
+            "shares": 30
+          },
+          "author": "小楠敦煌智慧旅游",
+          "signal": "neutral"
+        }
+      ],
       "parserVersion": 2,
       "sourceErrors": {
         "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
@@ -184,7 +224,7 @@
       "observedBookingWindowDays": null,
       "channel": "嘉峪关文物景区官方平台或现场售票窗口",
       "note": "关城普通票通常可当天实名购买；先看清单景点票与套票范围。",
-      "checkedAt": "2026-07-23T04:24:27.274572+00:00",
+      "checkedAt": "2026-07-23T04:49:28.061779+00:00",
       "lastEvidenceAt": null,
       "sourceStatus": "fallback",
       "evidence": [],
@@ -202,7 +242,7 @@
       "observedBookingWindowDays": null,
       "channel": "张掖七彩丹霞景区官方平台或现场售票窗口",
       "note": "普通游览票通常可当天购买；日出、深度游等特殊产品必须按官方场次单独确认。",
-      "checkedAt": "2026-07-23T04:24:27.274572+00:00",
+      "checkedAt": "2026-07-23T04:49:28.061779+00:00",
       "lastEvidenceAt": null,
       "sourceStatus": "fallback",
       "evidence": [],
