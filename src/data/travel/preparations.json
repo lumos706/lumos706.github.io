@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "parserVersion": 1,
-  "generatedAt": "2026-07-23T04:47:39.344822+00:00",
-  "expiresAt": "2026-07-24T10:47:39.344822+00:00",
+  "generatedAt": "2026-07-23T05:02:39.757717+00:00",
+  "expiresAt": "2026-07-24T11:02:39.757717+00:00",
   "status": "ok",
   "schedule": "21:00 Asia/Shanghai",
   "skill": {
@@ -12,7 +12,6 @@
   },
   "activeSources": [
     "douyin",
-    "xiaohongshu",
     "zhihu"
   ],
   "categories": {
@@ -45,30 +44,50 @@
           "priority": "必看"
         }
       ],
-      "checkedAt": "2026-07-23T04:47:39.344822+00:00",
-      "lastEvidenceAt": "2026-07-23T04:47:39.344822+00:00",
+      "checkedAt": "2026-07-23T05:02:39.757717+00:00",
+      "lastEvidenceAt": "2026-07-23T05:02:39.757717+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
           "platform": "douyin",
-          "title": "柠萌旅行青甘高原高反预防 应急完整指南 #青甘大环线 #青甘旅游 #高反应急 #应急指南 #柠萌带你游西北",
+          "title": "#高海拔旅游如何应对高原反应#红景天#洋参含片#严重高反降低海拔高度就近就医",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7660723456748555529",
+          "url": "https://www.douyin.com/video/7662392187082908401",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.41,
-          "score": 17,
+          "relevance": 0.29,
+          "score": 10,
           "engagement": {
-            "num_comments": 0,
-            "likes": 5,
+            "num_comments": 1,
+            "likes": 4,
             "views": 0,
-            "shares": 1
+            "shares": 0
           },
-          "author": "柠萌带你游西北",
+          "author": "酒哥实话",
           "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "青甘大环线第四期：必带物品 #青甘旅行攻略 #青海旅游推荐官 #青甘大环线 #青甘大环线自驾游 #青藏高原",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7658531058157414011",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.18,
+          "score": 12,
+          "engagement": {
+            "num_comments": 5,
+            "likes": 38,
+            "views": 0,
+            "shares": 22
+          },
+          "author": "云过垭口",
+          "signal": "positive"
         }
       ],
-      "sourceErrors": {}
+      "sourceErrors": {
+        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
+      }
     },
     "weather": {
       "key": "weather",
@@ -99,8 +118,8 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-23T04:47:39.344822+00:00",
-      "lastEvidenceAt": "2026-07-23T04:47:39.344822+00:00",
+      "checkedAt": "2026-07-23T05:02:39.757717+00:00",
+      "lastEvidenceAt": "2026-07-23T05:02:39.757717+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
@@ -121,7 +140,9 @@
           "signal": "neutral"
         }
       ],
-      "sourceErrors": {}
+      "sourceErrors": {
+        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
+      }
     },
     "documents": {
       "key": "documents",
@@ -152,30 +173,32 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-23T04:47:39.344822+00:00",
-      "lastEvidenceAt": "2026-07-23T04:47:39.344822+00:00",
+      "checkedAt": "2026-07-23T05:02:39.757717+00:00",
+      "lastEvidenceAt": "2026-07-23T05:02:39.757717+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
-          "platform": "xiaohongshu",
-          "title": "6🈷青甘大环线门票分享❤️",
+          "platform": "douyin",
+          "title": "青甘大环线人均8K vlog｜超实用攻略🌄 青海省内浙江身份证基本免门票哦～ ✨个人心中的美景排序： 1. 水上雅丹 2. 七彩丹霞 3. 察尔汗盐湖 ⚠️ 必注意事项： - 全程紫外线超强，防晒一定要做好！ - 高反真的很难受，记得提前准备 🍜 关于吃： 前面两天吃不习惯就别硬试当地菜，不吃后悔吃了更后悔 路过瓜州一定要吃瓜！啥瓜都甜到心尖儿 嘉峪关的烧烤巨好吃，强推！ 🐎 草原骑马小技巧： 多逛几家！越往后越划算，50块2小时都能拿下～",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a565fda000000001101194c",
+          "url": "https://www.douyin.com/video/7664997561569070521",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.31,
-          "score": 19,
+          "relevance": 0.34,
+          "score": 10,
           "engagement": {
-            "num_comments": 0,
-            "likes": 50,
-            "shares": 0,
-            "collects": 36
+            "num_comments": 2,
+            "likes": 10,
+            "views": 0,
+            "shares": 6
           },
-          "author": "宸阿喵",
-          "signal": "neutral"
+          "author": "霞哥 好运气",
+          "signal": "positive"
         }
       ],
-      "sourceErrors": {}
+      "sourceErrors": {
+        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
+      }
     },
     "flightTech": {
       "key": "flightTech",
@@ -206,44 +229,62 @@
           "priority": "必带"
         }
       ],
-      "checkedAt": "2026-07-23T04:47:39.344822+00:00",
-      "lastEvidenceAt": "2026-07-23T04:47:39.344822+00:00",
+      "checkedAt": "2026-07-23T05:02:39.757717+00:00",
+      "lastEvidenceAt": "2026-07-23T05:02:39.757717+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
           "platform": "douyin",
-          "title": "第一次坐飞机必看！ 行李、托运、充电宝一次讲清 20000毫安以内+3C认证才能带上飞机 收藏起来，出行不踩坑✈️#每天跟我涨知识 #瑞金机场 #乘机小知识 #旅游",
+          "title": "充电宝和电池登机指南！看这条就明白了！ 1、单个电池/充电宝总容量不能超过100Wh 2、独立放置的备用电池是要拿出来安检的（最好带 3C，没有 3C 的话可以塞到机器里） 3、装在设备里的电池不会被检查 4、最重要的一点！独立的备用电池或充电宝不能放在行李中托运，只能随身带！ #充电宝登机 #充电宝上飞机 #电池安检 #电池3c认证 #充电宝过安检",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7619521046190955194",
+          "url": "https://www.douyin.com/video/7547745322940763434",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.66,
-          "score": 30,
+          "score": 36,
           "engagement": {
-            "num_comments": 1,
-            "likes": 35,
+            "num_comments": 37,
+            "likes": 253,
             "views": 0,
-            "shares": 1
+            "shares": 51
           },
-          "author": "🌟舒玲行山河",
-          "signal": "caution"
+          "author": "飞行的阿童木",
+          "signal": "neutral"
         },
         {
           "platform": "douyin",
-          "title": "坐飞机带行李，多大的箱子就得托运，一般免费的额度有多少？没买行李额临时想要托运咋办呢？酒/充电宝/笔记本之类的可以托运吗？......潮汕机场小五的解答来了~#揭阳潮汕机场#飞机托运#托运行李#坐飞机#行李打包",
+          "title": "喂喂喂！你来电话啦～ 九元航空旅客充电宝安全提示 一、出行携带须知 1. 充电宝仅能随身携带，严禁托运，行李托运一律不予放行。 2. 机身清晰标注容量、电压、3C标识，额定能量≤100Wh可正常携带；100-160Wh需提前联系航司审批，超160Wh禁止登机。破损、鼓包、漏液、三无充电宝请勿携带。 3. 单人随身携带充电宝不超过2个，飞行全程保持关机状态，进入客舱后全程不可给电子设备充电，也不可以给充电宝充电。 二、上机存放要求 登机后不要将充电宝放入头顶行李架，放置随身小包、座椅前袋便于观察；远离热源、金属硬物，避免挤压、磕碰、短路。 三、机上充电宝起火/冒烟，旅客该怎么做 1. 立刻呼喊就近乘务员，不要自行挪动、拉扯发烫/冒烟的充电宝，切勿用衣物、毛毯包裹火源。 2. 听从机组指挥，快速撤离至远离火源的座位，系好安全带；烟雾较大时弯腰低头，用湿毛巾、衣物捂住口鼻。 3. 不围观、不慌乱、不随意走动，配合乘务员维持客舱秩序，告知乘务员充电宝位置、有无其他电子设备。 4.机组处置期间不要擅自触碰灭火设备、防护箱，机组询问时如实说明设备情况，后续落地配合工作人员移交涉事充电宝。#九元航空 #空乘安全提示 #民航出行#什么充电宝能上飞机",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7613323965322235177",
+          "url": "https://www.douyin.com/video/7659320844473062739",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.66,
+          "score": 33,
+          "engagement": {
+            "num_comments": 14,
+            "likes": 106,
+            "views": 0,
+            "shares": 8
+          },
+          "author": "九元AIR",
+          "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "只有3C标志的充电宝才能带上飞机，不然过不了安检哦 充电宝不能托运，只能随身携带，且飞行过程中不能使用哈#关注我带你去旅行 #石家庄跟团游 #充电宝 #乘坐飞机注意事项",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7657689742755166449",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.53,
-          "score": 31,
+          "score": 19,
           "engagement": {
-            "num_comments": 10,
-            "likes": 100,
+            "num_comments": 2,
+            "likes": 3,
             "views": 0,
-            "shares": 48
+            "shares": 0
           },
-          "author": "潮汕机场小五",
+          "author": "爱旅游的耿耿",
           "signal": "neutral"
         },
         {
@@ -261,24 +302,6 @@
             "voteups": 0
           },
           "author": "善良的屠夫",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "坐飞机充电宝怎么托运 #机场VVIP",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7664427403167404657",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.34,
-          "score": 13,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 15,
-            "views": 0,
-            "shares": 0
-          },
-          "author": "lily",
           "signal": "neutral"
         }
       ],
@@ -313,84 +336,86 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-23T04:47:39.344822+00:00",
-      "lastEvidenceAt": "2026-07-23T04:47:39.344822+00:00",
+      "checkedAt": "2026-07-23T05:02:39.757717+00:00",
+      "lastEvidenceAt": "2026-07-23T05:02:39.757717+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
           "platform": "douyin",
-          "title": "青甘环线旅游最好的游玩方式就是自驾 但是自驾要想玩得好，就一定要提前做好这个三个准备！租车暗藏小套路揭秘。#青甘大环线 #青甘大环线自驾游 #旅游攻略 #暑期这里最好玩 #旅行推荐官",
+          "title": "#租车日常 #西宁租车 #租车避坑指南 #青甘大环线 #青甘大环线自驾体验",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7530554944261311790",
+          "url": "https://www.douyin.com/video/7662344045252224116",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.53,
-          "score": 32,
-          "engagement": {
-            "num_comments": 46,
-            "likes": 248,
-            "views": 0,
-            "shares": 227
-          },
-          "author": "平凡的平「西北旅行定制」",
-          "signal": "positive"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "租车自驾青甘大环线已圆满收官",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a2675f40000000008024e5b",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.46,
-          "score": 35,
-          "engagement": {
-            "num_comments": 156,
-            "likes": 99,
-            "shares": 0,
-            "collects": 64
-          },
-          "author": "吉吉小熊",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "青甘大环线返程整理！租车自驾篇",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a4b4213000000001602474b",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.46,
-          "score": 23,
+          "relevance": 0.43,
+          "score": 20,
           "engagement": {
             "num_comments": 1,
-            "likes": 17,
-            "shares": 0,
-            "collects": 13
+            "likes": 12,
+            "views": 0,
+            "shares": 0
           },
-          "author": "奔跑的壮壮",
+          "author": "西宁雄驰租车（环线预定）",
           "signal": "neutral"
         },
         {
           "platform": "douyin",
-          "title": "自驾青甘大环线#青甘大环线自驾游 #自驾大西北 #西宁租车",
+          "title": "#青甘环线自驾 #创作灵感 #西宁租车 #自驾青甘大环线 西宁自驾无套路",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7657075229026780648",
+          "url": "https://www.douyin.com/video/7661241732566543744",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.46,
-          "score": 19,
+          "relevance": 0.42,
+          "score": 17,
           "engagement": {
-            "num_comments": 3,
-            "likes": 45,
+            "num_comments": 0,
+            "likes": 5,
             "views": 0,
-            "shares": 1
+            "shares": 0
           },
           "author": "西宁租车旅游-楠哥",
           "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "西北大环线自驾攻略来了，来了#西宁租车#西北大环线 #青甘大环线 #vlog日常 #租车自驾",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7521577839537524011",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.41,
+          "score": 30,
+          "engagement": {
+            "num_comments": 22,
+            "likes": 61,
+            "views": 0,
+            "shares": 14
+          },
+          "author": "西宁雄驰租车（环线预定）",
+          "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "青甘大环线租车 想来西宁租车自驾青甘大环线的外地朋友，千万别被低价租车坑了#青甘大环线 #青甘大环线自驾游 #西宁租车 #察尔汗盐湖 #鸣沙山月牙泉",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7655633929839875791",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.41,
+          "score": 24,
+          "engagement": {
+            "num_comments": 3,
+            "likes": 23,
+            "views": 0,
+            "shares": 7
+          },
+          "author": "西宁盘世租车",
+          "signal": "neutral"
         }
       ],
-      "sourceErrors": {}
+      "sourceErrors": {
+        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
+      }
     },
     "publicKit": {
       "key": "publicKit",
@@ -421,64 +446,10 @@
           "priority": "必做"
         }
       ],
-      "checkedAt": "2026-07-23T04:47:39.344822+00:00",
-      "lastEvidenceAt": "2026-07-23T04:47:39.344822+00:00",
+      "checkedAt": "2026-07-23T05:02:39.757717+00:00",
+      "lastEvidenceAt": "2026-07-23T05:02:39.757717+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
-        {
-          "platform": "douyin",
-          "title": "青甘大环线行李避坑 #我要上热门 #青甘大环线 #西北旅游避坑#青海敦煌旅行#大西北攻略 打算去青甘的听我一句劝！行李别瞎塞满，大半东西带去全是累赘！",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7655635038659289841",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.29,
-          "score": 13,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 14,
-            "views": 0,
-            "shares": 6
-          },
-          "author": "缥缈孤鸿影",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "一条视频讲明白去大西北需要准备的行李和怎么预防高反 #青甘大环线 #大西北 #青海旅游攻略 #青甘大环线旅游攻略",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7658674941818961000",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.29,
-          "score": 12,
-          "engagement": {
-            "num_comments": 2,
-            "likes": 2,
-            "views": 0,
-            "shares": 8
-          },
-          "author": "悠享旅行",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "女生一人公共交通游青甘之张掖2日游 #青甘大环线 #张掖 #甘肃旅游推荐 #旅行推荐官 #旅游攻略扶持计划",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7631219090757127462",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.18,
-          "score": 28,
-          "engagement": {
-            "num_comments": 19,
-            "likes": 271,
-            "views": 0,
-            "shares": 89
-          },
-          "author": "月然走读记",
-          "signal": "positive"
-        },
         {
           "platform": "zhihu",
           "title": "带6岁娃和60岁婆婆去西北8天，青甘八日游亲测行程+避坑全记录",
@@ -497,7 +468,9 @@
           "signal": "neutral"
         }
       ],
-      "sourceErrors": {}
+      "sourceErrors": {
+        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
+      }
     }
   },
   "medicalNotice": "药品与高原健康内容仅用于一般旅行准备，不替代医生诊断或个体化用药建议；如有基础疾病、孕期、近期不适或高原经历不佳，请在出发前咨询医生。",

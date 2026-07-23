@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "generatedAt": "2026-07-23T04:39:22.209410+00:00",
-  "expiresAt": "2026-07-24T16:39:22.209410+00:00",
+  "generatedAt": "2026-07-23T04:53:52.808167+00:00",
+  "expiresAt": "2026-07-24T16:53:52.808167+00:00",
   "status": "ok",
   "mode": "browser-plus-optional-credentials",
   "skill": {
@@ -19,81 +19,65 @@
   "notice": "公开内容价格快照与攻略线索，不是实时库存或官方结论；最终价格、余票、营业状态和退改规则以官方页面及商家当日信息为准。",
   "activeSources": [
     "baidu",
+    "bilibili",
     "douyin",
     "xiaohongshu",
     "zhihu"
   ],
   "sourceCoverage": {
     "baidu": 2,
-    "douyin": 83,
-    "xiaohongshu": 18,
-    "zhihu": 28
+    "bilibili": 4,
+    "douyin": 74,
+    "xiaohongshu": 20,
+    "zhihu": 26
   },
   "categories": {
     "flights": {
       "label": "机票",
       "status": "ok",
-      "evidenceCount": 4,
+      "evidenceCount": 3,
       "evidence": [
         {
-          "platform": "douyin",
-          "title": "机票多少？泰国机票很便宜！ #机票多少钱#机票怎么买#飞机#机票#沈阳桃仙机场",
+          "platform": "xiaohongshu",
+          "title": "沈阳桃仙国际机场再添新航线",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7656744864402509094",
+          "url": "https://www.xiaohongshu.com/explore/6a4799b7000000001702cb96",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.21,
-          "score": 5,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 2,
-            "views": 0,
-            "shares": 0
-          },
-          "author": "飞行万事屋",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "机票怎么买？这些时段合适！ #沈阳桃仙机场#机票多少钱#机票怎么买#机票燃油费#特价机票",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7655528075089726729",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.2,
-          "score": 22,
-          "engagement": {
-            "num_comments": 19,
-            "likes": 3844,
-            "views": 0,
-            "shares": 1591
-          },
-          "author": "空姐小思",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "飞机票多少钱？这些时段很便宜！ #机票多少钱#机票怎么买#飞机#机票#沈阳桃仙机场",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7657115876621077811",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.2,
-          "score": 19,
+          "relevance": 0.32,
+          "score": 16,
           "engagement": {
             "num_comments": 6,
-            "likes": 1530,
-            "views": 0,
-            "shares": 586
+            "likes": 20,
+            "shares": 0,
+            "collects": 6
           },
-          "author": "飞行万事屋",
+          "author": "国航350",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "【西宁机场2026年暑运新增航班一览】",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a438f4f000000002103facd",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.31,
+          "score": 18,
+          "engagement": {
+            "num_comments": 17,
+            "likes": 36,
+            "shares": 0,
+            "collects": 11
+          },
+          "author": "从西宁起飞西宁商业动态版",
           "signal": "neutral"
         },
         {
           "platform": "baidu",
           "title": "杭州飞西宁的机票价格大概什么时候会稳定?|西宁市|杭州市|宁波...",
           "snippet": "",
-          "url": "http://www.baidu.com/link?url=MZ-sp9SpMK3IbUF7DE-Jxln16ZZkUVoL7cLhbp9eSg0rxz2F_6W1Sl5WzQMJQbsZayeUqOxO2O7yoS-IkExoXSBe5vDqhkFutArdS4-lWtC",
+          "url": "http://www.baidu.com/link?url=V9igo8_aZNb43kbpIaiMp0vjXF0P6uF6KylVG03NPbOg8TdvobucWJvdxKJdAtptieM1XuHUIlCrOZyckvd12BXRLL5U2bGQ_I0d6y8bMa_",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.13,
@@ -103,9 +87,7 @@
           "signal": "neutral"
         }
       ],
-      "sourceErrors": {
-        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
-      },
+      "sourceErrors": {},
       "priceStatus": "flyai-live",
       "priceRange": {
         "min": 495,
@@ -119,8 +101,26 @@
     "hotels": {
       "label": "住宿",
       "status": "ok",
-      "evidenceCount": 3,
+      "evidenceCount": 5,
       "evidence": [
+        {
+          "platform": "douyin",
+          "title": "别拿七八月的青甘当夏天、一条环线过四季温差离谱:青海段青海湖茶卡祁连大柴旦白天二十多度太阳一落掉到几度必须带厚外套,甘肃段敦煌张掖三十多度太阳毒得硬核防晒,极少下雨基本晴好天! #青甘大环线 #大西北旅游 #青海湖 #敦煌 #旅行攻略",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7665246767592613812",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.32,
+          "score": 16,
+          "engagement": {
+            "num_comments": 2,
+            "likes": 30,
+            "views": 0,
+            "shares": 15
+          },
+          "author": "领队不周（青甘环线攻略）",
+          "signal": "neutral"
+        },
         {
           "platform": "zhihu",
           "title": "青甘大环线自驾8天，花了1.3w到底值不值？我把每天开销和真实感受全写出来了",
@@ -171,11 +171,27 @@
           },
           "author": "豆豆芙",
           "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "青海茶卡酒店？就这？别太过分",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6749aa7800000000070367dd",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.15,
+          "score": 1,
+          "engagement": {
+            "num_comments": 15,
+            "likes": 19,
+            "shares": 0,
+            "collects": 4
+          },
+          "author": "珂子想去大草原",
+          "signal": "neutral"
         }
       ],
-      "sourceErrors": {
-        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
-      },
+      "sourceErrors": {},
       "priceStatus": "flyai-live",
       "priceRange": {
         "min": 658,
@@ -202,7 +218,7 @@
     "tickets": {
       "label": "门票",
       "status": "ok",
-      "evidenceCount": 4,
+      "evidenceCount": 5,
       "evidence": [
         {
           "platform": "zhihu",
@@ -259,7 +275,7 @@
           "platform": "baidu",
           "title": "...怎么走?2026年暑期经典路线+预算+避坑全解析|茶卡盐湖|鸣沙山...",
           "snippet": "",
-          "url": "http://www.baidu.com/link?url=x7PXWlrznGrGDO3YdM-rEckq_UcVDZKvKzIZC5t3NtCPSD_TaSf_9oj8BcM9PECJ8npYuulDlQPKRgqbCgHd-uv19yE2BZ4LhE424f5pdlG",
+          "url": "http://www.baidu.com/link?url=-e0HPmlFvzw38fmCH6r88KUtMF245rYJveZEmiE4RmK5d3viKVupKnh2UUi9qSaRi4ELUFtdBw-Jmx4Tw8Ul4Rpp1bojr1UqrbTCc1N6N1i",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.3,
@@ -267,11 +283,27 @@
           "engagement": {},
           "author": "",
           "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "青甘大环线｜2026年最新门票预约表，看看吧",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a59c2e0000000001d0205fc",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.24,
+          "score": 13,
+          "engagement": {
+            "num_comments": 4,
+            "likes": 60,
+            "shares": 0,
+            "collects": 67
+          },
+          "author": "明日晴",
+          "signal": "neutral"
         }
       ],
-      "sourceErrors": {
-        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
-      },
+      "sourceErrors": {},
       "priceStatus": "insufficient",
       "priceRange": null,
       "priceSamples": [
@@ -288,8 +320,99 @@
     "qinghaiLake": {
       "label": "青海湖",
       "status": "ok",
-      "evidenceCount": 1,
+      "evidenceCount": 8,
       "evidence": [
+        {
+          "platform": "douyin",
+          "title": "大西北很美，但7、8月份别乱冲 7-8月是西北旺季，花海湖泊颜值拉满，但出行避坑要点提前收好 青海湖油菜花连片盛放，湖水澄澈湛蓝，风光无可替代，但出行一定要提前规划行程哦。 #青甘大环线 #青甘大环线旅游 #青甘大环线旅游攻略 #大西北青甘大环线 #西北青甘大环线",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7651927242750645989",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 20,
+          "engagement": {
+            "num_comments": 1,
+            "likes": 2,
+            "views": 0,
+            "shares": 1
+          },
+          "author": "远胜游（兰州）国际旅行社",
+          "signal": "neutral"
+        },
+        {
+          "platform": "bilibili",
+          "title": "来青海湖拍照好看的攻略 它来了",
+          "snippet": "-",
+          "url": "https://www.bilibili.com/video/BV1dQNL6nE8P",
+          "date": "2026-07-10",
+          "dateConfidence": "high",
+          "relevance": 0.46,
+          "score": 37,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 10,
+            "views": 175,
+            "danmaku": 0,
+            "favorites": 2
+          },
+          "author": "金泽青甘旅游全攻略",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "青海湖没白来｜附自驾攻略",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a353ced000000001503fb92",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.46,
+          "score": 33,
+          "engagement": {
+            "num_comments": 41,
+            "likes": 230,
+            "shares": 0,
+            "collects": 235
+          },
+          "author": "芝士少女",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "必藏：青海湖攻略（全景点+票价+避坑版）",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/69cca0030000000022001fd9",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.42,
+          "score": 23,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 108,
+            "shares": 0,
+            "collects": 159
+          },
+          "author": "星海旅行",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "0元解锁青海湖🚗环湖一圈儿详细自驾攻略",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a365c96000000001700b8f7",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.41,
+          "score": 37,
+          "engagement": {
+            "num_comments": 93,
+            "likes": 691,
+            "shares": 0,
+            "collects": 1285
+          },
+          "author": "刘小羊的小生活",
+          "signal": "neutral"
+        },
         {
           "platform": "zhihu",
           "title": "第一次去青海青海湖的茶卡盐湖小火车，有什么不踩雷攻略分享？",
@@ -306,17 +429,123 @@
           },
           "author": "山河游览志",
           "signal": "mixed"
+        },
+        {
+          "platform": "douyin",
+          "title": "8月我们准备自驾青海湖环线啦，一次性看看川、甘、青的夏天 #青海湖自驾游 #青海",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7661561176190471443",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.4,
+          "score": 25,
+          "engagement": {
+            "num_comments": 71,
+            "likes": 104,
+            "views": 0,
+            "shares": 118
+          },
+          "author": "陈小静💕旅行规划师&重庆出发",
+          "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "追逐青海湖与戈壁，只分享实用旅行经验 点赞收藏，旺季出行少走弯路#西北大环线#西北旅游攻略#青海湖#敦煌鸣沙山#西北避坑攻略",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7663034120759701425",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.4,
+          "score": 15,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 14,
+            "views": 0,
+            "shares": 13
+          },
+          "author": "涛子的青甘环线✈️",
+          "signal": "neutral"
         }
       ],
-      "sourceErrors": {
-        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
-      }
+      "sourceErrors": {}
     },
     "chakaSaltLake": {
       "label": "茶卡盐湖",
       "status": "ok",
-      "evidenceCount": 3,
+      "evidenceCount": 11,
       "evidence": [
+        {
+          "platform": "xiaohongshu",
+          "title": "茶卡盐湖游玩以及拍照避坑攻略",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a5de157000000000c014ed9",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.77,
+          "score": 29,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 1,
+            "shares": 0,
+            "collects": 1
+          },
+          "author": "西贝",
+          "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "茶卡盐湖天空之镜到底值不值得参观！ 茶卡盐湖游玩攻略！两个景区千万别走错了！最佳拍照机位在哪？看点有哪些？如何避坑畅玩？一条视频讲清楚！#茶卡盐湖 #茶卡盐湖天空之镜 #青甘大环线 #西北大环线 #旅游推荐官",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7647106073261978723",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.7,
+          "score": 26,
+          "engagement": {
+            "num_comments": 6,
+            "likes": 40,
+            "views": 0,
+            "shares": 17
+          },
+          "author": "领队小杨—青甘大环线攻略|畅畅鱼旅游公司",
+          "signal": "positive"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "青海旅游｜茶卡盐湖超超超详细拍照攻略❗️❗️",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/68662731000000001c0348a9",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.51,
+          "score": 36,
+          "engagement": {
+            "num_comments": 18,
+            "likes": 219,
+            "shares": 0,
+            "collects": 161
+          },
+          "author": "在茶卡盐湖的摄影师-大飞",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "8月早上7:00的茶卡盐湖｜详细攻略来啦",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a56275a000000001503cd20",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.5,
+          "score": 27,
+          "engagement": {
+            "num_comments": 5,
+            "likes": 20,
+            "shares": 0,
+            "collects": 19
+          },
+          "author": "甜酒",
+          "signal": "neutral"
+        },
         {
           "platform": "zhihu",
           "title": "大家去青海旅游基本上会选择在什么时候去？有什么好的旅游景点推荐吗？或者需要避坑的地方。？",
@@ -367,11 +596,81 @@
           },
           "author": "山河游览志",
           "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "存一些茶卡盐湖拍照姿势，真的很出片",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a059f91000000000702e3ea",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.32,
+          "score": 33,
+          "engagement": {
+            "num_comments": 13,
+            "likes": 1326,
+            "shares": 0,
+            "collects": 1118
+          },
+          "author": "元气姚姚",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "茶卡盐湖镜面拍照秘籍✨轻松拍出天空之境",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a350230000000001003c787",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.3,
+          "score": 16,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 24,
+            "shares": 0,
+            "collects": 29
+          },
+          "author": "在茶卡盐湖的摄影师-苏李",
+          "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "茶卡盐湖天空之镜玩法干货，交通方式、拍照点位、安全提醒全覆盖，避开阴天雷区，轻松出片不踩坑#茶卡盐湖 #天空之镜#青甘大环线#大西北穿搭#茶卡盐湖拍照",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7633391460007830117",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.3,
+          "score": 11,
+          "engagement": {
+            "num_comments": 11,
+            "likes": 150,
+            "views": 0,
+            "shares": 46
+          },
+          "author": "领队小雪带你游青甘",
+          "signal": "caution"
+        },
+        {
+          "platform": "douyin",
+          "title": "茶卡盐湖游玩攻略 #茶卡盐湖 #青海美好推荐官 #旅游 #北京导游协会 @北京文旅金名片",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7649548606807224741",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.3,
+          "score": 10,
+          "engagement": {
+            "num_comments": 4,
+            "likes": 88,
+            "views": 0,
+            "shares": 49
+          },
+          "author": "泽君",
+          "signal": "positive"
         }
       ],
-      "sourceErrors": {
-        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
-      }
+      "sourceErrors": {}
     },
     "dachaidan": {
       "label": "大柴旦",
@@ -393,6 +692,24 @@
             "voteups": 1
           },
           "author": "青甘领队驴队长",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "大柴旦翡翠湖-水上雅丹-G315U型公路【攻略】",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a2396aa000000001702b727",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.73,
+          "score": 33,
+          "engagement": {
+            "num_comments": 4,
+            "likes": 12,
+            "shares": 0,
+            "collects": 9
+          },
+          "author": "小蓝很白",
           "signal": "neutral"
         },
         {
@@ -437,7 +754,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.69,
-          "score": 37,
+          "score": 38,
           "engagement": {
             "num_comments": 49,
             "likes": 249,
@@ -455,7 +772,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.69,
-          "score": 32,
+          "score": 33,
           "engagement": {
             "num_comments": 8,
             "likes": 52,
@@ -481,6 +798,24 @@
             "shares": 0
           },
           "author": "七月上进",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "Day4:水上雅丹+大柴旦翡翠湖",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a5df87200000000010032a5",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.66,
+          "score": 27,
+          "engagement": {
+            "num_comments": 2,
+            "likes": 5,
+            "shares": 0,
+            "collects": 8
+          },
+          "author": "兜宝妈",
           "signal": "neutral"
         },
         {
@@ -525,7 +860,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.58,
-          "score": 31,
+          "score": 32,
           "engagement": {
             "num_comments": 22,
             "likes": 285,
@@ -543,7 +878,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.58,
-          "score": 29,
+          "score": 30,
           "engagement": {
             "num_comments": 22,
             "likes": 105,
@@ -552,51 +887,14 @@
           },
           "author": "小瑄青甘大环线旅游攻略",
           "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "《令人失望的大柴旦翡翠湖》 ---避坑，不要来！60元门票加50元小火车，几乎什么也看不到！除非再花25元坐电梯上塔，才能俯瞰到一些色彩。",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7664794835731912955",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.46,
-          "score": 28,
-          "engagement": {
-            "num_comments": 478,
-            "likes": 188,
-            "views": 0,
-            "shares": 146
-          },
-          "author": "极地武士",
-          "signal": "caution"
-        },
-        {
-          "platform": "zhihu",
-          "title": "去西北大环线自驾游需要注意什么？",
-          "snippet": "轻松拍出治愈系戈壁盐湖大片。 Day4：雅丹火星奇遇。清晨打卡色彩绚烂的大柴旦翡翠湖，各色盐池错落分布，宛如上帝散落人间的调色盘",
-          "url": "https://www.zhihu.com/question/543932835/answer/2055951965419475552",
-          "date": "2026-07-02",
-          "dateConfidence": "high",
-          "relevance": 0.46,
-          "score": 28,
-          "engagement": {
-            "num_comments": 0,
-            "collects": 0,
-            "voteups": 0
-          },
-          "author": "旅途备忘录",
-          "signal": "neutral"
         }
       ],
-      "sourceErrors": {
-        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
-      }
+      "sourceErrors": {}
     },
     "mogaoCaves": {
       "label": "莫高窟",
       "status": "ok",
-      "evidenceCount": 9,
+      "evidenceCount": 12,
       "evidence": [
         {
           "platform": "zhihu",
@@ -657,7 +955,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.64,
-          "score": 30,
+          "score": 37,
           "engagement": {
             "num_comments": 9,
             "likes": 118,
@@ -669,13 +967,31 @@
         },
         {
           "platform": "douyin",
+          "title": "莫高窟预攻略 莫高窟预约攻略 进入小程序“莫高窟参观预约网” 点击莫高窟 阅读提示 进行实名认证 然后选择参观日期 和场次 添加参观人 选择参观人 确认 下一步 提交订单 支付，就完成预约了。 预约不到的， 评论区联系我 100%搞定#莫高窟 #莫高窟预约 #莫高窟门票",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7651516892150041919",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.64,
+          "score": 37,
+          "engagement": {
+            "num_comments": 13,
+            "likes": 102,
+            "views": 0,
+            "shares": 12
+          },
+          "author": "行走的旅游世界",
+          "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
           "title": "莫高窟门票预约攻略 #莫高窟门票攻略 一票难求，我教你怎么正确预约莫高窟门票#青海旅游攻略 #青甘大环线攻略 #莫高窟攻略",
           "snippet": "",
           "url": "https://www.douyin.com/video/7519544071145229568",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.64,
-          "score": 29,
+          "score": 36,
           "engagement": {
             "num_comments": 6,
             "likes": 44,
@@ -687,13 +1003,103 @@
         },
         {
           "platform": "douyin",
+          "title": "你知道莫高窟常规票，应急票，特窟窟，复制窟他们有什么区别吗，怎么去预约这些门票，怎么游玩不踩坑#莫高窟攻略 #敦煌旅游攻略 #莫高窟门票攻略 #敦煌旅游包车",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7635618111735836325",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.64,
+          "score": 34,
+          "engagement": {
+            "num_comments": 5,
+            "likes": 61,
+            "views": 0,
+            "shares": 8
+          },
+          "author": "西北定制旅游|徽骆驼",
+          "signal": "caution"
+        },
+        {
+          "platform": "douyin",
+          "title": "敦煌避坑就看这条 #敦煌旅游攻略 #创作者中心 #创作灵感 #莫高窟攻略 #鸣沙山",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7631514052443162979",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.64,
+          "score": 34,
+          "engagement": {
+            "num_comments": 15,
+            "likes": 31,
+            "views": 0,
+            "shares": 8
+          },
+          "author": "爱拍照的小柳哥",
+          "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "青甘大环线到了敦煌站，鸣沙山月牙泉莫高窟玩法大全！ 6-7月份，青甘大环线敦煌这一站，鸣沙山月牙泉以及莫高窟的玩法大全整理好了，从游玩顺序及莫高窟门票预约都有详细的说明！#青甘大环线 #甘青大环线 #青甘大环线自驾游 #敦煌旅游 #莫高窟攻略",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7642023710517415209",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.64,
+          "score": 33,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 106,
+            "views": 0,
+            "shares": 13
+          },
+          "author": "敦煌寻漠【西北青甘环线领队】",
+          "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "敦煌旅游攻略，本地人整理出来的避坑指南，一定要收藏起来#敦煌旅游攻略 #避坑攻略 #旅游推荐官 #敦煌 #莫高窟",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7641441169264965234",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.64,
+          "score": 30,
+          "engagement": {
+            "num_comments": 1,
+            "likes": 15,
+            "views": 0,
+            "shares": 13
+          },
+          "author": "大飞的旅游攻略",
+          "signal": "positive"
+        },
+        {
+          "platform": "douyin",
+          "title": "莫高窟门票预约，门票预约攻略，约不到可以直接找我 *渠道：微信 “莫高窟参观预约网” 小程序 / 服务号，实名预约、人证一致。 *票种（2026）： A 类（推荐）：旺季（4.1-10.31）238 元，淡季 140 元；含 2 部数字电影、8 洞窟、摆渡车、讲解；提前 30 天 7:00 放票，日限 6000 张，旺季秒空。 B 类（应急）：100 元，4 洞窟、无电影；提前 7 天抢，日限 12000 张。 *抢票：提前填好身份信息，7:00 卡点抢 A 类；没票再抢 B 类。 *参观：带身份证，提前 30 分钟到数字展示中心；先观影，乘摆渡车入窟；窟内严禁拍照、触摸壁画。 *优待：6-18 岁、学生、60-69 岁老人优惠；70 岁以上、军人免票#莫高窟 #莫高窟预约指南 #莫高窟打卡#莫高窟预约 #",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7650361983388093736",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.64,
+          "score": 28,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 14,
+            "views": 0,
+            "shares": 11
+          },
+          "author": "行走的旅游世界",
+          "signal": "positive"
+        },
+        {
+          "platform": "douyin",
           "title": "莫高窟导航大坑，顺带预告明天本地美食私藏清单 这条视频一定要看到最后哈 #莫高窟避坑攻略 #敦煌自驾出行 #敦煌旅游干货#敦煌 #敦煌旅游#敦煌旅游攻略",
           "snippet": "",
           "url": "https://www.douyin.com/video/7664411801295767418",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.64,
-          "score": 23,
+          "score": 27,
           "engagement": {
             "num_comments": 0,
             "likes": 14,
@@ -702,63 +1108,9 @@
           },
           "author": "潘姐爱敦煌",
           "signal": "neutral"
-        },
-        {
-          "platform": "zhihu",
-          "title": "青甘莫高窟A类特窟专业讲解预约渠道与收费标准，防坑指南实测，第一次去必看花费多少",
-          "snippet": "姐妹们，去敦煌不去莫高窟等于白来，但莫高窟A类特窟专业讲解预约渠道与收费标准 你了解吗？ 去年我带娃去",
-          "url": "https://zhuanlan.zhihu.com/p/2060359485974131368",
-          "date": "2026-07-14",
-          "dateConfidence": "high",
-          "relevance": 0.39,
-          "score": 35,
-          "engagement": {
-            "num_comments": 0,
-            "collects": 0,
-            "voteups": 0
-          },
-          "author": "厉害了我的达人",
-          "signal": "neutral"
-        },
-        {
-          "platform": "zhihu",
-          "title": "自由行游客注意！莫高窟门票预约新政与窟内参观禁忌详解",
-          "snippet": "务必提前做好功课。 • 官方预约渠道 唯一官方指定预约平台为“莫高窟参观预约网”微信小程序。建议出行前关注该公众号",
-          "url": "https://zhuanlan.zhihu.com/p/2053877566247900201",
-          "date": "2026-06-26",
-          "dateConfidence": "high",
-          "relevance": 0.39,
-          "score": 19,
-          "engagement": {
-            "num_comments": 0,
-            "collects": 0,
-            "voteups": 0
-          },
-          "author": "阿里妍旅游",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "敦煌莫高窟详细版游玩攻略，含洞窟推荐#西北旅游 #青甘大环线 #敦煌 #莫高窟 #莫高窟壁画",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7518328518804065576",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.39,
-          "score": 13,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 15,
-            "views": 0,
-            "shares": 8
-          },
-          "author": "小雪在西北（组队中）",
-          "signal": "positive"
         }
       ],
-      "sourceErrors": {
-        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
-      }
+      "sourceErrors": {}
     },
     "mingshaMountain": {
       "label": "鸣沙山月牙泉",
@@ -773,7 +1125,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.91,
-          "score": 40,
+          "score": 42,
           "engagement": {
             "num_comments": 4,
             "likes": 12,
@@ -802,31 +1154,13 @@
         },
         {
           "platform": "douyin",
-          "title": "鸣沙山月牙泉万人星空演唱会攻略 #鸣沙山月牙泉 #鸣沙山万人星空演唱会 #大西北旅行攻略 #青甘旅游攻略 #沙漠日落",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7633742481817168229",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.7,
-          "score": 43,
-          "engagement": {
-            "num_comments": 38,
-            "likes": 257,
-            "views": 0,
-            "shares": 142
-          },
-          "author": "小鹿（西北青甘大环线攻略分享）",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
           "title": "鸣沙山月牙泉避坑指南，神奇之处。为什么一定要来？#鸣沙山月牙泉 #游玩攻略 #青甘大环线 #敦煌#旅游推荐官",
           "snippet": "",
           "url": "https://www.douyin.com/video/7624091232486727080",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.7,
-          "score": 32,
+          "score": 34,
           "engagement": {
             "num_comments": 3,
             "likes": 35,
@@ -844,7 +1178,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.7,
-          "score": 26,
+          "score": 28,
           "engagement": {
             "num_comments": 0,
             "likes": 8,
@@ -855,6 +1189,96 @@
           "signal": "neutral"
         },
         {
+          "platform": "xiaohongshu",
+          "title": "关于鸣沙山月牙泉日落",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a47e2560000000021014cd6",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.58,
+          "score": 25,
+          "engagement": {
+            "num_comments": 6,
+            "likes": 12,
+            "shares": 0,
+            "collects": 3
+          },
+          "author": "🌸",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "鸣沙山月牙泉｜保姆级攻略",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a5dccfe0000000001030049",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.55,
+          "score": 20,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 6,
+            "shares": 0,
+            "collects": 2
+          },
+          "author": "Kiki",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "我们在！敦煌鸣沙山月牙泉！好美！（附攻略）",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/69e445d4000000001f001a60",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.53,
+          "score": 40,
+          "engagement": {
+            "num_comments": 62,
+            "likes": 535,
+            "shares": 0,
+            "collects": 272
+          },
+          "author": "杨肥肥呀",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "总要看一场鸣沙山的日落吧🏜️（附攻略）",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a1e9dbd0000000036003402",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.53,
+          "score": 36,
+          "engagement": {
+            "num_comments": 32,
+            "likes": 140,
+            "shares": 0,
+            "collects": 242
+          },
+          "author": "半吊子选手",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "敦煌鸣沙山月牙泉超全必备品穿衣攻略",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/69ec68ab000000003700e81e",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.51,
+          "score": 47,
+          "engagement": {
+            "num_comments": 90,
+            "likes": 2857,
+            "shares": 0,
+            "collects": 4136
+          },
+          "author": "千千-青甘旅游全攻略",
+          "signal": "neutral"
+        },
+        {
           "platform": "douyin",
           "title": "鸣沙山月牙泉《避坑指南》 #大西北 #青甘大环线 #鸣沙山月牙泉 #鸣沙山",
           "snippet": "",
@@ -862,7 +1286,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.51,
-          "score": 32,
+          "score": 33,
           "engagement": {
             "num_comments": 16,
             "likes": 159,
@@ -870,6 +1294,24 @@
             "shares": 76
           },
           "author": "领队合理-青甘旅游全攻略",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "甘肃敦煌｜在鸣沙山月牙泉，邂逅绝美日落",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a57785600000000220151a4",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.51,
+          "score": 28,
+          "engagement": {
+            "num_comments": 10,
+            "likes": 25,
+            "shares": 0,
+            "collects": 34
+          },
+          "author": "云梦清禾🌸",
           "signal": "neutral"
         },
         {
@@ -888,106 +1330,14 @@
           },
           "author": "人间漫游册",
           "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "玩鸣沙山一定要避雷这些#鸣沙山月牙泉 #月牙泉打卡攻略 #沙漠 #旅游攻略",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7649697247369678126",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.49,
-          "score": 47,
-          "engagement": {
-            "num_comments": 272,
-            "likes": 5684,
-            "views": 0,
-            "shares": 4689
-          },
-          "author": "西北领队荔枝",
-          "signal": "caution"
-        },
-        {
-          "platform": "douyin",
-          "title": "敦煌鸣沙山月牙泉超全必备品穿衣攻略 #青甘大环线#西北大环线#鸣沙山月牙泉#去一次大西北才没有遗憾#大西北有哪些值得一去的景点",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7632574838331709578",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.49,
-          "score": 46,
-          "engagement": {
-            "num_comments": 237,
-            "likes": 5237,
-            "views": 0,
-            "shares": 5832
-          },
-          "author": "千千青甘大环线旅游攻略",
-          "signal": "positive"
-        },
-        {
-          "platform": "douyin",
-          "title": "敦煌鸣沙山月牙泉到底怎么玩？门票项目全避坑，日落星空演唱会时间直接抄！#鸣沙山月牙泉 #敦煌 #青甘大环线",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7629650321061676473",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.49,
-          "score": 35,
-          "engagement": {
-            "num_comments": 33,
-            "likes": 299,
-            "views": 0,
-            "shares": 243
-          },
-          "author": "领队小雪带你游青甘",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "懂行的人去敦煌鸣沙山都这么玩！三门选择、骑骆驼坑点、鞋套智商税、山顶高价水套路全揭秘，拍照看日落听演唱会，省心省钱不踩雷。#青甘大环线#敦煌#鸣沙山#青甘大环线#鸣沙山月牙泉",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7638139517837124837",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.49,
-          "score": 34,
-          "engagement": {
-            "num_comments": 30,
-            "likes": 342,
-            "views": 0,
-            "shares": 141
-          },
-          "author": "领队小雪带你游青甘",
-          "signal": "mixed"
-        },
-        {
-          "platform": "douyin",
-          "title": "鸣沙山月牙泉想玩好 必看的纯干货避坑指南 #青甘大环线#西北大环线#鸣沙山月牙泉#去一次大西北才没有遗憾#大西北有哪些值得一去的景点",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7639325804523286766",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.49,
-          "score": 29,
-          "engagement": {
-            "num_comments": 13,
-            "likes": 92,
-            "views": 0,
-            "shares": 51
-          },
-          "author": "千千青甘大环线旅游攻略",
-          "signal": "positive"
         }
       ],
-      "sourceErrors": {
-        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
-      }
+      "sourceErrors": {}
     },
     "jiayuPass": {
       "label": "嘉峪关",
       "status": "ok",
-      "evidenceCount": 10,
+      "evidenceCount": 12,
       "evidence": [
         {
           "platform": "douyin",
@@ -997,7 +1347,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.64,
-          "score": 36,
+          "score": 35,
           "engagement": {
             "num_comments": 147,
             "likes": 481,
@@ -1015,7 +1365,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.64,
-          "score": 28,
+          "score": 27,
           "engagement": {
             "num_comments": 0,
             "likes": 29,
@@ -1062,6 +1412,61 @@
           "signal": "neutral"
         },
         {
+          "platform": "bilibili",
+          "title": "嘉峪关关城",
+          "snippet": "-",
+          "url": "https://www.bilibili.com/video/BV129KV6NEHY",
+          "date": "2026-07-16",
+          "dateConfidence": "high",
+          "relevance": 0.54,
+          "score": 43,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 17,
+            "views": 4,
+            "danmaku": 0,
+            "favorites": 0
+          },
+          "author": "流年作青虹",
+          "signal": "neutral"
+        },
+        {
+          "platform": "bilibili",
+          "title": "嘉峪关一日游攻略来咯",
+          "snippet": "-",
+          "url": "https://www.bilibili.com/video/BV1HxKP6YEdW",
+          "date": "2026-07-18",
+          "dateConfidence": "high",
+          "relevance": 0.42,
+          "score": 69,
+          "engagement": {
+            "num_comments": 1,
+            "likes": 18,
+            "views": 223,
+            "danmaku": 0,
+            "favorites": 1
+          },
+          "author": "走马观花花世界z",
+          "signal": "neutral"
+        },
+        {
+          "platform": "zhihu",
+          "title": "8天7晚青甘大环线回来，把你们问爆的\"真实花费+住宿门票明细\"拆给你看",
+          "snippet": "等日落+星空。住敦煌。 D6 敦煌→嘉峪关→张掖七彩丹霞 嘉峪关关城110元，登城楼眺祁连雪山。七彩丹霞75元",
+          "url": "https://zhuanlan.zhihu.com/p/2055693962938152533",
+          "date": "2026-07-01",
+          "dateConfidence": "high",
+          "relevance": 0.39,
+          "score": 39,
+          "engagement": {
+            "num_comments": 0,
+            "collects": 0,
+            "voteups": 0
+          },
+          "author": "豆豆芙",
+          "signal": "neutral"
+        },
+        {
           "platform": "douyin",
           "title": "嘉峪关你真的玩对了吗？这9大打卡点千万不能错过！悬臂长城及长城第一墩可以这样轻松前往！#嘉峪关 #嘉峪关关城 #青甘大环线 #西北大环线 #旅游推荐官",
           "snippet": "",
@@ -1069,7 +1474,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.39,
-          "score": 25,
+          "score": 24,
           "engagement": {
             "num_comments": 52,
             "likes": 510,
@@ -1105,7 +1510,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.39,
-          "score": 21,
+          "score": 20,
           "engagement": {
             "num_comments": 18,
             "likes": 126,
@@ -1123,7 +1528,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.39,
-          "score": 19,
+          "score": 18,
           "engagement": {
             "num_comments": 5,
             "likes": 131,
@@ -1132,24 +1537,6 @@
           },
           "author": "西北飞飞姐",
           "signal": "caution"
-        },
-        {
-          "platform": "douyin",
-          "title": "来嘉峪关玩 夜游嘉峪关摇打个卡 太美了#边塞月光夜游嘉峪关#夜游嘉峪关关城 #嘉峪关关城#嘉峪关光影秀",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7662339481769150114",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.39,
-          "score": 13,
-          "engagement": {
-            "num_comments": 1,
-            "likes": 7,
-            "views": 0,
-            "shares": 1
-          },
-          "author": "哈皮吃不饱",
-          "signal": "neutral"
         },
         {
           "platform": "douyin",
@@ -1216,6 +1603,25 @@
           "signal": "neutral"
         },
         {
+          "platform": "bilibili",
+          "title": "张掖七彩丹霞游玩攻略",
+          "snippet": "-",
+          "url": "https://www.bilibili.com/video/BV18MTg6AEW7",
+          "date": "2026-06-28",
+          "dateConfidence": "high",
+          "relevance": 0.64,
+          "score": 47,
+          "engagement": {
+            "num_comments": 11,
+            "likes": 49,
+            "views": 1345,
+            "danmaku": 0,
+            "favorites": 47
+          },
+          "author": "汤汤带你游",
+          "signal": "neutral"
+        },
+        {
           "platform": "douyin",
           "title": "不要一提张掖，只知七彩丹霞 🥰我的四日路线： D1：张掖市博物馆 → 七彩丹霞（建议日落前2小时入园，光线最绝） D2：大佛寺 → 山西会馆 → 木塔寺（步行可达，市区半天搞定）→ 平山湖大峡谷 → 平易河大地之树（在平易河收费站旁边，仅航拍能看见） D3：马蹄寺 → 大都麻村（马蹄寺预留大半天，攀爬洞窟很费腿，且节假日要排队） D4：山丹马场（三场周边）→ 扁都口 ⚠️ 我后面从扁都口直接往祁连、西宁方向返程了。如果要回张掖，需要原路返回。 🚗 交通：全程自驾。市外景点都比较远且分散。 💡 小贴士： 👉平山湖大峡谷、马蹄寺洞窟均狭窄，穿防滑鞋，别背大包 👉山丹马场最佳季节是6-8月，草绿马壮 #交换世界计划 #青年创作者成长计划 #超会玩派对 #张掖",
           "snippet": "",
@@ -1262,7 +1668,7 @@
           "score": 24,
           "engagement": {
             "num_comments": 2,
-            "likes": 73,
+            "likes": 75,
             "views": 0,
             "shares": 43
           },
@@ -1375,24 +1781,6 @@
           },
           "author": "恺恺旅行日记",
           "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "看航拍美景，避踩坑指南#甘肃张掖七彩丹霞 #原创视频 #看美景能治愈心情 #美好生活恒简单",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7649165627635332431",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.4,
-          "score": 13,
-          "engagement": {
-            "num_comments": 2,
-            "likes": 23,
-            "views": 0,
-            "shares": 3
-          },
-          "author": "天眼兵哥",
-          "signal": "caution"
         }
       ],
       "sourceErrors": {
@@ -1404,7 +1792,7 @@
     "xining": {
       "label": "西宁",
       "status": "ok",
-      "evidenceCount": 1,
+      "evidenceCount": 2,
       "evidence": [
         {
           "platform": "zhihu",
@@ -1421,6 +1809,24 @@
             "voteups": 3
           },
           "author": "环游蓝色星球",
+          "signal": "positive"
+        },
+        {
+          "platform": "douyin",
+          "title": "如果你来，我去西宁接你……到达西宁已是晚上八点多，放好行李，直奔“西宁市区四大夜市”：莫家街（吃德禄酸奶）大新街夜市（吃杏子茶、烧烤），新千观光夜市（吃宫廷饼，酿皮、羊腿，买地摊货）、水井巷（各种美食）～ #西宁 #旅行 #旅行推荐官 #西北大环线#抖音美食推荐官",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7393046029953813795",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.4,
+          "score": 17,
+          "engagement": {
+            "num_comments": 11,
+            "likes": 81,
+            "views": 0,
+            "shares": 25
+          },
+          "author": "衫妮小姐",
           "signal": "positive"
         }
       ],
@@ -1449,6 +1855,24 @@
                 "voteups": 3
               },
               "author": "环游蓝色星球",
+              "signal": "positive"
+            },
+            {
+              "platform": "douyin",
+              "title": "如果你来，我去西宁接你……到达西宁已是晚上八点多，放好行李，直奔“西宁市区四大夜市”：莫家街（吃德禄酸奶）大新街夜市（吃杏子茶、烧烤），新千观光夜市（吃宫廷饼，酿皮、羊腿，买地摊货）、水井巷（各种美食）～ #西宁 #旅行 #旅行推荐官 #西北大环线#抖音美食推荐官",
+              "snippet": "",
+              "url": "https://www.douyin.com/video/7393046029953813795",
+              "date": null,
+              "dateConfidence": "low",
+              "relevance": 0.4,
+              "score": 17,
+              "engagement": {
+                "num_comments": 11,
+                "likes": 81,
+                "views": 0,
+                "shares": 25
+              },
+              "author": "衫妮小姐",
               "signal": "positive"
             }
           ]
@@ -1516,188 +1940,26 @@
         }
       ],
       "staleRestaurantsPreserved": true,
-      "restaurantRefreshAttemptAt": "2026-07-23T04:39:22.209410+00:00",
+      "restaurantRefreshAttemptAt": "2026-07-23T04:53:52.808167+00:00",
       "lastRestaurantSuccessfulAt": "2026-07-22T15:52:54.711810+00:00"
     },
     "chaka": {
       "label": "茶卡",
       "status": "ok",
-      "evidenceCount": 12,
+      "evidenceCount": 2,
       "evidence": [
         {
           "platform": "douyin",
-          "title": "青海美的我想埋在这了~炕锅羊肉也是香飞天灵盖！ 青海全程惊喜不断！青海湖震撼、茶卡黄昏绝美，西宁动物园性价比拉满，博物馆大开眼界，炕锅羊肉、狗浇尿饼等特色小吃吃到爽，唯一遗憾就是太远。#青海 #青海美食 #旅行 #西宁 #旅行种草指南",
+          "title": "在茶卡吃特色美食就来他们家 #木沙特色炕锅美食茶卡店#茶卡盐湖必吃美食 #茶卡特色炕锅羊肉 #茶卡镇本地特色美食",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7632215261277474091",
+          "url": "https://www.douyin.com/video/7638574398815609306",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.74,
-          "score": 49,
-          "engagement": {
-            "num_comments": 1059,
-            "likes": 9200,
-            "views": 0,
-            "shares": 1029
-          },
-          "author": "熙狗Go",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "一锅热气腾腾的炕锅羊肉，是青海人待客的最高礼遇，更是你不可错过的美食体验！#青海美食 #西北风味 #把家乡的味道分享给大家 #舌尖上的抖音",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7472659365187636516",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.56,
-          "score": 39,
-          "engagement": {
-            "num_comments": 261,
-            "likes": 3584,
-            "views": 0,
-            "shares": 2030
-          },
-          "author": "冶大发-",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "#炕锅羊肉 #西宁 西宁第一炕锅羊肉 #抖音美食推荐官 是不是第一不知道，但非常好吃 而且这边的羊肉质量嘎嘎在线",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7497229865143717158",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.56,
-          "score": 27,
+          "score": 33,
           "engagement": {
             "num_comments": 5,
-            "likes": 25,
-            "views": 0,
-            "shares": 42
-          },
-          "author": "🌈桐人也想吃",
-          "signal": "positive"
-        },
-        {
-          "platform": "douyin",
-          "title": "唯有美食不可辜负！ #没有什么是美食不能治愈的 #美食当前不可辜负 #茶卡盐湖 #炕锅羊肉",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7644188590441290355",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.56,
-          "score": 25,
-          "engagement": {
-            "num_comments": 1,
-            "likes": 19,
-            "views": 0,
-            "shares": 5
-          },
-          "author": "君王",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "在茶卡想吃地道的青海特色美食就来炕锅羊肉土火锅旗舰店#粉丝1000万 #抗拒不了的美食 #美味大铜锅 #口味独特，满满的锅气 #锅气是菜品的灵魂",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7648297122215554790",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.56,
-          "score": 25,
-          "engagement": {
-            "num_comments": 2,
-            "likes": 18,
-            "views": 0,
-            "shares": 4
-          },
-          "author": "玫瑰传说",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "在茶卡盐湖不知道吃点啥，那就来特色土火锅兰州拉面，#粉丝1000万 #特色铜火锅兰州拉面#炕锅羊肉 #好吃到停不下来 #青海茶卡",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7653865924478750322",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.56,
-          "score": 25,
-          "engagement": {
-            "num_comments": 3,
-            "likes": 20,
-            "views": 0,
-            "shares": 1
-          },
-          "author": "玫瑰传说",
-          "signal": "positive"
-        },
-        {
-          "platform": "douyin",
-          "title": "茶卡的朋友呢这桌满香伊生炒羊肉双人餐只要128元，直接5.9折拿下，满香伊盐之城特色餐饮。套餐里荤菜能选生炒羊肉和炕锅羊排，两份硬菜吃到爽！不管是想堂食还是打包带走都可以，来这不用预约，直接就能吃。羊肉都是新鲜现做，西北风味真地道，两个人来这吃又实惠又过瘾。要去的朋友记得视频左下角团购更划算！",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7657118224194807281",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.56,
-          "score": 20,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 0,
-            "views": 0,
-            "shares": 0
-          },
-          "author": "格尔木美食推荐👍",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "炕锅羊肉，不容错过！#祁连山下人 #炕锅羊肉 #青海家宴",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7651148169929100598",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.42,
-          "score": 18,
-          "engagement": {
-            "num_comments": 1,
-            "likes": 13,
-            "views": 0,
-            "shares": 6
-          },
-          "author": "清真·祁连山下人青海必吃家宴",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "川府饭店 川府川府！ 跑青海湖、茶卡盐湖环线，路过大水桥吃饭认准川府饭店！ 双人出行选88元荤素套餐，两三好友安排130元毛血旺套餐， 四人结伴吃198元本地野蘑菇炒肉套餐，车队多人聚餐直接冲246元炕锅羊排4-5人餐！ 青甘自驾别绕路，情侣、好友、车队小团体全都适配！ 线上团购优惠多多，全部免预约、随时退、过期自动退，路过就能直接核销就餐，点下方小黄车立即抢购！#共和大水桥 #川府饭店 #海西美食 #青海自驾吃饭攻略#川菜",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7665259614616213428",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.4,
-          "score": 17,
-          "engagement": {
-            "num_comments": 2,
-            "likes": 21,
-            "views": 0,
-            "shares": 0
-          },
-          "author": "大水桥川府饭店",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "来茶卡盐湖旅游不知道吃点啥，特色土火锅兰州拉面等你来#粉丝一千万 #手抓肉推荐 #青海特色美食 #好吃不贵经济实惠 #炕锅羊肉",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7653863104103337161",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.4,
-          "score": 17,
-          "engagement": {
-            "num_comments": 2,
-            "likes": 18,
+            "likes": 12,
             "views": 0,
             "shares": 1
           },
@@ -1706,39 +1968,21 @@
         },
         {
           "platform": "douyin",
-          "title": "来茶卡不知道吃什么就来炕锅羊肉土火锅旗舰店#粉丝一千万 #青海特色美食推荐 #炕锅土火锅 #青海美好推荐官 #好吃不贵经济实惠",
+          "title": "来海西蒙古族藏族自治州旅游一定要来这家茶卡聚雅特色炕锅肉土火锅。甄选3-5人套餐，现在团购价只要308元。招牌炕锅羊肉加上土火锅，香得很，吃了还想再吃！还有四份奶茶和米饭搭配着，又暖胃又暖心！刷到的宝子们赶紧囤，反正不用随时可以退，过期自动退。就在幸福路，快带上你的小伙伴一起来打卡。（【退款规则】到店核销：随时可退，过期未核销自动退）#附近美食优惠团购 #有灵魂的美食 #好吃打卡 #周边美食地图导航 #放松解压好去处",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7648295903065921755",
+          "url": "https://www.douyin.com/video/7454855696018918668",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.4,
-          "score": 17,
-          "engagement": {
-            "num_comments": 3,
-            "likes": 14,
-            "views": 0,
-            "shares": 2
-          },
-          "author": "西宁味道",
-          "signal": "positive"
-        },
-        {
-          "platform": "douyin",
-          "title": "#茶卡抗锅羊肉土火锅面片大王#茶卡盐湖天空之镜 #西北美食",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7652335033428471162",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.4,
-          "score": 16,
+          "relevance": 0.74,
+          "score": 28,
           "engagement": {
             "num_comments": 0,
-            "likes": 10,
+            "likes": 3,
             "views": 0,
-            "shares": 2
+            "shares": 0
           },
-          "author": "探店小博主",
-          "signal": "neutral"
+          "author": "聚雅美食官方号",
+          "signal": "positive"
         }
       ],
       "sourceErrors": {
@@ -1772,232 +2016,36 @@
         }
       ],
       "staleRestaurantsPreserved": true,
-      "restaurantRefreshAttemptAt": "2026-07-23T04:39:22.209410+00:00",
+      "restaurantRefreshAttemptAt": "2026-07-23T04:53:52.808167+00:00",
       "lastRestaurantSuccessfulAt": "2026-07-22T15:52:54.711810+00:00"
     },
     "dachaidan": {
       "label": "大柴旦",
       "status": "ok",
-      "evidenceCount": 12,
+      "evidenceCount": 1,
       "evidence": [
         {
-          "platform": "xiaohongshu",
-          "title": "大柴旦美食避雷！",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/66744e34000000001c036e46",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.81,
-          "score": 54,
-          "engagement": {
-            "num_comments": 41,
-            "likes": 106,
-            "shares": 0,
-            "collects": 60
-          },
-          "author": "盐水鸭",
-          "signal": "caution"
-        },
-        {
           "platform": "douyin",
-          "title": "大柴旦美食推荐，马辉餐饮干锅牦牛肉味道绝绝子！#抖音美食推荐官 #大柴旦美食#翡翠湖 #青甘大环线 #西北大环线",
+          "title": "大柴旦行政区五彩街的顶顶牛上团购啦！原价472元的干锅牦牛肉4人餐，现仅317元。肉嫩味美，配菜丰富，还有老酸奶和百事可乐，全家共享。店亮分高，速来！ （【退款规则】到店核销：随时可退，过期未核销自动退）#肥牛 #大块牛肉的正确煮法视频 #牛排 #真材实料好味道 #水煮牛肉",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7380197106906189068",
+          "url": "https://www.douyin.com/video/7660541696531484008",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.7,
-          "score": 51,
-          "engagement": {
-            "num_comments": 44,
-            "likes": 247,
-            "views": 0,
-            "shares": 264
-          },
-          "author": "马辉餐饮",
-          "signal": "positive"
-        },
-        {
-          "platform": "douyin",
-          "title": "逛完翡翠湖来尝尝这家的美食牦牛肉火锅 味道真的超赞#牦牛肉#牦牛肉火锅#翡翠湖#大柴旦美食",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7408117157730503999",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.7,
-          "score": 34,
-          "engagement": {
-            "num_comments": 1,
-            "likes": 8,
-            "views": 0,
-            "shares": 9
-          },
-          "author": "老北京涮牦牛肉藏羊肉火锅（海西大柴旦店）",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "今天给大家推荐一家位于海西蒙古族藏族自治州大柴旦创新街上的味香林牦牛自助火锅。他们家抖音评分4.5，在大柴旦行政区美食热销榜榜上有名。现在牦牛肉火锅自助4人只需298元。点击左下角链接，带上你的家人和朋友一起来品尝一下。（【退款规则】到店核销：随时可退，过期未核销自动退）#很哇塞的周末 #支持本地 #加油 #好吃打卡 #特色美食推荐",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7410254727184698633",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.7,
-          "score": 33,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 7,
-            "views": 0,
-            "shares": 7
-          },
-          "author": "味香林牦牛自助火锅官方号",
-          "signal": "positive"
-        },
-        {
-          "platform": "douyin",
-          "title": "认识一下吧，我是牛哥，青海人，在大柴旦开一家干锅牦牛肉，有缘刷到，不管你是70 80 90 00后，认识一下可好#大柴旦#牦牛肉#同城美食#放牛娃干锅牦牛肉",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7517564781269126458",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.7,
-          "score": 32,
-          "engagement": {
-            "num_comments": 3,
-            "likes": 6,
-            "views": 0,
-            "shares": 0
-          },
-          "author": "放牛娃干锅牦牛肉",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "大柴旦美食榜马辉餐饮王炸套餐来袭！原价 236 的情侣干锅牦牛肉双人餐砍至 148，香辣配囊饼，酸奶解腻，环境好价实惠，干饭人冲！ （【退款规则】到店核销：随时可退，过期未核销自动退）#干锅鸡 #私房菜 #自制麻辣香锅 #回锅肉 #发现好地",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7650880390413266815",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.7,
-          "score": 30,
-          "engagement": {
-            "num_comments": 1,
-            "likes": 3,
-            "views": 0,
-            "shares": 0
-          },
-          "author": "马辉餐饮",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "醉青海高原牦牛肉火锅在人民西路，入选大柴旦行政区美食好评榜，抖音评分 4.8，600 人消费。288 元享 4 人餐，鲜切肉新鲜营养。天然健康，吃着放心。左下角团购更惠。 （【退款规则】到店核销：随时可退，过期未核销自动退）#牛肉丸 #新鲜牛肉怎么吃更有营养 #牛淋巴肉能吃吗 #牛肉属于热性还是凉性的 #牛肉上面有黑色的能吃吗",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7662800807436240491",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.7,
-          "score": 26,
+          "relevance": 0.49,
+          "score": 17,
           "engagement": {
             "num_comments": 0,
             "likes": 0,
             "views": 0,
             "shares": 0
           },
-          "author": "醉青海高原牦牛肉火锅官方号",
+          "author": "海西大柴旦顶顶牛干锅牛肉店",
           "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "大柴旦避雷帖！！！",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/68d9235800000000130066a1",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.58,
-          "score": 40,
-          "engagement": {
-            "num_comments": 12,
-            "likes": 72,
-            "shares": 0,
-            "collects": 64
-          },
-          "author": "爆炒肉",
-          "signal": "caution"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "大柴旦餐厅避雷",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6871c22f000000000d0193f7",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.58,
-          "score": 20,
-          "engagement": {
-            "num_comments": 1,
-            "likes": 6,
-            "shares": 0,
-            "collects": 0
-          },
-          "author": "快乐的小芋圆",
-          "signal": "caution"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "大柴旦美食不踩雷",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/69e6f95400000000230209a9",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.55,
-          "score": 27,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 21,
-            "shares": 0,
-            "collects": 11
-          },
-          "author": "唐长老你从哪里来",
-          "signal": "mixed"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "大柴旦土著美食推荐清单💡",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/69e72ebc0000000023021d9c",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.55,
-          "score": 24,
-          "engagement": {
-            "num_comments": 1,
-            "likes": 6,
-            "shares": 0,
-            "collects": 6
-          },
-          "author": "美美生活味",
-          "signal": "positive"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "关于大柴旦的一些避雷！！！",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/687a0103000000002201dd29",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.55,
-          "score": 22,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 12,
-            "shares": 0,
-            "collects": 2
-          },
-          "author": "二一",
-          "signal": "caution"
         }
       ],
-      "sourceErrors": {},
+      "sourceErrors": {
+        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
+      },
       "restaurants": []
     },
     "dunhuang": {
@@ -2023,22 +2071,22 @@
           "signal": "positive"
         },
         {
-          "platform": "xiaohongshu",
-          "title": "打卡敦煌本地人推荐的本地美食驴肉黄面！",
+          "platform": "douyin",
+          "title": "打卡敦煌美食之驴肉黄面，避雷还是推荐？ #敦煌 #敦煌美食 #敦煌美食打卡 #旅行推荐官 #旅行vlog",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/69ec88ca000000003502ae72",
+          "url": "https://www.douyin.com/video/7572183691523312923",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.6,
-          "score": 29,
+          "relevance": 0.74,
+          "score": 40,
           "engagement": {
-            "num_comments": 2,
-            "likes": 14,
-            "shares": 0,
-            "collects": 10
+            "num_comments": 77,
+            "likes": 106,
+            "views": 0,
+            "shares": 69
           },
           "author": "管管酱的旅行日记",
-          "signal": "positive"
+          "signal": "mixed"
         },
         {
           "platform": "douyin",
@@ -2048,7 +2096,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.56,
-          "score": 34,
+          "score": 41,
           "engagement": {
             "num_comments": 650,
             "likes": 6032,
@@ -2060,372 +2108,276 @@
         },
         {
           "platform": "douyin",
-          "title": "打卡敦煌夜市特色美食#敦煌沙洲夜市的美食，很有特色，不但品种丰富，味道鲜美，而且价格实惠#沙葱牛肉饼、口袋羊肉，泡儿油糕、手抓羊肉、驴肉黄面、杏皮水，至今还流连忘返#夜市里的烟火气 #",
+          "title": "天上龙肉，地上驴肉，敦煌本地人爱吃的驴肉黄面，味道怎样呢？#本地人爱吃的店 #抖音美食推荐官 #美食推荐 #西北美食 #地方特色美食 #敦煌美食 #驴肉黄面",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7524379176611089707",
+          "url": "https://www.douyin.com/video/7052907119208647967",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.56,
-          "score": 23,
+          "score": 40,
           "engagement": {
-            "num_comments": 68,
-            "likes": 122,
+            "num_comments": 576,
+            "likes": 3501,
             "views": 0,
-            "shares": 3
+            "shares": 477
           },
-          "author": "金灿灿的霞",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "来听听老辈子的故事，听听属于我们敦煌自己的味道！#敦煌美食 #驴肉黄面 #传承中华美食",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7492406923308879143",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.56,
-          "score": 23,
-          "engagement": {
-            "num_comments": 34,
-            "likes": 113,
-            "views": 0,
-            "shares": 7
-          },
-          "author": "敦煌市顺阖黄面馆官方号",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "俗话说，天上的龙肉，地上的驴肉，敦煌名吃的李记酱驴肉黄面馆，将驴肉和黄面融为一体，黄亮诱人的黄面，浇上卤菜和炸酱，配上驴肉，与众不同，别有风味。在嘉峪关坚守十八年，，，#抖音美食推荐官 #敦煌 名吃#面食文化 #人类敦煌心向往之 #驴肉",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7387695213587860774",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.56,
-          "score": 21,
-          "engagement": {
-            "num_comments": 6,
-            "likes": 55,
-            "views": 0,
-            "shares": 36
-          },
-          "author": "毛毛觅食记（星动团）",
+          "author": "大眼吃遍天",
           "signal": "positive"
         },
         {
           "platform": "douyin",
-          "title": "在敦煌，怎么能不吃一顿地道的当地美食！#敦煌美食 #驴肉黄面 #手抓羊肉 #烤串 #烧烤",
+          "title": "🐑的敦煌食记 1.阿西娅西北妈妈拿手菜 2.城边边烧烤 3.舅舅家一羊两吃 4.尕古丽西域风味餐厅 5.国辉胡杨焖饼 6.石室冰室 7.达记驴肉黄面 #旅游吃啥 #吃货必去城市 #敦煌 #敦煌美食 #敦煌美食推荐",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7528698106206063898",
+          "url": "https://www.douyin.com/video/7654099837424388710",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.56,
-          "score": 20,
-          "engagement": {
-            "num_comments": 10,
-            "likes": 52,
-            "views": 0,
-            "shares": 1
-          },
-          "author": "喂嘴咆～张多肉",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "敦煌八大怪 驴肉黄面拽门外 驴肉黄面号称中华一绝 这面条口感真劲道 酱驴肉真香#肉能安神 #驴肉 #抖音美食推荐官 #生活vlog",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7209216974176390440",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.56,
-          "score": 20,
-          "engagement": {
-            "num_comments": 11,
-            "likes": 38,
-            "views": 0,
-            "shares": 5
-          },
-          "author": "云南峰哥",
-          "signal": "positive"
-        },
-        {
-          "platform": "douyin",
-          "title": "俗话说：“天上的龙肉，地上的驴肉。”敦煌的驴肉黄面，将驴肉与黄面融为一体，黄亮诱人的拉面，浇上卤菜或炸酱，配上驴肉系列佐菜，与众不同，别有风味。游客曾这样风趣地说，到敦煌游了风景名胜，若不品尝一下驴肉黄面，就好比到北京旅游未吃北京烤鸭，总让人感到美中不足。#抖音美食推荐官 #敦煌 #人类敦煌心向往之 #面食文化 #美食纪录片",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7273418203047398714",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.56,
-          "score": 20,
-          "engagement": {
-            "num_comments": 5,
-            "likes": 31,
-            "views": 0,
-            "shares": 14
-          },
-          "author": "敦煌游",
-          "signal": "positive"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "敦煌顺张黄面，不吃驴肉的真心不建议",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/67b9550c00000000290374fa",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.43,
-          "score": 23,
-          "engagement": {
-            "num_comments": 16,
-            "likes": 12,
-            "shares": 0,
-            "collects": 10
-          },
-          "author": "唔哩哇啦",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "避坑敦煌沙洲市场名吃广场马燕玲家驴肉黄面",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/64e8b4090000000012019b57",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.4,
-          "score": 14,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 4,
-            "shares": 0,
-            "collects": 0
-          },
-          "author": "momo",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "敦煌美食攻略",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/68089f2e000000001c02d660",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.34,
-          "score": 20,
-          "engagement": {
-            "num_comments": 3,
-            "likes": 17,
-            "shares": 0,
-            "collects": 26
-          },
-          "author": "圆周率旅行记",
-          "signal": "neutral"
-        }
-      ],
-      "sourceErrors": {},
-      "restaurants": []
-    },
-    "zhangye": {
-      "label": "张掖",
-      "status": "ok",
-      "evidenceCount": 12,
-      "evidence": [
-        {
-          "platform": "douyin",
-          "title": "张掖不仅有美景更有美食！炒拨拉/炒炮/烤面筋/卷子鸡/杏皮茶/油糕/牛肉小饭应有尽有！喜欢请您点赞收藏！#真实生活分享计划 #张掖 #谁懂这一口的好吃程度 #旅行就要逛吃逛吃 #妈呀太香了",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7655749589643269620",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.74,
-          "score": 43,
-          "engagement": {
-            "num_comments": 31,
-            "likes": 246,
-            "views": 0,
-            "shares": 160
-          },
-          "author": "王饱饱阿木木",
-          "signal": "positive"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "避雷张掖苗式卷子鸡",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/687cf032000000000d024ab8",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.64,
-          "score": 38,
-          "engagement": {
-            "num_comments": 47,
-            "likes": 23,
-            "shares": 0,
-            "collects": 17
-          },
-          "author": "Momo",
-          "signal": "caution"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "张掖苗氏卷子鸡避雷贴",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/68c93da0000000001300eb86",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.62,
-          "score": 22,
-          "engagement": {
-            "num_comments": 1,
-            "likes": 0,
-            "shares": 0,
-            "collects": 0
-          },
-          "author": "皮卡丘电你噢「",
-          "signal": "caution"
-        },
-        {
-          "platform": "douyin",
-          "title": "到张掖了，吃个卷子鸡。#旅行推荐官 #美食#亲子",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7661667177003187301",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.58,
-          "score": 29,
-          "engagement": {
-            "num_comments": 24,
-            "likes": 119,
-            "views": 0,
-            "shares": 5
-          },
-          "author": "谢大森（菏泽自驾新疆版）",
-          "signal": "positive"
-        },
-        {
-          "platform": "douyin",
-          "title": "张掖特色美食—卷子鸡（鸡肉垫卷子）#张掖人宣传张掖 #张掖约饭宝藏美食推荐 #寻味烟火气 #这家小店值得上烟火榜",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7625930745190461339",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.56,
-          "score": 25,
-          "engagement": {
-            "num_comments": 9,
-            "likes": 38,
-            "views": 0,
-            "shares": 21
-          },
-          "author": "行知张掖",
-          "signal": "positive"
-        },
-        {
-          "platform": "douyin",
-          "title": "西北硬菜 西行中途停靠张掖，解锁地道卷子鸡，碳水与肉食双重满足。#抗拒不了的美食",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7663070494036436322",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.56,
-          "score": 22,
-          "engagement": {
-            "num_comments": 9,
-            "likes": 26,
-            "views": 0,
-            "shares": 2
-          },
-          "author": "先生贾",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "张掖——卷子鸡",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/69833485000000002102a694",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.54,
-          "score": 36,
-          "engagement": {
-            "num_comments": 25,
-            "likes": 64,
-            "shares": 0,
-            "collects": 63
-          },
-          "author": "我行",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "卷子鸡…来张掖别吃",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/66586b2e000000000f00c438",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.44,
           "score": 27,
           "engagement": {
-            "num_comments": 44,
-            "likes": 23,
-            "shares": 0,
-            "collects": 6
-          },
-          "author": "柳六六",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "张掖的小份卷子鸡，一顿饭72……感人啊",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a1e9c2700000000360310d1",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.43,
-          "score": 33,
-          "engagement": {
-            "num_comments": 60,
-            "likes": 83,
-            "shares": 0,
-            "collects": 75
-          },
-          "author": "哆啦A小白兔🐰",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "今日打卡甘肃张掖美食—炒炮， 粉丝说他很小就在这吃，一直到成家立业，现在离开家乡在外工作，最挂念的家乡味就是这一碗卤肉炒炮，真的是独属于张掖人的记忆，不得不说，张掖真的太好吃了，每天都在晕碳当中ing#甘肃张掖 #张掖美食 #炒炮仗面 #美食推荐 #兰州小空总探店",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7656723600229109027",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.4,
-          "score": 43,
-          "engagement": {
-            "num_comments": 296,
-            "likes": 5599,
+            "num_comments": 22,
+            "likes": 32,
             "views": 0,
-            "shares": 914
+            "shares": 11
           },
-          "author": "小空总",
+          "author": "得意🐑🐑",
           "signal": "positive"
         },
         {
           "platform": "douyin",
-          "title": "《张掖美食系列》第一集！ #张掖 #美食 #炒炮 #四十兄弟 @抖音小助手",
+          "title": "驴肉黄面是敦煌的一道名吃 ，号称中华一绝。“驴肉黄面”顾名思义，其实是两道菜，一盘驴肉作菜，配手工拉制的黄面作主食。敦煌民间流传久远的吃法便是如此。到过敦煌的人和生活在敦煌的人都会在路边看到很多驴肉黄面馆，正宗的酱驴肉黄面馆敦煌人都知道，有家顺张黄面馆，就是享誉敦煌城的驴肉黄面代表。 #甘肃敦煌 #驴肉黄面 #民间美食 #地方特色美食 @DOU+小助手",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7448523215367884032",
+          "url": "https://www.douyin.com/video/7302427793915153714",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 26,
+          "engagement": {
+            "num_comments": 2,
+            "likes": 75,
+            "views": 0,
+            "shares": 12
+          },
+          "author": "稻壳",
+          "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "敦煌美食记 夜幕落下的沙洲夜市，藏尽敦煌地道烟火。 烤包子、驴肉黄面、沙葱牛肉饼、杏仁茶、酿皮…… 整理完整美食合集，来敦煌照着吃不踩雷，沉浸式感受西域舌尖浪漫。#敦煌美食#敦煌夜市#敦煌 #西北大环线 #自驾路线",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7654088164198860774",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 26,
+          "engagement": {
+            "num_comments": 12,
+            "likes": 35,
+            "views": 0,
+            "shares": 6
+          },
+          "author": "白白漫行记『在新疆",
+          "signal": "mixed"
+        },
+        {
+          "platform": "douyin",
+          "title": "来敦煌不知道吃啥，收藏这条视频就够了 来敦煌千万别乱吃饭，本地人常去的馆子在。 逛完鸣沙山一定要来这家店，性价比真的绝了 #敦煌西北菜 #胡羊焖饼 #驴肉黄面 #河西美食",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7657536185934598278",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 23,
+          "engagement": {
+            "num_comments": 2,
+            "likes": 15,
+            "views": 0,
+            "shares": 4
+          },
+          "author": "敦煌八菜一汤私房菜",
+          "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "敦煌美食测评来咯 吃了敦煌夜市和小红书推荐比较多的店，大部分都没有踩雷。 #吃喝玩乐分享计划 #敦煌夜市 #敦煌美食 #李广杏 #驴肉黄面",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7664974197710182011",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 22,
+          "engagement": {
+            "num_comments": 6,
+            "likes": 6,
+            "views": 0,
+            "shares": 0
+          },
+          "author": "走马观花花世界",
+          "signal": "mixed"
+        },
+        {
+          "platform": "douyin",
+          "title": "敦煌魏记驴肉黄面胡杨焖饼店 #让人拒绝不了的美食 #好吃到停不下来的菜 #接地气的小吃",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7643347441357823866",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 20,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 8,
+            "views": 0,
+            "shares": 0
+          },
+          "author": "敦煌魏记驴肉黄面胡羊焖饼82号",
+          "signal": "positive"
+        },
+        {
+          "platform": "douyin",
+          "title": "到敦煌玩的朋友避坑了，这家敦煌夜市里的驴肉黄面，说说我的经历，我们2个人一个6岁小孩，本来想吃一个黄面加一个胡扬闷饼，其实对于南方人这个量3个人完全够了，因为一路上我们在西北吃面大概知道份量，之前在德令哈一个老板娘人很好觉的我们吃不了后面的都不上，说吃了不够再上，这家老板娘却给我说不够得点两份，说一份是一根面不好分，我们同意了，后面又来套路了说驴肉黄面里没驴肉得单点，一听这感觉就是到了黑店，感觉天也晚了，孩子也饿了没和她计较，她让我们点中份，我执意点了小份，然后她又推荐她家的什么杏茶我们不要，她就问我孩子说很好喝，孩子就要了一个，最后一顿面吃了254虽然不多她也发不了财，但是还是很恶心人，去敦煌，位置在敦煌夜市口#敦煌 #敦煌旅游",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7208169816065150212",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.4,
           "score": 39,
           "engagement": {
-            "num_comments": 211,
-            "likes": 1318,
+            "num_comments": 8435,
+            "likes": 24385,
             "views": 0,
-            "shares": 2073
+            "shares": 778
           },
-          "author": "四十兄弟",
+          "author": "我叫小棉花",
+          "signal": "positive"
+        },
+        {
+          "platform": "douyin",
+          "title": "来敦煌品尝驴肉黄面，俩人没敢多点一共花了137元，真不便宜#人类敦煌心向往之",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7160281757688876325",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.4,
+          "score": 33,
+          "engagement": {
+            "num_comments": 935,
+            "likes": 4047,
+            "views": 0,
+            "shares": 158
+          },
+          "author": "旅途琪遇记",
           "signal": "neutral"
+        }
+      ],
+      "sourceErrors": {
+        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
+      },
+      "restaurants": [
+        {
+          "name": "达记驴肉黄面",
+          "specialty": "驴肉黄面",
+          "note": "驴肉和黄面可能分开计价，点单前确认套餐内容。",
+          "verdict": "candidate",
+          "sources": [
+            {
+              "platform": "douyin",
+              "title": "🐑的敦煌食记 1.阿西娅西北妈妈拿手菜 2.城边边烧烤 3.舅舅家一羊两吃 4.尕古丽西域风味餐厅 5.国辉胡杨焖饼 6.石室冰室 7.达记驴肉黄面 #旅游吃啥 #吃货必去城市 #敦煌 #敦煌美食 #敦煌美食推荐",
+              "snippet": "",
+              "url": "https://www.douyin.com/video/7654099837424388710",
+              "date": null,
+              "dateConfidence": "low",
+              "relevance": 0.56,
+              "score": 27,
+              "engagement": {
+                "num_comments": 22,
+                "likes": 32,
+                "views": 0,
+                "shares": 11
+              },
+              "author": "得意🐑🐑",
+              "signal": "positive"
+            }
+          ]
+        }
+      ],
+      "lastRestaurantSuccessfulAt": "2026-07-23T04:53:52.808167+00:00"
+    },
+    "zhangye": {
+      "label": "张掖",
+      "status": "ok",
+      "evidenceCount": 8,
+      "evidence": [
+        {
+          "platform": "douyin",
+          "title": "卷子鸡#张掖美食 #地方特色美食",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7391141140197592354",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.62,
+          "score": 36,
+          "engagement": {
+            "num_comments": 14,
+            "likes": 85,
+            "views": 0,
+            "shares": 67
+          },
+          "author": "张掖红娃子",
+          "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "来张掖一定要吃的大盘鸡店！ 好好吃好过瘾！#张掖美食 #张掖的美食 #张掖美食推荐 #张掖大盘鸡 #张掖卷子鸡",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7660848017586719345",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 50,
+          "engagement": {
+            "num_comments": 45,
+            "likes": 7070,
+            "views": 0,
+            "shares": 1102
+          },
+          "author": "裕圆妹妹",
+          "signal": "positive"
+        },
+        {
+          "platform": "douyin",
+          "title": "打开张掖特色美食——卷子鸡的食用方式 #美食推荐 #抖音美食创作者 #吃货日常 #张掖美食 #我的探店日记",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7574078614497398025",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 22,
+          "engagement": {
+            "num_comments": 2,
+            "likes": 20,
+            "views": 0,
+            "shares": 1
+          },
+          "author": "李游吃万里",
+          "signal": "positive"
+        },
+        {
+          "platform": "douyin",
+          "title": "这家店的铁锅卷子鸡真的太好吃了，面比肉还香！#接地气的小吃 #抖音美食创作者 #张掖地方特色美食 #西北美食 #甘肃美食 @DOU+小助手 @DOU+上热门 @甘味时光家族（张掖爱琴海）",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7663798108690029681",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 20,
+          "engagement": {
+            "num_comments": 1,
+            "likes": 12,
+            "views": 0,
+            "shares": 0
+          },
+          "author": "小曹曹😂᭄【探店团长】",
+          "signal": "positive"
         },
         {
           "platform": "douyin",
@@ -2435,7 +2387,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.4,
-          "score": 39,
+          "score": 42,
           "engagement": {
             "num_comments": 259,
             "likes": 1365,
@@ -2444,9 +2396,65 @@
           },
           "author": "张财进饱",
           "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "在西安吃甘肃美食金昌、武威、张掖特色菜，排骨垫麻腐饺子、鸡肉垫卷子、糟肉#家宴永昌老馆子 #甘肃美食 #武威美食 #抖音特色美食推荐官 #家乡味道",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7644133852307831205",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.4,
+          "score": 39,
+          "engagement": {
+            "num_comments": 165,
+            "likes": 594,
+            "views": 0,
+            "shares": 725
+          },
+          "author": "家宴永昌老馆子",
+          "signal": "positive"
+        },
+        {
+          "platform": "douyin",
+          "title": "张掖人刻在骨子里的味道，鸡肉垫卷子。自家养的土鸡剁块慢炖，土豆炖得绵软，手工擀的面卷抹上油卷好，铺在鸡肉底下焖上十几分钟。每一根卷子都吸饱浓郁的肉汤汁，暄软筋道，鸡肉炖到轻轻一抿就脱骨。不用再单独蒸馍，肉和面一锅出，院子里忙活一天，吃上这么一锅，浑身的疲惫全都消散，这就是西北农家最踏实的烟火气。#鸡肉垫卷子 #张掖美食 #农村日常 #家乡味道 #人间烟火气",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7664491056168537966",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.4,
+          "score": 35,
+          "engagement": {
+            "num_comments": 102,
+            "likes": 516,
+            "views": 0,
+            "shares": 90
+          },
+          "author": "南瓜二妹",
+          "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "火星啥也没有，还是去张掖吃卷子鸡哈！#抖音美食推荐官 #同城美食 #美食探店 #地方特色美食 #张掖",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7248575441156443427",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.4,
+          "score": 14,
+          "engagement": {
+            "num_comments": 10,
+            "likes": 6,
+            "views": 0,
+            "shares": 0
+          },
+          "author": "琼B闯天下",
+          "signal": "positive"
         }
       ],
-      "sourceErrors": {},
+      "sourceErrors": {
+        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
+      },
       "restaurants": [
         {
           "name": "苗氏卷子鸡",
@@ -2475,12 +2483,14 @@
           ]
         }
       ],
+      "staleRestaurantsPreserved": true,
+      "restaurantRefreshAttemptAt": "2026-07-23T04:53:52.808167+00:00",
       "lastRestaurantSuccessfulAt": "2026-07-23T04:39:22.209410+00:00"
     },
     "lanzhou": {
       "label": "兰州",
       "status": "ok",
-      "evidenceCount": 12,
+      "evidenceCount": 9,
       "evidence": [
         {
           "platform": "zhihu",
@@ -2500,60 +2510,6 @@
           "signal": "positive"
         },
         {
-          "platform": "xiaohongshu",
-          "title": "兰州牛肉面避雷！！",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a57aa5c0000000017028096",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.48,
-          "score": 17,
-          "engagement": {
-            "num_comments": 1,
-            "likes": 0,
-            "shares": 0,
-            "collects": 0
-          },
-          "author": "南殷",
-          "signal": "caution"
-        },
-        {
-          "platform": "douyin",
-          "title": "高担酿皮绝对是兰州最具代表性、最受欢迎的地方小吃之一，甚至可以和兰州牛肉面齐名#高担酿皮 #酿皮 #凉皮 #兰州美食 #地方特色美食",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7553975900128201993",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.47,
-          "score": 42,
-          "engagement": {
-            "num_comments": 462,
-            "likes": 7395,
-            "views": 0,
-            "shares": 2725
-          },
-          "author": "中国风味美食",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "兰州美食从夯到拉 主播两年甘肃学习生活有感（个人口味，不要骂我）致歉甘肃 致歉牛肉面 致歉大盘鸡 致歉手抓羊肉 致歉高担酿皮 致歉西北 致歉一切#兰州 #兰州美食 #兰州美食推荐 #甘肃美食 #兰州旅游",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7659077829786717492",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.47,
-          "score": 24,
-          "engagement": {
-            "num_comments": 11,
-            "likes": 51,
-            "views": 0,
-            "shares": 25
-          },
-          "author": "于得水",
-          "signal": "positive"
-        },
-        {
           "platform": "douyin",
           "title": "来兰州旅游， 一定要尝一尝兰州的手工酿皮子，甜胚子 #本地小吃店推荐#兰州美食#兰州特色小吃 #兰州酿皮#兰州旅游",
           "snippet": "",
@@ -2561,7 +2517,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.47,
-          "score": 16,
+          "score": 17,
           "engagement": {
             "num_comments": 0,
             "likes": 13,
@@ -2572,76 +2528,22 @@
           "signal": "positive"
         },
         {
-          "platform": "xiaohongshu",
-          "title": "兰州甜醅子奶茶简直是嗯嗯神器",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a3f3903000000001603c51c",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.37,
-          "score": 29,
-          "engagement": {
-            "num_comments": 123,
-            "likes": 15,
-            "shares": 0,
-            "collects": 6
-          },
-          "author": "momo（回国版）",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "兰州武威张掖🔥美食夯榜（已品鉴避雷√）",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a544f0e000000000702078e",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.36,
-          "score": 22,
-          "engagement": {
-            "num_comments": 2,
-            "likes": 9,
-            "shares": 0,
-            "collects": 11
-          },
-          "author": "R.R.S慕森卷卷",
-          "signal": "caution"
-        },
-        {
           "platform": "douyin",
-          "title": "兰州街头高担酿皮，6元一碗淋满油泼辣子，太攒劲了 #高担酿皮 #兰州美食",
+          "title": "#兰州街边美食#兰州兰州 #兰州美食 #兰州牛肉面#兰州酿皮子",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7418128861491219752",
+          "url": "https://www.douyin.com/video/7663463899723858314",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.34,
-          "score": 40,
+          "relevance": 0.4,
+          "score": 25,
           "engagement": {
-            "num_comments": 1595,
-            "likes": 26257,
+            "num_comments": 45,
+            "likes": 264,
             "views": 0,
-            "shares": 2749
+            "shares": 37
           },
-          "author": "麦总去哪吃",
+          "author": "馋嘴蚊蚊子",
           "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "兰州街头美食，酸辣粉，高担酿皮，河州炒炮仗，一天三家哪个香？ #走街串巷找美食 #本地人都爱的宝藏小店 #兰州美食推荐 #寻味本地美食图鉴 #寻味烟火气",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7624184224026758435",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.34,
-          "score": 33,
-          "engagement": {
-            "num_comments": 235,
-            "likes": 2450,
-            "views": 0,
-            "shares": 1537
-          },
-          "author": "老杨六要素",
-          "signal": "positive"
         },
         {
           "platform": "zhihu",
@@ -2662,42 +2564,98 @@
         },
         {
           "platform": "douyin",
-          "title": "兰州真是好吃爆了哇！ 韦记陇西腊肉、谢赫牛肉面、高担酿皮还有甜焙子……好好吃的兰州。这是我们青甘大环线的最后一站，来看肘击华夏千年的暴躁母亲：黄河🥹兰州是个好吃好玩的城市 #兰州兰州 #牛肉面 #青甘大环线 #旅行推荐官",
+          "title": "逛大众巷吃一碗现做的手工酿皮也是个不错的选择，左下角安排起来#本地小吃店推荐 #兰州美食 #兰州特色小吃#兰州酿皮#兰州旅游",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7648262517622293605",
+          "url": "https://www.douyin.com/video/7663452303558659493",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.34,
-          "score": 25,
+          "score": 17,
           "engagement": {
-            "num_comments": 116,
-            "likes": 374,
+            "num_comments": 1,
+            "likes": 60,
             "views": 0,
-            "shares": 27
+            "shares": 50
           },
-          "author": "骑北极熊",
+          "author": "顺仔呢",
           "signal": "positive"
         },
         {
           "platform": "douyin",
-          "title": "不是我说，兰州的酿皮真的好吃啊！！ #本地小吃店推荐 #兰州美食 #兰州特色小吃 #兰州酿皮子 #兰州旅游",
+          "title": "外地的家人们来兰州旅游 去大众巷星光夜市 一定要去尝尝这家酿皮！#本地小吃店推荐 #兰州美食 #兰州特色小吃 #兰州酿皮#兰州旅游",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7663326354549004964",
+          "url": "https://www.douyin.com/video/7663340734259485947",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.34,
-          "score": 18,
+          "score": 14,
           "engagement": {
-            "num_comments": 9,
-            "likes": 78,
+            "num_comments": 6,
+            "likes": 16,
             "views": 0,
-            "shares": 13
+            "shares": 1
           },
-          "author": "小满",
+          "author": "晗笑半步颠",
           "signal": "positive"
+        },
+        {
+          "platform": "douyin",
+          "title": "来兰州旅游一定要吃这口地道兰州酿皮#本地小吃店推荐 #兰州美食 #兰州特色小吃 #兰州酿皮#兰州旅游",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7663326140521693611",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.34,
+          "score": 13,
+          "engagement": {
+            "num_comments": 2,
+            "likes": 13,
+            "views": 0,
+            "shares": 3
+          },
+          "author": "Unicorn吃不饱",
+          "signal": "positive"
+        },
+        {
+          "platform": "douyin",
+          "title": "来兰州旅游别错过！大众巷这家清真手工酿皮绝了 #本地小吃店推荐 #兰州美食 #兰州特色小吃 #兰州酿皮#兰州旅游",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7663327748047963313",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.34,
+          "score": 13,
+          "engagement": {
+            "num_comments": 5,
+            "likes": 7,
+            "views": 0,
+            "shares": 3
+          },
+          "author": "炸毛可乐",
+          "signal": "positive"
+        },
+        {
+          "platform": "douyin",
+          "title": "从兰州到武威，一碗酿皮藏着甘肃的面食功夫 #酿皮 #美食 #甘肃美食 #西北美食 #凉皮酿皮",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7664800249818615059",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.34,
+          "score": 10,
+          "engagement": {
+            "num_comments": 1,
+            "likes": 1,
+            "views": 0,
+            "shares": 1
+          },
+          "author": "阿泽家的小院",
+          "signal": "neutral"
         }
       ],
-      "sourceErrors": {},
+      "sourceErrors": {
+        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
+      },
       "restaurants": []
     }
   },
@@ -2708,8 +2666,8 @@
     "optionalCredentialsEnabled": true,
     "diagnose": {
       "summary": {
-        "ok": 4,
-        "warn": 4,
+        "ok": 3,
+        "warn": 5,
         "error": 0
       },
       "sources": [
@@ -2730,9 +2688,9 @@
         {
           "source": "bilibili",
           "label": "B站",
-          "status": "ok",
+          "status": "warn",
           "available": true,
-          "reason": "公开搜索 API 可用"
+          "reason": "公开搜索 API 探测失败；可尝试 Playwright 兜底"
         },
         {
           "source": "zhihu",
@@ -3058,9 +3016,9 @@
   },
   "flyai": {
     "status": "ok",
-    "generatedAt": "2026-07-23T04:45:14.345Z",
-    "expiresAt": "2026-07-25T04:45:14.345Z",
-    "lastSuccessfulAt": "2026-07-23T04:45:14.345Z",
+    "generatedAt": "2026-07-23T04:59:51.743Z",
+    "expiresAt": "2026-07-25T04:59:51.743Z",
+    "lastSuccessfulAt": "2026-07-23T04:59:51.743Z",
     "mode": "api-enhanced",
     "skill": {
       "name": "flyai",
@@ -3114,7 +3072,7 @@
               "durationMinutes": 190,
               "preferredAirline": false,
               "price": 920,
-              "jumpUrl": "https://a.feizhu.com/4Hjp0N"
+              "jumpUrl": "https://a.feizhu.com/3cls1Z"
             },
             {
               "id": "shenyang-xining-outbound-2026-08-02 18:15:00-DR6597",
@@ -3139,7 +3097,7 @@
               "durationMinutes": 190,
               "preferredAirline": false,
               "price": 1040,
-              "jumpUrl": "https://a.feizhu.com/0YjDgF"
+              "jumpUrl": "https://a.feizhu.com/39oNcM"
             }
           ],
           "cliExitCode": 0
@@ -3152,34 +3110,9 @@
           "depDateStart": "2026-08-01",
           "depDateEnd": "2026-08-04",
           "status": "ok",
-          "bestPrice": 590,
+          "bestPrice": 630,
           "selectionMode": "preferred-airlines",
           "offers": [
-            {
-              "id": "shenyang-lanzhou-outbound-2026-08-04 12:20:00-MU9856",
-              "routeId": "shenyang-lanzhou-outbound",
-              "direction": "去程",
-              "origin": "沈阳",
-              "destination": "兰州",
-              "departureAirport": "桃仙国际机场",
-              "arrivalAirport": "中川机场",
-              "departureAt": "2026-08-04 12:20:00",
-              "arrivalAt": "2026-08-04 15:45:00",
-              "flightNumbers": [
-                "MU9856"
-              ],
-              "airlines": [
-                "东航"
-              ],
-              "seatClass": "经济舱",
-              "direct": true,
-              "stops": 0,
-              "duration": "205",
-              "durationMinutes": 205,
-              "preferredAirline": true,
-              "price": 590,
-              "jumpUrl": "https://a.feizhu.com/2efz2e"
-            },
             {
               "id": "shenyang-lanzhou-outbound-2026-08-04 16:25:00-CZ5997",
               "routeId": "shenyang-lanzhou-outbound",
@@ -3203,7 +3136,7 @@
               "durationMinutes": 200,
               "preferredAirline": true,
               "price": 630,
-              "jumpUrl": "https://a.feizhu.com/1zQMz7"
+              "jumpUrl": "https://a.feizhu.com/3yyuS9"
             },
             {
               "id": "shenyang-lanzhou-outbound-2026-08-03 16:25:00-CZ5997",
@@ -3228,7 +3161,32 @@
               "durationMinutes": 200,
               "preferredAirline": true,
               "price": 650,
-              "jumpUrl": "https://a.feizhu.com/2jNknr"
+              "jumpUrl": "https://a.feizhu.com/39ZyOu"
+            },
+            {
+              "id": "shenyang-lanzhou-outbound-2026-08-04 08:30:00-CZ5995",
+              "routeId": "shenyang-lanzhou-outbound",
+              "direction": "去程",
+              "origin": "沈阳",
+              "destination": "兰州",
+              "departureAirport": "桃仙国际机场",
+              "arrivalAirport": "中川机场",
+              "departureAt": "2026-08-04 08:30:00",
+              "arrivalAt": "2026-08-04 11:45:00",
+              "flightNumbers": [
+                "CZ5995"
+              ],
+              "airlines": [
+                "南航"
+              ],
+              "seatClass": "经济舱",
+              "direct": true,
+              "stops": 0,
+              "duration": "195",
+              "durationMinutes": 195,
+              "preferredAirline": true,
+              "price": 700,
+              "jumpUrl": "https://a.feizhu.com/10Vd2o"
             }
           ],
           "cliExitCode": 0
@@ -3267,7 +3225,7 @@
               "durationMinutes": 160,
               "preferredAirline": false,
               "price": 1160,
-              "jumpUrl": "https://a.feizhu.com/3JgGXX"
+              "jumpUrl": "https://a.feizhu.com/1WuoED"
             },
             {
               "id": "xining-shenyang-return-2026-08-09 22:10:00-DR6598",
@@ -3292,7 +3250,7 @@
               "durationMinutes": 160,
               "preferredAirline": false,
               "price": 1160,
-              "jumpUrl": "https://a.feizhu.com/4dtmvX"
+              "jumpUrl": "https://a.feizhu.com/1oI8sf"
             }
           ],
           "cliExitCode": 0
@@ -3331,7 +3289,7 @@
               "durationMinutes": 175,
               "preferredAirline": true,
               "price": 495,
-              "jumpUrl": "https://a.feizhu.com/1cFx5X"
+              "jumpUrl": "https://a.feizhu.com/0CY7Dc"
             },
             {
               "id": "lanzhou-shenyang-return-2026-08-05 20:45:00-CZ5998",
@@ -3356,20 +3314,20 @@
               "durationMinutes": 165,
               "preferredAirline": true,
               "price": 500,
-              "jumpUrl": "https://a.feizhu.com/38yiJC"
+              "jumpUrl": "https://a.feizhu.com/3vyeC1"
             },
             {
-              "id": "lanzhou-shenyang-return-2026-08-06 12:40:00-CZ5996",
+              "id": "lanzhou-shenyang-return-2026-08-04 21:00:00-CZ5998",
               "routeId": "lanzhou-shenyang-return",
               "direction": "返程",
               "origin": "兰州",
               "destination": "沈阳",
               "departureAirport": "中川机场",
               "arrivalAirport": "桃仙国际机场",
-              "departureAt": "2026-08-06 12:40:00",
-              "arrivalAt": "2026-08-06 15:25:00",
+              "departureAt": "2026-08-04 21:00:00",
+              "arrivalAt": "2026-08-04 23:30:00",
               "flightNumbers": [
-                "CZ5996"
+                "CZ5998"
               ],
               "airlines": [
                 "南航"
@@ -3377,11 +3335,11 @@
               "seatClass": "经济舱",
               "direct": true,
               "stops": 0,
-              "duration": "165",
-              "durationMinutes": 165,
+              "duration": "150",
+              "durationMinutes": 150,
               "preferredAirline": true,
-              "price": 590,
-              "jumpUrl": "https://a.feizhu.com/0Fd5jg"
+              "price": 510,
+              "jumpUrl": "https://a.feizhu.com/2k15yR"
             }
           ],
           "cliExitCode": 0
@@ -3411,32 +3369,32 @@
           "durationMinutes": 190,
           "preferredAirline": false,
           "price": 920,
-          "jumpUrl": "https://a.feizhu.com/4Hjp0N"
+          "jumpUrl": "https://a.feizhu.com/3cls1Z"
         },
         {
-          "id": "shenyang-lanzhou-outbound-2026-08-04 12:20:00-MU9856",
+          "id": "shenyang-lanzhou-outbound-2026-08-04 16:25:00-CZ5997",
           "routeId": "shenyang-lanzhou-outbound",
           "direction": "去程",
           "origin": "沈阳",
           "destination": "兰州",
           "departureAirport": "桃仙国际机场",
           "arrivalAirport": "中川机场",
-          "departureAt": "2026-08-04 12:20:00",
-          "arrivalAt": "2026-08-04 15:45:00",
+          "departureAt": "2026-08-04 16:25:00",
+          "arrivalAt": "2026-08-04 19:45:00",
           "flightNumbers": [
-            "MU9856"
+            "CZ5997"
           ],
           "airlines": [
-            "东航"
+            "南航"
           ],
           "seatClass": "经济舱",
           "direct": true,
           "stops": 0,
-          "duration": "205",
-          "durationMinutes": 205,
+          "duration": "200",
+          "durationMinutes": 200,
           "preferredAirline": true,
-          "price": 590,
-          "jumpUrl": "https://a.feizhu.com/2efz2e"
+          "price": 630,
+          "jumpUrl": "https://a.feizhu.com/3yyuS9"
         },
         {
           "id": "xining-shenyang-return-2026-08-07 22:10:00-DR6598",
@@ -3461,7 +3419,7 @@
           "durationMinutes": 160,
           "preferredAirline": false,
           "price": 1160,
-          "jumpUrl": "https://a.feizhu.com/3JgGXX"
+          "jumpUrl": "https://a.feizhu.com/1WuoED"
         },
         {
           "id": "lanzhou-shenyang-return-2026-08-06 08:20:00-MU9855",
@@ -3486,7 +3444,7 @@
           "durationMinutes": 175,
           "preferredAirline": true,
           "price": 495,
-          "jumpUrl": "https://a.feizhu.com/1cFx5X"
+          "jumpUrl": "https://a.feizhu.com/0CY7Dc"
         }
       ],
       "freshQueries": 4,
@@ -3534,7 +3492,7 @@
               "address": "西宁市城中区麟河路31号",
               "nearby": "近西宁夏都博汇温泉水乐园",
               "mainPic": "https://img.alicdn.com/imgextra/i3/6000000004603/O1CN01KPRSHJ1jsDilqcEra_!!6000000004603-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/3560Lr"
+              "detailUrl": "https://a.feizhu.com/0AmvMm"
             },
             {
               "id": "xining-0801-64052027",
@@ -3553,7 +3511,7 @@
               "address": "八一西路22号",
               "nearby": "近西宁站",
               "mainPic": "https://img.alicdn.com/imgextra/i3/6000000005172/O1CN01NFNHvC1o4paVPl5BI_!!6000000005172-2-hotel.png",
-              "detailUrl": "https://a.feizhu.com/49jgBO"
+              "detailUrl": "https://a.feizhu.com/0buA4W"
             },
             {
               "id": "xining-0801-63316090",
@@ -3572,7 +3530,7 @@
               "address": "五四西路66号",
               "nearby": "近西宁万达广场",
               "mainPic": "https://img.alicdn.com/imgextra/i4/6000000000486/O1CN015vGrpx1FSd9xS3xOV_!!6000000000486-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/0UCHV5"
+              "detailUrl": "https://a.feizhu.com/2SLB9t"
             }
           ],
           "cliExitCode": 0
@@ -3604,7 +3562,7 @@
               "address": "茶卡镇茶卡新村177号",
               "nearby": "近茶卡汽车站",
               "mainPic": "https://img.alicdn.com/imgextra/i3/6000000003456/O1CN014OHuNc1bOtwVrVa4y_!!6000000003456-2-hotel.png",
-              "detailUrl": "https://a.feizhu.com/3sOtfy"
+              "detailUrl": "https://a.feizhu.com/319FnH"
             },
             {
               "id": "chaka-0802-57357699",
@@ -3623,7 +3581,7 @@
               "address": "乌兰茶卡镇茶卡新村18号",
               "nearby": "近茶卡汽车站",
               "mainPic": "https://img.alicdn.com/imgextra/i1/6000000001884/O1CN01B5rr7A1PmvGq1oN7q_!!6000000001884-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/0Rm2ut"
+              "detailUrl": "https://a.feizhu.com/2QxnfT"
             },
             {
               "id": "chaka-0802-80219011",
@@ -3642,7 +3600,7 @@
               "address": "乌兰县茶卡镇茶卡新村75号",
               "nearby": "近茶卡汽车站",
               "mainPic": "https://img.alicdn.com/imgextra/i3/6000000002700/O1CN016lDEI51VoeM2J5aRb_!!6000000002700-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/0NcBCg"
+              "detailUrl": "https://a.feizhu.com/118oMe"
             }
           ],
           "cliExitCode": 0
@@ -3674,7 +3632,7 @@
               "address": "青海省海西蒙古族藏族自治州大柴旦行委大柴旦镇五彩街",
               "nearby": "近大柴旦行委柴旦镇",
               "mainPic": "https://img.alicdn.com/imgextra/i2/O1CN01VKfP0T1k0vl7ZyCaC_!!4611686018427384334-0-fliggy_content_upload_image.jpg",
-              "detailUrl": "https://a.feizhu.com/4K6AGL"
+              "detailUrl": "https://a.feizhu.com/438vti"
             },
             {
               "id": "dachaidan-0803-72113571",
@@ -3693,7 +3651,7 @@
               "address": "大柴旦人民路与温泉路交叉口中石化西侧50米",
               "nearby": "近大柴旦行委柴旦镇",
               "mainPic": "https://img.alicdn.com/imgextra/i2/O1CN01uMg2td289Dhpt4Rjr_!!4611686018427387601-0-fliggy_content_upload_image.jpg",
-              "detailUrl": "https://a.feizhu.com/3ewbSG"
+              "detailUrl": "https://a.feizhu.com/2nF1HC"
             },
             {
               "id": "dachaidan-0803-75518172",
@@ -3712,7 +3670,7 @@
               "address": "青海省海西州大柴旦人民西路35号院内1号",
               "nearby": "近大柴旦汽车站",
               "mainPic": "https://img.alicdn.com/imgextra/i2/6000000004291/O1CN01qkK3L61hZKU027ejP_!!6000000004291-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/2oG9wj"
+              "detailUrl": "https://a.feizhu.com/1Jj9bs"
             }
           ],
           "cliExitCode": 0
@@ -3743,7 +3701,7 @@
               "address": "敦煌市月牙泉镇杨家桥乡月牙泉村三组2号",
               "nearby": "近敦煌鸣沙山月牙泉景区",
               "mainPic": "https://img.alicdn.com/imgextra/i1/6000000005854/O1CN01JubPXu1t7BepdqmOp_!!6000000005854-2-hotel.png",
-              "detailUrl": "https://a.feizhu.com/2VxKld"
+              "detailUrl": "https://a.feizhu.com/2kkeGq"
             },
             {
               "id": "dunhuang-0804-51194180",
@@ -3762,7 +3720,7 @@
               "address": "杨家桥雷音寺对面千年敦煌月牙泉小镇（杨家桥，近鸣山路）",
               "nearby": "近敦煌鸣沙山月牙泉景区",
               "mainPic": "https://img.alicdn.com/imgextra/i3/O1CN019Yn9AK1g8wDbQOrSi_!!4611686018427383810-0-fliggy_content_upload_image.jpg",
-              "detailUrl": "https://a.feizhu.com/30Prfd"
+              "detailUrl": "https://a.feizhu.com/15Tksb"
             },
             {
               "id": "dunhuang-0804-56491273",
@@ -3781,7 +3739,7 @@
               "address": "敦煌市莫高镇新墩村三组10号",
               "nearby": "近敦煌站",
               "mainPic": "https://img.alicdn.com/imgextra/i4/O1CN01UQXYFL1i6IzYM4ofg_!!0-alitrip.jpg",
-              "detailUrl": "https://a.feizhu.com/0vSnTf"
+              "detailUrl": "https://a.feizhu.com/1yPDV5"
             }
           ],
           "cliExitCode": 0
@@ -3812,7 +3770,7 @@
               "address": "甘肃省张掖市甘州区高铁西站国芳商业综合体1期项目1号楼1楼",
               "nearby": "近张掖西站",
               "mainPic": "https://img.alicdn.com/imgextra/i3/6000000002166/O1CN01plgM0C1Rs4wLcR4M1_!!6000000002166-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/4LfEuC"
+              "detailUrl": "https://a.feizhu.com/2uiLZn"
             },
             {
               "id": "zhangye-0806-54674002",
@@ -3831,7 +3789,7 @@
               "address": "临泽丹霞国家地质公园北入口梨园新村别墅区8号楼",
               "nearby": "近丹霞口文旅小镇",
               "mainPic": "https://img.alicdn.com/imgextra/i3/O1CN01q88X141VVPsrLivUl_!!4611686018427382370-0-fliggy_content_upload_image.jpg",
-              "detailUrl": "https://a.feizhu.com/2Tjuil"
+              "detailUrl": "https://a.feizhu.com/1kNU4t"
             },
             {
               "id": "zhangye-0806-60058130",
@@ -3850,7 +3808,7 @@
               "address": "甘肃省张掖市高台县巷道镇南湾村（巷宣公路北侧）玉润苑小区综合楼三楼",
               "nearby": "近西关车站",
               "mainPic": "https://img.alicdn.com/imgextra/i1/6000000004157/O1CN01HWW2X31gZxXB8AB52_!!6000000004157-2-hotel.png",
-              "detailUrl": "https://a.feizhu.com/0lqjkP"
+              "detailUrl": "https://a.feizhu.com/1B1LtZ"
             }
           ],
           "cliExitCode": 0
@@ -3874,7 +3832,7 @@
           "address": "西宁市城中区麟河路31号",
           "nearby": "近西宁夏都博汇温泉水乐园",
           "mainPic": "https://img.alicdn.com/imgextra/i3/6000000004603/O1CN01KPRSHJ1jsDilqcEra_!!6000000004603-0-hotel.jpg",
-          "detailUrl": "https://a.feizhu.com/3560Lr"
+          "detailUrl": "https://a.feizhu.com/0AmvMm"
         },
         {
           "id": "chaka-0802-57094150",
@@ -3893,7 +3851,7 @@
           "address": "茶卡镇茶卡新村177号",
           "nearby": "近茶卡汽车站",
           "mainPic": "https://img.alicdn.com/imgextra/i3/6000000003456/O1CN014OHuNc1bOtwVrVa4y_!!6000000003456-2-hotel.png",
-          "detailUrl": "https://a.feizhu.com/3sOtfy"
+          "detailUrl": "https://a.feizhu.com/319FnH"
         },
         {
           "id": "dachaidan-0803-62148101",
@@ -3912,7 +3870,7 @@
           "address": "青海省海西蒙古族藏族自治州大柴旦行委大柴旦镇五彩街",
           "nearby": "近大柴旦行委柴旦镇",
           "mainPic": "https://img.alicdn.com/imgextra/i2/O1CN01VKfP0T1k0vl7ZyCaC_!!4611686018427384334-0-fliggy_content_upload_image.jpg",
-          "detailUrl": "https://a.feizhu.com/4K6AGL"
+          "detailUrl": "https://a.feizhu.com/438vti"
         },
         {
           "id": "dunhuang-0804-57450030",
@@ -3931,7 +3889,7 @@
           "address": "敦煌市月牙泉镇杨家桥乡月牙泉村三组2号",
           "nearby": "近敦煌鸣沙山月牙泉景区",
           "mainPic": "https://img.alicdn.com/imgextra/i1/6000000005854/O1CN01JubPXu1t7BepdqmOp_!!6000000005854-2-hotel.png",
-          "detailUrl": "https://a.feizhu.com/2VxKld"
+          "detailUrl": "https://a.feizhu.com/2kkeGq"
         },
         {
           "id": "zhangye-0806-58461071",
@@ -3950,7 +3908,7 @@
           "address": "甘肃省张掖市甘州区高铁西站国芳商业综合体1期项目1号楼1楼",
           "nearby": "近张掖西站",
           "mainPic": "https://img.alicdn.com/imgextra/i3/6000000002166/O1CN01plgM0C1Rs4wLcR4M1_!!6000000002166-0-hotel.jpg",
-          "detailUrl": "https://a.feizhu.com/4LfEuC"
+          "detailUrl": "https://a.feizhu.com/2uiLZn"
         }
       ],
       "freshQueries": 5,
