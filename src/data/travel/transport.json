@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "parserVersion": 1,
-  "generatedAt": "2026-07-24T05:01:55.847488+00:00",
-  "expiresAt": "2026-07-25T11:01:55.847488+00:00",
+  "generatedAt": "2026-07-24T05:57:59.615420+00:00",
+  "expiresAt": "2026-07-25T11:57:59.615420+00:00",
   "status": "ok",
   "schedule": "09:00 Asia/Shanghai",
   "skill": {
@@ -12,7 +12,7 @@
   },
   "activeSources": [
     "baidu",
-    "bilibili",
+    "douyin",
     "xiaohongshu",
     "zhihu"
   ],
@@ -23,8 +23,8 @@
         "headline": "西宁 → 二郎剑约 150 km，预留 2.5–3 小时",
         "route": "西宁早出发 → 青海湖南岸正规入口 → 景区停车场",
         "note": "暑期把拥堵、停车和天气余量算进去；不在公路路肩停车，也不临时驶入未明码标价的私人牧场。",
-        "checkedAt": "2026-07-24T05:01:55.847488+00:00",
-        "lastEvidenceAt": "2026-07-24T05:01:55.847488+00:00",
+        "checkedAt": "2026-07-24T05:57:59.615420+00:00",
+        "lastEvidenceAt": "2026-07-24T05:57:59.615420+00:00",
         "sourceStatus": "confirmed",
         "evidence": [
           {
@@ -60,6 +60,24 @@
             },
             "author": "风伴我远行",
             "signal": "neutral"
+          },
+          {
+            "platform": "douyin",
+            "title": "西北7天7晚旅游攻略新鲜出炉～ （附出行方式 花费及租车注意事项） Day1日月山—青海湖二郎剑Day2大柴旦翡翠湖Day3黑独山—石油小镇—鸣沙山月牙泉—敦煌夜市Day4敦煌莫高窟Day5照壁山Day6岗什卡雪峰Day7西宁早餐 #大西北 #旅游攻略 #我在抖音聊旅行 #为了这个镜头我特意去了一趟西北 #热门 @DOU+小助手 @抖音作者助手",
+            "snippet": "",
+            "url": "https://www.douyin.com/video/7627390850671263406",
+            "date": null,
+            "dateConfidence": "low",
+            "relevance": 0.53,
+            "score": 44,
+            "engagement": {
+              "num_comments": 231,
+              "likes": 3153,
+              "views": 0,
+              "shares": 2608
+            },
+            "author": "H0tK1d",
+            "signal": "neutral"
           }
         ]
       },
@@ -67,8 +85,8 @@
         "headline": "优先选择西宁往返二郎剑的正规旅游直通车",
         "route": "西宁官方旅游集散点 → 二郎剑景区 → 按约定时间原车返回",
         "note": "班次会随季节和成团情况调整；付款前确认集合点、返程时间、是否含门票及是否有购物安排。",
-        "checkedAt": "2026-07-24T05:01:55.847488+00:00",
-        "lastEvidenceAt": "2026-07-24T05:01:55.847488+00:00",
+        "checkedAt": "2026-07-24T05:57:59.615420+00:00",
+        "lastEvidenceAt": "2026-07-24T05:57:59.615420+00:00",
         "sourceStatus": "confirmed",
         "evidence": [
           {
@@ -82,9 +100,9 @@
             "score": 38,
             "engagement": {
               "num_comments": 53,
-              "likes": 149,
+              "likes": 150,
               "shares": 0,
-              "collects": 146
+              "collects": 147
             },
             "author": "百里洛乘风",
             "signal": "neutral"
@@ -135,8 +153,8 @@
         "headline": "青海湖 → 茶卡约 150 km，日落前完成入住",
         "route": "二郎剑一带 → 橡皮山方向 → 茶卡镇 / 景区停车场",
         "note": "高原天气和路况变化快，不为追日落安排夜间赶路；进景区前先确认停车场与预约入口。",
-        "checkedAt": "2026-07-24T05:01:55.847488+00:00",
-        "lastEvidenceAt": "2026-07-24T05:01:55.847488+00:00",
+        "checkedAt": "2026-07-24T05:57:59.615420+00:00",
+        "lastEvidenceAt": "2026-07-24T05:57:59.615420+00:00",
         "sourceStatus": "confirmed",
         "evidence": [
           {
@@ -162,8 +180,8 @@
         "headline": "先到茶卡镇，再用正规打车补景区最后一段",
         "route": "西宁乘当日可售铁路或客运班次 → 茶卡镇 → 景区入口",
         "note": "铁路和客运班次并非每天、每季都相同；先锁定去回两程再订住宿，不把返程航班接在同一天。",
-        "checkedAt": "2026-07-24T05:01:55.847488+00:00",
-        "lastEvidenceAt": "2026-07-24T05:01:55.847488+00:00",
+        "checkedAt": "2026-07-24T05:57:59.615420+00:00",
+        "lastEvidenceAt": "2026-07-24T05:57:59.615420+00:00",
         "sourceStatus": "confirmed",
         "evidence": [
           {
@@ -193,27 +211,10 @@
         "headline": "茶卡 → 大柴旦是长距离高原路段",
         "route": "茶卡 → 德令哈补给 → 大柴旦镇 → 翡翠湖或水上雅丹二选一",
         "note": "出发前加满油并下载离线地图，至少两人轮换驾驶；翡翠湖和水上雅丹不要塞进同一个下午。",
-        "checkedAt": "2026-07-24T05:01:55.847488+00:00",
-        "lastEvidenceAt": "2026-07-24T05:01:55.847488+00:00",
+        "checkedAt": "2026-07-24T05:57:59.615420+00:00",
+        "lastEvidenceAt": "2026-07-24T05:57:59.615420+00:00",
         "sourceStatus": "confirmed",
         "evidence": [
-          {
-            "platform": "zhihu",
-            "title": "青甘大环线8天7晚避坑全攻略，跟团自驾优缺点，人均花费明细清晰列出",
-            "snippet": "切勿在马路中间停留拍照；水上雅丹是国内独有的水上风蚀地貌，视野辽阔小众出片，傍晚抵达大柴旦休整。 D5 大柴旦翡翠湖→敦煌",
-            "url": "https://zhuanlan.zhihu.com/p/2063927715892405887",
-            "date": "2026-07-24",
-            "dateConfidence": "high",
-            "relevance": 0.61,
-            "score": 52,
-            "engagement": {
-              "num_comments": 0,
-              "collects": 0,
-              "voteups": 0
-            },
-            "author": "风伴我远行",
-            "signal": "neutral"
-          },
           {
             "platform": "xiaohongshu",
             "title": "大柴旦翡翠湖电车自驾精简攻略",
@@ -222,7 +223,7 @@
             "date": null,
             "dateConfidence": "low",
             "relevance": 0.58,
-            "score": 20,
+            "score": 22,
             "engagement": {
               "num_comments": 0,
               "likes": 2,
@@ -240,7 +241,7 @@
             "date": null,
             "dateConfidence": "low",
             "relevance": 0.47,
-            "score": 18,
+            "score": 20,
             "engagement": {
               "num_comments": 3,
               "likes": 7,
@@ -249,6 +250,23 @@
             },
             "author": "我是大宝",
             "signal": "neutral"
+          },
+          {
+            "platform": "zhihu",
+            "title": "青甘大环线自驾8天，花了1.3w到底值不值？我把每天开销和真实感受全写出来了",
+            "snippet": "Day 4：大柴旦→U型公路→水上雅丹→敦煌 这一天是地狱模式。开车5小时到水上雅丹，途经U型公路停下来拍照",
+            "url": "https://zhuanlan.zhihu.com/p/2054244984413500623",
+            "date": "2026-06-27",
+            "dateConfidence": "high",
+            "relevance": 0.41,
+            "score": 50,
+            "engagement": {
+              "num_comments": 2,
+              "collects": 0,
+              "voteups": 2
+            },
+            "author": "豆豆芙",
+            "signal": "neutral"
           }
         ]
       },
@@ -256,7 +274,7 @@
         "headline": "常规公共交通覆盖弱，七日不自驾方案建议跳过",
         "route": "若坚持前往：先到大柴旦镇，再预订可核验资质的当地接驳",
         "note": "镇区到翡翠湖、水上雅丹仍有明显最后一公里问题；不要到站后再临时接受陌生人揽客包车。",
-        "checkedAt": "2026-07-24T05:01:55.847488+00:00",
+        "checkedAt": "2026-07-24T05:57:59.615420+00:00",
         "lastEvidenceAt": "2026-07-23T04:19:31.900240+00:00",
         "sourceStatus": "fallback",
         "evidence": []
@@ -269,8 +287,8 @@
         "headline": "按票面报到时间直达数字展示中心停车场",
         "route": "敦煌市区 → 莫高窟数字展示中心 → 统一乘景区接驳前往洞窟",
         "note": "导航目的地应是数字展示中心而不是直接开往洞窟；旺季停车、取票和安检都要另留时间。",
-        "checkedAt": "2026-07-24T05:01:55.847488+00:00",
-        "lastEvidenceAt": "2026-07-24T05:01:55.847488+00:00",
+        "checkedAt": "2026-07-24T05:57:59.615420+00:00",
+        "lastEvidenceAt": "2026-07-24T05:57:59.615420+00:00",
         "sourceStatus": "confirmed",
         "evidence": [
           {
@@ -297,8 +315,8 @@
         "headline": "市区先到数字展示中心，再乘景区统一接驳",
         "route": "敦煌市区 → 当日官方直通车 / 公交 / 正规打车 → 数字展示中心",
         "note": "市区公交与直通车可能季节性调整，因此不凭旧攻略写死线路号；出发前一天用官方通知和地图实时公交复核。",
-        "checkedAt": "2026-07-24T05:01:55.847488+00:00",
-        "lastEvidenceAt": "2026-07-24T05:01:55.847488+00:00",
+        "checkedAt": "2026-07-24T05:57:59.615420+00:00",
+        "lastEvidenceAt": "2026-07-24T05:57:59.615420+00:00",
         "sourceStatus": "confirmed",
         "evidence": [
           {
@@ -347,7 +365,7 @@
         "headline": "敦煌市区短途前往，先确认景区停车入口",
         "route": "酒店休息 → 景区正规停车场 → 日落后按现场导流离场",
         "note": "日落散场车辆集中，不把车停在非正规路边；把骑骆驼和滑沙当可选项，不影响离场时间。",
-        "checkedAt": "2026-07-24T05:01:55.847488+00:00",
+        "checkedAt": "2026-07-24T05:57:59.615420+00:00",
         "lastEvidenceAt": "2026-07-23T05:00:15.089550+00:00",
         "sourceStatus": "fallback",
         "evidence": []
@@ -356,8 +374,8 @@
         "headline": "市区公交去、散场后四人打车回更稳",
         "route": "敦煌市区 → 当日可用公交 / 正规打车 → 鸣沙山月牙泉入口",
         "note": "晚间公交班次可能减少，去程就准备正规打车备选；上车前核对车牌和平台订单。",
-        "checkedAt": "2026-07-24T05:01:55.847488+00:00",
-        "lastEvidenceAt": "2026-07-24T05:01:55.847488+00:00",
+        "checkedAt": "2026-07-24T05:57:59.615420+00:00",
+        "lastEvidenceAt": "2026-07-24T05:57:59.615420+00:00",
         "sourceStatus": "confirmed",
         "evidence": [
           {
@@ -368,7 +386,7 @@
             "date": null,
             "dateConfidence": "low",
             "relevance": 0.34,
-            "score": 23,
+            "score": 29,
             "engagement": {
               "num_comments": 27,
               "likes": 32,
@@ -388,8 +406,8 @@
         "headline": "市区短途到关城，只保留一个核心景点",
         "route": "市区 / 酒店 → 关城景区停车场 → 原路返回",
         "note": "先看清单景点票与套票范围；七日线不再串悬壁长城等外围点，避免挤压下一段动车。",
-        "checkedAt": "2026-07-24T05:01:55.847488+00:00",
-        "lastEvidenceAt": "2026-07-24T05:01:55.847488+00:00",
+        "checkedAt": "2026-07-24T05:57:59.615420+00:00",
+        "lastEvidenceAt": "2026-07-24T05:57:59.615420+00:00",
         "sourceStatus": "confirmed",
         "evidence": [
           {
@@ -405,46 +423,9 @@
               "num_comments": 1,
               "likes": 23,
               "shares": 0,
-              "collects": 40
+              "collects": 41
             },
             "author": "wu星探长",
-            "signal": "neutral"
-          },
-          {
-            "platform": "xiaohongshu",
-            "title": "嘉峪关不进去非自驾",
-            "snippet": "",
-            "url": "https://www.xiaohongshu.com/explore/6a5f0865000000000e035f56",
-            "date": null,
-            "dateConfidence": "low",
-            "relevance": 0.31,
-            "score": 9,
-            "engagement": {
-              "num_comments": 3,
-              "likes": 4,
-              "shares": 0,
-              "collects": 1
-            },
-            "author": "沫沫钱多多福多多",
-            "signal": "neutral"
-          },
-          {
-            "platform": "bilibili",
-            "title": "山东临沂自驾新疆赛里木湖，铁腚旅行第三天，嘉峪关#自驾游 #山东大白将 #嘉峪关 #问界m7",
-            "snippet": "-",
-            "url": "https://www.bilibili.com/video/BV11Lg46VEur",
-            "date": "2026-07-23",
-            "dateConfidence": "high",
-            "relevance": 0.25,
-            "score": 44,
-            "engagement": {
-              "num_comments": 0,
-              "likes": 11,
-              "views": 141,
-              "danmaku": 0,
-              "favorites": 1
-            },
-            "author": "山东大白将-锦泉超市",
             "signal": "neutral"
           }
         ]
@@ -453,8 +434,8 @@
         "headline": "从到达站用公交或四人打车分摊前往关城",
         "route": "嘉峪关站 / 嘉峪关南站 → 市区寄存行李 → 关城景区",
         "note": "两个铁路站与市区距离不同；买票后按实际到达站重新查路线，不套用另一车站的公交攻略。",
-        "checkedAt": "2026-07-24T05:01:55.847488+00:00",
-        "lastEvidenceAt": "2026-07-24T05:01:55.847488+00:00",
+        "checkedAt": "2026-07-24T05:57:59.615420+00:00",
+        "lastEvidenceAt": "2026-07-24T05:57:59.615420+00:00",
         "sourceStatus": "confirmed",
         "evidence": [
           {
@@ -485,28 +466,10 @@
         "headline": "市区 → 北入口约 40 km，早场更容易控时",
         "route": "张掖市区 → 七彩丹霞北入口停车场 → 按景区接驳环线游览",
         "note": "进景区后服从内部接驳顺序；日落场散场集中，返兰州当天优先选择早场。",
-        "checkedAt": "2026-07-24T05:01:55.847488+00:00",
-        "lastEvidenceAt": "2026-07-24T05:01:55.847488+00:00",
+        "checkedAt": "2026-07-24T05:57:59.615420+00:00",
+        "lastEvidenceAt": "2026-07-24T05:57:59.615420+00:00",
         "sourceStatus": "confirmed",
         "evidence": [
-          {
-            "platform": "xiaohongshu",
-            "title": "Day5山东临沂自驾新疆 | 到达张掖七彩丹霞",
-            "snippet": "",
-            "url": "https://www.xiaohongshu.com/explore/6a5458880000000015026084",
-            "date": null,
-            "dateConfidence": "low",
-            "relevance": 0.43,
-            "score": 32,
-            "engagement": {
-              "num_comments": 22,
-              "likes": 57,
-              "shares": 0,
-              "collects": 62
-            },
-            "author": "心平气荷",
-            "signal": "neutral"
-          },
           {
             "platform": "zhihu",
             "title": "青甘大环线8天7晚避坑全攻略，跟团自驾优缺点，人均花费明细清晰列出",
@@ -523,6 +486,24 @@
             },
             "author": "风伴我远行",
             "signal": "neutral"
+          },
+          {
+            "platform": "xiaohongshu",
+            "title": "张掖七彩丹霞 野生丹霞 自驾游",
+            "snippet": "",
+            "url": "https://www.xiaohongshu.com/explore/6a62c55e000000001d00d34e",
+            "date": null,
+            "dateConfidence": "low",
+            "relevance": 0.36,
+            "score": 13,
+            "engagement": {
+              "num_comments": 0,
+              "likes": 2,
+              "shares": 0,
+              "collects": 0
+            },
+            "author": "超人不会飞",
+            "signal": "neutral"
           }
         ]
       },
@@ -530,8 +511,8 @@
         "headline": "用当日景区专线或四人正规打车往返",
         "route": "张掖市区 / 张掖西站 → 旅游集散点或正规打车 → 北入口",
         "note": "日落时间可能晚于末班公共接驳，去程前必须确认返程；无法确认就改早场，不在景区外临时找黑车。",
-        "checkedAt": "2026-07-24T05:01:55.847488+00:00",
-        "lastEvidenceAt": "2026-07-24T05:01:55.847488+00:00",
+        "checkedAt": "2026-07-24T05:57:59.615420+00:00",
+        "lastEvidenceAt": "2026-07-24T05:57:59.615420+00:00",
         "sourceStatus": "confirmed",
         "evidence": [
           {
@@ -542,10 +523,10 @@
             "date": null,
             "dateConfidence": "low",
             "relevance": 0.34,
-            "score": 35,
+            "score": 37,
             "engagement": {
               "num_comments": 58,
-              "likes": 238,
+              "likes": 239,
               "shares": 0,
               "collects": 349
             },
