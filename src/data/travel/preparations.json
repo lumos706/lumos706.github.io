@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "parserVersion": 1,
-  "generatedAt": "2026-07-23T05:02:39.757717+00:00",
-  "expiresAt": "2026-07-24T11:02:39.757717+00:00",
+  "generatedAt": "2026-07-24T04:25:26.757067+00:00",
+  "expiresAt": "2026-07-25T10:25:26.757067+00:00",
   "status": "ok",
   "schedule": "09:00 Asia/Shanghai",
   "skill": {
@@ -12,6 +12,7 @@
   },
   "activeSources": [
     "douyin",
+    "xiaohongshu",
     "zhihu"
   ],
   "categories": {
@@ -44,9 +45,9 @@
           "priority": "必看"
         }
       ],
-      "checkedAt": "2026-07-23T05:02:39.757717+00:00",
+      "checkedAt": "2026-07-24T04:25:26.757067+00:00",
       "lastEvidenceAt": "2026-07-23T05:02:39.757717+00:00",
-      "sourceStatus": "confirmed",
+      "sourceStatus": "retained",
       "evidence": [
         {
           "platform": "douyin",
@@ -85,9 +86,7 @@
           "signal": "positive"
         }
       ],
-      "sourceErrors": {
-        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
-      }
+      "sourceErrors": {}
     },
     "weather": {
       "key": "weather",
@@ -118,8 +117,8 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-23T05:02:39.757717+00:00",
-      "lastEvidenceAt": "2026-07-23T05:02:39.757717+00:00",
+      "checkedAt": "2026-07-24T04:25:26.757067+00:00",
+      "lastEvidenceAt": "2026-07-24T04:25:26.757067+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
@@ -130,7 +129,7 @@
           "date": "2026-07-16",
           "dateConfidence": "high",
           "relevance": 0.41,
-          "score": 47,
+          "score": 46,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -138,11 +137,27 @@
           },
           "author": "大西北旅游领队",
           "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "青甘大环线本命防晒衣｜拍照防晒双在线🌄",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a38cada0000000021015faa",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.32,
+          "score": 9,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 2,
+            "shares": 0,
+            "collects": 1
+          },
+          "author": "Nononono",
+          "signal": "neutral"
         }
       ],
-      "sourceErrors": {
-        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
-      }
+      "sourceErrors": {}
     },
     "documents": {
       "key": "documents",
@@ -173,32 +188,48 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-23T05:02:39.757717+00:00",
-      "lastEvidenceAt": "2026-07-23T05:02:39.757717+00:00",
+      "checkedAt": "2026-07-24T04:25:26.757067+00:00",
+      "lastEvidenceAt": "2026-07-24T04:25:26.757067+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
-          "platform": "douyin",
-          "title": "青甘大环线人均8K vlog｜超实用攻略🌄 青海省内浙江身份证基本免门票哦～ ✨个人心中的美景排序： 1. 水上雅丹 2. 七彩丹霞 3. 察尔汗盐湖 ⚠️ 必注意事项： - 全程紫外线超强，防晒一定要做好！ - 高反真的很难受，记得提前准备 🍜 关于吃： 前面两天吃不习惯就别硬试当地菜，不吃后悔吃了更后悔 路过瓜州一定要吃瓜！啥瓜都甜到心尖儿 嘉峪关的烧烤巨好吃，强推！ 🐎 草原骑马小技巧： 多逛几家！越往后越划算，50块2小时都能拿下～",
+          "platform": "xiaohongshu",
+          "title": "2026青甘大环线门票预约表！准备要来的看看",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7664997561569070521",
+          "url": "https://www.xiaohongshu.com/explore/6a4eed4000000000080303fa",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.34,
-          "score": 10,
+          "relevance": 0.35,
+          "score": 19,
           "engagement": {
             "num_comments": 2,
-            "likes": 10,
-            "views": 0,
-            "shares": 6
+            "likes": 91,
+            "shares": 0,
+            "collects": 118
           },
-          "author": "霞哥 好运气",
-          "signal": "positive"
+          "author": "💕",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "6🈷青甘大环线门票分享❤️",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a565fda000000001101194c",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.31,
+          "score": 14,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 63,
+            "shares": 0,
+            "collects": 39
+          },
+          "author": "宸阿喵",
+          "signal": "neutral"
         }
       ],
-      "sourceErrors": {
-        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
-      }
+      "sourceErrors": {}
     },
     "flightTech": {
       "key": "flightTech",
@@ -229,62 +260,25 @@
           "priority": "必带"
         }
       ],
-      "checkedAt": "2026-07-23T05:02:39.757717+00:00",
-      "lastEvidenceAt": "2026-07-23T05:02:39.757717+00:00",
+      "checkedAt": "2026-07-24T04:25:26.757067+00:00",
+      "lastEvidenceAt": "2026-07-24T04:25:26.757067+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
-          "platform": "douyin",
-          "title": "充电宝和电池登机指南！看这条就明白了！ 1、单个电池/充电宝总容量不能超过100Wh 2、独立放置的备用电池是要拿出来安检的（最好带 3C，没有 3C 的话可以塞到机器里） 3、装在设备里的电池不会被检查 4、最重要的一点！独立的备用电池或充电宝不能放在行李中托运，只能随身带！ #充电宝登机 #充电宝上飞机 #电池安检 #电池3c认证 #充电宝过安检",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7547745322940763434",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.66,
-          "score": 36,
-          "engagement": {
-            "num_comments": 37,
-            "likes": 253,
-            "views": 0,
-            "shares": 51
-          },
-          "author": "飞行的阿童木",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "喂喂喂！你来电话啦～ 九元航空旅客充电宝安全提示 一、出行携带须知 1. 充电宝仅能随身携带，严禁托运，行李托运一律不予放行。 2. 机身清晰标注容量、电压、3C标识，额定能量≤100Wh可正常携带；100-160Wh需提前联系航司审批，超160Wh禁止登机。破损、鼓包、漏液、三无充电宝请勿携带。 3. 单人随身携带充电宝不超过2个，飞行全程保持关机状态，进入客舱后全程不可给电子设备充电，也不可以给充电宝充电。 二、上机存放要求 登机后不要将充电宝放入头顶行李架，放置随身小包、座椅前袋便于观察；远离热源、金属硬物，避免挤压、磕碰、短路。 三、机上充电宝起火/冒烟，旅客该怎么做 1. 立刻呼喊就近乘务员，不要自行挪动、拉扯发烫/冒烟的充电宝，切勿用衣物、毛毯包裹火源。 2. 听从机组指挥，快速撤离至远离火源的座位，系好安全带；烟雾较大时弯腰低头，用湿毛巾、衣物捂住口鼻。 3. 不围观、不慌乱、不随意走动，配合乘务员维持客舱秩序，告知乘务员充电宝位置、有无其他电子设备。 4.机组处置期间不要擅自触碰灭火设备、防护箱，机组询问时如实说明设备情况，后续落地配合工作人员移交涉事充电宝。#九元航空 #空乘安全提示 #民航出行#什么充电宝能上飞机",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7659320844473062739",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.66,
-          "score": 33,
-          "engagement": {
-            "num_comments": 14,
-            "likes": 106,
-            "views": 0,
-            "shares": 8
-          },
-          "author": "九元AIR",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "只有3C标志的充电宝才能带上飞机，不然过不了安检哦 充电宝不能托运，只能随身携带，且飞行过程中不能使用哈#关注我带你去旅行 #石家庄跟团游 #充电宝 #乘坐飞机注意事项",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7657689742755166449",
-          "date": null,
-          "dateConfidence": "low",
+          "platform": "zhihu",
+          "title": "有哪些平价又实用的旅行好物，是你每次出行都必带的？",
+          "snippet": "一个解决多国标+充电需求，20-30元 还有充电宝，飞机不能超过2万毫安，必须要有3C标志核心规定 民航局明确",
+          "url": "https://www.zhihu.com/question/2040674297497268633/answer/2055074640632997164",
+          "date": "2026-06-29",
+          "dateConfidence": "high",
           "relevance": 0.53,
-          "score": 19,
+          "score": 42,
           "engagement": {
-            "num_comments": 2,
-            "likes": 3,
-            "views": 0,
-            "shares": 0
+            "num_comments": 0,
+            "collects": 0,
+            "voteups": 0
           },
-          "author": "爱旅游的耿耿",
+          "author": "每天短剧",
           "signal": "neutral"
         },
         {
@@ -295,13 +289,49 @@
           "date": "2026-07-22",
           "dateConfidence": "high",
           "relevance": 0.41,
-          "score": 57,
+          "score": 56,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
             "voteups": 0
           },
           "author": "善良的屠夫",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "小米充电宝太坑，有3C也不能带上飞机！",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/691798380000000007021170",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.33,
+          "score": 35,
+          "engagement": {
+            "num_comments": 290,
+            "likes": 2502,
+            "shares": 0,
+            "collects": 959
+          },
+          "author": "Iam扎扎",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "我的充电宝被中国机场没收了！❌3C认证",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/69679f120000000021028fb3",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.33,
+          "score": 18,
+          "engagement": {
+            "num_comments": 28,
+            "likes": 45,
+            "shares": 0,
+            "collects": 23
+          },
+          "author": "尹尹若现",
           "signal": "neutral"
         }
       ],
@@ -336,86 +366,84 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-23T05:02:39.757717+00:00",
-      "lastEvidenceAt": "2026-07-23T05:02:39.757717+00:00",
+      "checkedAt": "2026-07-24T04:25:26.757067+00:00",
+      "lastEvidenceAt": "2026-07-24T04:25:26.757067+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
-          "platform": "douyin",
-          "title": "#租车日常 #西宁租车 #租车避坑指南 #青甘大环线 #青甘大环线自驾体验",
+          "platform": "xiaohongshu",
+          "title": "青甘大环线前期准备（自驾版）",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7662344045252224116",
+          "url": "https://www.xiaohongshu.com/explore/688a17310000000005009c21",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.43,
-          "score": 20,
+          "relevance": 0.47,
+          "score": 38,
           "engagement": {
-            "num_comments": 1,
-            "likes": 12,
-            "views": 0,
-            "shares": 0
+            "num_comments": 32,
+            "likes": 328,
+            "shares": 0,
+            "collects": 390
           },
-          "author": "西宁雄驰租车（环线预定）",
+          "author": "换个刊投我又是好汉",
           "signal": "neutral"
         },
         {
-          "platform": "douyin",
-          "title": "#青甘环线自驾 #创作灵感 #西宁租车 #自驾青甘大环线 西宁自驾无套路",
+          "platform": "xiaohongshu",
+          "title": "青甘大环线自驾租车防坑攻略",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7661241732566543744",
+          "url": "https://www.xiaohongshu.com/explore/68d8e006000000000e00dc88",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.42,
-          "score": 17,
+          "relevance": 0.47,
+          "score": 31,
           "engagement": {
-            "num_comments": 0,
-            "likes": 5,
-            "views": 0,
-            "shares": 0
+            "num_comments": 6,
+            "likes": 65,
+            "shares": 0,
+            "collects": 87
           },
-          "author": "西宁租车旅游-楠哥",
+          "author": "你好我系陈Mm",
           "signal": "neutral"
         },
         {
-          "platform": "douyin",
-          "title": "西北大环线自驾攻略来了，来了#西宁租车#西北大环线 #青甘大环线 #vlog日常 #租车自驾",
+          "platform": "xiaohongshu",
+          "title": "租车自驾青甘大环线已圆满收官",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7521577839537524011",
+          "url": "https://www.xiaohongshu.com/explore/6a2675f40000000008024e5b",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.41,
-          "score": 30,
+          "relevance": 0.46,
+          "score": 35,
           "engagement": {
-            "num_comments": 22,
-            "likes": 61,
-            "views": 0,
-            "shares": 14
+            "num_comments": 156,
+            "likes": 100,
+            "shares": 0,
+            "collects": 66
           },
-          "author": "西宁雄驰租车（环线预定）",
+          "author": "吉吉小熊",
           "signal": "neutral"
         },
         {
-          "platform": "douyin",
-          "title": "青甘大环线租车 想来西宁租车自驾青甘大环线的外地朋友，千万别被低价租车坑了#青甘大环线 #青甘大环线自驾游 #西宁租车 #察尔汗盐湖 #鸣沙山月牙泉",
+          "platform": "xiaohongshu",
+          "title": "青甘大环线返程整理！租车自驾篇",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7655633929839875791",
+          "url": "https://www.xiaohongshu.com/explore/6a4b4213000000001602474b",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.41,
+          "relevance": 0.46,
           "score": 24,
           "engagement": {
-            "num_comments": 3,
-            "likes": 23,
-            "views": 0,
-            "shares": 7
+            "num_comments": 1,
+            "likes": 17,
+            "shares": 0,
+            "collects": 13
           },
-          "author": "西宁盘世租车",
+          "author": "奔跑的壮壮",
           "signal": "neutral"
         }
       ],
-      "sourceErrors": {
-        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
-      }
+      "sourceErrors": {}
     },
     "publicKit": {
       "key": "publicKit",
@@ -446,10 +474,28 @@
           "priority": "必做"
         }
       ],
-      "checkedAt": "2026-07-23T05:02:39.757717+00:00",
-      "lastEvidenceAt": "2026-07-23T05:02:39.757717+00:00",
+      "checkedAt": "2026-07-24T04:25:26.757067+00:00",
+      "lastEvidenceAt": "2026-07-24T04:25:26.757067+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
+        {
+          "platform": "xiaohongshu",
+          "title": "青甘环线归来｜行李精简避坑版✨",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a4cc49500000000220095fa",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.2,
+          "score": 13,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 32,
+            "shares": 0,
+            "collects": 36
+          },
+          "author": "逐风",
+          "signal": "neutral"
+        },
         {
           "platform": "zhihu",
           "title": "带6岁娃和60岁婆婆去西北8天，青甘八日游亲测行程+避坑全记录",
@@ -468,9 +514,7 @@
           "signal": "neutral"
         }
       ],
-      "sourceErrors": {
-        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
-      }
+      "sourceErrors": {}
     }
   },
   "medicalNotice": "药品与高原健康内容仅用于一般旅行准备，不替代医生诊断或个体化用药建议；如有基础疾病、孕期、近期不适或高原经历不佳，请在出发前咨询医生。",
