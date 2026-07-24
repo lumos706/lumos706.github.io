@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "parserVersion": 1,
-  "generatedAt": "2026-07-24T04:25:26.757067+00:00",
-  "expiresAt": "2026-07-25T10:25:26.757067+00:00",
+  "generatedAt": "2026-07-24T05:04:08.669773+00:00",
+  "expiresAt": "2026-07-25T11:04:08.669773+00:00",
   "status": "ok",
   "schedule": "09:00 Asia/Shanghai",
   "skill": {
@@ -45,7 +45,7 @@
           "priority": "必看"
         }
       ],
-      "checkedAt": "2026-07-24T04:25:26.757067+00:00",
+      "checkedAt": "2026-07-24T05:04:08.669773+00:00",
       "lastEvidenceAt": "2026-07-23T05:02:39.757717+00:00",
       "sourceStatus": "retained",
       "evidence": [
@@ -117,8 +117,8 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-24T04:25:26.757067+00:00",
-      "lastEvidenceAt": "2026-07-24T04:25:26.757067+00:00",
+      "checkedAt": "2026-07-24T05:04:08.669773+00:00",
+      "lastEvidenceAt": "2026-07-24T05:04:08.669773+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
@@ -136,24 +136,6 @@
             "voteups": 1
           },
           "author": "大西北旅游领队",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "青甘大环线本命防晒衣｜拍照防晒双在线🌄",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a38cada0000000021015faa",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.32,
-          "score": 9,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 2,
-            "shares": 0,
-            "collects": 1
-          },
-          "author": "Nononono",
           "signal": "neutral"
         }
       ],
@@ -188,8 +170,8 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-24T04:25:26.757067+00:00",
-      "lastEvidenceAt": "2026-07-24T04:25:26.757067+00:00",
+      "checkedAt": "2026-07-24T05:04:08.669773+00:00",
+      "lastEvidenceAt": "2026-07-24T05:04:08.669773+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
@@ -200,10 +182,10 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.35,
-          "score": 19,
+          "score": 26,
           "engagement": {
             "num_comments": 2,
-            "likes": 91,
+            "likes": 93,
             "shares": 0,
             "collects": 118
           },
@@ -218,7 +200,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.31,
-          "score": 14,
+          "score": 20,
           "engagement": {
             "num_comments": 0,
             "likes": 63,
@@ -260,27 +242,10 @@
           "priority": "必带"
         }
       ],
-      "checkedAt": "2026-07-24T04:25:26.757067+00:00",
-      "lastEvidenceAt": "2026-07-24T04:25:26.757067+00:00",
+      "checkedAt": "2026-07-24T05:04:08.669773+00:00",
+      "lastEvidenceAt": "2026-07-24T05:04:08.669773+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
-        {
-          "platform": "zhihu",
-          "title": "有哪些平价又实用的旅行好物，是你每次出行都必带的？",
-          "snippet": "一个解决多国标+充电需求，20-30元 还有充电宝，飞机不能超过2万毫安，必须要有3C标志核心规定 民航局明确",
-          "url": "https://www.zhihu.com/question/2040674297497268633/answer/2055074640632997164",
-          "date": "2026-06-29",
-          "dateConfidence": "high",
-          "relevance": 0.53,
-          "score": 42,
-          "engagement": {
-            "num_comments": 0,
-            "collects": 0,
-            "voteups": 0
-          },
-          "author": "每天短剧",
-          "signal": "neutral"
-        },
         {
           "platform": "zhihu",
           "title": "为什么有些充电宝不能带上飞机？",
@@ -333,6 +298,24 @@
           },
           "author": "尹尹若现",
           "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "一步一步教❗找不到充电宝3C认证编号咋办❓",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/686910bd000000001c035d01",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.3,
+          "score": 38,
+          "engagement": {
+            "num_comments": 956,
+            "likes": 3382,
+            "shares": 0,
+            "collects": 4806
+          },
+          "author": "进击的小张",
+          "signal": "neutral"
         }
       ],
       "sourceErrors": {}
@@ -366,46 +349,10 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-24T04:25:26.757067+00:00",
-      "lastEvidenceAt": "2026-07-24T04:25:26.757067+00:00",
+      "checkedAt": "2026-07-24T05:04:08.669773+00:00",
+      "lastEvidenceAt": "2026-07-24T05:04:08.669773+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
-        {
-          "platform": "xiaohongshu",
-          "title": "青甘大环线前期准备（自驾版）",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/688a17310000000005009c21",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.47,
-          "score": 38,
-          "engagement": {
-            "num_comments": 32,
-            "likes": 328,
-            "shares": 0,
-            "collects": 390
-          },
-          "author": "换个刊投我又是好汉",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "青甘大环线自驾租车防坑攻略",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/68d8e006000000000e00dc88",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.47,
-          "score": 31,
-          "engagement": {
-            "num_comments": 6,
-            "likes": 65,
-            "shares": 0,
-            "collects": 87
-          },
-          "author": "你好我系陈Mm",
-          "signal": "neutral"
-        },
         {
           "platform": "xiaohongshu",
           "title": "租车自驾青甘大环线已圆满收官",
@@ -441,6 +388,42 @@
           },
           "author": "奔跑的壮壮",
           "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "青甘大环线🔁小攻略之一：租车与准备",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a3c6813000000001503d3f6",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.46,
+          "score": 24,
+          "engagement": {
+            "num_comments": 1,
+            "likes": 12,
+            "shares": 0,
+            "collects": 16
+          },
+          "author": "123不许动",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "青甘环线自驾准备｜租车如何省钱",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a610f2c000000001101ccd0",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.46,
+          "score": 17,
+          "engagement": {
+            "num_comments": 1,
+            "likes": 1,
+            "shares": 0,
+            "collects": 1
+          },
+          "author": "欢欢喜喜嘻嘻",
+          "signal": "neutral"
         }
       ],
       "sourceErrors": {}
@@ -474,8 +457,8 @@
           "priority": "必做"
         }
       ],
-      "checkedAt": "2026-07-24T04:25:26.757067+00:00",
-      "lastEvidenceAt": "2026-07-24T04:25:26.757067+00:00",
+      "checkedAt": "2026-07-24T05:04:08.669773+00:00",
+      "lastEvidenceAt": "2026-07-24T05:04:08.669773+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
