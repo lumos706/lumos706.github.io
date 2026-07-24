@@ -27,6 +27,7 @@ from update_travel_data import (
     normalize_evidence,
     run_skill,
     skill_environment,
+    without_source,
     write_atomic,
 )
 
@@ -395,16 +396,23 @@ def main() -> int:
         prior = previous_categories.get(spec.key)
         if not isinstance(prior, dict):
             prior = {}
+        query = spec.query()
+        query_sources = (
+            query.sources
+            if spec.key == "health"
+            else without_source(query.sources, "douyin")
+        )
         try:
             payload = run_skill(
                 skill_script,
-                spec.query(),
+                query,
                 days=args.days,
                 timeout=args.timeout,
                 quick=args.quick,
                 env=env,
+                sources=query_sources,
             )
-            normalized = normalize_evidence(payload, spec.query(), limit=10)
+            normalized = normalize_evidence(payload, query, limit=10)
             category = category_payload(spec, normalized, prior, checked_at)
             category["sourceErrors"] = {
                 key.removesuffix("_error"): value

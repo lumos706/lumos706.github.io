@@ -341,6 +341,15 @@ def skill_environment(no_browser: bool, allow_credentials: bool) -> dict[str, st
     return env
 
 
+def without_source(sources: str, excluded: str) -> str:
+    """Return a last30days-cn source list without one platform."""
+    return ",".join(
+        source.strip()
+        for source in sources.split(",")
+        if source.strip() and source.strip() != excluded
+    )
+
+
 def extract_json(text: str) -> dict[str, Any]:
     decoder = json.JSONDecoder()
     starts = [match.start() for match in re.finditer(r"(?m)^\s*\{", text)]
@@ -365,13 +374,14 @@ def run_skill(
     timeout: int,
     quick: bool,
     env: dict[str, str],
+    sources: str | None = None,
 ) -> dict[str, Any]:
     command = [
         sys.executable,
         str(skill_script),
         spec.topic,
         "--search",
-        spec.sources,
+        sources or spec.sources,
         "--days",
         str(days),
         "--refresh",
@@ -712,6 +722,13 @@ def main() -> int:
 
     for index, spec in enumerate(selected_queries):
         target = categories if spec.group == "category" else (attractions if spec.group == "attraction" else food)
+        # Limit Douyin to one representative query in this file. Repeating all
+        # price, attraction, and food searches in minutes triggers verification.
+        query_sources = (
+            spec.sources
+            if spec.group == "attraction" and spec.key == "qinghaiLake"
+            else without_source(spec.sources, "douyin")
+        )
         try:
             payload = run_skill(
                 skill_script,
@@ -720,6 +737,7 @@ def main() -> int:
                 timeout=args.timeout,
                 quick=args.quick,
                 env=env,
+                sources=query_sources,
             )
             old_group = {
                 "category": "categories",
@@ -780,7 +798,7 @@ def main() -> int:
                     "label": spec.label,
                     "group": spec.group,
                     "topic": spec.topic,
-                    "sources": spec.sources.split(","),
+                    "sources": query_sources.split(","),
                     "range": payload.get("range"),
                     "exitCode": payload.get("_exit_code"),
                 }

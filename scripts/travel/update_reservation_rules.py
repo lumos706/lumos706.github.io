@@ -24,6 +24,7 @@ from update_travel_data import (
     normalize_evidence,
     run_skill,
     skill_environment,
+    without_source,
     write_atomic,
 )
 
@@ -322,16 +323,23 @@ def main() -> int:
 
     for index, spec in enumerate(RESERVATIONS):
         old_rule = prior_attractions.get(spec.key) if isinstance(prior_attractions.get(spec.key), dict) else {}
+        query = spec.query()
+        query_sources = (
+            query.sources
+            if spec.key == "mogaoCaves"
+            else without_source(query.sources, "douyin")
+        )
         try:
             payload = run_skill(
                 skill_script,
-                spec.query(),
+                query,
                 days=args.days,
                 timeout=args.timeout,
                 quick=args.quick,
                 env=env,
+                sources=query_sources,
             )
-            evidence = normalize_evidence(payload, spec.query(), limit=8)
+            evidence = normalize_evidence(payload, query, limit=8)
             rule = source_rule(spec, evidence, old_rule, checked_at)
             rule["sourceErrors"] = {
                 key.removesuffix("_error"): value

@@ -66,6 +66,9 @@ jobs:
           python -m pip install jieba playwright
           python -m playwright install --with-deps chromium
 
+      - name: Apply Douyin browser compatibility shim
+        run: python scripts/travel/patch_last30days_douyin.py
+
       - name: Restore optional browser login
         run: |
           if [[ -n "${LAST30DAYS_XHS_COOKIES_B64:-}" ]]; then
