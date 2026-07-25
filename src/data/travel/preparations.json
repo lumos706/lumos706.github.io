@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "parserVersion": 1,
-  "generatedAt": "2026-07-24T05:59:56.928212+00:00",
-  "expiresAt": "2026-07-25T11:59:56.928212+00:00",
+  "generatedAt": "2026-07-25T04:21:31.624117+00:00",
+  "expiresAt": "2026-07-26T10:21:31.624117+00:00",
   "status": "ok",
   "schedule": "09:00 Asia/Shanghai",
   "skill": {
@@ -45,8 +45,8 @@
           "priority": "必看"
         }
       ],
-      "checkedAt": "2026-07-24T05:59:56.928212+00:00",
-      "lastEvidenceAt": "2026-07-24T05:59:56.928212+00:00",
+      "checkedAt": "2026-07-25T04:21:31.624117+00:00",
+      "lastEvidenceAt": "2026-07-25T04:21:31.624117+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
@@ -60,7 +60,7 @@
           "score": 23,
           "engagement": {
             "num_comments": 6,
-            "likes": 23,
+            "likes": 24,
             "views": 0,
             "shares": 0
           },
@@ -83,6 +83,24 @@
             "shares": 1
           },
           "author": "柠萌带你游西北",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "第一章节就高原反应了",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/69de661e000000001b022c7e",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.25,
+          "score": 23,
+          "engagement": {
+            "num_comments": 24,
+            "likes": 35,
+            "shares": 0,
+            "collects": 25
+          },
+          "author": "阿玲",
           "signal": "neutral"
         }
       ],
@@ -117,8 +135,8 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-24T05:59:56.928212+00:00",
-      "lastEvidenceAt": "2026-07-24T05:59:56.928212+00:00",
+      "checkedAt": "2026-07-25T04:21:31.624117+00:00",
+      "lastEvidenceAt": "2026-07-25T04:21:31.624117+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
@@ -129,7 +147,7 @@
           "date": "2026-07-16",
           "dateConfidence": "high",
           "relevance": 0.41,
-          "score": 46,
+          "score": 45,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -170,8 +188,8 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-24T05:59:56.928212+00:00",
-      "lastEvidenceAt": "2026-07-24T05:59:56.928212+00:00",
+      "checkedAt": "2026-07-25T04:21:31.624117+00:00",
+      "lastEvidenceAt": "2026-07-25T04:21:31.624117+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
@@ -182,12 +200,12 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.35,
-          "score": 19,
+          "score": 23,
           "engagement": {
             "num_comments": 2,
-            "likes": 93,
+            "likes": 100,
             "shares": 0,
-            "collects": 119
+            "collects": 123
           },
           "author": "💕",
           "signal": "neutral"
@@ -200,12 +218,12 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.31,
-          "score": 15,
+          "score": 20,
           "engagement": {
-            "num_comments": 2,
-            "likes": 63,
+            "num_comments": 4,
+            "likes": 67,
             "shares": 0,
-            "collects": 39
+            "collects": 40
           },
           "author": "宸阿喵",
           "signal": "neutral"
@@ -242,8 +260,8 @@
           "priority": "必带"
         }
       ],
-      "checkedAt": "2026-07-24T05:59:56.928212+00:00",
-      "lastEvidenceAt": "2026-07-24T05:59:56.928212+00:00",
+      "checkedAt": "2026-07-25T04:21:31.624117+00:00",
+      "lastEvidenceAt": "2026-07-25T04:21:31.624117+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
@@ -254,7 +272,7 @@
           "date": "2026-07-22",
           "dateConfidence": "high",
           "relevance": 0.41,
-          "score": 56,
+          "score": 55,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -271,12 +289,12 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.33,
-          "score": 34,
+          "score": 33,
           "engagement": {
             "num_comments": 290,
-            "likes": 2502,
+            "likes": 2506,
             "shares": 0,
-            "collects": 959
+            "collects": 962
           },
           "author": "Iam扎扎",
           "signal": "neutral"
@@ -289,7 +307,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.33,
-          "score": 18,
+          "score": 14,
           "engagement": {
             "num_comments": 28,
             "likes": 45,
@@ -297,24 +315,6 @@
             "collects": 23
           },
           "author": "尹尹若现",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "充电宝3C乘机新规👉附登机必备清单！",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/686390720000000012016965",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.31,
-          "score": 23,
-          "engagement": {
-            "num_comments": 12,
-            "likes": 370,
-            "shares": 0,
-            "collects": 264
-          },
-          "author": "街灯晚餐",
           "signal": "neutral"
         }
       ],
@@ -349,28 +349,10 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-24T05:59:56.928212+00:00",
-      "lastEvidenceAt": "2026-07-24T05:59:56.928212+00:00",
+      "checkedAt": "2026-07-25T04:21:31.624117+00:00",
+      "lastEvidenceAt": "2026-07-25T04:21:31.624117+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
-        {
-          "platform": "xiaohongshu",
-          "title": "青甘大环线自驾租车防坑攻略",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/68d8e006000000000e00dc88",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.47,
-          "score": 31,
-          "engagement": {
-            "num_comments": 6,
-            "likes": 65,
-            "shares": 0,
-            "collects": 87
-          },
-          "author": "你好我系陈Mm",
-          "signal": "neutral"
-        },
         {
           "platform": "xiaohongshu",
           "title": "青甘大环线自驾租车分享，女生友好‼️",
@@ -379,12 +361,12 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.47,
-          "score": 29,
+          "score": 30,
           "engagement": {
-            "num_comments": 16,
-            "likes": 40,
+            "num_comments": 19,
+            "likes": 42,
             "shares": 0,
-            "collects": 15
+            "collects": 16
           },
           "author": "雪球球、",
           "signal": "neutral"
@@ -397,7 +379,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.46,
-          "score": 35,
+          "score": 36,
           "engagement": {
             "num_comments": 156,
             "likes": 100,
@@ -415,15 +397,32 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.46,
-          "score": 24,
+          "score": 25,
           "engagement": {
             "num_comments": 1,
             "likes": 17,
             "shares": 0,
-            "collects": 14
+            "collects": 15
           },
           "author": "奔跑的壮壮",
           "signal": "neutral"
+        },
+        {
+          "platform": "zhihu",
+          "title": "暑假打算自驾青甘大环线，有什么注意事项？",
+          "snippet": "都和发达地区差一大截。来这里要做好吃苦的准备，想舒舒服服玩一圈建议选云南。 对景点不要抱太大期望，大西北的美在路上。喜欢大漠孤烟的感觉可以从冷湖开车到茫崖再到格尔木",
+          "url": "https://www.zhihu.com/question/542976774/answer/2063580162906649571",
+          "date": "2026-07-23",
+          "dateConfidence": "high",
+          "relevance": 0.41,
+          "score": 41,
+          "engagement": {
+            "num_comments": 0,
+            "collects": 0,
+            "voteups": 0
+          },
+          "author": "kight11",
+          "signal": "positive"
         }
       ],
       "sourceErrors": {}
@@ -457,9 +456,9 @@
           "priority": "必做"
         }
       ],
-      "checkedAt": "2026-07-24T05:59:56.928212+00:00",
+      "checkedAt": "2026-07-25T04:21:31.624117+00:00",
       "lastEvidenceAt": "2026-07-24T05:59:56.928212+00:00",
-      "sourceStatus": "confirmed",
+      "sourceStatus": "retained",
       "evidence": [
         {
           "platform": "xiaohongshu",
@@ -515,7 +514,9 @@
           "signal": "neutral"
         }
       ],
-      "sourceErrors": {}
+      "sourceErrors": {
+        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
+      }
     }
   },
   "medicalNotice": "药品与高原健康内容仅用于一般旅行准备，不替代医生诊断或个体化用药建议；如有基础疾病、孕期、近期不适或高原经历不佳，请在出发前咨询医生。",
