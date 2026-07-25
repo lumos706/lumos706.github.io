@@ -7,13 +7,19 @@ interface Props {
   title: string;
   category: string;
   pubDate: Date;
+  motion?: 'default' | 'home';
 }
 
-const { index, slug, title, category, pubDate } = Astro.props;
+const { index, slug, title, category, pubDate, motion = 'default' } = Astro.props;
 const date = new Intl.DateTimeFormat('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit' }).format(pubDate).replaceAll('/', '.');
 ---
 
-<a class="post-row" href={`/posts/${slug}/`} data-reveal>
+<a
+  class="post-row"
+  href={`/posts/${slug}/`}
+  data-reveal={motion === 'default' ? '' : undefined}
+  data-home-motion={motion === 'home' ? 'reveal' : undefined}
+>
   <span class="post-index">{String(index).padStart(2, '0')}</span>
   <span class="post-meta">{category}<br />{date}</span>
   <span class="post-title">{title}</span>

@@ -13,6 +13,7 @@
   "dependencies": {
     "@astrojs/rss": "^4.0.15",
     "@astrojs/sitemap": "^3.7.3",
+    "animejs": "^4.5.0",
     "astro": "^7.1.1"
   },
   "devDependencies": {

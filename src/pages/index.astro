@@ -12,28 +12,37 @@ const latest = posts.filter((post) => post.id !== featured.id).slice(0, 3);
 ---
 
 <BaseLayout>
+  <script is:inline>
+    (() => {
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const root = document.documentElement;
+      root.classList.add('home-motion-pending');
+      window.setTimeout(() => root.classList.remove('home-motion-pending'), 1800);
+    })();
+  </script>
+
   <section class="wrap hero">
-    <div class="hero-copy" data-reveal>
-      <h1>在代码与生活之间，留下一束光。</h1>
-      <p>这里记录技术实践、设计观察，也收藏那些让日常变得清晰的微小发现。慢一点写，诚实一点想。</p>
-      <div class="hero-actions">
+    <div class="hero-copy">
+      <h1 data-home-motion="intro">在代码与生活之间，留下一束光。</h1>
+      <p data-home-motion="intro">这里记录技术实践、设计观察，也收藏那些让日常变得清晰的微小发现。慢一点写，诚实一点想。</p>
+      <div class="hero-actions" data-home-motion="intro">
         <a class="button-primary" href="#featured">开始阅读 <ArrowIcon /></a>
         <a class="hero-secondary" href="/about/">关于这个博客</a>
       </div>
     </div>
-    <div class="hero-visual" data-reveal><HeroVisual /></div>
+    <div class="hero-visual" data-home-motion="intro-visual"><HeroVisual /></div>
   </section>
 
   {featured && (
     <section id="featured" class="section featured-section">
       <div class="wrap">
         <div class="section-head"><h2 class="section-title">精选文章</h2><span class="section-index">FEATURED / 01</span></div>
-        <div class="featured">
-          <div class="feature-poster" data-reveal>
+        <div class="featured" data-home-motion-group>
+          <div class="feature-poster" data-home-motion="reveal">
             <span class="poster-label">LUMOS FIELD NOTE</span>
             <span class="poster-number">01</span>
           </div>
-          <div class="feature-copy" data-reveal>
+          <div class="feature-copy" data-home-motion="reveal">
             <div class="meta-label">{featured.data.category} · {featured.data.readingTime} 分钟阅读 · {formatDate(featured.data.pubDate)}</div>
             <h3>{featured.data.title}</h3>
             <p>{featured.data.description}</p>
@@ -46,33 +55,46 @@ const latest = posts.filter((post) => post.id !== featured.id).slice(0, 3);
 
   <section class="wrap latest-section">
     <div class="section-head"><h2 class="section-title">最近更新</h2><span class="section-index">THE LATEST / {String(latest.length).padStart(2, '0')}</span></div>
-    <div>
-      {latest.map((post, index) => <PostRow index={index + 1} slug={post.id} title={post.data.title} category={post.data.category} pubDate={post.data.pubDate} />)}
+    <div data-home-motion-group>
+      {latest.map((post, index) => <PostRow index={index + 1} slug={post.id} title={post.data.title} category={post.data.category} pubDate={post.data.pubDate} motion="home" />)}
     </div>
     <a class="all-posts text-link" href="/posts/">查看全部文章 <ArrowIcon direction="right" /></a>
   </section>
 
   <section class="topics-section">
-    <div class="wrap">
-      <h2 class="topics-title" data-reveal>CODE <em>/</em> DESIGN <em>/</em> LIFE</h2>
+    <div class="wrap" data-home-motion-group>
+      <h2 class="topics-title" data-home-motion="reveal">CODE <em>/</em> DESIGN <em>/</em> LIFE</h2>
       <div class="topic-grid">
-        <div data-reveal><strong>代码</strong><p>记录开发实践、工具选择，以及那些值得被反复使用的解决方案。</p></div>
-        <div data-reveal><strong>设计</strong><p>观察产品、界面和文字如何共同构成一种清晰而克制的体验。</p></div>
-        <div data-reveal><strong>生活</strong><p>在效率之外，保存阅读、散步与日常里偶然亮起的时刻。</p></div>
+        <div data-home-motion="reveal"><strong>代码</strong><p>记录开发实践、工具选择，以及那些值得被反复使用的解决方案。</p></div>
+        <div data-home-motion="reveal"><strong>设计</strong><p>观察产品、界面和文字如何共同构成一种清晰而克制的体验。</p></div>
+        <div data-home-motion="reveal"><strong>生活</strong><p>在效率之外，保存阅读、散步与日常里偶然亮起的时刻。</p></div>
       </div>
     </div>
   </section>
 
-  <section class="wrap about-strip">
-    <h2 data-reveal>一间持续生长的<br />数字书房。</h2>
-    <div class="about-copy" data-reveal>
+  <section class="wrap about-strip" data-home-motion-group>
+    <h2 data-home-motion="reveal">一间持续生长的<br />数字书房。</h2>
+    <div class="about-copy" data-home-motion="reveal">
       <p>Lumos 是一个独立个人博客。这里没有信息流的催促，也不追逐转瞬即逝的热点；只有经过整理的经验、仍在发生的思考，以及对开放互联网的一点坚持。</p>
       <a class="text-link" href="/about/">更多关于我 <ArrowIcon /></a>
     </div>
   </section>
 </BaseLayout>
 
+<script>
+  import { initHomeMotion } from '@/scripts/home-motion';
+
+  initHomeMotion();
+</script>
+
 <style>
+  :global(html.home-motion-pending [data-home-motion]),
+  :global(html.home-motion-active [data-home-motion='reveal']:not([data-home-motion-state='played'])) {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+    will-change: opacity, transform;
+  }
+
   .hero {
     display: grid;
     min-height: 730px;
@@ -202,5 +224,14 @@ const latest = posts.filter((post) => post.id !== featured.id).slice(0, 3);
     .topics-title { font-size: clamp(3.65rem, 17vw, 5.5rem); white-space: normal; }
     .topic-grid { grid-template-columns: 1fr; gap: 38px; margin-top: 62px; }
     .about-strip { grid-template-columns: 1fr; gap: 46px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :global(html.home-motion-pending [data-home-motion]),
+    :global(html.home-motion-active [data-home-motion='reveal']) {
+      opacity: 1;
+      transform: none;
+      will-change: auto;
+    }
   }
 </style>
