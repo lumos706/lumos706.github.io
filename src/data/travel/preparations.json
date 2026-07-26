@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "parserVersion": 1,
-  "generatedAt": "2026-07-25T04:21:31.624117+00:00",
-  "expiresAt": "2026-07-26T10:21:31.624117+00:00",
+  "generatedAt": "2026-07-26T04:37:20.885243+00:00",
+  "expiresAt": "2026-07-27T10:37:20.885243+00:00",
   "status": "ok",
   "schedule": "09:00 Asia/Shanghai",
   "skill": {
@@ -11,7 +11,6 @@
     "repository": "https://github.com/Jesseovo/last30days-skill-cn"
   },
   "activeSources": [
-    "douyin",
     "xiaohongshu",
     "zhihu"
   ],
@@ -45,62 +44,26 @@
           "priority": "必看"
         }
       ],
-      "checkedAt": "2026-07-25T04:21:31.624117+00:00",
-      "lastEvidenceAt": "2026-07-25T04:21:31.624117+00:00",
+      "checkedAt": "2026-07-26T04:37:20.885243+00:00",
+      "lastEvidenceAt": "2026-07-26T04:37:20.885243+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
-          "platform": "douyin",
-          "title": "高原旅行，量力而行，做好攻略，准备好氧气，高原反应本可预防 最近严重高反的游客越来越多，他们都有一个同样的问题，就是没有准备医用级氧气设备，导致高反，有的因此失去生命！大家真的不要盲目挑战高原！#高原反应 #便携式制氧机 #倍益康便携式制氧机 #嘉医便携式制氧机 #稻城亚丁",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7665769612390325843",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.41,
-          "score": 23,
-          "engagement": {
-            "num_comments": 6,
-            "likes": 24,
-            "views": 0,
-            "shares": 0
-          },
-          "author": "川藏便携式制氧机随身氧吧（倍益康、嘉医）",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "柠萌旅行青甘高原高反预防 应急完整指南 #青甘大环线 #青甘旅游 #高反应急 #应急指南 #柠萌带你游西北",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7660723456748555529",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.41,
-          "score": 17,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 5,
-            "views": 0,
-            "shares": 1
-          },
-          "author": "柠萌带你游西北",
-          "signal": "neutral"
-        },
-        {
           "platform": "xiaohongshu",
-          "title": "第一章节就高原反应了",
+          "title": "高原体验（1）",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/69de661e000000001b022c7e",
+          "url": "https://www.xiaohongshu.com/explore/6a599ffe00000000010006c6",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.25,
-          "score": 23,
+          "relevance": 0.16,
+          "score": 18,
           "engagement": {
-            "num_comments": 24,
-            "likes": 35,
+            "num_comments": 73,
+            "likes": 31,
             "shares": 0,
-            "collects": 25
+            "collects": 32
           },
-          "author": "阿玲",
+          "author": "西北漂小海豹",
           "signal": "neutral"
         }
       ],
@@ -135,8 +98,8 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-25T04:21:31.624117+00:00",
-      "lastEvidenceAt": "2026-07-25T04:21:31.624117+00:00",
+      "checkedAt": "2026-07-26T04:37:20.885243+00:00",
+      "lastEvidenceAt": "2026-07-26T04:37:20.885243+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
@@ -147,7 +110,7 @@
           "date": "2026-07-16",
           "dateConfidence": "high",
           "relevance": 0.41,
-          "score": 45,
+          "score": 44,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -188,8 +151,8 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-25T04:21:31.624117+00:00",
-      "lastEvidenceAt": "2026-07-25T04:21:31.624117+00:00",
+      "checkedAt": "2026-07-26T04:37:20.885243+00:00",
+      "lastEvidenceAt": "2026-07-26T04:37:20.885243+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
@@ -200,12 +163,12 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.35,
-          "score": 23,
+          "score": 25,
           "engagement": {
             "num_comments": 2,
-            "likes": 100,
+            "likes": 113,
             "shares": 0,
-            "collects": 123
+            "collects": 132
           },
           "author": "💕",
           "signal": "neutral"
@@ -218,12 +181,12 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.31,
-          "score": 20,
+          "score": 21,
           "engagement": {
             "num_comments": 4,
-            "likes": 67,
+            "likes": 70,
             "shares": 0,
-            "collects": 40
+            "collects": 42
           },
           "author": "宸阿喵",
           "signal": "neutral"
@@ -260,10 +223,28 @@
           "priority": "必带"
         }
       ],
-      "checkedAt": "2026-07-25T04:21:31.624117+00:00",
-      "lastEvidenceAt": "2026-07-25T04:21:31.624117+00:00",
+      "checkedAt": "2026-07-26T04:37:20.885243+00:00",
+      "lastEvidenceAt": "2026-07-26T04:37:20.885243+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
+        {
+          "platform": "xiaohongshu",
+          "title": "长春龙嘉机场充电宝3C规定",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6870f3380000000011002333",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.46,
+          "score": 34,
+          "engagement": {
+            "num_comments": 92,
+            "likes": 334,
+            "shares": 0,
+            "collects": 151
+          },
+          "author": "松花酿酒 春水煎茶",
+          "signal": "neutral"
+        },
         {
           "platform": "zhihu",
           "title": "为什么有些充电宝不能带上飞机？",
@@ -272,7 +253,7 @@
           "date": "2026-07-22",
           "dateConfidence": "high",
           "relevance": 0.41,
-          "score": 55,
+          "score": 54,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -289,32 +270,32 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.33,
-          "score": 33,
+          "score": 38,
           "engagement": {
             "num_comments": 290,
-            "likes": 2506,
+            "likes": 2511,
             "shares": 0,
-            "collects": 962
+            "collects": 960
           },
           "author": "Iam扎扎",
           "signal": "neutral"
         },
         {
           "platform": "xiaohongshu",
-          "title": "我的充电宝被中国机场没收了！❌3C认证",
+          "title": "出国飞必看⚠️ 国际航班充电宝3C认证真相",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/69679f120000000021028fb3",
+          "url": "https://www.xiaohongshu.com/explore/699d37c6000000001a0255d0",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.33,
-          "score": 14,
+          "relevance": 0.32,
+          "score": 19,
           "engagement": {
-            "num_comments": 28,
-            "likes": 45,
+            "num_comments": 5,
+            "likes": 54,
             "shares": 0,
-            "collects": 23
+            "collects": 69
           },
-          "author": "尹尹若现",
+          "author": "公牛数码",
           "signal": "neutral"
         }
       ],
@@ -349,10 +330,28 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-25T04:21:31.624117+00:00",
-      "lastEvidenceAt": "2026-07-25T04:21:31.624117+00:00",
+      "checkedAt": "2026-07-26T04:37:20.885243+00:00",
+      "lastEvidenceAt": "2026-07-26T04:37:20.885243+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
+        {
+          "platform": "xiaohongshu",
+          "title": "青甘大环线前期准备（自驾版）",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/688a17310000000005009c21",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.47,
+          "score": 38,
+          "engagement": {
+            "num_comments": 32,
+            "likes": 329,
+            "shares": 0,
+            "collects": 390
+          },
+          "author": "换个刊投我又是好汉",
+          "signal": "neutral"
+        },
         {
           "platform": "xiaohongshu",
           "title": "青甘大环线自驾租车分享，女生友好‼️",
@@ -361,7 +360,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.47,
-          "score": 30,
+          "score": 28,
           "engagement": {
             "num_comments": 19,
             "likes": 42,
@@ -379,10 +378,10 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.46,
-          "score": 36,
+          "score": 34,
           "engagement": {
             "num_comments": 156,
-            "likes": 100,
+            "likes": 101,
             "shares": 0,
             "collects": 66
           },
@@ -397,32 +396,15 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.46,
-          "score": 25,
+          "score": 23,
           "engagement": {
             "num_comments": 1,
-            "likes": 17,
+            "likes": 18,
             "shares": 0,
-            "collects": 15
+            "collects": 16
           },
           "author": "奔跑的壮壮",
           "signal": "neutral"
-        },
-        {
-          "platform": "zhihu",
-          "title": "暑假打算自驾青甘大环线，有什么注意事项？",
-          "snippet": "都和发达地区差一大截。来这里要做好吃苦的准备，想舒舒服服玩一圈建议选云南。 对景点不要抱太大期望，大西北的美在路上。喜欢大漠孤烟的感觉可以从冷湖开车到茫崖再到格尔木",
-          "url": "https://www.zhihu.com/question/542976774/answer/2063580162906649571",
-          "date": "2026-07-23",
-          "dateConfidence": "high",
-          "relevance": 0.41,
-          "score": 41,
-          "engagement": {
-            "num_comments": 0,
-            "collects": 0,
-            "voteups": 0
-          },
-          "author": "kight11",
-          "signal": "positive"
         }
       ],
       "sourceErrors": {}
@@ -456,67 +438,30 @@
           "priority": "必做"
         }
       ],
-      "checkedAt": "2026-07-25T04:21:31.624117+00:00",
-      "lastEvidenceAt": "2026-07-24T05:59:56.928212+00:00",
-      "sourceStatus": "retained",
+      "checkedAt": "2026-07-26T04:37:20.885243+00:00",
+      "lastEvidenceAt": "2026-07-26T04:37:20.885243+00:00",
+      "sourceStatus": "confirmed",
       "evidence": [
         {
           "platform": "xiaohongshu",
-          "title": "青甘环线公共交通攻略",
+          "title": "青甘环线7天公共交通不自驾路线附酒店测评",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a2d145f0000000035029cd3",
+          "url": "https://www.xiaohongshu.com/explore/6a2a09af0000000021022f36",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.25,
-          "score": 27,
+          "relevance": 0.19,
+          "score": 25,
           "engagement": {
-            "num_comments": 63,
-            "likes": 409,
+            "num_comments": 90,
+            "likes": 474,
             "shares": 0,
-            "collects": 519
+            "collects": 666
           },
-          "author": "茄子",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "青甘环线归来｜行李精简避坑版✨",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a4cc49500000000220095fa",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.2,
-          "score": 13,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 32,
-            "shares": 0,
-            "collects": 36
-          },
-          "author": "逐风",
-          "signal": "neutral"
-        },
-        {
-          "platform": "zhihu",
-          "title": "带6岁娃和60岁婆婆去西北8天，青甘八日游亲测行程+避坑全记录",
-          "snippet": "比海盐水温和。 关于行李：别带大箱子。一个24寸箱+一个双肩包就够。在茶卡和祁连可以让车把行李提前运到下一站",
-          "url": "https://zhuanlan.zhihu.com/p/2053154314961604907",
-          "date": "2026-06-24",
-          "dateConfidence": "high",
-          "relevance": 0.18,
-          "score": 8,
-          "engagement": {
-            "num_comments": 0,
-            "collects": 0,
-            "voteups": 0
-          },
-          "author": "豆豆芙",
+          "author": "Q.",
           "signal": "neutral"
         }
       ],
-      "sourceErrors": {
-        "xiaohongshu": "未获取到结果；已尝试 MCP/公开接口/站内搜索兜底。默认或 deep 模式还会尝试 Playwright。若仍为空，通常是登录态失效、验证码、平台反爬或搜索引擎未收录。"
-      }
+      "sourceErrors": {}
     }
   },
   "medicalNotice": "药品与高原健康内容仅用于一般旅行准备，不替代医生诊断或个体化用药建议；如有基础疾病、孕期、近期不适或高原经历不佳，请在出发前咨询医生。",
