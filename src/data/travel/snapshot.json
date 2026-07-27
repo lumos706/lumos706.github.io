@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "generatedAt": "2026-07-26T05:11:25.955593+00:00",
-  "expiresAt": "2026-07-27T17:11:25.955593+00:00",
+  "generatedAt": "2026-07-27T04:39:06.100047+00:00",
+  "expiresAt": "2026-07-28T16:39:06.100047+00:00",
   "status": "ok",
   "mode": "browser-plus-optional-credentials",
   "skill": {
@@ -26,10 +26,10 @@
   ],
   "sourceCoverage": {
     "baidu": 5,
-    "bilibili": 11,
+    "bilibili": 1,
     "douyin": 4,
-    "xiaohongshu": 106,
-    "zhihu": 23
+    "xiaohongshu": 107,
+    "zhihu": 21
   },
   "categories": {
     "flights": {
@@ -57,47 +57,43 @@
         },
         {
           "platform": "xiaohongshu",
-          "title": "【西宁机场2026年暑运新增航班一览】",
+          "title": "呼市/兰州/西宁/拉萨机场最新国际航班信息",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a438f4f000000002103facd",
+          "url": "https://www.xiaohongshu.com/explore/69f2c990000000003601edf1",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.31,
-          "score": 17,
+          "relevance": 0.32,
+          "score": 14,
           "engagement": {
-            "num_comments": 17,
-            "likes": 37,
+            "num_comments": 0,
+            "likes": 24,
             "shares": 0,
-            "collects": 11
+            "collects": 10
           },
-          "author": "从西宁起飞西宁商业动态版",
-          "signal": "neutral"
-        },
-        {
-          "platform": "zhihu",
-          "title": "端午去冰城与尔滨邂逅一场让人面红耳赤的桑拿浴",
-          "snippet": "西安咸阳国际机场、兰州中川国际机场、银川河东国际机场还有西宁曹家堡国际机场 ，这些西北地区重要机场的主导航司均为东方航空及其下辖的东航西北公司",
-          "url": "https://zhuanlan.zhihu.com/p/2058138893476803608",
-          "date": "2026-07-08",
-          "dateConfidence": "high",
-          "relevance": 0.26,
-          "score": 40,
-          "engagement": {
-            "num_comments": 2,
-            "collects": 0,
-            "voteups": 14
-          },
-          "author": "宣武该溜子",
+          "author": "航旅在线",
           "signal": "neutral"
         },
         {
           "platform": "baidu",
-          "title": "去青甘有直飞吗?2026暑运新增南宁直飞西宁每日1班,中转攻略与机票...",
+          "title": "...西宁市|同程|机票|兰州市|西宁曹家堡国际机场_新浪新闻",
           "snippet": "",
-          "url": "http://www.baidu.com/link?url=na4dH4EMa4YOhx3ipH9ls-mL5Fo9Y1SiA2Z6t2fePlWfdH_fw5pYREjdicpQAXmP9UdJmjHNBa_2dD69SHQjUCcsFu2D4zdiyMu_AzmE50C",
+          "url": "http://www.baidu.com/link?url=s3Z3XOy3SzSj0ajc-Q5vC9lUNfjxXjA2MpOlIEddOmvERp8gGuFMVQQ8E06c_R6Byehjihr2oHfiwWmLli8O_oXeZp64rSl3_hpB3vE-efi",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.12,
+          "relevance": 0.21,
+          "score": 0,
+          "engagement": {},
+          "author": "",
+          "signal": "neutral"
+        },
+        {
+          "platform": "baidu",
+          "title": "...兰州中川机场|曹家堡机场|青海湖湖区|杭州市|西宁市_手机新浪网",
+          "snippet": "",
+          "url": "http://www.baidu.com/link?url=krRzDQo_alDpOLHHiE2wM2VXOlVrPoaPO-ZOq2NnChROqqUcpPStTdgU_haXf9em0Pxb5Q8i6ZEFqUWPpNTrJVGj87_6p4qDI5V35DEQAL_",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.13,
           "score": 0,
           "engagement": {},
           "author": "",
@@ -128,26 +124,13 @@
           "date": "2026-06-27",
           "dateConfidence": "high",
           "relevance": 0.26,
-          "score": 42,
+          "score": 41,
           "engagement": {
             "num_comments": 2,
             "collects": 0,
             "voteups": 2
           },
           "author": "豆豆芙",
-          "signal": "neutral"
-        },
-        {
-          "platform": "baidu",
-          "title": "双床房预订哪家酒店好?2026全预算场景实测:汉庭200元/晚经济...",
-          "snippet": "",
-          "url": "http://www.baidu.com/link?url=0PazDr3XgMSwDzmvzJGdbNWjSMOIhQHT-jpgx2RxId4ny1kRGdMPPRakEBjrpsPjsA2t5UiMv3rqAp6OqWe-QBVRaUWUai3xL4sYX-wMJJ_",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.21,
-          "score": 0,
-          "engagement": {},
-          "author": "",
           "signal": "neutral"
         },
         {
@@ -158,7 +141,7 @@
           "date": "2026-07-01",
           "dateConfidence": "high",
           "relevance": 0.2,
-          "score": 13,
+          "score": 12,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -184,6 +167,24 @@
           },
           "author": "珂子想去大草原",
           "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "在大柴旦住到了超便宜又舒服的酒店🏨",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a565a29000000000f03019e",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.13,
+          "score": 3,
+          "engagement": {
+            "num_comments": 19,
+            "likes": 24,
+            "shares": 0,
+            "collects": 17
+          },
+          "author": "羊乐多🐑🍒",
+          "signal": "neutral"
         }
       ],
       "sourceErrors": {},
@@ -193,12 +194,6 @@
         "max": 1290
       },
       "priceSamples": [
-        {
-          "value": 200,
-          "platform": "baidu",
-          "title": "双床房预订哪家酒店好?2026全预算场景实测:汉庭200元/晚经济...",
-          "url": "http://www.baidu.com/link?url=0PazDr3XgMSwDzmvzJGdbNWjSMOIhQHT-jpgx2RxId4ny1kRGdMPPRakEBjrpsPjsA2t5UiMv3rqAp6OqWe-QBVRaUWUai3xL4sYX-wMJJ_"
-        },
         {
           "value": 700,
           "platform": "zhihu",
@@ -223,7 +218,7 @@
           "date": "2026-07-02",
           "dateConfidence": "high",
           "relevance": 0.46,
-          "score": 55,
+          "score": 54,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -240,7 +235,7 @@
           "date": "2026-07-14",
           "dateConfidence": "high",
           "relevance": 0.37,
-          "score": 31,
+          "score": 30,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -257,7 +252,7 @@
           "date": "2026-07-01",
           "dateConfidence": "high",
           "relevance": 0.37,
-          "score": 20,
+          "score": 19,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -270,7 +265,7 @@
           "platform": "baidu",
           "title": "青海湖暑假必须预约吗?2026年新规:每日限流1.2万、分时段放票,未...",
           "snippet": "",
-          "url": "http://www.baidu.com/link?url=tAUpGrnrRzt9XrMuwWppllUXROUgICIC5hmkQrNI3R-r6yFgZ6B5neq1ianXdi7nWjC2udv52rTh76y48Fl1kr9S9_AJgVkNal6J-2sgiZa",
+          "url": "http://www.baidu.com/link?url=3MUMhBU3UXzjdlDja_CVEt45rj7RYZ04aKUW7Z0yUapiD-vl86WhP_fmj_J98uiNsa5GKpluIFVNgZft2AD-wnSa6ubbE_q2Y-GoTC191u7",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.29,
@@ -283,7 +278,7 @@
           "platform": "baidu",
           "title": "青海湖今天开放吗?2026年7月20日实地探访:门票90元限流1.2万,但20...",
           "snippet": "",
-          "url": "http://www.baidu.com/link?url=1QBG6-JRQJ4zbZursl7O6Sp5wUK3n-j2c2aY_WYfcaqk3DBEEH2RV1uN5ODh9HEQDjoKt4SECTUSdxhdG8WsevhwSGomVk-KQYr9rts4BhG",
+          "url": "http://www.baidu.com/link?url=o3HvhUASyJoOduVccRg21B_lTeh-x50C2UIVrfzxG9ELi5XAKAhelGJ3_kmaFttTwu6hyidcxaC-J4J9XDkykJ2s2wiiURE5fuuc_4j5miC",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.28,
@@ -300,21 +295,21 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.24,
-          "score": 14,
+          "score": 16,
           "engagement": {
             "num_comments": 8,
-            "likes": 73,
+            "likes": 74,
             "shares": 0,
-            "collects": 92
+            "collects": 97
           },
           "author": "明日晴",
           "signal": "neutral"
         },
         {
           "platform": "baidu",
-          "title": "...黑独山,青海湖,茶卡盐湖,大柴旦翡翠湖,翡翠湖,艾肯泉,莫高窟...",
+          "title": "...费用预算+避坑指南+FAQ|西宁市|张掖市|青海湖|莫高窟|茶卡盐湖...",
           "snippet": "",
-          "url": "http://www.baidu.com/link?url=H6PKkt04geQzId2v8pXxtXUd2KXt1hB7MDf2wAjvw8GCFHwLn1ICz61S6xbWo-8K6v-NGtsLSmfiGXKw8awnPq",
+          "url": "http://www.baidu.com/link?url=3MUMhBU3UXzjdlDja_CVEt45rj7RYZ04aKUW7Z0yUapiD-vl86WhP_fmj_J98uiNiG7PZm3DmW3Ges8YUU8S53veQPwZ2JSs5DXW1EzQole",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.22,
@@ -338,7 +333,7 @@
           "value": 90,
           "platform": "baidu",
           "title": "青海湖今天开放吗?2026年7月20日实地探访:门票90元限流1.2万,但20...",
-          "url": "http://www.baidu.com/link?url=1QBG6-JRQJ4zbZursl7O6Sp5wUK3n-j2c2aY_WYfcaqk3DBEEH2RV1uN5ODh9HEQDjoKt4SECTUSdxhdG8WsevhwSGomVk-KQYr9rts4BhG"
+          "url": "http://www.baidu.com/link?url=o3HvhUASyJoOduVccRg21B_lTeh-x50C2UIVrfzxG9ELi5XAKAhelGJ3_kmaFttTwu6hyidcxaC-J4J9XDkykJ2s2wiiURE5fuuc_4j5miC"
         }
       ]
     }
@@ -347,7 +342,7 @@
     "qinghaiLake": {
       "label": "青海湖",
       "status": "ok",
-      "evidenceCount": 11,
+      "evidenceCount": 9,
       "evidence": [
         {
           "platform": "douyin",
@@ -368,40 +363,21 @@
           "signal": "neutral"
         },
         {
-          "platform": "bilibili",
-          "title": "来青海湖拍照好看的攻略 它来了",
-          "snippet": "-",
-          "url": "https://www.bilibili.com/video/BV1dQNL6nE8P",
-          "date": "2026-07-10",
-          "dateConfidence": "high",
-          "relevance": 0.46,
-          "score": 42,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 10,
-            "views": 179,
-            "danmaku": 0,
-            "favorites": 2
-          },
-          "author": "金泽青甘旅游全攻略",
-          "signal": "neutral"
-        },
-        {
           "platform": "xiaohongshu",
-          "title": "青海湖不进景区拍照攻略live原图直出",
+          "title": "青海湖没白来｜附自驾攻略",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a5306db00000000160270bd",
+          "url": "https://www.xiaohongshu.com/explore/6a353ced000000001503fb92",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.42,
-          "score": 26,
+          "relevance": 0.46,
+          "score": 33,
           "engagement": {
-            "num_comments": 15,
-            "likes": 242,
+            "num_comments": 43,
+            "likes": 243,
             "shares": 0,
-            "collects": 69
+            "collects": 239
           },
-          "author": "田七七",
+          "author": "芝士少女",
           "signal": "neutral"
         },
         {
@@ -412,12 +388,12 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.42,
-          "score": 22,
+          "score": 23,
           "engagement": {
             "num_comments": 0,
-            "likes": 116,
+            "likes": 117,
             "shares": 0,
-            "collects": 166
+            "collects": 168
           },
           "author": "星海旅行",
           "signal": "neutral"
@@ -430,12 +406,12 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.42,
-          "score": 17,
+          "score": 19,
           "engagement": {
             "num_comments": 4,
-            "likes": 13,
+            "likes": 16,
             "shares": 0,
-            "collects": 25
+            "collects": 31
           },
           "author": "风与猫狗皆自由 🐱🐶",
           "signal": "neutral"
@@ -448,12 +424,12 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.41,
-          "score": 35,
+          "score": 37,
           "engagement": {
-            "num_comments": 96,
-            "likes": 788,
+            "num_comments": 98,
+            "likes": 832,
             "shares": 0,
-            "collects": 1437
+            "collects": 1505
           },
           "author": "刘小羊的小生活",
           "signal": "neutral"
@@ -466,7 +442,7 @@
           "date": "2026-07-14",
           "dateConfidence": "high",
           "relevance": 0.4,
-          "score": 36,
+          "score": 47,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -483,7 +459,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.4,
-          "score": 23,
+          "score": 26,
           "engagement": {
             "num_comments": 72,
             "likes": 105,
@@ -501,10 +477,10 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.4,
-          "score": 17,
+          "score": 19,
           "engagement": {
             "num_comments": 3,
-            "likes": 35,
+            "likes": 38,
             "views": 0,
             "shares": 15
           },
@@ -519,7 +495,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.4,
-          "score": 15,
+          "score": 16,
           "engagement": {
             "num_comments": 0,
             "likes": 14,
@@ -528,23 +504,6 @@
           },
           "author": "涛子的青甘环线✈️",
           "signal": "neutral"
-        },
-        {
-          "platform": "zhihu",
-          "title": "成都一路向西，赴一场青海湖360km环湖之约",
-          "snippet": "最佳季节： 6月下旬–8月（油菜花+避暑）； 9月人少水蓝，冬季可看蓝冰但需防寒 ⚠高反预防：青海湖海拔3200m",
-          "url": "https://zhuanlan.zhihu.com/p/2055570454199509081",
-          "date": "2026-07-01",
-          "dateConfidence": "high",
-          "relevance": 0.25,
-          "score": 15,
-          "engagement": {
-            "num_comments": 1,
-            "collects": 0,
-            "voteups": 0
-          },
-          "author": "池恩聊",
-          "signal": "neutral"
         }
       ],
       "sourceErrors": {}
@@ -552,26 +511,8 @@
     "chakaSaltLake": {
       "label": "茶卡盐湖",
       "status": "ok",
-      "evidenceCount": 12,
+      "evidenceCount": 9,
       "evidence": [
-        {
-          "platform": "xiaohongshu",
-          "title": "茶卡盐湖游玩以及拍照避坑攻略",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a5de157000000000c014ed9",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.77,
-          "score": 29,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 1,
-            "shares": 0,
-            "collects": 1
-          },
-          "author": "西贝",
-          "signal": "neutral"
-        },
         {
           "platform": "xiaohongshu",
           "title": "青海旅游｜茶卡盐湖超超超详细拍照攻略❗️❗️",
@@ -580,7 +521,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.51,
-          "score": 38,
+          "score": 36,
           "engagement": {
             "num_comments": 18,
             "likes": 218,
@@ -591,25 +532,6 @@
           "signal": "neutral"
         },
         {
-          "platform": "bilibili",
-          "title": "茶卡盐湖天空之镜的硬核拍照攻略 男女老少都适用",
-          "snippet": "",
-          "url": "https://www.bilibili.com/video/BV1MsMe6YEf4",
-          "date": "2026-07-09",
-          "dateConfidence": "high",
-          "relevance": 0.5,
-          "score": 41,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 3,
-            "views": 373,
-            "danmaku": 0,
-            "favorites": 5
-          },
-          "author": "老高-青甘旅游全攻略",
-          "signal": "neutral"
-        },
-        {
           "platform": "xiaohongshu",
           "title": "8月早上7:00的茶卡盐湖｜详细攻略来啦",
           "snippet": "",
@@ -617,10 +539,10 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.5,
-          "score": 28,
+          "score": 24,
           "engagement": {
             "num_comments": 5,
-            "likes": 22,
+            "likes": 24,
             "shares": 0,
             "collects": 19
           },
@@ -635,7 +557,7 @@
           "date": "2026-07-14",
           "dateConfidence": "high",
           "relevance": 0.49,
-          "score": 67,
+          "score": 66,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -643,25 +565,6 @@
           },
           "author": "山河游览志",
           "signal": "mixed"
-        },
-        {
-          "platform": "bilibili",
-          "title": "什么时候去西北最合适，必须是7-8月 #西北旅游攻略 #西北旅行 #青甘大环线 #茶卡盐湖",
-          "snippet": "-",
-          "url": "https://www.bilibili.com/video/BV1YmTc6yE9Q",
-          "date": "2026-07-01",
-          "dateConfidence": "high",
-          "relevance": 0.49,
-          "score": 31,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 7,
-            "views": 193,
-            "danmaku": 0,
-            "favorites": 0
-          },
-          "author": "西北导游小陈",
-          "signal": "neutral"
         },
         {
           "platform": "zhihu",
@@ -682,77 +585,39 @@
         },
         {
           "platform": "xiaohongshu",
-          "title": "茶卡盐湖攻略",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a5b5bc2000000001101af77",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.46,
-          "score": 40,
-          "engagement": {
-            "num_comments": 64,
-            "likes": 426,
-            "shares": 0,
-            "collects": 440
-          },
-          "author": "上一秒",
-          "signal": "neutral"
-        },
-        {
-          "platform": "bilibili",
-          "title": "茶卡盐湖怎么去？攻略终于来啦",
-          "snippet": "",
-          "url": "https://www.bilibili.com/video/BV1seKG6FE8o",
-          "date": "2026-07-16",
-          "dateConfidence": "high",
-          "relevance": 0.34,
-          "score": 31,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 3,
-            "views": 51,
-            "danmaku": 0,
-            "favorites": 0
-          },
-          "author": "茶卡盐湖天空壹号景区",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
           "title": "茶卡盐湖攻略｜超真实实测！！",
           "snippet": "",
           "url": "https://www.xiaohongshu.com/explore/6a5d8bdf000000000401dfb4",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.34,
-          "score": 15,
+          "score": 10,
           "engagement": {
             "num_comments": 0,
             "likes": 5,
             "shares": 0,
-            "collects": 9
+            "collects": 11
           },
           "author": "啾啾",
           "signal": "neutral"
         },
         {
-          "platform": "bilibili",
-          "title": "茶卡盐湖天空之镜的保姆级攻略",
+          "platform": "xiaohongshu",
+          "title": "茶卡盐湖实话攻略｜真心不推荐坐小火车🚫省",
           "snippet": "",
-          "url": "https://www.bilibili.com/video/BV1etTs61EW1",
-          "date": "2026-07-04",
-          "dateConfidence": "high",
-          "relevance": 0.33,
-          "score": 30,
+          "url": "https://www.xiaohongshu.com/explore/6a61f391000000001c00d949",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.32,
+          "score": 12,
           "engagement": {
             "num_comments": 0,
-            "likes": 5,
-            "views": 412,
-            "danmaku": 0,
-            "favorites": 4
+            "likes": 16,
+            "shares": 0,
+            "collects": 17
           },
-          "author": "老高-青甘旅游全攻略",
-          "signal": "neutral"
+          "author": "Caroline",
+          "signal": "mixed"
         },
         {
           "platform": "xiaohongshu",
@@ -762,15 +627,50 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.31,
-          "score": 31,
+          "score": 29,
           "engagement": {
-            "num_comments": 46,
-            "likes": 203,
+            "num_comments": 47,
+            "likes": 214,
             "shares": 0,
-            "collects": 200
+            "collects": 206
           },
           "author": "「」",
           "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "7.24茶卡盐湖已逃回，提醒8月要来的姐妹...",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a63187a000000001101d53a",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.31,
+          "score": 14,
+          "engagement": {
+            "num_comments": 1,
+            "likes": 18,
+            "shares": 0,
+            "collects": 21
+          },
+          "author": "FY.",
+          "signal": "neutral"
+        },
+        {
+          "platform": "zhihu",
+          "title": "茶卡盐湖并非网红照骗，选对时机就能邂逅真正的天空之镜。",
+          "snippet": "避开恶劣天气错峰出行，这片高原秘境值得奔赴。 #茶卡盐湖 #青海旅游",
+          "url": "https://zhuanlan.zhihu.com/p/2063048570467619886",
+          "date": "2026-07-21",
+          "dateConfidence": "high",
+          "relevance": 0.13,
+          "score": 25,
+          "engagement": {
+            "num_comments": 0,
+            "collects": 0,
+            "voteups": 0
+          },
+          "author": "苏米的时光匣",
+          "signal": "positive"
         }
       ],
       "sourceErrors": {}
@@ -788,13 +688,31 @@
           "date": "2026-07-13",
           "dateConfidence": "high",
           "relevance": 0.81,
-          "score": 80,
+          "score": 79,
           "engagement": {
             "num_comments": 3,
             "collects": 0,
             "voteups": 1
           },
           "author": "青甘领队驴队长",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "大柴旦翡翠湖-水上雅丹-G315U型公路【攻略】",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a2396aa000000001702b727",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.73,
+          "score": 32,
+          "engagement": {
+            "num_comments": 4,
+            "likes": 12,
+            "shares": 0,
+            "collects": 9
+          },
+          "author": "小蓝很白",
           "signal": "neutral"
         },
         {
@@ -805,7 +723,7 @@
           "date": "2026-07-14",
           "dateConfidence": "high",
           "relevance": 0.69,
-          "score": 57,
+          "score": 56,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -822,7 +740,7 @@
           "date": "2026-07-16",
           "dateConfidence": "high",
           "relevance": 0.69,
-          "score": 47,
+          "score": 46,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -839,32 +757,14 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.66,
-          "score": 32,
+          "score": 29,
           "engagement": {
             "num_comments": 2,
-            "likes": 8,
+            "likes": 10,
             "shares": 0,
-            "collects": 17
+            "collects": 18
           },
           "author": "兜宝妈",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "大柴旦翡翠湖攻略",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a3922ff000000001700b7d4",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.59,
-          "score": 43,
-          "engagement": {
-            "num_comments": 17,
-            "likes": 300,
-            "shares": 0,
-            "collects": 313
-          },
-          "author": "Hello，世界你好",
           "signal": "neutral"
         },
         {
@@ -875,7 +775,7 @@
           "date": "2026-07-14",
           "dateConfidence": "high",
           "relevance": 0.58,
-          "score": 40,
+          "score": 39,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -892,10 +792,10 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.55,
-          "score": 38,
+          "score": 36,
           "engagement": {
             "num_comments": 62,
-            "likes": 70,
+            "likes": 71,
             "shares": 0,
             "collects": 113
           },
@@ -903,77 +803,21 @@
           "signal": "neutral"
         },
         {
-          "platform": "xiaohongshu",
-          "title": "大柴旦翡翠湖游玩攻略(3小时)",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a64c7ec000000000100c6f0",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.53,
-          "score": 18,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 3,
-            "shares": 0,
-            "collects": 0
-          },
-          "author": "正月里的小鱼儿",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "大柴旦翡翠湖保姆级攻略！含蜜蜡湖&小柴旦",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a5af151000000001101079d",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.49,
-          "score": 28,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 50,
-            "shares": 0,
-            "collects": 54
-          },
-          "author": "四月🌾",
-          "signal": "neutral"
-        },
-        {
-          "platform": "bilibili",
-          "title": "260723大柴旦翡翠湖",
-          "snippet": "大柴旦翡翠湖",
-          "url": "https://www.bilibili.com/video/BV1jag46aE7g",
-          "date": "2026-07-23",
+          "platform": "zhihu",
+          "title": "深耕西北多年，7天6晚。写给第一次来大西北旅行朋友的出行攻略",
+          "snippet": "大柴旦--小柴旦湖--315公路--水上雅丹--青海雅丹--大柴旦450km 今天，我们从大柴旦出发前往【乌苏特水上雅丹】，途经315国道的【U型天路】",
+          "url": "https://zhuanlan.zhihu.com/p/2059758921187956124",
+          "date": "2026-07-12",
           "dateConfidence": "high",
           "relevance": 0.46,
-          "score": 47,
+          "score": 33,
           "engagement": {
             "num_comments": 0,
-            "likes": 10,
-            "views": 306,
-            "danmaku": 0,
-            "favorites": 1
+            "collects": 0,
+            "voteups": 0
           },
-          "author": "frogfree",
+          "author": "西北领队驴队长",
           "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "大柴旦翡翠湖避雷！",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a640a68000000001d00f3d5",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.46,
-          "score": 26,
-          "engagement": {
-            "num_comments": 46,
-            "likes": 13,
-            "shares": 0,
-            "collects": 5
-          },
-          "author": "Lysara",
-          "signal": "caution"
         },
         {
           "platform": "xiaohongshu",
@@ -983,14 +827,68 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.43,
-          "score": 35,
+          "score": 34,
           "engagement": {
             "num_comments": 12,
-            "likes": 361,
+            "likes": 370,
             "shares": 0,
-            "collects": 284
+            "collects": 299
           },
           "author": "明日晴",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "实况直出大柴旦翡翠湖 别去！！！！！q",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a650323000000000f005a44",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.41,
+          "score": 25,
+          "engagement": {
+            "num_comments": 43,
+            "likes": 31,
+            "shares": 0,
+            "collects": 25
+          },
+          "author": "豆菜",
+          "signal": "caution"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "大柴旦翡翠湖 【必须要说的坑】",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/688ee5dc0000000023021b84",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.41,
+          "score": 16,
+          "engagement": {
+            "num_comments": 3,
+            "likes": 9,
+            "shares": 0,
+            "collects": 5
+          },
+          "author": "冷不丁儿热茶",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "怎么水上雅丹省💰？超强攻略",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a15693a000000003701cf38",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.33,
+          "score": 27,
+          "engagement": {
+            "num_comments": 17,
+            "likes": 118,
+            "shares": 0,
+            "collects": 242
+          },
+          "author": "行走的豪大侠",
           "signal": "neutral"
         }
       ],
@@ -1009,14 +907,32 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.76,
-          "score": 38,
+          "score": 39,
           "engagement": {
             "num_comments": 6,
-            "likes": 20,
+            "likes": 29,
             "shares": 0,
-            "collects": 19
+            "collects": 29
           },
           "author": "你的京游小管家",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "莫高窟应急票入院预约攻略",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a66a7bc000000002201a44b",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.66,
+          "score": 27,
+          "engagement": {
+            "num_comments": 6,
+            "likes": 3,
+            "shares": 0,
+            "collects": 1
+          },
+          "author": "借我一抹光",
           "signal": "neutral"
         },
         {
@@ -1027,7 +943,7 @@
           "date": "2026-07-02",
           "dateConfidence": "high",
           "relevance": 0.64,
-          "score": 63,
+          "score": 62,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -1044,7 +960,7 @@
           "date": "2026-07-02",
           "dateConfidence": "high",
           "relevance": 0.64,
-          "score": 52,
+          "score": 51,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -1061,7 +977,7 @@
           "date": "2026-07-20",
           "dateConfidence": "high",
           "relevance": 0.64,
-          "score": 48,
+          "score": 47,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -1071,41 +987,21 @@
           "signal": "neutral"
         },
         {
-          "platform": "bilibili",
-          "title": "莫高窟门票 什么时间预约",
-          "snippet": "-",
-          "url": "https://www.bilibili.com/video/BV1GETr6oEM7",
-          "date": "2026-07-02",
-          "dateConfidence": "high",
-          "relevance": 0.44,
-          "score": 24,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 7,
-            "views": 4,
-            "danmaku": 0,
-            "favorites": 0
-          },
-          "author": "旅游-小岩",
-          "signal": "neutral"
-        },
-        {
-          "platform": "bilibili",
-          "title": "敦煌莫高窟怎么预约A票和B票的区别在哪",
+          "platform": "xiaohongshu",
+          "title": "今天，莫高窟！最强最清楚攻略",
           "snippet": "",
-          "url": "https://www.bilibili.com/video/BV1wYKQ6PEWS",
-          "date": "2026-06-30",
-          "dateConfidence": "high",
-          "relevance": 0.41,
-          "score": 46,
+          "url": "https://www.xiaohongshu.com/explore/69c7dae6000000002301d2b0",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.42,
+          "score": 43,
           "engagement": {
-            "num_comments": 0,
-            "likes": 9,
-            "views": 478,
-            "danmaku": 0,
-            "favorites": 4
+            "num_comments": 224,
+            "likes": 1959,
+            "shares": 0,
+            "collects": 2953
           },
-          "author": "老高-青甘旅游全攻略",
+          "author": "sprite...tuanzi",
           "signal": "neutral"
         },
         {
@@ -1116,68 +1012,68 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.41,
-          "score": 43,
+          "score": 41,
           "engagement": {
-            "num_comments": 170,
-            "likes": 1169,
+            "num_comments": 174,
+            "likes": 1180,
             "shares": 0,
-            "collects": 1987
+            "collects": 2006
           },
           "author": "汤汤带你玩",
           "signal": "neutral"
         },
         {
           "platform": "xiaohongshu",
-          "title": "提前两三天抢到莫高窟常规门票攻略🙊",
+          "title": "莫高窟错峰攻略❗️应急票到底怎么玩❓",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a2f8ea9000000002103c26e",
+          "url": "https://www.xiaohongshu.com/explore/68651c1a000000000d027310",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.4,
           "score": 35,
           "engagement": {
-            "num_comments": 55,
-            "likes": 335,
+            "num_comments": 50,
+            "likes": 435,
             "shares": 0,
-            "collects": 322
+            "collects": 673
           },
-          "author": "卡皮巴拉卡皮巴",
+          "author": "茉莉红豆Go",
           "signal": "neutral"
         },
         {
           "platform": "xiaohongshu",
-          "title": "莫高窟最强攻略：怎么看特窟，怎么看20个窟",
+          "title": "J人攻略转让｜去莫高窟一定要听劝的十件事‼️",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a64dcfd000000000f01df32",
+          "url": "https://www.xiaohongshu.com/explore/69ef5a1c000000001a02fa7f",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.4,
-          "score": 26,
+          "score": 34,
           "engagement": {
-            "num_comments": 8,
-            "likes": 39,
+            "num_comments": 36,
+            "likes": 390,
             "shares": 0,
-            "collects": 60
+            "collects": 530
           },
-          "author": "冷三岁",
+          "author": "柳絮同学",
           "signal": "neutral"
         },
         {
           "platform": "xiaohongshu",
-          "title": "《来敦煌前先收藏！莫高窟避坑指南》",
+          "title": "青甘Day5｜莫高窟最强攻略！应急票+特窟版",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a26c941000000000e031400",
+          "url": "https://www.xiaohongshu.com/explore/6a5cf48d000000000101dc2a",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.4,
-          "score": 24,
+          "relevance": 0.39,
+          "score": 39,
           "engagement": {
-            "num_comments": 0,
-            "likes": 51,
+            "num_comments": 198,
+            "likes": 951,
             "shares": 0,
-            "collects": 87
+            "collects": 1389
           },
-          "author": "捷克林Jacqueline",
+          "author": "lucky琦",
           "signal": "neutral"
         },
         {
@@ -1188,32 +1084,32 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.39,
-          "score": 41,
+          "score": 39,
           "engagement": {
-            "num_comments": 266,
-            "likes": 798,
+            "num_comments": 270,
+            "likes": 838,
             "shares": 0,
-            "collects": 1281
+            "collects": 1348
           },
           "author": "momo",
           "signal": "caution"
         },
         {
           "platform": "xiaohongshu",
-          "title": "青甘Day5｜莫高窟最强攻略！应急票+特窟版",
+          "title": "别在买票页死磕！莫高窟抢票攻略",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a5cf48d000000000101dc2a",
+          "url": "https://www.xiaohongshu.com/explore/6a5e2a11000000001c00e725",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.39,
-          "score": 41,
+          "score": 32,
           "engagement": {
-            "num_comments": 179,
-            "likes": 844,
+            "num_comments": 90,
+            "likes": 165,
             "shares": 0,
-            "collects": 1236
+            "collects": 237
           },
-          "author": "lucky琦",
+          "author": "不想睡",
           "signal": "neutral"
         }
       ],
@@ -1226,20 +1122,38 @@
       "evidence": [
         {
           "platform": "xiaohongshu",
-          "title": "鸣沙山月牙泉看日落超详细避坑攻略",
+          "title": "鸣沙山月牙泉封神攻略｜日落🌅美到失语",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/64cb9f530000000012019e62",
+          "url": "https://www.xiaohongshu.com/explore/6a6601f1000000001302c174",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.94,
-          "score": 60,
+          "relevance": 0.72,
+          "score": 28,
           "engagement": {
-            "num_comments": 12,
-            "likes": 374,
+            "num_comments": 0,
+            "likes": 2,
             "shares": 0,
-            "collects": 578
+            "collects": 2
           },
-          "author": "九哥户外旅游",
+          "author": "七玥逛野qy",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "鸣沙山月牙泉｜日落实测全攻略！省钱避坑干货",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a5ed4ad0000000022018910",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.71,
+          "score": 26,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 1,
+            "shares": 0,
+            "collects": 1
+          },
+          "author": "蓝琪儿",
           "signal": "neutral"
         },
         {
@@ -1250,7 +1164,7 @@
           "date": "2026-07-02",
           "dateConfidence": "high",
           "relevance": 0.7,
-          "score": 66,
+          "score": 65,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -1261,111 +1175,56 @@
         },
         {
           "platform": "xiaohongshu",
-          "title": "鸣沙山月牙泉超详攻略",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a3e6158000000000702db2f",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.58,
-          "score": 50,
-          "engagement": {
-            "num_comments": 110,
-            "likes": 1004,
-            "shares": 0,
-            "collects": 1318
-          },
-          "author": "汤汤带你游",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "关于鸣沙山月牙泉日落",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a47e2560000000021014cd6",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.58,
-          "score": 27,
-          "engagement": {
-            "num_comments": 6,
-            "likes": 16,
-            "shares": 0,
-            "collects": 6
-          },
-          "author": "🌸",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
           "title": "鸣沙山月牙泉｜保姆级攻略",
           "snippet": "",
           "url": "https://www.xiaohongshu.com/explore/6a5dccfe0000000001030049",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.55,
-          "score": 21,
+          "score": 26,
           "engagement": {
             "num_comments": 0,
-            "likes": 8,
+            "likes": 37,
             "shares": 0,
-            "collects": 2
+            "collects": 4
           },
           "author": "Kiki",
           "signal": "neutral"
         },
         {
           "platform": "xiaohongshu",
-          "title": "总要看一场鸣沙山的日落吧🏜️（附攻略）",
+          "title": "我们在！敦煌鸣沙山月牙泉！好美！（附攻略）",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a1e9dbd0000000036003402",
+          "url": "https://www.xiaohongshu.com/explore/69e445d4000000001f001a60",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.53,
-          "score": 39,
+          "score": 43,
           "engagement": {
-            "num_comments": 32,
-            "likes": 149,
+            "num_comments": 62,
+            "likes": 545,
             "shares": 0,
-            "collects": 251
+            "collects": 274
           },
-          "author": "半吊子选手",
+          "author": "杨肥肥呀",
           "signal": "neutral"
         },
         {
           "platform": "xiaohongshu",
-          "title": "鸣沙山月牙泉，演唱会+日出日落保姆级攻略",
+          "title": "鸣沙山月牙泉｜保姆级攻略！西北演唱会！",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/68cce055000000001301c56e",
+          "url": "https://www.xiaohongshu.com/explore/6a1983d3000000003601e39a",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.51,
-          "score": 44,
-          "engagement": {
-            "num_comments": 53,
-            "likes": 712,
-            "shares": 0,
-            "collects": 815
-          },
-          "author": "白白胖胖充满希望",
-          "signal": "neutral"
-        },
-        {
-          "platform": "bilibili",
-          "title": "爬鸣沙山月牙泉先看看这份攻略",
-          "snippet": "-",
-          "url": "https://www.bilibili.com/video/BV1oW7s6yE2p",
-          "date": "2026-06-27",
-          "dateConfidence": "high",
-          "relevance": 0.51,
           "score": 38,
           "engagement": {
-            "num_comments": 0,
-            "likes": 20,
-            "views": 472,
-            "danmaku": 0,
-            "favorites": 13
+            "num_comments": 16,
+            "likes": 244,
+            "shares": 0,
+            "collects": 173
           },
-          "author": "汤汤带你游",
+          "author": "宋宋伊琳",
           "signal": "neutral"
         },
         {
@@ -1376,14 +1235,51 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.51,
-          "score": 33,
+          "score": 34,
           "engagement": {
             "num_comments": 19,
-            "likes": 68,
+            "likes": 74,
             "shares": 0,
-            "collects": 62
+            "collects": 65
           },
           "author": "777",
+          "signal": "neutral"
+        },
+        {
+          "platform": "bilibili",
+          "title": "爬鸣沙山月牙泉先看看这份攻略",
+          "snippet": "-",
+          "url": "https://www.bilibili.com/video/BV1oW7s6yE2p",
+          "date": "2026-06-27",
+          "dateConfidence": "high",
+          "relevance": 0.51,
+          "score": 22,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 20,
+            "views": 477,
+            "danmaku": 0,
+            "favorites": 13
+          },
+          "author": "汤汤带你游",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "鸣沙山月牙泉ִֶָ🌙.*没做攻略来的后悔到哭…",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a3a513f000000001503cf8c",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.5,
+          "score": 37,
+          "engagement": {
+            "num_comments": 12,
+            "likes": 243,
+            "shares": 0,
+            "collects": 205
+          },
+          "author": "王夜里",
           "signal": "neutral"
         },
         {
@@ -1396,10 +1292,10 @@
           "relevance": 0.49,
           "score": 47,
           "engagement": {
-            "num_comments": 91,
-            "likes": 1247,
+            "num_comments": 94,
+            "likes": 1279,
             "shares": 0,
-            "collects": 1479
+            "collects": 1520
           },
           "author": "耶不耶呀（solotrip攻略中）",
           "signal": "neutral"
@@ -1412,7 +1308,7 @@
           "date": "2026-07-14",
           "dateConfidence": "high",
           "relevance": 0.49,
-          "score": 37,
+          "score": 36,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -1429,10 +1325,10 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.39,
-          "score": 15,
+          "score": 17,
           "engagement": {
             "num_comments": 7,
-            "likes": 6,
+            "likes": 7,
             "shares": 0,
             "collects": 1
           },
@@ -1445,45 +1341,8 @@
     "jiayuPass": {
       "label": "嘉峪关",
       "status": "ok",
-      "evidenceCount": 11,
+      "evidenceCount": 9,
       "evidence": [
-        {
-          "platform": "bilibili",
-          "title": "嘉峪关关城",
-          "snippet": "-",
-          "url": "https://www.bilibili.com/video/BV129KV6NEHY",
-          "date": "2026-07-16",
-          "dateConfidence": "high",
-          "relevance": 0.54,
-          "score": 40,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 17,
-            "views": 5,
-            "danmaku": 0,
-            "favorites": 0
-          },
-          "author": "流年作青虹",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "嘉峪关关城",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a229375000000003701f77a",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.54,
-          "score": 26,
-          "engagement": {
-            "num_comments": 3,
-            "likes": 13,
-            "shares": 0,
-            "collects": 2
-          },
-          "author": "南柯一梦",
-          "signal": "neutral"
-        },
         {
           "platform": "xiaohongshu",
           "title": "嘉峪关 不坐观光车攻略",
@@ -1494,49 +1353,12 @@
           "relevance": 0.44,
           "score": 44,
           "engagement": {
-            "num_comments": 176,
-            "likes": 769,
+            "num_comments": 177,
+            "likes": 782,
             "shares": 0,
-            "collects": 1191
+            "collects": 1214
           },
           "author": "xixi",
-          "signal": "neutral"
-        },
-        {
-          "platform": "bilibili",
-          "title": "嘉峪关一日游攻略来咯",
-          "snippet": "-",
-          "url": "https://www.bilibili.com/video/BV1HxKP6YEdW",
-          "date": "2026-07-18",
-          "dateConfidence": "high",
-          "relevance": 0.42,
-          "score": 67,
-          "engagement": {
-            "num_comments": 2,
-            "likes": 19,
-            "views": 279,
-            "danmaku": 0,
-            "favorites": 1
-          },
-          "author": "走马观花花世界z",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "真实嘉峪关三地景点评测和攻略",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a5ce56c000000001400654b",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.42,
-          "score": 24,
-          "engagement": {
-            "num_comments": 3,
-            "likes": 15,
-            "shares": 0,
-            "collects": 20
-          },
-          "author": "林晓",
           "signal": "neutral"
         },
         {
@@ -1549,10 +1371,10 @@
           "relevance": 0.4,
           "score": 37,
           "engagement": {
-            "num_comments": 59,
-            "likes": 262,
+            "num_comments": 61,
+            "likes": 269,
             "shares": 0,
-            "collects": 388
+            "collects": 401
           },
           "author": "Annnn~",
           "signal": "neutral"
@@ -1568,11 +1390,29 @@
           "score": 36,
           "engagement": {
             "num_comments": 45,
-            "likes": 317,
+            "likes": 321,
             "shares": 0,
-            "collects": 255
+            "collects": 259
           },
           "author": "星星人",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "嘉峪关赶时间打卡，不用门票，附攻略",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a61e777000000000401f14a",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.4,
+          "score": 32,
+          "engagement": {
+            "num_comments": 31,
+            "likes": 84,
+            "shares": 0,
+            "collects": 135
+          },
+          "author": "歌颂你的美",
           "signal": "neutral"
         },
         {
@@ -1588,7 +1428,7 @@
             "num_comments": 48,
             "likes": 21,
             "shares": 0,
-            "collects": 8
+            "collects": 9
           },
           "author": "船桨",
           "signal": "caution"
@@ -1604,11 +1444,29 @@
           "score": 23,
           "engagement": {
             "num_comments": 2,
-            "likes": 15,
+            "likes": 16,
             "shares": 0,
             "collects": 31
           },
           "author": "爱玩的洋葱",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "青甘大环线｜第四天 嘉峪关真实血泪攻略",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a61f1820000000010027f68",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.4,
+          "score": 14,
+          "engagement": {
+            "num_comments": 2,
+            "likes": 2,
+            "shares": 0,
+            "collects": 0
+          },
+          "author": "奕动拾光",
           "signal": "neutral"
         },
         {
@@ -1639,10 +1497,10 @@
           "relevance": 0.35,
           "score": 30,
           "engagement": {
-            "num_comments": 45,
-            "likes": 181,
+            "num_comments": 47,
+            "likes": 182,
             "shares": 0,
-            "collects": 45
+            "collects": 46
           },
           "author": "清水煮牛腩",
           "signal": "neutral"
@@ -1657,20 +1515,38 @@
       "evidence": [
         {
           "platform": "xiaohongshu",
-          "title": "张掖|七彩丹霞日落攻略",
+          "title": "张掖七彩丹霞保姆级攻略｜日落封神不踩雷",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a646d4500000000050397a2",
+          "url": "https://www.xiaohongshu.com/explore/6a5a3923000000001d00d498",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.84,
-          "score": 38,
+          "relevance": 0.74,
+          "score": 37,
           "engagement": {
-            "num_comments": 0,
-            "likes": 5,
+            "num_comments": 2,
+            "likes": 8,
             "shares": 0,
-            "collects": 5
+            "collects": 7
           },
-          "author": "丝路中际旅行",
+          "author": "吃独食第一名",
+          "signal": "mixed"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "去看张掖看七彩丹霞，一定要先看下我的攻略",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a53add80000000011016d25",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.6,
+          "score": 48,
+          "engagement": {
+            "num_comments": 48,
+            "likes": 375,
+            "shares": 0,
+            "collects": 497
+          },
+          "author": "不去明知山。",
           "signal": "neutral"
         },
         {
@@ -1681,12 +1557,12 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.6,
-          "score": 38,
+          "score": 36,
           "engagement": {
             "num_comments": 6,
-            "likes": 24,
+            "likes": 25,
             "shares": 0,
-            "collects": 28
+            "collects": 30
           },
           "author": "提拉米莎",
           "signal": "neutral"
@@ -1699,12 +1575,12 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.6,
-          "score": 33,
+          "score": 32,
           "engagement": {
             "num_comments": 0,
             "likes": 23,
             "shares": 0,
-            "collects": 14
+            "collects": 15
           },
           "author": "小简粗去玩O_o",
           "signal": "neutral"
@@ -1717,7 +1593,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.58,
-          "score": 25,
+          "score": 26,
           "engagement": {
             "num_comments": 8,
             "likes": 3,
@@ -1735,12 +1611,12 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.56,
-          "score": 24,
+          "score": 26,
           "engagement": {
             "num_comments": 0,
-            "likes": 4,
+            "likes": 5,
             "shares": 0,
-            "collects": 4
+            "collects": 5
           },
           "author": "爱捏粘土的Alice",
           "signal": "neutral"
@@ -1753,12 +1629,12 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.49,
-          "score": 47,
+          "score": 40,
           "engagement": {
-            "num_comments": 18,
-            "likes": 224,
+            "num_comments": 23,
+            "likes": 234,
             "shares": 0,
-            "collects": 270
+            "collects": 280
           },
           "author": "奥大姐和米小妹",
           "signal": "neutral"
@@ -1771,33 +1647,15 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.49,
-          "score": 45,
+          "score": 39,
           "engagement": {
-            "num_comments": 186,
-            "likes": 99,
+            "num_comments": 209,
+            "likes": 112,
             "shares": 0,
-            "collects": 60
+            "collects": 69
           },
           "author": "库珀",
           "signal": "caution"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "可以，七彩丹霞避坑指南来了！",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a1ea3a1000000003601892e",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.46,
-          "score": 36,
-          "engagement": {
-            "num_comments": 17,
-            "likes": 45,
-            "shares": 0,
-            "collects": 38
-          },
-          "author": "一颗南瓜🎃",
-          "signal": "neutral"
         },
         {
           "platform": "xiaohongshu",
@@ -1807,7 +1665,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.46,
-          "score": 33,
+          "score": 30,
           "engagement": {
             "num_comments": 33,
             "likes": 20,
@@ -1819,38 +1677,20 @@
         },
         {
           "platform": "xiaohongshu",
-          "title": "来七彩丹霞必看这个攻略2️⃣",
+          "title": "七彩丹霞如何玩才对❗️避坑指南❌",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a64c9c6000000000100183c",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.46,
-          "score": 15,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 1,
-            "shares": 0,
-            "collects": 1
-          },
-          "author": "平凡的麻瓜日记",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "张掖七彩丹霞 被领队坑了去夜游",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a2cbaa6000000001c024e1f",
+          "url": "https://www.xiaohongshu.com/explore/6a12e9b8000000003601ac6d",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.44,
-          "score": 22,
+          "score": 44,
           "engagement": {
-            "num_comments": 9,
-            "likes": 10,
+            "num_comments": 88,
+            "likes": 1041,
             "shares": 0,
-            "collects": 0
+            "collects": 974
           },
-          "author": "Betty",
+          "author": "宋宋伊琳",
           "signal": "neutral"
         },
         {
@@ -1869,6 +1709,24 @@
             "collects": 2
           },
           "author": "游在中国China Bound",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "七彩丹霞保姆级的旅游攻略",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a5f461b000000001f01f7f7",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.44,
+          "score": 21,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 3,
+            "shares": 0,
+            "collects": 10
+          },
+          "author": "超子带你游西北",
           "signal": "neutral"
         }
       ],
@@ -1889,7 +1747,7 @@
           "date": "2026-07-08",
           "dateConfidence": "high",
           "relevance": 0.56,
-          "score": 65,
+          "score": 49,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -1906,7 +1764,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.54,
-          "score": 27,
+          "score": 24,
           "engagement": {
             "num_comments": 34,
             "likes": 8,
@@ -1924,7 +1782,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.49,
-          "score": 26,
+          "score": 23,
           "engagement": {
             "num_comments": 36,
             "likes": 13,
@@ -1942,7 +1800,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.49,
-          "score": 26,
+          "score": 23,
           "engagement": {
             "num_comments": 3,
             "likes": 13,
@@ -1960,7 +1818,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.46,
-          "score": 27,
+          "score": 23,
           "engagement": {
             "num_comments": 84,
             "likes": 21,
@@ -1972,18 +1830,54 @@
         },
         {
           "platform": "xiaohongshu",
+          "title": "避雷 西宁 祁连牦牛酸奶",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/68a9c976000000001b01d046",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.46,
+          "score": 19,
+          "engagement": {
+            "num_comments": 8,
+            "likes": 9,
+            "shares": 0,
+            "collects": 2
+          },
+          "author": "YY",
+          "signal": "caution"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "避雷，德禄酸奶真难吃！",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/68cec1dd000000001203e398",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.46,
+          "score": 15,
+          "engagement": {
+            "num_comments": 3,
+            "likes": 2,
+            "shares": 0,
+            "collects": 1
+          },
+          "author": "吴西迪西我来了",
+          "signal": "caution"
+        },
+        {
+          "platform": "xiaohongshu",
           "title": "（青海西宁）德禄酸奶(力盟商业步行街店)",
           "snippet": "",
           "url": "https://www.xiaohongshu.com/explore/68b620b3000000001d025f50",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.42,
-          "score": 34,
+          "score": 28,
           "engagement": {
             "num_comments": 22,
-            "likes": 86,
+            "likes": 88,
             "shares": 0,
-            "collects": 40
+            "collects": 43
           },
           "author": "medei Ya",
           "signal": "neutral"
@@ -1996,7 +1890,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.41,
-          "score": 18,
+          "score": 16,
           "engagement": {
             "num_comments": 3,
             "likes": 6,
@@ -2008,31 +1902,13 @@
         },
         {
           "platform": "xiaohongshu",
-          "title": "西宁酸奶，我恨你！",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a2957b40000000022029107",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.34,
-          "score": 29,
-          "engagement": {
-            "num_comments": 149,
-            "likes": 51,
-            "shares": 0,
-            "collects": 9
-          },
-          "author": "潇潇",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
           "title": "西宁的酸奶吃了",
           "snippet": "",
           "url": "https://www.xiaohongshu.com/explore/69a1914e0000000015020f18",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.34,
-          "score": 12,
+          "score": 11,
           "engagement": {
             "num_comments": 13,
             "likes": 3,
@@ -2044,31 +1920,13 @@
         },
         {
           "platform": "xiaohongshu",
-          "title": "西宁酸奶壁垒",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a5b4895000000000f011304",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.34,
-          "score": 10,
-          "engagement": {
-            "num_comments": 3,
-            "likes": 3,
-            "shares": 0,
-            "collects": 0
-          },
-          "author": "火鸡面小王",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
           "title": "西宁的酸奶只能西宁吃",
           "snippet": "",
           "url": "https://www.xiaohongshu.com/explore/67ade0b30000000029019fe0",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.31,
-          "score": 18,
+          "score": 14,
           "engagement": {
             "num_comments": 15,
             "likes": 17,
@@ -2086,7 +1944,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.31,
-          "score": 11,
+          "score": 10,
           "engagement": {
             "num_comments": 1,
             "likes": 9,
@@ -2113,7 +1971,7 @@
               "date": "2026-07-08",
               "dateConfidence": "high",
               "relevance": 0.56,
-              "score": 65,
+              "score": 49,
               "engagement": {
                 "num_comments": 0,
                 "collects": 0,
@@ -2130,7 +1988,7 @@
               "date": null,
               "dateConfidence": "low",
               "relevance": 0.54,
-              "score": 27,
+              "score": 24,
               "engagement": {
                 "num_comments": 34,
                 "likes": 8,
@@ -2148,7 +2006,7 @@
               "date": null,
               "dateConfidence": "low",
               "relevance": 0.49,
-              "score": 26,
+              "score": 23,
               "engagement": {
                 "num_comments": 36,
                 "likes": 13,
@@ -2161,48 +2019,13 @@
           ]
         }
       ],
-      "lastRestaurantSuccessfulAt": "2026-07-26T05:11:25.955593+00:00"
+      "lastRestaurantSuccessfulAt": "2026-07-27T04:39:06.100047+00:00"
     },
     "chaka": {
       "label": "茶卡",
       "status": "ok",
-      "evidenceCount": 10,
+      "evidenceCount": 6,
       "evidence": [
-        {
-          "platform": "xiaohongshu",
-          "title": "西宁吃炕锅羊肉的话，避雷这家",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/69e8aa77000000001a02970b",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.58,
-          "score": 34,
-          "engagement": {
-            "num_comments": 39,
-            "likes": 35,
-            "shares": 0,
-            "collects": 25
-          },
-          "author": "问你西河",
-          "signal": "caution"
-        },
-        {
-          "platform": "zhihu",
-          "title": "青甘大环线8天7晚纯玩团实测，青海湖茶卡敦煌张掖经典串联人均1600起避坑指南",
-          "snippet": "搭配卤制入味的驴肉和秘制卤汁，是敦煌烟火气的代表。 3.炕锅羊肉。 羊肉、土豆、粉条、青椒一同焖煮在铁锅中，焦香四溢",
-          "url": "https://zhuanlan.zhihu.com/p/2055332773976610563",
-          "date": "2026-06-30",
-          "dateConfidence": "high",
-          "relevance": 0.56,
-          "score": 43,
-          "engagement": {
-            "num_comments": 0,
-            "collects": 0,
-            "voteups": 1
-          },
-          "author": "豆豆芙",
-          "signal": "neutral"
-        },
         {
           "platform": "xiaohongshu",
           "title": "西宁炕锅羊肉",
@@ -2211,33 +2034,15 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.49,
-          "score": 41,
+          "score": 45,
           "engagement": {
             "num_comments": 172,
-            "likes": 391,
+            "likes": 394,
             "shares": 0,
-            "collects": 425
+            "collects": 427
           },
           "author": "吃货魂铃屋酱",
           "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "茶卡镇|好吃的炕锅羊肉",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/66129273000000001a01139c",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.46,
-          "score": 33,
-          "engagement": {
-            "num_comments": 17,
-            "likes": 157,
-            "shares": 0,
-            "collects": 131
-          },
-          "author": "枕着面包数月亮",
-          "signal": "positive"
         },
         {
           "platform": "xiaohongshu",
@@ -2247,7 +2052,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.46,
-          "score": 16,
+          "score": 19,
           "engagement": {
             "num_comments": 0,
             "likes": 7,
@@ -2265,7 +2070,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.44,
-          "score": 15,
+          "score": 18,
           "engagement": {
             "num_comments": 3,
             "likes": 2,
@@ -2283,51 +2088,33 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.43,
-          "score": 26,
+          "score": 29,
           "engagement": {
-            "num_comments": 39,
-            "likes": 13,
+            "num_comments": 40,
+            "likes": 14,
             "shares": 0,
-            "collects": 21
+            "collects": 28
           },
           "author": "安允昕",
           "signal": "positive"
         },
         {
           "platform": "xiaohongshu",
-          "title": "青甘美食自推荐🤤炕锅牦牛肉香掉眉",
+          "title": "茶卡镇美食避雷！！！！",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a11b9d0000000003701d811",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.42,
-          "score": 22,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 23,
-            "shares": 0,
-            "collects": 26
-          },
-          "author": "胡萝卜鼠鼠",
-          "signal": "positive"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "这才是炕锅好吗！",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/69ad9c67000000001600b852",
+          "url": "https://www.xiaohongshu.com/explore/68df87020000000007036e48",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.34,
-          "score": 30,
+          "score": 15,
           "engagement": {
-            "num_comments": 88,
-            "likes": 176,
+            "num_comments": 5,
+            "likes": 1,
             "shares": 0,
-            "collects": 139
+            "collects": 2
           },
-          "author": "辣比小新Q",
-          "signal": "neutral"
+          "author": "小陆爱吃荔枝",
+          "signal": "caution"
         },
         {
           "platform": "xiaohongshu",
@@ -2337,7 +2124,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.31,
-          "score": 11,
+          "score": 14,
           "engagement": {
             "num_comments": 3,
             "likes": 8,
@@ -2402,7 +2189,7 @@
           "relevance": 0.58,
           "score": 25,
           "engagement": {
-            "num_comments": 1,
+            "num_comments": 2,
             "likes": 6,
             "shares": 0,
             "collects": 0
@@ -2421,12 +2208,48 @@
           "score": 32,
           "engagement": {
             "num_comments": 0,
-            "likes": 24,
+            "likes": 26,
             "shares": 0,
             "collects": 13
           },
           "author": "唐长老你从哪里来",
           "signal": "mixed"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "大柴旦土著美食推荐清单💡",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/69e72ebc0000000023021d9c",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.55,
+          "score": 29,
+          "engagement": {
+            "num_comments": 1,
+            "likes": 7,
+            "shares": 0,
+            "collects": 7
+          },
+          "author": "美美生活味",
+          "signal": "positive"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "关于大柴旦的一些避雷！！！",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/687a0103000000002201dd29",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.55,
+          "score": 27,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 12,
+            "shares": 0,
+            "collects": 3
+          },
+          "author": "二一",
+          "signal": "caution"
         },
         {
           "platform": "xiaohongshu",
@@ -2436,7 +2259,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.53,
-          "score": 47,
+          "score": 48,
           "engagement": {
             "num_comments": 63,
             "likes": 158,
@@ -2457,30 +2280,12 @@
           "score": 35,
           "engagement": {
             "num_comments": 16,
-            "likes": 17,
+            "likes": 18,
             "shares": 0,
             "collects": 12
           },
           "author": "知世",
           "signal": "caution"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "青海大柴旦｜本地人推荐的6家必吃美食！",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/686dfd5a0000000010012ed8",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.51,
-          "score": 47,
-          "engagement": {
-            "num_comments": 2,
-            "likes": 490,
-            "shares": 0,
-            "collects": 400
-          },
-          "author": "素黑姐姐",
-          "signal": "positive"
         },
         {
           "platform": "xiaohongshu",
@@ -2490,7 +2295,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.51,
-          "score": 38,
+          "score": 39,
           "engagement": {
             "num_comments": 40,
             "likes": 36,
@@ -2502,39 +2307,21 @@
         },
         {
           "platform": "xiaohongshu",
-          "title": "青海大柴旦柴和聚冰煮藏羊肉石锅牦牛肉",
+          "title": "大柴旦！不踩雷土著推荐🔥",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/68e67933000000000400701a",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.49,
-          "score": 18,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 1,
-            "shares": 0,
-            "collects": 1
-          },
-          "author": "小包子的日记",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "大柴旦这家餐厅别来😱",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/66ea4e540000000012012cd8",
+          "url": "https://www.xiaohongshu.com/explore/69e72bbb000000001b021b34",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.34,
-          "score": 37,
+          "score": 33,
           "engagement": {
-            "num_comments": 18,
-            "likes": 137,
+            "num_comments": 1,
+            "likes": 132,
             "shares": 0,
-            "collects": 109
+            "collects": 98
           },
-          "author": "以父之名、",
-          "signal": "caution"
+          "author": "蓝莓小蛋糕",
+          "signal": "mixed"
         },
         {
           "platform": "xiaohongshu",
@@ -2582,23 +2369,6 @@
       "evidenceCount": 6,
       "evidence": [
         {
-          "platform": "zhihu",
-          "title": "第一次去敦煌怎么玩？3天2晚纯干货攻略（行程+住宿+避坑全整理）",
-          "snippet": "2、本地必吃美食 敦煌西北特色美食风味独特，招牌菜品有驴肉黄面、胡羊焖饼、红柳烤羊肉、手抓羊羔肉；特色小吃包含羊肉合汁、沙葱牛肉饼、酿皮、泡儿油糕",
-          "url": "https://zhuanlan.zhihu.com/p/2062564500260262171",
-          "date": "2026-07-20",
-          "dateConfidence": "high",
-          "relevance": 0.74,
-          "score": 53,
-          "engagement": {
-            "num_comments": 0,
-            "collects": 0,
-            "voteups": 0
-          },
-          "author": "知乎用户SMrc5L",
-          "signal": "positive"
-        },
-        {
           "platform": "xiaohongshu",
           "title": "打卡敦煌本地人推荐的本地美食驴肉黄面！",
           "snippet": "",
@@ -2606,7 +2376,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.6,
-          "score": 29,
+          "score": 34,
           "engagement": {
             "num_comments": 2,
             "likes": 14,
@@ -2624,7 +2394,7 @@
           "date": "2026-07-20",
           "dateConfidence": "high",
           "relevance": 0.56,
-          "score": 75,
+          "score": 59,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -2635,13 +2405,31 @@
         },
         {
           "platform": "xiaohongshu",
+          "title": "敦煌避坑-党记驴肉黄面",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/615c42640000000021034044",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.46,
+          "score": 35,
+          "engagement": {
+            "num_comments": 43,
+            "likes": 25,
+            "shares": 0,
+            "collects": 19
+          },
+          "author": "vera💗",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
           "title": "敦煌美食攻略",
           "snippet": "",
           "url": "https://www.xiaohongshu.com/explore/68089f2e000000001c02d660",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.34,
-          "score": 19,
+          "score": 25,
           "engagement": {
             "num_comments": 3,
             "likes": 17,
@@ -2671,20 +2459,20 @@
         },
         {
           "platform": "xiaohongshu",
-          "title": "就我觉得敦煌根本没有美食吗？",
+          "title": "敦煌夜市之美食大坑",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/68498bea0000000022027991",
+          "url": "https://www.xiaohongshu.com/explore/687e684d000000002201e36e",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.31,
-          "score": 26,
+          "score": 12,
           "engagement": {
-            "num_comments": 158,
-            "likes": 83,
+            "num_comments": 4,
+            "likes": 1,
             "shares": 0,
-            "collects": 93
+            "collects": 1
           },
-          "author": "安安",
+          "author": "Mr.叶",
           "signal": "neutral"
         }
       ],
@@ -2704,7 +2492,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.64,
-          "score": 38,
+          "score": 37,
           "engagement": {
             "num_comments": 47,
             "likes": 23,
@@ -2740,7 +2528,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.54,
-          "score": 37,
+          "score": 35,
           "engagement": {
             "num_comments": 25,
             "likes": 63,
@@ -2758,7 +2546,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.44,
-          "score": 27,
+          "score": 26,
           "engagement": {
             "num_comments": 44,
             "likes": 23,
@@ -2776,12 +2564,12 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.43,
-          "score": 34,
+          "score": 32,
           "engagement": {
             "num_comments": 61,
-            "likes": 91,
+            "likes": 92,
             "shares": 0,
-            "collects": 82
+            "collects": 85
           },
           "author": "哆啦A小白兔🐰",
           "signal": "neutral"
@@ -2794,7 +2582,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.31,
-          "score": 17,
+          "score": 16,
           "engagement": {
             "num_comments": 2,
             "likes": 15,
@@ -2812,12 +2600,12 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.31,
-          "score": 13,
+          "score": 12,
           "engagement": {
             "num_comments": 0,
             "likes": 6,
             "shares": 0,
-            "collects": 4
+            "collects": 3
           },
           "author": "家私的生活纪",
           "signal": "neutral"
@@ -2852,7 +2640,7 @@
           ]
         }
       ],
-      "lastRestaurantSuccessfulAt": "2026-07-26T05:11:25.955593+00:00"
+      "lastRestaurantSuccessfulAt": "2026-07-27T04:39:06.100047+00:00"
     },
     "lanzhou": {
       "label": "兰州",
@@ -2885,7 +2673,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.4,
-          "score": 37,
+          "score": 34,
           "engagement": {
             "num_comments": 279,
             "likes": 135,
@@ -2897,39 +2685,39 @@
         },
         {
           "platform": "xiaohongshu",
-          "title": "兰州牛肉面，避雷“磨沟沿”",
+          "title": "兰州甜醅子奶茶简直是嗯嗯神器",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/689caf42000000001d01e1eb",
+          "url": "https://www.xiaohongshu.com/explore/6a3f3903000000001603c51c",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.4,
-          "score": 30,
+          "relevance": 0.37,
+          "score": 26,
           "engagement": {
-            "num_comments": 86,
-            "likes": 17,
+            "num_comments": 124,
+            "likes": 15,
             "shares": 0,
-            "collects": 10
+            "collects": 6
           },
-          "author": "呵呵",
-          "signal": "caution"
+          "author": "momo（回国版）",
+          "signal": "neutral"
         },
         {
           "platform": "xiaohongshu",
-          "title": "兰州武威张掖🔥美食夯榜（已品鉴避雷√）",
+          "title": "兰州美食打卡",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a544f0e000000000702078e",
+          "url": "https://www.xiaohongshu.com/explore/6a4235a8000000001003ff08",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.36,
-          "score": 22,
+          "relevance": 0.31,
+          "score": 17,
           "engagement": {
-            "num_comments": 2,
-            "likes": 10,
+            "num_comments": 0,
+            "likes": 16,
             "shares": 0,
-            "collects": 11
+            "collects": 14
           },
-          "author": "R.R.S慕森卷卷",
-          "signal": "caution"
+          "author": "君依依",
+          "signal": "neutral"
         },
         {
           "platform": "xiaohongshu",
@@ -2939,7 +2727,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.31,
-          "score": 11,
+          "score": 10,
           "engagement": {
             "num_comments": 2,
             "likes": 1,
@@ -3051,8 +2839,8 @@
           "baidu"
         ],
         "range": {
-          "from": "2026-06-26",
-          "to": "2026-07-26"
+          "from": "2026-06-27",
+          "to": "2026-07-27"
         },
         "exitCode": 0
       },
@@ -3067,8 +2855,8 @@
           "baidu"
         ],
         "range": {
-          "from": "2026-06-26",
-          "to": "2026-07-26"
+          "from": "2026-06-27",
+          "to": "2026-07-27"
         },
         "exitCode": 0
       },
@@ -3083,8 +2871,8 @@
           "baidu"
         ],
         "range": {
-          "from": "2026-06-26",
-          "to": "2026-07-26"
+          "from": "2026-06-27",
+          "to": "2026-07-27"
         },
         "exitCode": 0
       },
@@ -3100,8 +2888,8 @@
           "zhihu"
         ],
         "range": {
-          "from": "2026-06-26",
-          "to": "2026-07-26"
+          "from": "2026-06-27",
+          "to": "2026-07-27"
         },
         "exitCode": 0
       },
@@ -3116,8 +2904,8 @@
           "zhihu"
         ],
         "range": {
-          "from": "2026-06-26",
-          "to": "2026-07-26"
+          "from": "2026-06-27",
+          "to": "2026-07-27"
         },
         "exitCode": 0
       },
@@ -3132,8 +2920,8 @@
           "zhihu"
         ],
         "range": {
-          "from": "2026-06-26",
-          "to": "2026-07-26"
+          "from": "2026-06-27",
+          "to": "2026-07-27"
         },
         "exitCode": 0
       },
@@ -3148,8 +2936,8 @@
           "zhihu"
         ],
         "range": {
-          "from": "2026-06-26",
-          "to": "2026-07-26"
+          "from": "2026-06-27",
+          "to": "2026-07-27"
         },
         "exitCode": 0
       },
@@ -3164,8 +2952,8 @@
           "zhihu"
         ],
         "range": {
-          "from": "2026-06-26",
-          "to": "2026-07-26"
+          "from": "2026-06-27",
+          "to": "2026-07-27"
         },
         "exitCode": 0
       },
@@ -3180,8 +2968,8 @@
           "zhihu"
         ],
         "range": {
-          "from": "2026-06-26",
-          "to": "2026-07-26"
+          "from": "2026-06-27",
+          "to": "2026-07-27"
         },
         "exitCode": 0
       },
@@ -3196,8 +2984,8 @@
           "zhihu"
         ],
         "range": {
-          "from": "2026-06-26",
-          "to": "2026-07-26"
+          "from": "2026-06-27",
+          "to": "2026-07-27"
         },
         "exitCode": 0
       },
@@ -3211,8 +2999,8 @@
           "zhihu"
         ],
         "range": {
-          "from": "2026-06-26",
-          "to": "2026-07-26"
+          "from": "2026-06-27",
+          "to": "2026-07-27"
         },
         "exitCode": 0
       },
@@ -3226,8 +3014,8 @@
           "zhihu"
         ],
         "range": {
-          "from": "2026-06-26",
-          "to": "2026-07-26"
+          "from": "2026-06-27",
+          "to": "2026-07-27"
         },
         "exitCode": 0
       },
@@ -3241,8 +3029,8 @@
           "zhihu"
         ],
         "range": {
-          "from": "2026-06-26",
-          "to": "2026-07-26"
+          "from": "2026-06-27",
+          "to": "2026-07-27"
         },
         "exitCode": 0
       },
@@ -3256,8 +3044,8 @@
           "zhihu"
         ],
         "range": {
-          "from": "2026-06-26",
-          "to": "2026-07-26"
+          "from": "2026-06-27",
+          "to": "2026-07-27"
         },
         "exitCode": 0
       },
@@ -3271,8 +3059,8 @@
           "zhihu"
         ],
         "range": {
-          "from": "2026-06-26",
-          "to": "2026-07-26"
+          "from": "2026-06-27",
+          "to": "2026-07-27"
         },
         "exitCode": 0
       },
@@ -3286,8 +3074,8 @@
           "zhihu"
         ],
         "range": {
-          "from": "2026-06-26",
-          "to": "2026-07-26"
+          "from": "2026-06-27",
+          "to": "2026-07-27"
         },
         "exitCode": 0
       }
@@ -3296,9 +3084,9 @@
   },
   "flyai": {
     "status": "ok",
-    "generatedAt": "2026-07-26T05:16:22.271Z",
-    "expiresAt": "2026-07-28T05:16:22.271Z",
-    "lastSuccessfulAt": "2026-07-26T05:16:22.271Z",
+    "generatedAt": "2026-07-27T04:44:06.020Z",
+    "expiresAt": "2026-07-29T04:44:06.020Z",
+    "lastSuccessfulAt": "2026-07-27T04:44:06.020Z",
     "mode": "api-enhanced",
     "skill": {
       "name": "flyai",
@@ -3330,31 +3118,6 @@
           "selectionMode": "fallback-airlines",
           "offers": [
             {
-              "id": "shenyang-xining-outbound-2026-08-02 18:15:00-DR6597",
-              "routeId": "shenyang-xining-outbound",
-              "direction": "去程",
-              "origin": "沈阳",
-              "destination": "西宁",
-              "departureAirport": "桃仙国际机场",
-              "arrivalAirport": "曹家堡机场",
-              "departureAt": "2026-08-02 18:15:00",
-              "arrivalAt": "2026-08-02 21:25:00",
-              "flightNumbers": [
-                "DR6597"
-              ],
-              "airlines": [
-                "苏南瑞丽航空"
-              ],
-              "seatClass": "经济舱",
-              "direct": true,
-              "stops": 0,
-              "duration": "190",
-              "durationMinutes": 190,
-              "preferredAirline": false,
-              "price": 1040,
-              "jumpUrl": "https://a.feizhu.com/0JtllC"
-            },
-            {
               "id": "shenyang-xining-outbound-2026-08-03 18:15:00-DR6597",
               "routeId": "shenyang-xining-outbound",
               "direction": "去程",
@@ -3377,7 +3140,32 @@
               "durationMinutes": 190,
               "preferredAirline": false,
               "price": 1040,
-              "jumpUrl": "https://a.feizhu.com/48yITR"
+              "jumpUrl": "https://a.feizhu.com/0GNI1r"
+            },
+            {
+              "id": "shenyang-xining-outbound-2026-08-02 18:15:00-DR6597",
+              "routeId": "shenyang-xining-outbound",
+              "direction": "去程",
+              "origin": "沈阳",
+              "destination": "西宁",
+              "departureAirport": "桃仙国际机场",
+              "arrivalAirport": "曹家堡机场",
+              "departureAt": "2026-08-02 18:15:00",
+              "arrivalAt": "2026-08-02 21:25:00",
+              "flightNumbers": [
+                "DR6597"
+              ],
+              "airlines": [
+                "苏南瑞丽航空"
+              ],
+              "seatClass": "经济舱",
+              "direct": true,
+              "stops": 0,
+              "duration": "190",
+              "durationMinutes": 190,
+              "preferredAirline": false,
+              "price": 1160,
+              "jumpUrl": "https://a.feizhu.com/2AxFcO"
             }
           ],
           "cliExitCode": 0
@@ -3390,59 +3178,9 @@
           "depDateStart": "2026-08-01",
           "depDateEnd": "2026-08-04",
           "status": "ok",
-          "bestPrice": 780,
+          "bestPrice": 595,
           "selectionMode": "preferred-airlines",
           "offers": [
-            {
-              "id": "shenyang-lanzhou-outbound-2026-08-02 19:45:00-MU9830",
-              "routeId": "shenyang-lanzhou-outbound",
-              "direction": "去程",
-              "origin": "沈阳",
-              "destination": "兰州",
-              "departureAirport": "桃仙国际机场",
-              "arrivalAirport": "中川机场",
-              "departureAt": "2026-08-02 19:45:00",
-              "arrivalAt": "2026-08-02 22:55:00",
-              "flightNumbers": [
-                "MU9830"
-              ],
-              "airlines": [
-                "东航"
-              ],
-              "seatClass": "经济舱",
-              "direct": true,
-              "stops": 0,
-              "duration": "190",
-              "durationMinutes": 190,
-              "preferredAirline": true,
-              "price": 780,
-              "jumpUrl": "https://a.feizhu.com/03V1vD"
-            },
-            {
-              "id": "shenyang-lanzhou-outbound-2026-08-04 12:20:00-MU9856",
-              "routeId": "shenyang-lanzhou-outbound",
-              "direction": "去程",
-              "origin": "沈阳",
-              "destination": "兰州",
-              "departureAirport": "桃仙国际机场",
-              "arrivalAirport": "中川机场",
-              "departureAt": "2026-08-04 12:20:00",
-              "arrivalAt": "2026-08-04 15:45:00",
-              "flightNumbers": [
-                "MU9856"
-              ],
-              "airlines": [
-                "东航"
-              ],
-              "seatClass": "经济舱",
-              "direct": true,
-              "stops": 0,
-              "duration": "205",
-              "durationMinutes": 205,
-              "preferredAirline": true,
-              "price": 780,
-              "jumpUrl": "https://a.feizhu.com/2gsHjK"
-            },
             {
               "id": "shenyang-lanzhou-outbound-2026-08-03 19:45:00-MU9830",
               "routeId": "shenyang-lanzhou-outbound",
@@ -3465,8 +3203,58 @@
               "duration": "190",
               "durationMinutes": 190,
               "preferredAirline": true,
+              "price": 595,
+              "jumpUrl": "https://a.feizhu.com/4ASjEn"
+            },
+            {
+              "id": "shenyang-lanzhou-outbound-2026-08-04 19:55:00-MU9830",
+              "routeId": "shenyang-lanzhou-outbound",
+              "direction": "去程",
+              "origin": "沈阳",
+              "destination": "兰州",
+              "departureAirport": "桃仙国际机场",
+              "arrivalAirport": "中川机场",
+              "departureAt": "2026-08-04 19:55:00",
+              "arrivalAt": "2026-08-04 23:20:00",
+              "flightNumbers": [
+                "MU9830"
+              ],
+              "airlines": [
+                "东航"
+              ],
+              "seatClass": "经济舱",
+              "direct": true,
+              "stops": 0,
+              "duration": "205",
+              "durationMinutes": 205,
+              "preferredAirline": true,
+              "price": 625,
+              "jumpUrl": "https://a.feizhu.com/0ZZWOn"
+            },
+            {
+              "id": "shenyang-lanzhou-outbound-2026-08-02 19:45:00-MU9830",
+              "routeId": "shenyang-lanzhou-outbound",
+              "direction": "去程",
+              "origin": "沈阳",
+              "destination": "兰州",
+              "departureAirport": "桃仙国际机场",
+              "arrivalAirport": "中川机场",
+              "departureAt": "2026-08-02 19:45:00",
+              "arrivalAt": "2026-08-02 22:55:00",
+              "flightNumbers": [
+                "MU9830"
+              ],
+              "airlines": [
+                "东航"
+              ],
+              "seatClass": "经济舱",
+              "direct": true,
+              "stops": 0,
+              "duration": "190",
+              "durationMinutes": 190,
+              "preferredAirline": true,
               "price": 820,
-              "jumpUrl": "https://a.feizhu.com/2xKYMd"
+              "jumpUrl": "https://a.feizhu.com/1nKgyN"
             }
           ],
           "cliExitCode": 0
@@ -3479,9 +3267,34 @@
           "depDateStart": "2026-08-04",
           "depDateEnd": "2026-08-11",
           "status": "ok",
-          "bestPrice": 920,
+          "bestPrice": 810,
           "selectionMode": "fallback-airlines",
           "offers": [
+            {
+              "id": "xining-shenyang-return-2026-08-05 22:10:00-DR6598",
+              "routeId": "xining-shenyang-return",
+              "direction": "返程",
+              "origin": "西宁",
+              "destination": "沈阳",
+              "departureAirport": "曹家堡机场",
+              "arrivalAirport": "桃仙国际机场",
+              "departureAt": "2026-08-05 22:10:00",
+              "arrivalAt": "2026-08-06 00:50:00",
+              "flightNumbers": [
+                "DR6598"
+              ],
+              "airlines": [
+                "苏南瑞丽航空"
+              ],
+              "seatClass": "经济舱",
+              "direct": true,
+              "stops": 0,
+              "duration": "160",
+              "durationMinutes": 160,
+              "preferredAirline": false,
+              "price": 810,
+              "jumpUrl": "https://a.feizhu.com/0KKRvw"
+            },
             {
               "id": "xining-shenyang-return-2026-08-10 22:10:00-DR6598",
               "routeId": "xining-shenyang-return",
@@ -3504,8 +3317,8 @@
               "duration": "160",
               "durationMinutes": 160,
               "preferredAirline": false,
-              "price": 920,
-              "jumpUrl": "https://a.feizhu.com/494m7Z"
+              "price": 1040,
+              "jumpUrl": "https://a.feizhu.com/0ev9Ay"
             },
             {
               "id": "xining-shenyang-return-2026-08-07 22:10:00-DR6598",
@@ -3530,32 +3343,7 @@
               "durationMinutes": 160,
               "preferredAirline": false,
               "price": 1160,
-              "jumpUrl": "https://a.feizhu.com/3ENgVA"
-            },
-            {
-              "id": "xining-shenyang-return-2026-08-09 22:10:00-DR6598",
-              "routeId": "xining-shenyang-return",
-              "direction": "返程",
-              "origin": "西宁",
-              "destination": "沈阳",
-              "departureAirport": "曹家堡机场",
-              "arrivalAirport": "桃仙国际机场",
-              "departureAt": "2026-08-09 22:10:00",
-              "arrivalAt": "2026-08-10 00:50:00",
-              "flightNumbers": [
-                "DR6598"
-              ],
-              "airlines": [
-                "苏南瑞丽航空"
-              ],
-              "seatClass": "经济舱",
-              "direct": true,
-              "stops": 0,
-              "duration": "160",
-              "durationMinutes": 160,
-              "preferredAirline": false,
-              "price": 1160,
-              "jumpUrl": "https://a.feizhu.com/13RzxD"
+              "jumpUrl": "https://a.feizhu.com/2YtAjJ"
             }
           ],
           "cliExitCode": 0
@@ -3571,31 +3359,6 @@
           "bestPrice": 500,
           "selectionMode": "preferred-airlines",
           "offers": [
-            {
-              "id": "lanzhou-shenyang-return-2026-08-06 08:20:00-MU9855",
-              "routeId": "lanzhou-shenyang-return",
-              "direction": "返程",
-              "origin": "兰州",
-              "destination": "沈阳",
-              "departureAirport": "中川机场",
-              "arrivalAirport": "桃仙国际机场",
-              "departureAt": "2026-08-06 08:20:00",
-              "arrivalAt": "2026-08-06 11:15:00",
-              "flightNumbers": [
-                "MU9855"
-              ],
-              "airlines": [
-                "东航"
-              ],
-              "seatClass": "经济舱",
-              "direct": true,
-              "stops": 0,
-              "duration": "175",
-              "durationMinutes": 175,
-              "preferredAirline": true,
-              "price": 500,
-              "jumpUrl": "https://a.feizhu.com/33Xtr9"
-            },
             {
               "id": "lanzhou-shenyang-return-2026-08-04 21:00:00-CZ5998",
               "routeId": "lanzhou-shenyang-return",
@@ -3618,8 +3381,33 @@
               "duration": "150",
               "durationMinutes": 150,
               "preferredAirline": true,
-              "price": 510,
-              "jumpUrl": "https://a.feizhu.com/2Wvr7m"
+              "price": 500,
+              "jumpUrl": "https://a.feizhu.com/1zJH82"
+            },
+            {
+              "id": "lanzhou-shenyang-return-2026-08-06 08:20:00-MU9855",
+              "routeId": "lanzhou-shenyang-return",
+              "direction": "返程",
+              "origin": "兰州",
+              "destination": "沈阳",
+              "departureAirport": "中川机场",
+              "arrivalAirport": "桃仙国际机场",
+              "departureAt": "2026-08-06 08:20:00",
+              "arrivalAt": "2026-08-06 11:15:00",
+              "flightNumbers": [
+                "MU9855"
+              ],
+              "airlines": [
+                "东航"
+              ],
+              "seatClass": "经济舱",
+              "direct": true,
+              "stops": 0,
+              "duration": "175",
+              "durationMinutes": 175,
+              "preferredAirline": true,
+              "price": 525,
+              "jumpUrl": "https://a.feizhu.com/0QjB8D"
             },
             {
               "id": "lanzhou-shenyang-return-2026-08-04 08:20:00-MU9855",
@@ -3644,7 +3432,7 @@
               "durationMinutes": 175,
               "preferredAirline": true,
               "price": 575,
-              "jumpUrl": "https://a.feizhu.com/0ieXjs"
+              "jumpUrl": "https://a.feizhu.com/3RMC7U"
             }
           ],
           "cliExitCode": 0
@@ -3652,15 +3440,15 @@
       ],
       "featured": [
         {
-          "id": "shenyang-xining-outbound-2026-08-02 18:15:00-DR6597",
+          "id": "shenyang-xining-outbound-2026-08-03 18:15:00-DR6597",
           "routeId": "shenyang-xining-outbound",
           "direction": "去程",
           "origin": "沈阳",
           "destination": "西宁",
           "departureAirport": "桃仙国际机场",
           "arrivalAirport": "曹家堡机场",
-          "departureAt": "2026-08-02 18:15:00",
-          "arrivalAt": "2026-08-02 21:25:00",
+          "departureAt": "2026-08-03 18:15:00",
+          "arrivalAt": "2026-08-03 21:25:00",
           "flightNumbers": [
             "DR6597"
           ],
@@ -3674,18 +3462,18 @@
           "durationMinutes": 190,
           "preferredAirline": false,
           "price": 1040,
-          "jumpUrl": "https://a.feizhu.com/0JtllC"
+          "jumpUrl": "https://a.feizhu.com/0GNI1r"
         },
         {
-          "id": "shenyang-lanzhou-outbound-2026-08-02 19:45:00-MU9830",
+          "id": "shenyang-lanzhou-outbound-2026-08-03 19:45:00-MU9830",
           "routeId": "shenyang-lanzhou-outbound",
           "direction": "去程",
           "origin": "沈阳",
           "destination": "兰州",
           "departureAirport": "桃仙国际机场",
           "arrivalAirport": "中川机场",
-          "departureAt": "2026-08-02 19:45:00",
-          "arrivalAt": "2026-08-02 22:55:00",
+          "departureAt": "2026-08-03 19:45:00",
+          "arrivalAt": "2026-08-03 22:55:00",
           "flightNumbers": [
             "MU9830"
           ],
@@ -3698,19 +3486,19 @@
           "duration": "190",
           "durationMinutes": 190,
           "preferredAirline": true,
-          "price": 780,
-          "jumpUrl": "https://a.feizhu.com/03V1vD"
+          "price": 595,
+          "jumpUrl": "https://a.feizhu.com/4ASjEn"
         },
         {
-          "id": "xining-shenyang-return-2026-08-10 22:10:00-DR6598",
+          "id": "xining-shenyang-return-2026-08-05 22:10:00-DR6598",
           "routeId": "xining-shenyang-return",
           "direction": "返程",
           "origin": "西宁",
           "destination": "沈阳",
           "departureAirport": "曹家堡机场",
           "arrivalAirport": "桃仙国际机场",
-          "departureAt": "2026-08-10 22:10:00",
-          "arrivalAt": "2026-08-11 00:50:00",
+          "departureAt": "2026-08-05 22:10:00",
+          "arrivalAt": "2026-08-06 00:50:00",
           "flightNumbers": [
             "DR6598"
           ],
@@ -3723,33 +3511,33 @@
           "duration": "160",
           "durationMinutes": 160,
           "preferredAirline": false,
-          "price": 920,
-          "jumpUrl": "https://a.feizhu.com/494m7Z"
+          "price": 810,
+          "jumpUrl": "https://a.feizhu.com/0KKRvw"
         },
         {
-          "id": "lanzhou-shenyang-return-2026-08-06 08:20:00-MU9855",
+          "id": "lanzhou-shenyang-return-2026-08-04 21:00:00-CZ5998",
           "routeId": "lanzhou-shenyang-return",
           "direction": "返程",
           "origin": "兰州",
           "destination": "沈阳",
           "departureAirport": "中川机场",
           "arrivalAirport": "桃仙国际机场",
-          "departureAt": "2026-08-06 08:20:00",
-          "arrivalAt": "2026-08-06 11:15:00",
+          "departureAt": "2026-08-04 21:00:00",
+          "arrivalAt": "2026-08-04 23:30:00",
           "flightNumbers": [
-            "MU9855"
+            "CZ5998"
           ],
           "airlines": [
-            "东航"
+            "南航"
           ],
           "seatClass": "经济舱",
           "direct": true,
           "stops": 0,
-          "duration": "175",
-          "durationMinutes": 175,
+          "duration": "150",
+          "durationMinutes": 150,
           "preferredAirline": true,
           "price": 500,
-          "jumpUrl": "https://a.feizhu.com/33Xtr9"
+          "jumpUrl": "https://a.feizhu.com/1zJH82"
         }
       ],
       "freshQueries": 4,
@@ -3766,7 +3554,7 @@
         "min": 658,
         "max": 1290
       },
-      "sevenDayTwoRoomEstimate": 5532,
+      "sevenDayTwoRoomEstimate": 5554,
       "roomsRequested": 2,
       "roomTypeRequested": "双床房",
       "inventoryConfirmed": false,
@@ -3788,16 +3576,16 @@
               "checkOut": "2026-08-02",
               "nights": 1,
               "name": "Holiday Inn 西宁温泉假日酒店",
-              "pricePerRoomNight": 503,
-              "twoRoomsPerNight": 1006,
-              "twoRoomStayTotal": 1006,
+              "pricePerRoomNight": 514,
+              "twoRoomsPerNight": 1028,
+              "twoRoomStayTotal": 1028,
               "score": "",
               "scoreDesc": "",
               "star": "豪华型",
               "address": "西宁市城中区麟河路31号",
               "nearby": "近西宁夏都博汇温泉水乐园",
               "mainPic": "https://img.alicdn.com/imgextra/i3/6000000004603/O1CN01KPRSHJ1jsDilqcEra_!!6000000004603-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/3f16vJ"
+              "detailUrl": "https://a.feizhu.com/4YWeez"
             },
             {
               "id": "xining-0801-64052027",
@@ -3816,7 +3604,7 @@
               "address": "八一西路22号",
               "nearby": "近西宁站",
               "mainPic": "https://img.alicdn.com/imgextra/i3/6000000005172/O1CN01NFNHvC1o4paVPl5BI_!!6000000005172-2-hotel.png",
-              "detailUrl": "https://a.feizhu.com/2mv8DG"
+              "detailUrl": "https://a.feizhu.com/2Ovir5"
             },
             {
               "id": "xining-0801-63316090",
@@ -3835,7 +3623,7 @@
               "address": "五四西路66号",
               "nearby": "近西宁万达广场",
               "mainPic": "https://img.alicdn.com/imgextra/i4/6000000000486/O1CN015vGrpx1FSd9xS3xOV_!!6000000000486-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/3C0QKj"
+              "detailUrl": "https://a.feizhu.com/4LC9oF"
             }
           ],
           "cliExitCode": 0
@@ -3867,7 +3655,7 @@
               "address": "茶卡镇茶卡新村177号",
               "nearby": "近茶卡汽车站",
               "mainPic": "https://img.alicdn.com/imgextra/i3/6000000003456/O1CN014OHuNc1bOtwVrVa4y_!!6000000003456-2-hotel.png",
-              "detailUrl": "https://a.feizhu.com/2yuDfk"
+              "detailUrl": "https://a.feizhu.com/1UqFcy"
             },
             {
               "id": "chaka-0802-55251019",
@@ -3877,16 +3665,16 @@
               "checkOut": "2026-08-03",
               "nights": 1,
               "name": "茶卡丽都宾馆",
-              "pricePerRoomNight": 268,
-              "twoRoomsPerNight": 536,
-              "twoRoomStayTotal": 536,
+              "pricePerRoomNight": 209,
+              "twoRoomsPerNight": 418,
+              "twoRoomStayTotal": 418,
               "score": "",
               "scoreDesc": "",
               "star": "经济型",
               "address": "茶卡镇茶卡村170号",
               "nearby": "近茶卡汽车站",
               "mainPic": "https://img.alicdn.com/imgextra/i1/6000000007831/O1CN016YJ2KU27ieggVE5sp_!!6000000007831-2-hotel.png",
-              "detailUrl": "https://a.feizhu.com/1sUe0x"
+              "detailUrl": "https://a.feizhu.com/0C4IQm"
             },
             {
               "id": "chaka-0802-57357699",
@@ -3905,7 +3693,7 @@
               "address": "乌兰茶卡镇茶卡新村18号",
               "nearby": "近茶卡汽车站",
               "mainPic": "https://img.alicdn.com/imgextra/i1/6000000001884/O1CN01B5rr7A1PmvGq1oN7q_!!6000000001884-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/2yxDYD"
+              "detailUrl": "https://a.feizhu.com/4bR6EA"
             }
           ],
           "cliExitCode": 0
@@ -3937,7 +3725,7 @@
               "address": "大柴旦行委建设路29号，近大柴旦汽车站",
               "nearby": "近大柴旦行委柴旦镇",
               "mainPic": "https://img.alicdn.com/imgextra/i3/6000000006588/O1CN01XHq5Jf1yXMNRhAEwa_!!6000000006588-2-hotel.png",
-              "detailUrl": "https://a.feizhu.com/3RZltl"
+              "detailUrl": "https://a.feizhu.com/2khecr"
             },
             {
               "id": "dachaidan-0803-62148101",
@@ -3947,16 +3735,16 @@
               "checkOut": "2026-08-04",
               "nights": 1,
               "name": "维也纳酒店（5.0青海大柴旦店）",
-              "pricePerRoomNight": 619,
-              "twoRoomsPerNight": 1238,
-              "twoRoomStayTotal": 1238,
+              "pricePerRoomNight": 675,
+              "twoRoomsPerNight": 1350,
+              "twoRoomStayTotal": 1350,
               "score": "",
               "scoreDesc": "",
               "star": "舒适型",
               "address": "青海省海西蒙古族藏族自治州大柴旦行委大柴旦镇五彩街",
               "nearby": "近大柴旦行委柴旦镇",
               "mainPic": "https://img.alicdn.com/imgextra/i2/O1CN01VKfP0T1k0vl7ZyCaC_!!4611686018427384334-0-fliggy_content_upload_image.jpg",
-              "detailUrl": "https://a.feizhu.com/4UU97O"
+              "detailUrl": "https://a.feizhu.com/0etf9D"
             },
             {
               "id": "dachaidan-0803-72113571",
@@ -3966,16 +3754,16 @@
               "checkOut": "2026-08-04",
               "nights": 1,
               "name": "超越国际大酒店",
-              "pricePerRoomNight": 950,
-              "twoRoomsPerNight": 1900,
-              "twoRoomStayTotal": 1900,
+              "pricePerRoomNight": 770,
+              "twoRoomsPerNight": 1540,
+              "twoRoomStayTotal": 1540,
               "score": "",
               "scoreDesc": "",
               "star": "舒适型",
               "address": "大柴旦人民路与温泉路交叉口中石化西侧50米",
               "nearby": "近大柴旦行委柴旦镇",
               "mainPic": "https://img.alicdn.com/imgextra/i2/O1CN01uMg2td289Dhpt4Rjr_!!4611686018427387601-0-fliggy_content_upload_image.jpg",
-              "detailUrl": "https://a.feizhu.com/47d3aN"
+              "detailUrl": "https://a.feizhu.com/0ekWTR"
             }
           ],
           "cliExitCode": 0
@@ -4006,7 +3794,26 @@
               "address": "月牙泉镇鸣山村一组79附1号",
               "nearby": "近敦煌鸣沙山月牙泉景区",
               "mainPic": "https://img.alicdn.com/imgextra/i3/6000000001012/O1CN01ES4EdU1JLXxgrivt6_!!6000000001012-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/44iEIB"
+              "detailUrl": "https://a.feizhu.com/2J9Vkv"
+            },
+            {
+              "id": "dunhuang-0804-57450030",
+              "stayId": "dunhuang-0804",
+              "city": "敦煌",
+              "checkIn": "2026-08-04",
+              "checkOut": "2026-08-06",
+              "nights": 2,
+              "name": "敦煌山堤美宿(鸣沙山月牙泉店)",
+              "pricePerRoomNight": 538,
+              "twoRoomsPerNight": 1076,
+              "twoRoomStayTotal": 2152,
+              "score": "",
+              "scoreDesc": "",
+              "star": "舒适型",
+              "address": "敦煌市月牙泉镇杨家桥乡月牙泉村三组2号",
+              "nearby": "近敦煌鸣沙山月牙泉景区",
+              "mainPic": "https://img.alicdn.com/imgextra/i1/6000000005854/O1CN01JubPXu1t7BepdqmOp_!!6000000005854-2-hotel.png",
+              "detailUrl": "https://a.feizhu.com/2w4hZo"
             },
             {
               "id": "dunhuang-0804-51194180",
@@ -4025,26 +3832,7 @@
               "address": "杨家桥雷音寺对面千年敦煌月牙泉小镇（杨家桥，近鸣山路）",
               "nearby": "近敦煌鸣沙山月牙泉景区",
               "mainPic": "https://img.alicdn.com/imgextra/i3/O1CN019Yn9AK1g8wDbQOrSi_!!4611686018427383810-0-fliggy_content_upload_image.jpg",
-              "detailUrl": "https://a.feizhu.com/2gH1rZ"
-            },
-            {
-              "id": "dunhuang-0804-56491273",
-              "stayId": "dunhuang-0804",
-              "city": "敦煌",
-              "checkIn": "2026-08-04",
-              "checkOut": "2026-08-06",
-              "nights": 2,
-              "name": "敦煌白老大客栈(莫高窟数字中心店)",
-              "pricePerRoomNight": 139,
-              "twoRoomsPerNight": 278,
-              "twoRoomStayTotal": 556,
-              "score": "",
-              "scoreDesc": "",
-              "star": "经济型",
-              "address": "敦煌市莫高镇新墩村三组10号",
-              "nearby": "近敦煌站",
-              "mainPic": "https://img.alicdn.com/imgextra/i4/O1CN01UQXYFL1i6IzYM4ofg_!!0-alitrip.jpg",
-              "detailUrl": "https://a.feizhu.com/2dfEML"
+              "detailUrl": "https://a.feizhu.com/3UZYBt"
             }
           ],
           "cliExitCode": 0
@@ -4075,26 +3863,7 @@
               "address": "甘肃省张掖市甘州区高铁西站国芳商业综合体1期项目1号楼1楼",
               "nearby": "近张掖西站",
               "mainPic": "https://img.alicdn.com/imgextra/i3/6000000002166/O1CN01plgM0C1Rs4wLcR4M1_!!6000000002166-0-hotel.jpg",
-              "detailUrl": "https://a.feizhu.com/2XXIML"
-            },
-            {
-              "id": "zhangye-0806-54674002",
-              "stayId": "zhangye-0806",
-              "city": "张掖",
-              "checkIn": "2026-08-06",
-              "checkOut": "2026-08-07",
-              "nights": 1,
-              "name": "张掖丹霞彩韵山居酒店（丹霞口文旅小镇店）",
-              "pricePerRoomNight": 168,
-              "twoRoomsPerNight": 336,
-              "twoRoomStayTotal": 336,
-              "score": "",
-              "scoreDesc": "",
-              "star": "经济型",
-              "address": "临泽丹霞国家地质公园北入口梨园新村别墅区8号楼",
-              "nearby": "近丹霞口文旅小镇",
-              "mainPic": "https://img.alicdn.com/imgextra/i3/O1CN01q88X141VVPsrLivUl_!!4611686018427382370-0-fliggy_content_upload_image.jpg",
-              "detailUrl": "https://a.feizhu.com/2sBUsl"
+              "detailUrl": "https://a.feizhu.com/29DAD4"
             },
             {
               "id": "zhangye-0806-60058130",
@@ -4113,7 +3882,26 @@
               "address": "甘肃省张掖市高台县巷道镇南湾村（巷宣公路北侧）玉润苑小区综合楼三楼",
               "nearby": "近西关车站",
               "mainPic": "https://img.alicdn.com/imgextra/i1/6000000004157/O1CN01HWW2X31gZxXB8AB52_!!6000000004157-2-hotel.png",
-              "detailUrl": "https://a.feizhu.com/0JiRYK"
+              "detailUrl": "https://a.feizhu.com/245hjq"
+            },
+            {
+              "id": "zhangye-0806-83962084",
+              "stayId": "zhangye-0806",
+              "city": "张掖",
+              "checkIn": "2026-08-06",
+              "checkOut": "2026-08-07",
+              "nights": 1,
+              "name": "海友张掖鼓楼明清街酒店",
+              "pricePerRoomNight": 344,
+              "twoRoomsPerNight": 688,
+              "twoRoomStayTotal": 688,
+              "score": "",
+              "scoreDesc": "",
+              "star": "经济型",
+              "address": "北水桥街75号欧式街A区融达小区2号楼1层部分，5层全部",
+              "nearby": "近大佛寺",
+              "mainPic": "https://img.alicdn.com/imgextra/i1/6000000004273/O1CN01udkqcv1hR5TziKj33_!!6000000004273-0-hotel.jpg",
+              "detailUrl": "https://a.feizhu.com/1cUzUa"
             }
           ],
           "cliExitCode": 0
@@ -4128,16 +3916,16 @@
           "checkOut": "2026-08-02",
           "nights": 1,
           "name": "Holiday Inn 西宁温泉假日酒店",
-          "pricePerRoomNight": 503,
-          "twoRoomsPerNight": 1006,
-          "twoRoomStayTotal": 1006,
+          "pricePerRoomNight": 514,
+          "twoRoomsPerNight": 1028,
+          "twoRoomStayTotal": 1028,
           "score": "",
           "scoreDesc": "",
           "star": "豪华型",
           "address": "西宁市城中区麟河路31号",
           "nearby": "近西宁夏都博汇温泉水乐园",
           "mainPic": "https://img.alicdn.com/imgextra/i3/6000000004603/O1CN01KPRSHJ1jsDilqcEra_!!6000000004603-0-hotel.jpg",
-          "detailUrl": "https://a.feizhu.com/3f16vJ"
+          "detailUrl": "https://a.feizhu.com/4YWeez"
         },
         {
           "id": "chaka-0802-57094150",
@@ -4156,7 +3944,7 @@
           "address": "茶卡镇茶卡新村177号",
           "nearby": "近茶卡汽车站",
           "mainPic": "https://img.alicdn.com/imgextra/i3/6000000003456/O1CN014OHuNc1bOtwVrVa4y_!!6000000003456-2-hotel.png",
-          "detailUrl": "https://a.feizhu.com/2yuDfk"
+          "detailUrl": "https://a.feizhu.com/1UqFcy"
         },
         {
           "id": "dachaidan-0803-57334102",
@@ -4175,7 +3963,7 @@
           "address": "大柴旦行委建设路29号，近大柴旦汽车站",
           "nearby": "近大柴旦行委柴旦镇",
           "mainPic": "https://img.alicdn.com/imgextra/i3/6000000006588/O1CN01XHq5Jf1yXMNRhAEwa_!!6000000006588-2-hotel.png",
-          "detailUrl": "https://a.feizhu.com/3RZltl"
+          "detailUrl": "https://a.feizhu.com/2khecr"
         },
         {
           "id": "dunhuang-0804-53981001",
@@ -4194,7 +3982,7 @@
           "address": "月牙泉镇鸣山村一组79附1号",
           "nearby": "近敦煌鸣沙山月牙泉景区",
           "mainPic": "https://img.alicdn.com/imgextra/i3/6000000001012/O1CN01ES4EdU1JLXxgrivt6_!!6000000001012-0-hotel.jpg",
-          "detailUrl": "https://a.feizhu.com/44iEIB"
+          "detailUrl": "https://a.feizhu.com/2J9Vkv"
         },
         {
           "id": "zhangye-0806-58461071",
@@ -4213,7 +4001,7 @@
           "address": "甘肃省张掖市甘州区高铁西站国芳商业综合体1期项目1号楼1楼",
           "nearby": "近张掖西站",
           "mainPic": "https://img.alicdn.com/imgextra/i3/6000000002166/O1CN01plgM0C1Rs4wLcR4M1_!!6000000002166-0-hotel.jpg",
-          "detailUrl": "https://a.feizhu.com/2XXIML"
+          "detailUrl": "https://a.feizhu.com/29DAD4"
         }
       ],
       "freshQueries": 5,
