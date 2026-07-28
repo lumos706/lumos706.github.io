@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "parserVersion": 1,
-  "generatedAt": "2026-07-27T04:46:32.245592+00:00",
-  "expiresAt": "2026-07-28T10:46:32.245592+00:00",
+  "generatedAt": "2026-07-28T04:21:27.369898+00:00",
+  "expiresAt": "2026-07-29T10:21:27.369898+00:00",
   "status": "ok",
   "schedule": "09:00 Asia/Shanghai",
   "skill": {
@@ -11,7 +11,6 @@
     "repository": "https://github.com/Jesseovo/last30days-skill-cn"
   },
   "activeSources": [
-    "douyin",
     "xiaohongshu",
     "zhihu"
   ],
@@ -45,44 +44,26 @@
           "priority": "必看"
         }
       ],
-      "checkedAt": "2026-07-27T04:46:32.245592+00:00",
-      "lastEvidenceAt": "2026-07-27T04:46:32.245592+00:00",
+      "checkedAt": "2026-07-28T04:21:27.369898+00:00",
+      "lastEvidenceAt": "2026-07-28T04:21:27.369898+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
-          "platform": "douyin",
-          "title": "可孚便携式氧气呼吸器 家里有老人 ，孕妇或准备去高原旅游的朋友，备上几瓶很有必要#氧气瓶 #输氧#缺氧#高原旅游#高原反应",
+          "platform": "xiaohongshu",
+          "title": "带60岁+父母去西藏旅游之药品准备篇~",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7666696001005125369",
+          "url": "https://www.xiaohongshu.com/explore/6a61c9f0000000000f039c00",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.53,
-          "score": 20,
+          "relevance": 0.31,
+          "score": 15,
           "engagement": {
-            "num_comments": 0,
-            "likes": 3,
-            "views": 0,
-            "shares": 0
+            "num_comments": 10,
+            "likes": 15,
+            "shares": 0,
+            "collects": 10
           },
-          "author": "多多优选",
-          "signal": "neutral"
-        },
-        {
-          "platform": "douyin",
-          "title": "柠萌旅行青甘高原高反预防 应急完整指南 #青甘大环线 #青甘旅游 #高反应急 #应急指南 #柠萌带你游西北",
-          "snippet": "",
-          "url": "https://www.douyin.com/video/7660723456748555529",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.41,
-          "score": 16,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 5,
-            "views": 0,
-            "shares": 1
-          },
-          "author": "柠萌带你游西北",
+          "author": "御姐控",
           "signal": "neutral"
         }
       ],
@@ -117,8 +98,8 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-27T04:46:32.245592+00:00",
-      "lastEvidenceAt": "2026-07-27T04:46:32.245592+00:00",
+      "checkedAt": "2026-07-28T04:21:27.369898+00:00",
+      "lastEvidenceAt": "2026-07-28T04:21:27.369898+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
@@ -170,28 +151,10 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-27T04:46:32.245592+00:00",
-      "lastEvidenceAt": "2026-07-27T04:46:32.245592+00:00",
+      "checkedAt": "2026-07-28T04:21:27.369898+00:00",
+      "lastEvidenceAt": "2026-07-28T04:21:27.369898+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
-        {
-          "platform": "xiaohongshu",
-          "title": "青甘大环线保险求助🆘",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a1bfeac000000003503bb54",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.43,
-          "score": 26,
-          "engagement": {
-            "num_comments": 38,
-            "likes": 35,
-            "shares": 0,
-            "collects": 25
-          },
-          "author": "布黑帕",
-          "signal": "neutral"
-        },
         {
           "platform": "xiaohongshu",
           "title": "2026青甘大环线门票预约表！准备要来的看看",
@@ -202,10 +165,10 @@
           "relevance": 0.35,
           "score": 24,
           "engagement": {
-            "num_comments": 2,
-            "likes": 128,
+            "num_comments": 3,
+            "likes": 137,
             "shares": 0,
-            "collects": 145
+            "collects": 160
           },
           "author": "💕",
           "signal": "neutral"
@@ -242,28 +205,10 @@
           "priority": "必带"
         }
       ],
-      "checkedAt": "2026-07-27T04:46:32.245592+00:00",
-      "lastEvidenceAt": "2026-07-27T04:46:32.245592+00:00",
+      "checkedAt": "2026-07-28T04:21:27.369898+00:00",
+      "lastEvidenceAt": "2026-07-28T04:21:27.369898+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
-        {
-          "platform": "xiaohongshu",
-          "title": "没有3C认证的充电宝不能带上飞机以及托运啦",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/685fbd3f000000000d0245de",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.56,
-          "score": 30,
-          "engagement": {
-            "num_comments": 11,
-            "likes": 74,
-            "shares": 0,
-            "collects": 18
-          },
-          "author": "鱼小鱼",
-          "signal": "neutral"
-        },
         {
           "platform": "zhihu",
           "title": "充电宝可以带上飞机吗？盘点5个有3C认证能上飞机好用的充电宝",
@@ -272,7 +217,7 @@
           "date": "2026-07-27",
           "dateConfidence": "high",
           "relevance": 0.41,
-          "score": 73,
+          "score": 72,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -289,7 +234,7 @@
           "date": "2026-07-22",
           "dateConfidence": "high",
           "relevance": 0.41,
-          "score": 39,
+          "score": 38,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -306,14 +251,32 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.34,
-          "score": 30,
+          "score": 31,
           "engagement": {
             "num_comments": 341,
-            "likes": 1039,
+            "likes": 1043,
             "shares": 0,
-            "collects": 742
+            "collects": 743
           },
           "author": "潘祥记鲜花饼｜长水机场",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "我的充电宝被中国机场没收了！❌3C认证",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/69679f120000000021028fb3",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.33,
+          "score": 18,
+          "engagement": {
+            "num_comments": 28,
+            "likes": 45,
+            "shares": 0,
+            "collects": 23
+          },
+          "author": "尹尹若现",
           "signal": "neutral"
         }
       ],
@@ -348,10 +311,46 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-27T04:46:32.245592+00:00",
-      "lastEvidenceAt": "2026-07-27T04:46:32.245592+00:00",
+      "checkedAt": "2026-07-28T04:21:27.369898+00:00",
+      "lastEvidenceAt": "2026-07-28T04:21:27.369898+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
+        {
+          "platform": "xiaohongshu",
+          "title": "青甘大环线前期准备（自驾版）",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/688a17310000000005009c21",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.47,
+          "score": 39,
+          "engagement": {
+            "num_comments": 32,
+            "likes": 329,
+            "shares": 0,
+            "collects": 390
+          },
+          "author": "换个刊投我又是好汉",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "青甘大环线自驾租车防坑攻略",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/68d8e006000000000e00dc88",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.47,
+          "score": 32,
+          "engagement": {
+            "num_comments": 8,
+            "likes": 65,
+            "shares": 0,
+            "collects": 91
+          },
+          "author": "你好我系陈Mm",
+          "signal": "neutral"
+        },
         {
           "platform": "xiaohongshu",
           "title": "青甘大环线自驾租车分享，女生友好‼️",
@@ -360,7 +359,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.47,
-          "score": 28,
+          "score": 30,
           "engagement": {
             "num_comments": 19,
             "likes": 42,
@@ -378,7 +377,7 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.46,
-          "score": 35,
+          "score": 36,
           "engagement": {
             "num_comments": 158,
             "likes": 101,
@@ -386,42 +385,6 @@
             "collects": 66
           },
           "author": "吉吉小熊",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "青甘大环线返程整理！租车自驾篇",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a4b4213000000001602474b",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.46,
-          "score": 23,
-          "engagement": {
-            "num_comments": 1,
-            "likes": 18,
-            "shares": 0,
-            "collects": 16
-          },
-          "author": "奔跑的壮壮",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "青甘大环线🔁小攻略之一：租车与准备",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a3c6813000000001503d3f6",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.46,
-          "score": 22,
-          "engagement": {
-            "num_comments": 1,
-            "likes": 12,
-            "shares": 0,
-            "collects": 17
-          },
-          "author": "123不许动",
           "signal": "neutral"
         }
       ],
@@ -456,28 +419,10 @@
           "priority": "必做"
         }
       ],
-      "checkedAt": "2026-07-27T04:46:32.245592+00:00",
-      "lastEvidenceAt": "2026-07-27T04:46:32.245592+00:00",
+      "checkedAt": "2026-07-28T04:21:27.369898+00:00",
+      "lastEvidenceAt": "2026-07-28T04:21:27.369898+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
-        {
-          "platform": "xiaohongshu",
-          "title": "青甘环线公共交通攻略",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a2d145f0000000035029cd3",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.25,
-          "score": 26,
-          "engagement": {
-            "num_comments": 63,
-            "likes": 424,
-            "shares": 0,
-            "collects": 548
-          },
-          "author": "茄子",
-          "signal": "neutral"
-        },
         {
           "platform": "xiaohongshu",
           "title": "青甘环线7天公共交通不自驾路线附酒店测评",
@@ -486,12 +431,12 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.19,
-          "score": 25,
+          "score": 22,
           "engagement": {
             "num_comments": 90,
-            "likes": 486,
+            "likes": 493,
             "shares": 0,
-            "collects": 681
+            "collects": 690
           },
           "author": "Q.",
           "signal": "neutral"
