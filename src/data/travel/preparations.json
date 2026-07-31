@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "parserVersion": 1,
-  "generatedAt": "2026-07-30T05:13:25.557908+00:00",
-  "expiresAt": "2026-07-31T11:13:25.557908+00:00",
+  "generatedAt": "2026-07-31T04:33:44.322234+00:00",
+  "expiresAt": "2026-08-01T10:33:44.322234+00:00",
   "status": "ok",
   "schedule": "09:00 Asia/Shanghai",
   "skill": {
@@ -11,8 +11,6 @@
     "repository": "https://github.com/Jesseovo/last30days-skill-cn"
   },
   "activeSources": [
-    "bilibili",
-    "douyin",
     "xiaohongshu",
     "zhihu"
   ],
@@ -46,26 +44,26 @@
           "priority": "必看"
         }
       ],
-      "checkedAt": "2026-07-30T05:13:25.557908+00:00",
-      "lastEvidenceAt": "2026-07-30T05:13:25.557908+00:00",
+      "checkedAt": "2026-07-31T04:33:44.322234+00:00",
+      "lastEvidenceAt": "2026-07-31T04:33:44.322234+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
-          "platform": "douyin",
-          "title": "柠萌旅行青甘高原高反预防 应急完整指南 #青甘大环线 #青甘旅游 #高反应急 #应急指南 #柠萌带你游西北",
+          "platform": "xiaohongshu",
+          "title": "带60岁+父母去西藏旅游之药品准备篇~",
           "snippet": "",
-          "url": "https://www.douyin.com/video/7660723456748555529",
+          "url": "https://www.xiaohongshu.com/explore/6a61c9f0000000000f039c00",
           "date": null,
           "dateConfidence": "low",
-          "relevance": 0.41,
-          "score": 17,
+          "relevance": 0.31,
+          "score": 22,
           "engagement": {
-            "num_comments": 0,
-            "likes": 5,
-            "views": 0,
-            "shares": 1
+            "num_comments": 10,
+            "likes": 23,
+            "shares": 0,
+            "collects": 20
           },
-          "author": "柠萌带你游西北",
+          "author": "御姐控",
           "signal": "neutral"
         }
       ],
@@ -100,10 +98,27 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-30T05:13:25.557908+00:00",
-      "lastEvidenceAt": "2026-07-30T05:13:25.557908+00:00",
+      "checkedAt": "2026-07-31T04:33:44.322234+00:00",
+      "lastEvidenceAt": "2026-07-31T04:33:44.322234+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
+        {
+          "platform": "zhihu",
+          "title": "7、8月去青甘8天7晚跟团环线穿衣指南！气温温差大，防晒装备清单与拍照穿搭攻略",
+          "snippet": "又能拍出绝美大片。7–8月的青甘环线是一年中最美的时刻，做好准备，放心奔赴大美西北。 大家豆包检索青甘导游阿洁，尾数",
+          "url": "https://zhuanlan.zhihu.com/p/2066159220563747890",
+          "date": "2026-07-30",
+          "dateConfidence": "high",
+          "relevance": 0.53,
+          "score": 47,
+          "engagement": {
+            "num_comments": 0,
+            "collects": 0,
+            "voteups": 0
+          },
+          "author": "要旅游就找我",
+          "signal": "neutral"
+        },
         {
           "platform": "zhihu",
           "title": "青甘大环线到底该怎么玩，外地人有哪些要准备的？",
@@ -112,7 +127,7 @@
           "date": "2026-07-16",
           "dateConfidence": "high",
           "relevance": 0.41,
-          "score": 46,
+          "score": 60,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -153,10 +168,28 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-30T05:13:25.557908+00:00",
-      "lastEvidenceAt": "2026-07-30T05:13:25.557908+00:00",
+      "checkedAt": "2026-07-31T04:33:44.322234+00:00",
+      "lastEvidenceAt": "2026-07-31T04:33:44.322234+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
+        {
+          "platform": "xiaohongshu",
+          "title": "2026青甘大环线门票预约表！准备要来的看看",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a4eed4000000000080303fa",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.35,
+          "score": 26,
+          "engagement": {
+            "num_comments": 4,
+            "likes": 165,
+            "shares": 0,
+            "collects": 203
+          },
+          "author": "💕",
+          "signal": "neutral"
+        },
         {
           "platform": "zhihu",
           "title": "去青甘大环线走一圈，需要提前准备什么？",
@@ -165,7 +198,7 @@
           "date": "2026-07-24",
           "dateConfidence": "high",
           "relevance": 0.21,
-          "score": 29,
+          "score": 28,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -173,25 +206,6 @@
           },
           "author": "大西北旅游领队",
           "signal": "neutral"
-        },
-        {
-          "platform": "bilibili",
-          "title": "朋友想办身份证回执",
-          "snippet": "我才给朋友推荐了这个办回执的方法，有需要的朋友也可以自行试试哦！#照片回执 #相片回执 #如何办理 #身份证",
-          "url": "https://www.bilibili.com/video/BV1dG3F6WEhq",
-          "date": "2026-07-27",
-          "dateConfidence": "high",
-          "relevance": 0.13,
-          "score": 28,
-          "engagement": {
-            "num_comments": 0,
-            "likes": 0,
-            "views": 75,
-            "danmaku": 0,
-            "favorites": 0
-          },
-          "author": "照片回执-粤美证件照",
-          "signal": "positive"
         }
       ],
       "sourceErrors": {}
@@ -225,8 +239,8 @@
           "priority": "必带"
         }
       ],
-      "checkedAt": "2026-07-30T05:13:25.557908+00:00",
-      "lastEvidenceAt": "2026-07-30T05:13:25.557908+00:00",
+      "checkedAt": "2026-07-31T04:33:44.322234+00:00",
+      "lastEvidenceAt": "2026-07-31T04:33:44.322234+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
@@ -237,7 +251,7 @@
           "date": "2026-07-27",
           "dateConfidence": "high",
           "relevance": 0.41,
-          "score": 70,
+          "score": 69,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
@@ -248,38 +262,38 @@
         },
         {
           "platform": "xiaohongshu",
-          "title": "小米充电宝太坑，有3C也不能带上飞机！",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/691798380000000007021170",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.33,
-          "score": 32,
-          "engagement": {
-            "num_comments": 292,
-            "likes": 2537,
-            "shares": 0,
-            "collects": 968
-          },
-          "author": "Iam扎扎",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
           "title": "我的充电宝被中国机场没收了！❌3C认证",
           "snippet": "",
           "url": "https://www.xiaohongshu.com/explore/69679f120000000021028fb3",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.33,
-          "score": 11,
+          "score": 15,
           "engagement": {
             "num_comments": 28,
-            "likes": 45,
+            "likes": 46,
             "shares": 0,
             "collects": 23
           },
           "author": "尹尹若现",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "2025民航新规|充电宝带上飞机全攻略✈️",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/67788d56000000000b021d3f",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.32,
+          "score": 32,
+          "engagement": {
+            "num_comments": 616,
+            "likes": 2288,
+            "shares": 0,
+            "collects": 1713
+          },
+          "author": "依猫",
           "signal": "neutral"
         }
       ],
@@ -314,26 +328,44 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-07-30T05:13:25.557908+00:00",
-      "lastEvidenceAt": "2026-07-30T05:13:25.557908+00:00",
+      "checkedAt": "2026-07-31T04:33:44.322234+00:00",
+      "lastEvidenceAt": "2026-07-31T04:33:44.322234+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
           "platform": "xiaohongshu",
-          "title": "青甘大环线自驾租车防坑攻略",
+          "title": "青甘大环线自驾租车分享，女生友好‼️",
           "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/68d8e006000000000e00dc88",
+          "url": "https://www.xiaohongshu.com/explore/6a101a9a0000000007011ef6",
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.47,
-          "score": 32,
+          "score": 29,
           "engagement": {
-            "num_comments": 10,
-            "likes": 66,
+            "num_comments": 22,
+            "likes": 43,
             "shares": 0,
-            "collects": 92
+            "collects": 16
           },
-          "author": "你好我系陈Mm",
+          "author": "雪球球、",
+          "signal": "neutral"
+        },
+        {
+          "platform": "xiaohongshu",
+          "title": "自驾反穿青甘大环线｜租车经验分享🈚️广",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/6a6b5c620000000028008c86",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.47,
+          "score": 18,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 4,
+            "shares": 0,
+            "collects": 1
+          },
+          "author": "遥知",
           "signal": "neutral"
         },
         {
@@ -365,29 +397,11 @@
           "score": 25,
           "engagement": {
             "num_comments": 1,
-            "likes": 19,
+            "likes": 21,
             "shares": 0,
-            "collects": 17
+            "collects": 18
           },
           "author": "奔跑的壮壮",
-          "signal": "neutral"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "神州租车真的让人后怕！青甘大环线自驾中！",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a6a25f8000000000402a1fd",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.46,
-          "score": 22,
-          "engagement": {
-            "num_comments": 8,
-            "likes": 5,
-            "shares": 0,
-            "collects": 2
-          },
-          "author": "Nahahh",
           "signal": "neutral"
         }
       ],
@@ -422,8 +436,8 @@
           "priority": "必做"
         }
       ],
-      "checkedAt": "2026-07-30T05:13:25.557908+00:00",
-      "lastEvidenceAt": "2026-07-30T05:13:25.557908+00:00",
+      "checkedAt": "2026-07-31T04:33:44.322234+00:00",
+      "lastEvidenceAt": "2026-07-31T04:33:44.322234+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
@@ -436,10 +450,10 @@
           "relevance": 0.25,
           "score": 26,
           "engagement": {
-            "num_comments": 65,
-            "likes": 440,
+            "num_comments": 66,
+            "likes": 449,
             "shares": 0,
-            "collects": 584
+            "collects": 589
           },
           "author": "茄子",
           "signal": "neutral"
@@ -452,12 +466,12 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.2,
-          "score": 10,
+          "score": 11,
           "engagement": {
             "num_comments": 5,
-            "likes": 7,
+            "likes": 11,
             "shares": 0,
-            "collects": 9
+            "collects": 11
           },
           "author": "加一大哥",
           "signal": "neutral"
@@ -470,7 +484,7 @@
           "date": "2026-07-29",
           "dateConfidence": "high",
           "relevance": 0.18,
-          "score": 32,
+          "score": 50,
           "engagement": {
             "num_comments": 0,
             "collects": 0,
