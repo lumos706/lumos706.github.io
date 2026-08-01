@@ -63,7 +63,9 @@ src/styles/                   全局设计变量和基础样式
 
 ## 可拆卸的旅游攻略系统
 
-旅游模块位于 `/travel/`，面向 4 位成人、2 间双床房的青海甘肃行程。它提供 3 / 4 / 7 日路线、¥2,500 / ¥3,000 / ¥3,500 三档落地预算，以及“自驾（租车）/ 公共交通”两种当地出游方式；路线、逐日安排、交通费用与景点到达方式会联动切换。
+> **当前状态：休眠。** 导航入口和 `/travel/` 静态路由均未发布，自动数据刷新也已暂停；组件、数据、测试、采集脚本及页面源码全部保留。休眠页面位于 `src/features/travel/TravelPage.astro`。
+
+旅游模块面向 4 位成人、2 间双床房的青海甘肃行程。它提供 3 / 4 / 7 日路线、¥2,500 / ¥3,000 / ¥3,500 三档落地预算，以及“自驾（租车）/ 公共交通”两种当地出游方式；路线、逐日安排、交通费用与景点到达方式会联动切换。
 
 所有公开攻略、预约与当地交通线索都由官方 [`Jesseovo/last30days-skill-cn`](https://github.com/Jesseovo/last30days-skill-cn) 采集；机票和酒店报价由官方 [`alibaba-flyai/flyai-skill`](https://github.com/alibaba-flyai/flyai-skill) 提供。仓库脚本只负责编排 skill、过滤无关结果和生成 Astro 所需 JSON，不实现站点爬虫或飞猪接口。
 
@@ -96,7 +98,7 @@ node scripts/travel/update_flyai_prices.mjs
 
 凭据、Cookie 和浏览器登录态不得提交到仓库。GitHub Actions 使用仓库 Secrets：`ZHIHU_COOKIE`、`SCRAPECREATORS_API_KEY`、`LAST30DAYS_XHS_COOKIES_B64`、`LAST30DAYS_DOUYIN_COOKIES_B64` 和 `FLYAI_API_KEY`。缺少攻略平台凭据时，采集脚本仍会回退到无 API 浏览器与公开搜索路径；FlyAI 查询失败时保留上一份有效机酒报价并标记状态。
 
-`.github/workflows/travel-data.yml` 每天 `01:00 UTC`（北京时间 09:00）运行一次刷新。任务会安装官方 skill、FlyAI skill、Miniconda、`jieba` 与 Playwright Chromium，更新攻略、餐馆、当地交通、出发准备、景区预约、机票和酒店，通过生产构建后再提交数据并触发 Pages 部署。抖音只在每周一 09:00 的定时任务中低频采集，其他六天不会访问抖音，而是保留最近一次成功的抖音依据及其真实采集日期；其他来源仍每日更新。每周抖音健康检查只把本轮新取得的依据计为成功，沿用链接不会冒充当天结果。预约证据不足时保留上一份有效规则；交通证据不足时保留人工核对过的稳妥基线，不根据单条帖子擅自改写公交线路号。
+`.github/workflows/travel-data.yml` 的自动 `schedule` 当前已注释暂停，只保留手动触发入口，因此休眠期间不会每天自动采集或提交数据。模块恢复后，重新启用 `01:00 UTC`（北京时间 09:00）的每日刷新；抖音仍只在每周一低频采集，其他日期保留最近一次成功依据及真实采集日期。每周抖音健康检查只把本轮新取得的依据计为成功，沿用链接不会冒充当天结果。
 
 正式刷新前，工作流会先通过官方 skill 对小红书和知乎执行最多两次低频真实查询，并检查小红书核心登录 Cookie 的本地到期字段。主采集路径降级、Cookie 缺失或临近 7 天到期时，仓库会自动创建名为“旅游数据登录态需要更新”的 Issue 并指派给仓库所有者；定时检查仍未恢复时每天提醒一次，恢复后自动关闭。预检异常不会阻断当晚刷新，脚本会继续使用公开搜索兜底并保留上一轮有效内容。
 
@@ -104,11 +106,20 @@ Cookie 没有统一、可保证的有效期：小红书 Cookie 文件包含浏�
 
 需要排查单项时，可在 Actions 手动运行任务并填写 `only`，例如 `tickets` 或 `dunhuang,zhangye`；定时任务不填写该参数，会完整刷新全部类别。手动运行默认同样不访问抖音；只有明确勾选“同时刷新抖音”时才会启用该路径。本地需要主动测试抖音时，先临时设置 `TRAVEL_DOUYIN_REFRESH=true`，运行完成后立即移除该环境变量，避免连续高频查询。
 
+### 恢复模块
+
+恢复时执行四项反向操作即可，不需要重做页面或数据：
+
+1. 将 `src/features/travel/TravelPage.astro` 移回 `src/pages/travel/index.astro`。
+2. 取消 `src/components/Header.astro` 中“旅行”导航项的注释。
+3. 取消 `.github/workflows/travel-data.yml` 中 `schedule` 的注释。
+4. 运行构建并部署，确认 `/travel/`、导航入口和定时任务恢复。
+
 ### 移除模块
 
 删除以下内容即可完整卸载，不影响博客文章：
 
-- `src/pages/travel/`
+- `src/features/travel/`
 - `src/components/travel/`
 - `src/data/travel/`
 - `src/styles/travel.css`

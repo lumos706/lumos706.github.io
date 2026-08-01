@@ -1,9 +1,11 @@
 name: Refresh travel data
 
 on:
-  schedule:
-    # GitHub Actions uses UTC. 01:00 UTC = 09:00 Asia/Shanghai.
-    - cron: '0 1 * * *'
+  # The travel module is dormant. Keep the workflow for a future restore, but
+  # leave its automatic schedule paused until /travel/ is published again.
+  # schedule:
+  #   # GitHub Actions uses UTC. 01:00 UTC = 09:00 Asia/Shanghai.
+  #   - cron: '0 1 * * *'
   workflow_dispatch:
     inputs:
       only:
