@@ -1,15 +1,15 @@
 ---
 title: 把大模型训推优化串起来
-description: 为了准备一次组会分享，我从训练与推理的区别讲起，把 FlashAttention、MLA、KV Cache、模型量化和推测解码串成了一张可以顺着读下去的地图。
+description: 为了准备一次组会分享，我从训练与推理的区别讲起，把 FlashAttention、MLA、KDA、KV Cache、模型量化和推测解码串成了一张可以顺着读下去的地图。
 pubDate: 2026-07-20T10:00:00+08:00
 category: 学习
 tags: [大模型, 推理优化, KV Cache, 模型量化, 推测解码]
-readingTime: 27
+readingTime: 32
 featured: true
 cover: ink
 ---
 
-为了准备一次组会分享，我先写了一份很粗的大纲。上面排着一串当时看起来很厉害的名字：FlashAttention、GQA、MLA、PagedAttention、QServe、推测解码……每个词我都大概听过，可真要站在一张架构图前，从第一根箭头讲到最后一个模块，我发现自己并没有想明白。
+为了准备一次组会分享，我先写了一份很粗的大纲。上面排着一串当时看起来很厉害的名字：FlashAttention、GQA、MLA、KDA、PagedAttention、QServe、推测解码……每个词我都大概听过，可真要站在一张架构图前，从第一根箭头讲到最后一个模块，我发现自己并没有想明白。
 
 导师对分享的要求也很具体：论文来自哪里、哪一年、发在哪、有没有开源、用了什么数据和工作负载，都要核实。这个要求反而帮了我。它迫使我离开“某方法提升了几倍”这种二手结论，回到论文原文，看清楚它究竟改了哪一项成本，数字又是在什么条件下测出来的。
 
@@ -107,6 +107,42 @@ RoPE 又让事情多了一层。位置旋转与普通低秩投影不能随意交
 我觉得最值得记住的区别是：GQA 改的是“保存几套 K/V”，MLA 改的是“到底保存什么”。
 
 我补这一部分时参考了[这篇中文原理解读](https://zhuanlan.zhihu.com/p/1958660005310993491)，再回到 DeepSeek-V2 技术报告核对了缓存对象、矩阵吸收和实验数字。中文讲解适合顺着推导读，论文更适合确认边界。
+
+### KDA：把不断增长的 KV 变成一块可改写的状态
+
+MLA 仍然属于 softmax 全注意力：它让每个 token 留下的缓存更小，但历史越长，压缩后的 KV 还是会一项项追加。读到 KDA（Kimi Delta Attention）时，我才意识到问题还可以再往前推一步：**能不能不再为每个历史 token 留一份独立记录，而是把整段历史更新进一块固定大小的状态？**
+
+先看最简单的线性注意力。省略特征映射和归一化后，它可以把过去的 Key/Value 累加进一个状态矩阵 `S`：
+
+```text
+S_t = S_{t-1} + k_t v_t^T
+o_t = S_t^T q_t
+```
+
+这样，输出只需要让当前 Query 去读取 `S_t`，状态大小不再随序列长度增长，对序列长度的 attention 计算也从二次变成线性。问题是这个状态像一张反复写字、从不擦除的纸：新旧关联不断叠在一起，写错的内容无法修正，相近的 Key 还会互相干扰。上下文越长，固定容量的状态越容易被“写花”。
+
+KDA 的核心不是只给这张纸加一个统一的遗忘速度，而是同时引入**逐通道遗忘门**和 **delta 修正**。把论文公式改写成更容易读的三步，大致是：
+
+```text
+S'  = Diag(α_t) S_{t-1}
+S_t = S' + β_t k_t (v_t^T - k_t^T S')
+o_t = S_t^T q_t
+```
+
+`α_t` 是一个向量，每个特征通道都能决定自己保留多少旧状态；`β_t` 控制这次写入有多强。括号里的 `v_t^T - k_t^T S'` 就是 delta：先用旧状态预测当前 Key 应该对应什么 Value，再只把“真实值与旧预测的差”写回去。换句话说，KDA 不再只有累加，还能沿当前 Key 的方向修正旧关联。相比 Gated DeltaNet 对整个 head 使用一个衰减值，KDA 把遗忘细化到了通道级，有限状态里的空间因此能分配得更精细。
+
+<figure class="paper-figure">
+  <img src="/images/posts/llm-training-inference-optimization/kda_arch.png" alt="Kimi Linear 以三层 KDA 和一层 MLA 交替组成的混合注意力架构，以及 KDA 模块内部结构" width="1272" height="1398" loading="lazy" />
+  <figcaption>Kimi Linear Figure 3：每 3 层 KDA 插入 1 层完整 MLA；右下角展开了 KDA 的投影、短卷积、门控与归一化路径。来源：Kimi Team, arXiv:2510.26692，官方仓库原图。</figcaption>
+</figure>
+
+固定状态换来了效率，也带来了边界：纯线性注意力很难像完整 softmax 注意力那样，随时精确翻回某个很早的位置做复制或检索。Kimi Linear 没有假装这个问题不存在，而是采用混合架构：连续 3 层 KDA 负责高效处理大部分上下文，再插入 1 层完整 MLA 提供全局注意力。KDA 层的状态不会按 token 追加，MLA 层仍保留 KV Cache；所以论文所说的是**整个模型的 KV Cache 最高减少约 75%**，不是缓存彻底消失。
+
+递推公式适合逐 token 解码，放到训练和 Prefill 中却容易重新变成串行瓶颈。KDA 把状态转移写成一种特殊的 DPLR（Diagonal-Plus-Low-Rank）形式，再用 chunkwise 算法把一段 rank-1 更新打包成矩阵运算，使更多工作能落到 Tensor Core 上。对我来说，这部分最重要的提醒是：数学上写出 `O(n)` 还不够，能否把递推改造成 GPU 擅长的并行计算，才决定它是不是一个真正可用的架构。
+
+Kimi Linear 技术报告用 48B 总参数、3B 激活参数的 MoE 做了同配方对比。相对完整 MLA，论文在 1M 上下文下报告最高约 75% 的 KV Cache 节省和约 6× 的解码吞吐；而 Figure 7 的 batch=1 测试里，1M 长度的 Prefill 是 2.9×，Decode TPOT 是 2.2×。这两个数字并不矛盾，反而再次说明 batch、指标与测量方式会显著改变“加速几倍”的含义。
+
+我最后把三者记成一句话：**GQA 减少完整 K/V 的份数，MLA 压缩每个 token 要保存的内容，KDA 则把整段历史改写进固定状态，再用少量 MLA 层补回全局精确检索。** 这一节先顺着[这篇 KDA 中文解析](https://mp.weixin.qq.com/s/SryRr3WciTJnLtAS2FkMjw)理解动机，再用 [Kimi Linear 官方技术报告](https://arxiv.org/abs/2510.26692)核对公式、混合比例和实验边界。
 
 ### PagedAttention：序列连续，显存不必连续
 
@@ -245,9 +281,9 @@ DSpark 位于逐 token 草稿和完全并行草稿之间。图按 1、2、3 阅�
 
 第三个习惯，是把推测解码理解成“小模型替大模型生成”。真正决定输出的仍是 Target；Draft 只是提出候选。方法之间的差别，主要在草稿怎样产生、怎样表达位置依赖，以及怎样选择送去验证的长度。
 
-这条研究线还在快速变化。模型架构会从 GQA 继续走向 MLA、CLA、YOCO 等更少 KV 的设计；KV Cache 会变成可以压缩、迁移、跨请求复用的分布式内存层；量化精度、draft 长度、kernel 和调度也会越来越动态。无论方法怎么换，端到端、可复现的 benchmark 仍然是底座。
+这条研究线还在快速变化。模型架构会从 GQA、MLA 继续走向 KDA 这类混合线性注意力，以及 CLA、YOCO 等更少 KV 的设计；KV Cache 会变成可以压缩、迁移、跨请求复用的分布式内存层；量化精度、draft 长度、kernel 和调度也会越来越动态。无论方法怎么换，端到端、可复现的 benchmark 仍然是底座。
 
-回头看这次学习，我真正得到的不是十一篇论文与技术报告的摘要，而是一张判断地图：**这个方法在省什么，它把代价移到了哪里，论文数字在哪些条件下才成立。** 有了这三个问题，再遇到一个新方法，至少知道应该从哪一页开始读。
+回头看这次学习，我真正得到的不是十二篇论文与技术报告的摘要，而是一张判断地图：**这个方法在省什么，它把代价移到了哪里，论文数字在哪些条件下才成立。** 有了这三个问题，再遇到一个新方法，至少知道应该从哪一页开始读。
 
 ### 文中论文与项目
 
@@ -257,6 +293,7 @@ DSpark 位于逐 token 草稿和完全并行草稿之间。图按 1、2、3 阅�
 | FlashAttention-2 | [ICLR 2024](https://openreview.net/forum?id=mZn2Xyh9Ec) | `Dao-AILab/flash-attention`，BSD-3-Clause |
 | GQA | [EMNLP 2023](https://aclanthology.org/2023.emnlp-main.298/) | `google/flaxformer`，Apache-2.0，仓库已归档 |
 | MLA / DeepSeek-V2 | [arXiv:2405.04434](https://arxiv.org/abs/2405.04434) | `deepseek-ai/DeepSeek-V2`，MIT |
+| KDA / Kimi Linear | [arXiv:2510.26692](https://arxiv.org/abs/2510.26692) | `MoonshotAI/Kimi-Linear`，MIT |
 | PagedAttention | [SOSP 2023](https://arxiv.org/abs/2309.06180) | `vllm-project/vllm`，Apache-2.0 |
 | Mooncake | [USENIX FAST 2025](https://www.usenix.org/conference/fast25/presentation/qin) | `kvcache-ai/Mooncake`，Apache-2.0 |
 | QServe | [MLSys 2025](https://arxiv.org/abs/2405.04532) | `mit-han-lab/omniserve`，Apache-2.0 |
@@ -265,4 +302,4 @@ DSpark 位于逐 token 草稿和完全并行草稿之间。图按 1、2、3 阅�
 | DFlash | [ICML 2026 / arXiv:2602.06036](https://arxiv.org/abs/2602.06036) | `z-lab/dflash`，MIT |
 | DSpark | [arXiv:2607.05147](https://arxiv.org/abs/2607.05147) | `deepseek-ai/DeepSpec`，MIT |
 
-资料与论文状态按这次项目的核验结果整理，截止 2026 年 7 月 20 日。
+资料与论文状态按这次项目的核验结果整理，截止 2026 年 8 月 1 日。
