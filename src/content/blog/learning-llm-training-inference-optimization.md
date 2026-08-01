@@ -112,24 +112,33 @@ RoPE 又让事情多了一层。位置旋转与普通低秩投影不能随意交
 
 MLA 仍然属于 softmax 全注意力：它让每个 token 留下的缓存更小，但历史越长，压缩后的 KV 还是会一项项追加。读到 KDA（Kimi Delta Attention）时，我才意识到问题还可以再往前推一步：**能不能不再为每个历史 token 留一份独立记录，而是把整段历史更新进一块固定大小的状态？**
 
-先看最简单的线性注意力。省略特征映射和归一化后，它可以把过去的 Key/Value 累加进一个状态矩阵 `S`：
+先看最简单的线性注意力。省略特征映射和归一化后，它可以把过去的 Key/Value 累加进一个状态矩阵 $\mathbf{S}_t$：
 
-```text
-S_t = S_{t-1} + k_t v_t^T
-o_t = S_t^T q_t
-```
+$$
+\begin{aligned}
+\mathbf{S}_t &= \mathbf{S}_{t-1} + \mathbf{k}_t \mathbf{v}_t^{\mathsf T}, \\
+\mathbf{o}_t &= \mathbf{S}_t^{\mathsf T} \mathbf{q}_t.
+\end{aligned}
+$$
 
-这样，输出只需要让当前 Query 去读取 `S_t`，状态大小不再随序列长度增长，对序列长度的 attention 计算也从二次变成线性。问题是这个状态像一张反复写字、从不擦除的纸：新旧关联不断叠在一起，写错的内容无法修正，相近的 Key 还会互相干扰。上下文越长，固定容量的状态越容易被“写花”。
+这样，输出只需要让当前 Query 去读取 $\mathbf{S}_t$，状态大小不再随序列长度增长，对序列长度的 attention 计算也从二次变成线性。问题是这个状态像一张反复写字、从不擦除的纸：新旧关联不断叠在一起，写错的内容无法修正，相近的 Key 还会互相干扰。上下文越长，固定容量的状态越容易被“写花”。
 
 KDA 的核心不是只给这张纸加一个统一的遗忘速度，而是同时引入**逐通道遗忘门**和 **delta 修正**。把论文公式改写成更容易读的三步，大致是：
 
-```text
-S'  = Diag(α_t) S_{t-1}
-S_t = S' + β_t k_t (v_t^T - k_t^T S')
-o_t = S_t^T q_t
-```
+$$
+\begin{aligned}
+\widetilde{\mathbf{S}}_t
+  &= \operatorname{Diag}(\boldsymbol{\alpha}_t)\,\mathbf{S}_{t-1}, \\
+\boldsymbol{\delta}_t
+  &= \mathbf{v}_t - \widetilde{\mathbf{S}}_t^{\mathsf T}\mathbf{k}_t, \\
+\mathbf{S}_t
+  &= \widetilde{\mathbf{S}}_t + \beta_t\mathbf{k}_t\boldsymbol{\delta}_t^{\mathsf T}, \\
+\mathbf{o}_t
+  &= \mathbf{S}_t^{\mathsf T}\mathbf{q}_t.
+\end{aligned}
+$$
 
-`α_t` 是一个向量，每个特征通道都能决定自己保留多少旧状态；`β_t` 控制这次写入有多强。括号里的 `v_t^T - k_t^T S'` 就是 delta：先用旧状态预测当前 Key 应该对应什么 Value，再只把“真实值与旧预测的差”写回去。换句话说，KDA 不再只有累加，还能沿当前 Key 的方向修正旧关联。相比 Gated DeltaNet 对整个 head 使用一个衰减值，KDA 把遗忘细化到了通道级，有限状态里的空间因此能分配得更精细。
+$\boldsymbol{\alpha}_t$ 是一个向量，每个特征通道都能决定自己保留多少旧状态；$\beta_t$ 控制这次写入有多强。第二行的 $\boldsymbol{\delta}_t$ 就是 delta：先用旧状态预测当前 Key 应该对应什么 Value，再只把“真实值与旧预测的差”写回去。换句话说，KDA 不再只有累加，还能沿当前 Key 的方向修正旧关联。相比 Gated DeltaNet 对整个 head 使用一个衰减值，KDA 把遗忘细化到了通道级，有限状态里的空间因此能分配得更精细。
 
 <figure class="paper-figure">
   <img src="/images/posts/llm-training-inference-optimization/kda_arch.png" alt="Kimi Linear 以三层 KDA 和一层 MLA 交替组成的混合注意力架构，以及 KDA 模块内部结构" width="1272" height="1398" loading="lazy" />
@@ -138,7 +147,7 @@ o_t = S_t^T q_t
 
 固定状态换来了效率，也带来了边界：纯线性注意力很难像完整 softmax 注意力那样，随时精确翻回某个很早的位置做复制或检索。Kimi Linear 没有假装这个问题不存在，而是采用混合架构：连续 3 层 KDA 负责高效处理大部分上下文，再插入 1 层完整 MLA 提供全局注意力。KDA 层的状态不会按 token 追加，MLA 层仍保留 KV Cache；所以论文所说的是**整个模型的 KV Cache 最高减少约 75%**，不是缓存彻底消失。
 
-递推公式适合逐 token 解码，放到训练和 Prefill 中却容易重新变成串行瓶颈。KDA 把状态转移写成一种特殊的 DPLR（Diagonal-Plus-Low-Rank）形式，再用 chunkwise 算法把一段 rank-1 更新打包成矩阵运算，使更多工作能落到 Tensor Core 上。对我来说，这部分最重要的提醒是：数学上写出 `O(n)` 还不够，能否把递推改造成 GPU 擅长的并行计算，才决定它是不是一个真正可用的架构。
+递推公式适合逐 token 解码，放到训练和 Prefill 中却容易重新变成串行瓶颈。KDA 把状态转移写成一种特殊的 DPLR（Diagonal-Plus-Low-Rank）形式，再用 chunkwise 算法把一段 rank-1 更新打包成矩阵运算，使更多工作能落到 Tensor Core 上。对我来说，这部分最重要的提醒是：数学上写出 $O(n)$ 还不够，能否把递推改造成 GPU 擅长的并行计算，才决定它是不是一个真正可用的架构。
 
 Kimi Linear 技术报告用 48B 总参数、3B 激活参数的 MoE 做了同配方对比。相对完整 MLA，论文在 1M 上下文下报告最高约 75% 的 KV Cache 节省和约 6× 的解码吞吐；而 Figure 7 的 batch=1 测试里，1M 长度的 Prefill 是 2.9×，Decode TPOT 是 2.2×。这两个数字并不矛盾，反而再次说明 batch、指标与测量方式会显著改变“加速几倍”的含义。
 
