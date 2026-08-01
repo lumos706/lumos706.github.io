@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "parserVersion": 1,
-  "generatedAt": "2026-08-01T04:31:59.008537+00:00",
-  "expiresAt": "2026-08-02T10:31:59.008537+00:00",
+  "generatedAt": "2026-08-01T05:40:08.637678+00:00",
+  "expiresAt": "2026-08-02T11:40:08.637678+00:00",
   "status": "ok",
   "schedule": "09:00 Asia/Shanghai",
   "skill": {
@@ -44,8 +44,8 @@
           "priority": "必看"
         }
       ],
-      "checkedAt": "2026-08-01T04:31:59.008537+00:00",
-      "lastEvidenceAt": "2026-08-01T04:31:59.008537+00:00",
+      "checkedAt": "2026-08-01T05:40:08.637678+00:00",
+      "lastEvidenceAt": "2026-08-01T05:40:08.637678+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
@@ -98,8 +98,8 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-08-01T04:31:59.008537+00:00",
-      "lastEvidenceAt": "2026-08-01T04:31:59.008537+00:00",
+      "checkedAt": "2026-08-01T05:40:08.637678+00:00",
+      "lastEvidenceAt": "2026-08-01T05:40:08.637678+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
@@ -168,8 +168,8 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-08-01T04:31:59.008537+00:00",
-      "lastEvidenceAt": "2026-08-01T04:31:59.008537+00:00",
+      "checkedAt": "2026-08-01T05:40:08.637678+00:00",
+      "lastEvidenceAt": "2026-08-01T05:40:08.637678+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
@@ -180,31 +180,14 @@
           "date": null,
           "dateConfidence": "low",
           "relevance": 0.35,
-          "score": 30,
+          "score": 31,
           "engagement": {
             "num_comments": 4,
-            "likes": 173,
+            "likes": 174,
             "shares": 0,
-            "collects": 214
+            "collects": 215
           },
           "author": "💕",
-          "signal": "neutral"
-        },
-        {
-          "platform": "zhihu",
-          "title": "去青甘大环线走一圈，需要提前准备什么？",
-          "snippet": "防晒，墨镜，裙子，遮阳帽，披肩，薄冲锋衣，证件，少量现金",
-          "url": "https://www.zhihu.com/question/2053763987548934181/answer/2064127967962436455",
-          "date": "2026-07-24",
-          "dateConfidence": "high",
-          "relevance": 0.21,
-          "score": 42,
-          "engagement": {
-            "num_comments": 0,
-            "collects": 0,
-            "voteups": 1
-          },
-          "author": "大西北旅游领队",
           "signal": "neutral"
         }
       ],
@@ -239,8 +222,8 @@
           "priority": "必带"
         }
       ],
-      "checkedAt": "2026-08-01T04:31:59.008537+00:00",
-      "lastEvidenceAt": "2026-08-01T04:31:59.008537+00:00",
+      "checkedAt": "2026-08-01T05:40:08.637678+00:00",
+      "lastEvidenceAt": "2026-08-01T05:40:08.637678+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
@@ -289,7 +272,7 @@
           "score": 35,
           "engagement": {
             "num_comments": 293,
-            "likes": 2548,
+            "likes": 2549,
             "shares": 0,
             "collects": 970
           },
@@ -346,10 +329,28 @@
           "priority": "建议"
         }
       ],
-      "checkedAt": "2026-08-01T04:31:59.008537+00:00",
-      "lastEvidenceAt": "2026-08-01T04:31:59.008537+00:00",
+      "checkedAt": "2026-08-01T05:40:08.637678+00:00",
+      "lastEvidenceAt": "2026-08-01T05:40:08.637678+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
+        {
+          "platform": "xiaohongshu",
+          "title": "青甘大环线自驾租车防坑攻略",
+          "snippet": "",
+          "url": "https://www.xiaohongshu.com/explore/68d8e006000000000e00dc88",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.47,
+          "score": 31,
+          "engagement": {
+            "num_comments": 10,
+            "likes": 68,
+            "shares": 0,
+            "collects": 94
+          },
+          "author": "你好我系陈Mm",
+          "signal": "neutral"
+        },
         {
           "platform": "xiaohongshu",
           "title": "租车自驾青甘大环线已圆满收官",
@@ -401,24 +402,6 @@
           },
           "author": "kight11",
           "signal": "positive"
-        },
-        {
-          "platform": "xiaohongshu",
-          "title": "青甘大环线自驾攻略🚙",
-          "snippet": "",
-          "url": "https://www.xiaohongshu.com/explore/6a6c24a4000000002402f3fc",
-          "date": null,
-          "dateConfidence": "low",
-          "relevance": 0.39,
-          "score": 17,
-          "engagement": {
-            "num_comments": 7,
-            "likes": 4,
-            "shares": 0,
-            "collects": 2
-          },
-          "author": "樱桃小柚子",
-          "signal": "neutral"
         }
       ],
       "sourceErrors": {}
@@ -452,8 +435,8 @@
           "priority": "必做"
         }
       ],
-      "checkedAt": "2026-08-01T04:31:59.008537+00:00",
-      "lastEvidenceAt": "2026-08-01T04:31:59.008537+00:00",
+      "checkedAt": "2026-08-01T05:40:08.637678+00:00",
+      "lastEvidenceAt": "2026-08-01T05:40:08.637678+00:00",
       "sourceStatus": "confirmed",
       "evidence": [
         {
