@@ -27,8 +27,14 @@ from update_travel_data import (
     normalize_evidence,
     run_skill,
     skill_environment,
-    without_source,
     write_atomic,
+)
+from douyin_policy import (
+    douyin_refresh_requested,
+    douyin_urls,
+    evidence_platforms,
+    merge_douyin_snapshot,
+    query_sources as policy_query_sources,
 )
 
 
@@ -388,6 +394,8 @@ def main() -> int:
     env = skill_environment(args.no_browser, args.allow_credentials)
     now = datetime.now(timezone.utc)
     checked_at = now.isoformat()
+    refresh_douyin = douyin_refresh_requested()
+    fresh_douyin_urls: set[str] = set()
     categories: dict[str, Any] = {}
     failures: list[dict[str, str]] = []
     active_sources: set[str] = set()
@@ -397,10 +405,10 @@ def main() -> int:
         if not isinstance(prior, dict):
             prior = {}
         query = spec.query()
-        query_sources = (
-            query.sources
-            if spec.key == "health"
-            else without_source(query.sources, "douyin")
+        selected_sources = policy_query_sources(
+            query.sources,
+            representative=spec.key == "health",
+            refresh_requested=refresh_douyin,
         )
         try:
             payload = run_skill(
@@ -410,9 +418,10 @@ def main() -> int:
                 timeout=args.timeout,
                 quick=args.quick,
                 env=env,
-                sources=query_sources,
+                sources=selected_sources,
             )
             normalized = normalize_evidence(payload, query, limit=10)
+            fresh_douyin_urls.update(douyin_urls(normalized))
             category = category_payload(spec, normalized, prior, checked_at)
             category["sourceErrors"] = {
                 key.removesuffix("_error"): value
@@ -434,7 +443,7 @@ def main() -> int:
             time.sleep(args.pause)
 
     snapshot = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "parserVersion": PARSER_VERSION,
         "generatedAt": checked_at,
         "expiresAt": (now + timedelta(hours=30)).isoformat(),
@@ -458,6 +467,15 @@ def main() -> int:
             "failures": failures,
         },
     }
+    douyin_metadata = merge_douyin_snapshot(
+        snapshot,
+        previous,
+        refresh_requested=refresh_douyin,
+        checked_at=checked_at,
+        fresh_urls=fresh_douyin_urls,
+    )
+    snapshot["douyin"] = douyin_metadata
+    snapshot["activeSources"] = sorted(evidence_platforms(snapshot["categories"]))
     write_atomic(output, snapshot)
     print(
         json.dumps(

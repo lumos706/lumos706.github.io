@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "parserVersion": 1,
   "generatedAt": "2026-08-01T05:37:50.105536+00:00",
   "expiresAt": "2026-08-02T11:37:50.105536+00:00",
@@ -13,6 +13,7 @@
   "activeSources": [
     "baidu",
     "bilibili",
+    "douyin",
     "xiaohongshu",
     "zhihu"
   ],
@@ -58,6 +59,46 @@
             "engagement": {},
             "author": "",
             "signal": "neutral"
+          },
+          {
+            "platform": "douyin",
+            "title": "西北7天7晚旅游攻略新鲜出炉～ （附出行方式 花费及租车注意事项） Day1日月山—青海湖二郎剑Day2大柴旦翡翠湖Day3黑独山—石油小镇—鸣沙山月牙泉—敦煌夜市Day4敦煌莫高窟Day5照壁山Day6岗什卡雪峰Day7西宁早餐 #大西北 #旅游攻略 #我在抖音聊旅行 #为了这个镜头我特意去了一趟西北 #热门 @DOU+小助手 @抖音作者助手",
+            "snippet": "",
+            "url": "https://www.douyin.com/video/7627390850671263406",
+            "date": null,
+            "dateConfidence": "low",
+            "relevance": 0.53,
+            "score": 40,
+            "engagement": {
+              "num_comments": 233,
+              "likes": 3185,
+              "views": 0,
+              "shares": 2633
+            },
+            "author": "H0tK1d",
+            "signal": "neutral",
+            "douyinState": "retained",
+            "douyinLastSuccessfulAt": "2026-07-30T05:11:16.005094+00:00"
+          },
+          {
+            "platform": "douyin",
+            "title": "自驾青甘大环线，青海湖二郎剑游玩攻略，湖泊沙滩岛屿美不胜收！ 第二期青海湖二郎剑攻略。#自驾游 #青甘大环线 #青海湖二郎剑景区 #旅行攻略 #青海湖",
+            "snippet": "",
+            "url": "https://www.douyin.com/video/7665289113876188416",
+            "date": null,
+            "dateConfidence": "low",
+            "relevance": 0.53,
+            "score": 29,
+            "engagement": {
+              "num_comments": 26,
+              "likes": 152,
+              "views": 0,
+              "shares": 49
+            },
+            "author": "六月带你去旅行",
+            "signal": "neutral",
+            "douyinState": "retained",
+            "douyinLastSuccessfulAt": "2026-07-30T05:11:16.005094+00:00"
           }
         ]
       },
@@ -482,5 +523,17 @@
   "collection": {
     "mode": "browser-plus-optional-credentials",
     "failures": []
+  },
+  "douyin": {
+    "schemaVersion": 1,
+    "policy": "weekly-monday",
+    "schedule": "每周一 09:00 Asia/Shanghai",
+    "refreshRequested": false,
+    "refreshStatus": "retained",
+    "lastAttemptAt": "2026-07-30T05:11:16.005094+00:00",
+    "lastSuccessfulAt": "2026-07-30T05:11:16.005094+00:00",
+    "evidenceCount": 2,
+    "freshEvidenceCount": 0,
+    "retainedEvidenceCount": 2
   }
 }

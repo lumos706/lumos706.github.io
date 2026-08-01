@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "generatedAt": "2026-08-01T05:31:45.690512+00:00",
   "expiresAt": "2026-08-02T17:31:45.690512+00:00",
   "status": "ok",
@@ -20,12 +20,14 @@
   "activeSources": [
     "baidu",
     "bilibili",
+    "douyin",
     "xiaohongshu",
     "zhihu"
   ],
   "sourceCoverage": {
     "baidu": 2,
     "bilibili": 5,
+    "douyin": 4,
     "xiaohongshu": 90,
     "zhihu": 27
   },
@@ -268,7 +270,7 @@
     "qinghaiLake": {
       "label": "青海湖",
       "status": "ok",
-      "evidenceCount": 3,
+      "evidenceCount": 7,
       "evidence": [
         {
           "platform": "xiaohongshu",
@@ -322,6 +324,86 @@
           },
           "author": "木鸟行记",
           "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "大西北很美，但7、8月份别乱冲 7-8月是西北旺季，花海湖泊颜值拉满，但出行避坑要点提前收好 青海湖油菜花连片盛放，湖水澄澈湛蓝，风光无可替代，但出行一定要提前规划行程哦。 #青甘大环线 #青甘大环线旅游 #青甘大环线旅游攻略 #大西北青甘大环线 #西北青甘大环线",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7651927242750645989",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.56,
+          "score": 20,
+          "engagement": {
+            "num_comments": 1,
+            "likes": 2,
+            "views": 0,
+            "shares": 1
+          },
+          "author": "远胜游（兰州）国际旅行社",
+          "signal": "neutral",
+          "douyinState": "retained",
+          "douyinLastSuccessfulAt": "2026-07-30T05:05:23.763142+00:00"
+        },
+        {
+          "platform": "douyin",
+          "title": "8月我们准备自驾青海湖环线啦，一次性看看川、甘、青的夏天 #青海湖自驾游 #青海",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7661561176190471443",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.4,
+          "score": 25,
+          "engagement": {
+            "num_comments": 72,
+            "likes": 105,
+            "views": 0,
+            "shares": 121
+          },
+          "author": "陈小静💕旅行规划师&重庆出发",
+          "signal": "neutral",
+          "douyinState": "retained",
+          "douyinLastSuccessfulAt": "2026-07-30T05:05:23.763142+00:00"
+        },
+        {
+          "platform": "douyin",
+          "title": "第一次来青海湖，别把这3个点乱塞进路线！ 七八月第一次走青甘大环线，青海湖这三个点，千万别一股脑全塞进路线里。 很多人一做攻略，看到二郎剑、黑马河、断崖圣泉湾，就觉得少去一个都亏。这条视频分享给您到底怎么排！#青甘大环线 #青甘大环线自驾游 #甘青大环线 #青甘 #青海湖",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7651268857453169935",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.4,
+          "score": 19,
+          "engagement": {
+            "num_comments": 5,
+            "likes": 42,
+            "views": 0,
+            "shares": 24
+          },
+          "author": "敦煌寻漠【西北青甘环线领队】",
+          "signal": "neutral",
+          "douyinState": "retained",
+          "douyinLastSuccessfulAt": "2026-07-30T05:05:23.763142+00:00"
+        },
+        {
+          "platform": "douyin",
+          "title": "追逐青海湖与戈壁，只分享实用旅行经验 点赞收藏，旺季出行少走弯路#西北大环线#西北旅游攻略#青海湖#敦煌鸣沙山#西北避坑攻略",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7663034120759701425",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.4,
+          "score": 16,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 16,
+            "views": 0,
+            "shares": 17
+          },
+          "author": "涛子的青甘环线✈️",
+          "signal": "neutral",
+          "douyinState": "retained",
+          "douyinLastSuccessfulAt": "2026-07-30T05:05:23.763142+00:00"
         }
       ],
       "sourceErrors": {}
@@ -3730,5 +3812,17 @@
     },
     "systemMessages": [],
     "failures": []
+  },
+  "douyin": {
+    "schemaVersion": 1,
+    "policy": "weekly-monday",
+    "schedule": "每周一 09:00 Asia/Shanghai",
+    "refreshRequested": false,
+    "refreshStatus": "retained",
+    "lastAttemptAt": "2026-07-30T05:05:23.763142+00:00",
+    "lastSuccessfulAt": "2026-07-30T05:05:23.763142+00:00",
+    "evidenceCount": 4,
+    "freshEvidenceCount": 0,
+    "retainedEvidenceCount": 4
   }
 }

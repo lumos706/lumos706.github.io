@@ -10,6 +10,11 @@ on:
         description: 'Optional comma-separated query keys for a targeted refresh'
         required: false
         type: string
+      refresh_douyin:
+        description: 'Also run the weekly Douyin collection path'
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -37,6 +42,25 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+
+      - name: Set weekly Douyin refresh policy
+        id: refresh_policy
+        env:
+          MANUAL_REFRESH_DOUYIN: ${{ inputs.refresh_douyin }}
+        run: |
+          refresh_douyin=false
+          if [[ "$GITHUB_EVENT_NAME" == "schedule" && "$(date -u +%u)" == "1" ]]; then
+            refresh_douyin=true
+          elif [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" && "${MANUAL_REFRESH_DOUYIN:-false}" == "true" ]]; then
+            refresh_douyin=true
+          fi
+          echo "douyin=$refresh_douyin" >> "$GITHUB_OUTPUT"
+          echo "TRAVEL_DOUYIN_REFRESH=$refresh_douyin" >> "$GITHUB_ENV"
+          if [[ "$refresh_douyin" == "true" ]]; then
+            echo "抖音策略：本次执行每周刷新；健康检查要求至少 2 / 4 个数据文件取得新依据。" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "抖音策略：本次不访问抖音，保留最近一次成功依据及其真实日期。" >> "$GITHUB_STEP_SUMMARY"
+          fi
 
       - name: Setup Node
         uses: actions/setup-node@v7
@@ -173,12 +197,14 @@ jobs:
 
       - name: Check generated Douyin evidence
         id: douyin_health
+        if: steps.refresh_policy.outputs.douyin == 'true'
         run: |
           python scripts/travel/check_douyin_evidence.py \
             --summary "$GITHUB_STEP_SUMMARY" \
             --issue-body "$RUNNER_TEMP/douyin-health-issue.md"
 
       - name: Notify when Douyin verification is needed
+        if: steps.refresh_policy.outputs.douyin == 'true'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}

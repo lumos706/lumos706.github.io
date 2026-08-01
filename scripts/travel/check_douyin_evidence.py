@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Report whether the latest travel snapshots contain usable Douyin evidence.
+"""Report whether the weekly run obtained newly refreshed Douyin evidence.
 
 This helper never visits the web. Collection remains the responsibility of the
-official last30days-cn skill; this script only verifies its generated JSON so a
-scheduled workflow can request a new browser verification when Douyin returns
-an empty result after a CAPTCHA or risk-control challenge.
+official last30days-cn skill. Retained links keep the website useful between
+weekly runs, but they never count as a successful new collection attempt.
 """
 
 from __future__ import annotations
@@ -58,7 +57,9 @@ def valid_douyin_items(value: Any) -> list[dict[str, Any]]:
 
 def build_report(paths: list[Path]) -> dict[str, Any]:
     files: list[dict[str, Any]] = []
-    seen_urls: set[str] = set()
+    all_urls: set[str] = set()
+    fresh_urls: set[str] = set()
+    retained_urls: set[str] = set()
     for path in paths:
         payload = load_json(path)
         items = valid_douyin_items(payload)
@@ -67,50 +68,72 @@ def build_report(paths: list[Path]) -> dict[str, Any]:
             for item in items
             if isinstance(item.get("url"), str) and item.get("url")
         }
-        seen_urls.update(urls)
+        metadata = payload.get("douyin") if isinstance(payload.get("douyin"), dict) else {}
+        file_fresh_urls = {
+            str(item.get("url"))
+            for item in items
+            if item.get("douyinState") == "fresh"
+            and metadata.get("refreshRequested") is True
+            and metadata.get("refreshStatus") == "fresh"
+        }
+        file_retained_urls = urls - file_fresh_urls
+        all_urls.update(urls)
+        fresh_urls.update(file_fresh_urls)
+        retained_urls.update(file_retained_urls)
         files.append(
             {
                 "path": path.as_posix(),
                 "generatedAt": payload.get("generatedAt"),
                 "evidenceCount": len(urls),
+                "freshEvidenceCount": len(file_fresh_urls),
+                "retainedEvidenceCount": len(file_retained_urls),
+                "refreshStatus": metadata.get("refreshStatus"),
+                "lastSuccessfulAt": metadata.get("lastSuccessfulAt"),
             }
         )
 
     files_with_evidence = sum(1 for item in files if item["evidenceCount"] > 0)
-    status = "healthy" if seen_urls and files_with_evidence >= 2 else "attention"
+    files_with_fresh_evidence = sum(
+        1 for item in files if item["freshEvidenceCount"] > 0
+    )
+    status = "healthy" if files_with_fresh_evidence >= 2 else "attention"
     return {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "checkedAt": datetime.now(timezone.utc).isoformat(),
         "status": status,
-        "evidenceCount": len(seen_urls),
+        "evidenceCount": len(all_urls),
+        "freshEvidenceCount": len(fresh_urls),
+        "retainedEvidenceCount": len(retained_urls - fresh_urls),
         "filesWithEvidence": files_with_evidence,
+        "filesWithFreshEvidence": files_with_fresh_evidence,
         "files": files,
     }
 
 
 def markdown(report: dict[str, Any], *, issue: bool = False) -> str:
-    label = "正常" if report["status"] == "healthy" else "需要验证"
-    heading = "# 抖音旅游数据需要验证" if issue else "## 抖音旅游数据刷新检查"
+    label = "本周刷新成功" if report["status"] == "healthy" else "本周需要验证"
+    heading = "# 抖音旅游数据需要验证" if issue else "## 抖音每周刷新检查"
     lines = [
         heading,
         "",
         f"- 检查时间：{report['checkedAt']}",
         f"- 状态：**{label}**",
-        f"- 有效抖音链接：{report['evidenceCount']} 条",
-        f"- 含抖音依据的数据文件：{report['filesWithEvidence']} / {len(report['files'])}",
+        f"- 本轮新取得抖音链接：{report['freshEvidenceCount']} 条",
+        f"- 本轮取得新依据的数据文件：{report['filesWithFreshEvidence']} / {len(report['files'])}",
+        f"- 仍保留的历史抖音链接：{report['retainedEvidenceCount']} 条",
     ]
     if report["status"] != "healthy":
         lines.extend(
             [
                 "",
-                "> 抖音不强制登录，但无 API 浏览器路径可能遇到验证码或风控页。其他来源仍会正常刷新，已有静态行程不会被清空。",
+                "> 抖音只在每周一 09:00 尝试刷新。无 API 浏览器路径可能遇到验证码或风控页；其他来源仍会每日更新，最近一次成功的抖音依据会保留并显示真实日期。",
                 "",
                 "### 需要处理",
                 "",
                 "1. 在本机通过 last30days-cn 的 Playwright 窗口完成抖音验证；若页面要求登录，再扫码登录。",
                 "2. 将浏览器 Cookie 加密更新到仓库 Secret `LAST30DAYS_DOUYIN_COOKIES_B64`。",
                 "3. 不要把 Cookie 粘贴到 Issue、聊天或代码中。",
-                "4. 手动运行 `Refresh travel data`，成功后本 Issue 会自动关闭。",
+                "4. 更新后可以自行关闭本 Issue；系统会在下周一重新核验。若要提前核验，手动运行工作流时需勾选“同时刷新抖音”。",
             ]
         )
     return "\n".join(lines) + "\n"
@@ -123,6 +146,7 @@ def write_outputs(report: dict[str, Any]) -> None:
     with Path(output_path).open("a", encoding="utf-8") as handle:
         handle.write(f"overall={report['status']}\n")
         handle.write(f"evidence_count={report['evidenceCount']}\n")
+        handle.write(f"fresh_evidence_count={report['freshEvidenceCount']}\n")
 
 
 def main() -> int:

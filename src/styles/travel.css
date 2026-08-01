@@ -872,6 +872,51 @@
   line-height: 1.72;
 }
 
+.travel-douyin-policy {
+  display: grid;
+  grid-template-columns: auto minmax(220px, 1fr) auto;
+  gap: 8px 20px;
+  align-items: baseline;
+  padding: 18px 20px;
+  margin: 28px 0 16px;
+  border: 1px solid rgba(221, 255, 87, 0.32);
+  background: rgba(221, 255, 87, 0.06);
+  color: var(--travel-board-text);
+}
+
+.travel-douyin-policy > span {
+  color: var(--travel-route);
+  font-size: var(--travel-meta);
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
+.travel-douyin-policy strong {
+  font-size: 0.98rem;
+}
+
+.travel-douyin-policy p,
+.travel-douyin-policy small {
+  margin: 0;
+}
+
+.travel-douyin-policy p {
+  color: var(--travel-route);
+  font-size: var(--travel-copy);
+  font-weight: 700;
+}
+
+.travel-douyin-policy small {
+  grid-column: 2 / -1;
+  color: rgba(245, 242, 233, 0.7);
+  font-size: var(--travel-copy-small);
+  line-height: 1.65;
+}
+
+.travel-douyin-policy.fresh {
+  background: rgba(221, 255, 87, 0.11);
+}
+
 .travel-platform-hint {
   padding: 14px 0 0;
   color: rgba(245, 242, 233, 0.68);
@@ -1917,6 +1962,16 @@
   .travel-controls-inner {
     grid-template-columns: 1fr;
     gap: 28px;
+  }
+
+  .travel-douyin-policy {
+    grid-template-columns: 1fr;
+    gap: 7px;
+    padding: 17px 18px;
+  }
+
+  .travel-douyin-policy small {
+    grid-column: auto;
   }
 
   .travel-control-link {

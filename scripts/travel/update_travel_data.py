@@ -24,6 +24,13 @@ from pathlib import Path
 from typing import Any, Iterable
 from urllib.parse import urlparse
 
+from douyin_policy import (
+    douyin_refresh_requested,
+    douyin_urls,
+    merge_douyin_snapshot,
+    query_sources as policy_query_sources,
+)
+
 
 SKILL_NAME = "last30days-cn"
 SKILL_VERSION = "3.2.0-cn"
@@ -697,6 +704,9 @@ def main() -> int:
     prior = previous_snapshot(output)
     env = skill_environment(args.no_browser, args.allow_credentials)
     now = datetime.now(timezone.utc)
+    checked_at = now.isoformat()
+    refresh_douyin = douyin_refresh_requested()
+    fresh_douyin_urls: set[str] = set()
     requested_keys = {
         key.strip()
         for key in (args.only or "").split(",")
@@ -724,10 +734,10 @@ def main() -> int:
         target = categories if spec.group == "category" else (attractions if spec.group == "attraction" else food)
         # Limit Douyin to one representative query in this file. Repeating all
         # price, attraction, and food searches in minutes triggers verification.
-        query_sources = (
-            spec.sources
-            if spec.group == "attraction" and spec.key == "qinghaiLake"
-            else without_source(spec.sources, "douyin")
+        selected_sources = policy_query_sources(
+            spec.sources,
+            representative=spec.group == "attraction" and spec.key == "qinghaiLake",
+            refresh_requested=refresh_douyin,
         )
         try:
             payload = run_skill(
@@ -737,7 +747,7 @@ def main() -> int:
                 timeout=args.timeout,
                 quick=args.quick,
                 env=env,
-                sources=query_sources,
+                sources=selected_sources,
             )
             old_group = {
                 "category": "categories",
@@ -746,6 +756,7 @@ def main() -> int:
             }[spec.group]
             old_result = ((prior or {}).get(old_group) or {}).get(spec.key)
             result = category_snapshot(spec, payload)
+            fresh_douyin_urls.update(douyin_urls(result.get("evidence", [])))
             if spec.group == "food":
                 fresh_restaurants = restaurant_snapshot(spec.restaurants, result["evidence"])
                 result["restaurants"] = fresh_restaurants
@@ -798,7 +809,7 @@ def main() -> int:
                     "label": spec.label,
                     "group": spec.group,
                     "topic": spec.topic,
-                    "sources": query_sources.split(","),
+                    "sources": selected_sources.split(","),
                     "range": payload.get("range"),
                     "exitCode": payload.get("_exit_code"),
                 }
@@ -827,6 +838,21 @@ def main() -> int:
         if index < len(selected_queries) - 1 and args.pause > 0:
             time.sleep(args.pause)
 
+    data_tree = {
+        "categories": categories,
+        "attractions": attractions,
+        "food": food,
+    }
+    douyin_metadata = merge_douyin_snapshot(
+        data_tree,
+        prior,
+        refresh_requested=refresh_douyin,
+        checked_at=checked_at,
+        fresh_urls=fresh_douyin_urls,
+    )
+    categories = data_tree["categories"]
+    attractions = data_tree["attractions"]
+    food = data_tree["food"]
     all_groups = (*categories.values(), *attractions.values(), *food.values())
     active_sources = sorted(
         {
@@ -850,8 +876,8 @@ def main() -> int:
     else:
         overall_status = "ok" if evidence_total else "empty"
     snapshot = {
-        "schemaVersion": 2,
-        "generatedAt": now.isoformat(),
+        "schemaVersion": 4,
+        "generatedAt": checked_at,
         "expiresAt": (now + timedelta(hours=36)).isoformat(),
         "status": overall_status,
         "mode": "browser-plus-optional-credentials" if args.allow_credentials else "no-api-browser",
@@ -870,6 +896,7 @@ def main() -> int:
         "notice": "公开内容价格快照与攻略线索，不是实时库存或官方结论；最终价格、余票、营业状态和退改规则以官方页面及商家当日信息为准。",
         "activeSources": active_sources,
         "sourceCoverage": source_coverage,
+        "douyin": douyin_metadata,
         "categories": categories,
         "attractions": attractions,
         "food": food,

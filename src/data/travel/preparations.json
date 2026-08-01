@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "parserVersion": 1,
   "generatedAt": "2026-08-01T05:40:08.637678+00:00",
   "expiresAt": "2026-08-02T11:40:08.637678+00:00",
@@ -11,6 +11,7 @@
     "repository": "https://github.com/Jesseovo/last30days-skill-cn"
   },
   "activeSources": [
+    "douyin",
     "xiaohongshu",
     "zhihu"
   ],
@@ -65,6 +66,26 @@
           },
           "author": "青海西宁氧气配送",
           "signal": "neutral"
+        },
+        {
+          "platform": "douyin",
+          "title": "柠萌旅行青甘高原高反预防 应急完整指南 #青甘大环线 #青甘旅游 #高反应急 #应急指南 #柠萌带你游西北",
+          "snippet": "",
+          "url": "https://www.douyin.com/video/7660723456748555529",
+          "date": null,
+          "dateConfidence": "low",
+          "relevance": 0.41,
+          "score": 17,
+          "engagement": {
+            "num_comments": 0,
+            "likes": 5,
+            "views": 0,
+            "shares": 1
+          },
+          "author": "柠萌带你游西北",
+          "signal": "neutral",
+          "douyinState": "retained",
+          "douyinLastSuccessfulAt": "2026-07-30T05:13:25.557908+00:00"
         }
       ],
       "sourceErrors": {}
@@ -482,5 +503,17 @@
   "collection": {
     "mode": "browser-plus-optional-credentials",
     "failures": []
+  },
+  "douyin": {
+    "schemaVersion": 1,
+    "policy": "weekly-monday",
+    "schedule": "每周一 09:00 Asia/Shanghai",
+    "refreshRequested": false,
+    "refreshStatus": "retained",
+    "lastAttemptAt": "2026-07-30T05:13:25.557908+00:00",
+    "lastSuccessfulAt": "2026-07-30T05:13:25.557908+00:00",
+    "evidenceCount": 1,
+    "freshEvidenceCount": 0,
+    "retainedEvidenceCount": 1
   }
 }
